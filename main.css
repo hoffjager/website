@@ -1,4 +1,24 @@
-﻿h1 {
+﻿/*Master Stylesheet*/
+
+#top h1 {
+    color: silver;
+    background: darkred;
+    border: 5px solid silver;
+    padding: 2.5px;
+    width: 480px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: lightsalmon;
+}
+
+#top frame {
+    width: 480px;
+    border: 2px dotted blue;
+}
+
+#top h2 {
+    color: darkred;
+    background: silver;
+    border: 5px solid red;
+    padding: 2.5px;
+    width: 480px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
