@@ -146,3 +146,25 @@ body h2.headers {
     background: green
 }
 /* 0,0,1,2 */
+
+/* Blockquotes */
+p, blockquote {
+    border: 1px solid red
+}
+
+q {
+    background: aqua;
+}
+
+/* Emphasizing Elements */
+*[class ~= "dangerous"] {
+    color: red
+}
+
+*[class ~= "look"] {
+    color: gold
+}
+
+*[class ~= "unlocking"] {
+    color: silver
+}
