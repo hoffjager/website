@@ -168,3 +168,70 @@ q {
 *[class ~= "unlocking"] {
     color: silver
 }
+
+/* Hyperlink States */
+a:hover {
+    background: yellow;
+}
+
+a:active {
+    background: olive;
+}
+
+a:visited {
+    background: aqua;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+a:focus {
+    background: red;
+    color: white
+}
+
+/* Fragmenting Links */
+p.yellow-block {
+    height: 700px;
+    background: yellow;
+}
+
+p.red-block {
+    height: 700px;
+    background: red;
+}
+
+/* Linking to Protocols */
+img#chart {
+    visibility: hidden;
+    height: 0px;
+}
+
+p#links {
+    padding: 5px;
+    border: 3px double green;
+    width: 200px;
+}
+
+/* Images as Hyperlinks */
+p.button {
+    width: 192px;
+    height: 67px;
+    background: url(rollover-bg.png);
+}
+
+p.button a {
+    display: block;
+    width: 192px;
+    height: 67px;
+}
+
+p.button a img {
+    border: 0px;
+}
+
+p.button a:hover img {
+    visibility: hidden;
+}
