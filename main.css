@@ -583,4 +583,33 @@ label.hilite {
 }
 */
 
+/* Figures & Figcaptions */
+/*
+figure#front-stack {
+    float: left;
+    margin-top: 0px;
+}
 
+figure#back-stack {
+    float: right;
+    margin-top: 0px;
+}
+
+figcaption {
+    font-size: smaller;
+    color: red;
+}
+
+p:first-letter {
+    font-size: xx-large;
+}
+*/
+
+/* Embedding in Frames */
+/*
+article.left220 {
+    width: 220px;
+    float: left;
+    margin-right: 20px;
+}
+*/

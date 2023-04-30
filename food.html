@@ -205,6 +205,29 @@
         <input type="submit" value="Submit Form" />
     </form>
     <hr />
+    <picture>
+        <source media="(min-width: 500px)" srcset="images/large.png" />
+        <source media="(min-width: 200px)" srcset="images/small.png" />
+        <img alt="Regular Guy" src="images/medium.png"
+             width="103" height="125" />
+    </picture>
+    <hr />
+    <p>
+        This is text in the document that...
+        <br />
+        <object data="docs/piechart.pdf" type="application/pdf"
+                width="480" height="320">
+            [PDF Document - may require the Adobe Reader plugin]
+        </object>
+        <br />
+        ...continues around an embedded resource.
+    </p>
+    <hr />
+    <embed src="movie.swf" width="270" height="202"
+           type="application/x-shockwave-flash" />
+    <embed src="movie.svg" width="283" height="202"
+           type="image/svg+xml" />
+    <hr />
     <a id="bottom" href="#top">Back to Top</a> |
     <a href="mailto:jonnygrealish64@gmail.com">Send Email</a>
 </body>
