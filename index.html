@@ -5,29 +5,33 @@
     <meta name="description" content="Blog for various interests in my life" />
     <meta name="keywords" content="hoff_jager, playstation, gaming, hama beads, arts & crafts, dogs, birds" />
     <title>hoff_home</title>
-    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="main.css"/>-->
     <!--JavaScript functionality to be added in the future-->
 </head>
 <body onload="alert('Web page currently being developed.')">
     <nav>
         <a id="top" href="index.html" title="Home Page!" accesskey="1">Home</a> |
-        <a href="beads.html" title="Arts & Crafts!" accesskey="2">Hama Beads</a> |
+        <a href="food.html" title="Food & Fitness" accesskey="2">Food</a> |
         <a href="games.html" title="Video Games!" accesskey="3">Gaming</a> |
-        <a href="pets.html" title="Pets!" accesskey="4">Pets</a>
+        <a href="hamabeads.html" title="Arts & Crafts!" accesskey="4">Hama Beads</a> |
+        <a href="pets.html" title="Pets!" accesskey="5">Pets</a>
     </nav>
     <br />
     <nav class="button">
         <a href="index.html">
-            <img src="index.png" alt="Home Page!" width="45" height="45" />
+            <img src="images/index.png" alt="Home Page!" width="45" height="45" />
         </a>
-        <a href="beads.html">
-            <img src="beads.png" alt="Arts & Crafts!" width="65" height="65" />
+        <a href="food.html">
+            <img src="images/food.png" alt="Food & Fitness!" width="50" height="50" />
         </a>
         <a href="games.html">
-            <img src="games.png" alt="Video Games!" width="55" height="55" />
+            <img src="images/games.png" alt="Video Games!" width="55" height="55" />
+        </a>
+        <a href="hamabeads.html">
+            <img src="images/hamabeads.png" alt="Arts & Crafts!" width="65" height="65" />
         </a>
         <a href="pets.html">
-            <img src="pets.png" alt="Pets!" width="50" height="50" />
+            <img src="images/pets.png" alt="Pets!" width="50" height="50" />
         </a>
     </nav>
     <p>
@@ -87,7 +91,90 @@
 </code>
 </pre>
     <hr />
-    <a id="bottom" href="#top">Back to Top</a> |
-    <a href="mailto:jonnygrealish64@gmail.com">Send Email</a>
+    <h1>Interesting Articles</h1>
+    <article>
+        <h2>Professional Profile</h2>
+        <p>Links to my professional profile to be established soon.</p>
+    </article>
+    <br />
+    <hr />
+    <ol id="list-1">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+    <ol id="list-2" start="4">
+        <li>QC</li>
+        <li>QA</li>
+        <li>R&amp;D</li>
+    </ol>
+    <ol id="list-3">
+        <li>Remote</li>
+        <li>Part-Time</li>
+        <li>Permanent</li>
+    </ol>
+    <hr />
+    <form method="GET" action="http://www.youtube.com/">
+        <p>
+            <input type="submit"
+                   name="YouTube"
+                   value="YouTube" />
+        </p>
+    </form>
+    <hr />
+    <form id="form-1" method="get" action="http://localhost/echo.pl">
+        Please Supply Your Email Address:
+        <input id="adr" name="Address" type="text" size="45" />
+        <br />
+        <input type="image" src="ibutton.png" alt="Submit Button"
+               title="Click to submit form" />
+        <img id="btn" src="ibutton.png" alt="Submit Button"
+             title="Click to submit with JavaScript validation" />
+    </form>
+    <hr />
+    <form method="get" action="http://localhost/echo.pl">
+        <fieldset>
+            <legend>Toolbox</legend>
+            <label class="hilite">
+                Hammer
+                <input type="checkbox" name="Toolbox"
+                       value="Hammer" tabindex="2" checked />
+            </label>
+            <label>
+                Wrench
+                <input type="checkbox" name="Toolbox"
+                       value="Wrench" tabindex="3" />
+            </label>
+            <label class="hilite">
+                Screwdriver
+                <input type="checkbox" name="Toolbox"
+                       value="Screwdriver" tabindex="4" />
+            </label>
+            <label>
+                Ratchet
+                <input type="checkbox" name="Toolbox"
+                       value="Ratchet" tabindex="5" />
+            </label>
+            <label class="hilite">
+                Power Drill
+                <input type="checkbox" name="Toolbox"
+                       value="Power Drill" tabindex="6" />
+            </label>
+            <button type="submit" tabindex="1">
+                <img src="toolbox.png" />Submit
+            </button>
+        </fieldset>
+    </form>
+    <hr />
+    <footer>
+        <nav>
+            <a id="bottom" href="#top">Back to Top</a> |
+            <a href="mailto:jonnygrealish64@gmail.com">Send Email</a>
+        </nav>
+        <address>
+            742 Evergreen Terrace, Springfield
+        </address>
+        <small>&copy; 2023 hoff_jager</small>
+    </footer>
 </body>
 </html>
