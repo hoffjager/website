@@ -5,11 +5,11 @@
     <meta name="description" content="Blog and Photos for cute and funny animals" />
     <meta name="keywords" content="dogs, rosco, coco, drifter, birds, robin, finch" />
     <title>hoff_pets</title>
-    <!--<link rel="stylesheet" type="text/css" href="main.css"/>-->
+    <link rel="stylesheet" type="text/css" href="main.css"/>
     <!--JavaScript functionality to be added in the future-->
 </head>
-<body onload="alert('Web page currently being developed.')">
-    <!--Coco original photo: 4320px width x 3240px height-->
+<body id="pets" onload="alert('Web page currently being developed.')">
+    <!--coco_bear original photo dimensions: 4320px width x 3240px height-->
     <img src="images/coco_bear.jpg" alt="Coco the King Charles Spaniel" width="250" height="200" />
     <nav>
         <a id="top" href="index.html" title="Home Page!" accesskey="1">Home</a> |
@@ -19,30 +19,31 @@
         <a href="pets.html" title="Pets!" accesskey="5">Pets</a>
     </nav>
     <br />
-    <nav class="button">
+    <nav>
         <a href="index.html">
             <img src="images/index.png" alt="Home Page!" width="45" height="45" />
         </a>
         <a href="food.html">
-            <img src="images/food.png" alt="Food & Fitness!" width="50" height="50" />
+            <img src="images/food.png" alt="Food & Fitness!" width="45" height="45" />
         </a>
         <a href="games.html">
-            <img src="images/games.png" alt="Video Games!" width="55" height="55" />
+            <img src="images/games.png" alt="Video Games!" width="45" height="45" />
         </a>
         <a href="hamabeads.html">
-            <img src="images/hamabeads.png" alt="Arts & Crafts!" width="65" height="65" />
+            <img src="images/hamabeads.png" alt="Arts & Crafts!" width="45" height="45" />
         </a>
         <a href="pets.html">
-            <img src="images/pets.png" alt="Pets!" width="50" height="50" />
+            <img src="images/pets.png" alt="Pets!" width="45" height="45" />
         </a>
     </nav>
     <p>
-        Cute photos of pets coming soon to this web page. <br />
+        Cute photos of pets coming soon to this web page.
+        <br />
         I have a plethora on Google Photos, I would be delighted to organise my collection to commemorate the pets I have come to know and love :)
     </p>
     <hr />
     <!--Petsmap original photo: 2448px width x 3264px height-->
-    <img src="images/petsmap.jpg" alt="Pets Map" width="700" height="700" usemap="#doggos" />
+    <img src="images/petsmap.jpg" alt="Pets Map" width="480" height="480" usemap="#doggos" />
     <map name="doggos">
         <!--rect: top-left x, top-left y, bottom-right x, bottom-right y-->
         <area shape="rect" coords="0,0,200,500"
@@ -57,18 +58,19 @@
     </map>
     <hr />
     <p>
-        My wife had three wonderfully funny &amp; cute dogs, a Pomeranian, a King Charles Spaniel, and one other dog who was I believe, an Australian Cattle Dog &amp; Labrador Mix. <br />
+        My wife had three wonderfully funny &amp; cute dogs, a Pomeranian, a King Charles Spaniel, and one other dog who was I believe,
+        a magical Australian Cattle Dog &amp; Labrador Mix.
+        <br />
         Their names were Rosco, Coco &amp; Drifter :)
     </p>
     <hr />
     <main>
-        Main Area
-        <br />
         <section>
             <h2>Funny Doggo Stories</h2>
             <article>
                 <h3>Drifter</h3>
                 <p>Loved chicken nuggies</p>
+                <p>Especially loved cake :P</p>
             </article>
         </section>
         <section>
@@ -76,6 +78,13 @@
                 <h3>Coco</h3>
                 <p>Loved lying down in front of the toasty stove</p>
                 <p>Loved to bark (a lot)</p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h3>Rosco</h3>
+                <p>Loved to cook with us, he was our sous chef</p>
+                <p>Hated brooms and hairdryers :P</p>
             </article>
         </section>
     </main>
@@ -88,45 +97,37 @@
         </template>
     </table>
     <hr />
-    <form method="get" action="http://localhost/echo.pl">
-        <p>
-            Color: <input type="color" name="color" />
-            Range: <input type="range" name="range" min="1" max="10" />
-            Time: <input type="time" name="time" /> <br />
-            URL: <input type="url" name="url" size="54" required />
-        </p>
-        <textarea name="The Future Web" rows="8" cols="70">
-        </textarea>
-        <p>
-            <input type="submit" value="Submit" />
-        </p>
-    </form>
-    <hr />
-    <audio src="waa.m4a" autoplay>
-        [Fallback]
-    </audio>
-    <audio controls>
-        <source src="waa.m4a" type="audio/mpeg" />
-    </audio>
-    <hr />
-    <video controls="controls" width="480" height="480">
+    <video controls="controls" width="400" height="400">
         <source src="videos/rosco.mp4" type="video/mp4" />
         [Fallback]
     </video>
-    <video controls="controls" width="480" height="480">
+    <br />
+    <audio controls style="width: 400px">
+        <source src="audio/rosco.mp3" type="audio/mpeg" />
+        <source src="audio/rosco.ogg" type="audio/ogg" />
+    </audio>
+    <br />
+    <video controls="controls" width="400" height="400">
         <source src="videos/coco.mp4" type="video/mp4" />
         [Fallback]
     </video>
-    <video controls="controls" width="480" height="480">
+    <br />
+    <audio controls style="width: 400px">
+        <source src="audio/coco.mp3" type="audio/mpeg" />
+        <source src="audio/coco.ogg" type="audio/ogg" />
+    </audio>
+    <br />
+    <video controls="controls" width="400" height="400">
         <source src="videos/drifter.mp4" type="video/mp4" />
         [Fallback]
     </video>
-    <hr />
-    <audio id="snd">
-        <source src="audio.mp3" type="audio/mpeg" />
-        <source src="audio.ogg" type="audio/ogg" />
-        [Fallback]
+    <br />
+    <audio controls style="width: 400px">
+        <source src="audio/drifter.mp3" type="audio/mpeg" />
+        <source src="audio/drifter.ogg" type="audio/ogg" />
     </audio>
+    <br />
+    <hr />
     <img id="ctl" src="ctl.png" width="32"
          height="32" alt="control" />
     <progress id="bar" value="0"></progress>
@@ -183,6 +184,12 @@
     <footer>
         <a id="bottom" href="#top">Back to Top</a> |
         <a href="mailto:jonnygrealish64@gmail.com">Send Email</a>
+        <br />
+        <p>
+            Pets Custom Font = puppybelliesmedium;
+            Credit to Vanessa @ <a href="http://bythebutterfly.com/">By The Butterfly</a> |
+            <a href="mailto:bythebutterfly@gmail.com">Send Email</a>
+        </p>
     </footer>
 </body>
 </html>

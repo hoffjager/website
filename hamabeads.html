@@ -5,7 +5,7 @@
     <meta name="description" content="Blog and photos for hama bead creations" />
     <meta name="keywords" content="hama beads, arts & crafts" />
     <title>hoff_beads</title>
-    <!--<link rel="stylesheet" type="text/css" href="main.css"/>-->
+    <link rel="stylesheet" type="text/css" href="main.css"/>
     <!--JavaScript functionality to be added in the future-->
     <style type="text/css">
         h1 {
@@ -44,6 +44,21 @@
             <img src="images/pets.png" alt="Pets!" width="50" height="50" />
         </a>
     </nav>
+    <hr />
+    <form method="get" action="http://localhost/echo.pl">
+        <p>
+            Color: <input type="color" name="color" />
+            Range: <input type="range" name="range" min="1" max="10" />
+            Time: <input type="time" name="time" />
+            URL: <input type="url" name="url" size="54" required />
+        </p>
+        <textarea name="The Future Web" rows="8" cols="70">
+        </textarea>
+        <p>
+            <input type="submit" value="Submit" />
+        </p>
+    </form>
+    <hr />
     <h1 style="background-color: pink; color: darkblue;"> Hama Bead Creations Coming Soon </h1>
     <p style="color: darkgreen;">
         I have made many hama bead icons throughout the years, and I will be adding image tags to this web page in due course. <br />
