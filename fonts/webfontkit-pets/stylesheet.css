@@ -3,9 +3,9 @@
 
 @font-face {
     font-family: "puppybelliesmedium";
-    src: url(fonts/PuppyBellies.eot),
-    url(fonts/webfontkit/puppybellies-webfont.woff) format("woff"),
-    url(fonts/webfontkit/puppybellies-webfont.woff2) format("woff2"),
+    src: url(fonts/webfontkit-pets/PuppyBellies.eot),
+    url(fonts/webfontkit-pets/puppybellies-webfont.woff) format("woff"),
+    url(fonts/webfontkit-pets/puppybellies-webfont.woff2) format("woff2"),
     url("https://yoursite.com/css/fonts/puppybelliesmedium.otf") format("opentype"),
     url("https://yoursite.com/css/fonts/puppybelliesmedium.svg#filename") format("svg");
     font-weight: normal;

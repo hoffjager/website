@@ -9,8 +9,7 @@
     <!--JavaScript functionality to be added in the future-->
 </head>
 <body id="pets" onload="alert('Web page currently being developed.')">
-    <!--coco_bear original photo dimensions: 4320px width x 3240px height-->
-    <img src="images/coco_bear.jpg" alt="Coco the King Charles Spaniel" width="250" height="200" />
+    <h1>Pets Galore :)</h1>
     <nav>
         <a id="top" href="index.html" title="Home Page!" accesskey="1">Home</a> |
         <a href="food.html" title="Food & Fitness" accesskey="2">Food</a> |
@@ -37,33 +36,63 @@
         </a>
     </nav>
     <p>
-        Cute photos of pets coming soon to this web page.
+        My wife had three wonderfully funny and cute dogs.
         <br />
-        I have a plethora on Google Photos, I would be delighted to organise my collection to commemorate the pets I have come to know and love :)
+        Rosco the Pomeranian, Coco the King Charles Spaniel, and Drifter the Magical Australian Cattle Dog and Labrador Mix.
+        <br />
     </p>
     <hr />
-    <!--Petsmap original photo: 2448px width x 3264px height-->
-    <img src="images/petsmap.jpg" alt="Pets Map" width="480" height="480" usemap="#doggos" />
-    <map name="doggos">
+    <!--Rosco original photo: 899px width x 1600px height-->
+    <img src="images/rosco.jpg" alt="Rosco" width="400" height="400" usemap="#rosco" />
+    <map name="rosco">
         <!--rect: top-left x, top-left y, bottom-right x, bottom-right y-->
-        <area shape="rect" coords="0,0,200,500"
+        <area shape="rect" coords="200,200,200,200"
               href="rosco.html"
               alt="Rosco" title="Rosco the Pom Pom" />
-        <area shape="rect" coords="0,0,50,0"
+    </map>
+    <!--Coco original photo: 3024px width x 4032px height-->
+    <img src="images/coco.jpg" alt="Coco" width="400" height="400" usemap="#coco" />
+    <map name="coco">
+        <!--rect: top-left x, top-left y, bottom-right x, bottom-right y-->
+        <area shape="rect" coords="200,200,200,200"
               href="coco.html"
               alt="Coco" title="Coco the King Charles" />
-        <area shape="rect" coords="50,50,150,100"
+    </map>
+    <!--Drifter original photo: 3024px width x 4032px height-->
+    <img src="images/drifter.jpg" alt="Drifter" width="400" height="400" usemap="#drifter" />
+    <map name="coco">
+        <!--rect: top-left x, top-left y, bottom-right x, bottom-right y-->
+        <area shape="rect" coords="200,200,200,200"
               href="drifter.html"
-              alt="Drifter" title="Drifter the Magical Dog" />
+              alt="Drifter" title="Drifter the Magical Doggo" />
     </map>
     <hr />
-    <p>
-        My wife had three wonderfully funny &amp; cute dogs, a Pomeranian, a King Charles Spaniel, and one other dog who was I believe,
-        a magical Australian Cattle Dog &amp; Labrador Mix.
-        <br />
-        Their names were Rosco, Coco &amp; Drifter :)
-    </p>
-    <hr />
+    <video controls="controls" width="400" height="400">
+        <source src="videos/rosco.mp4" type="video/mp4" />
+        [Fallback]
+    </video>
+    <video controls="controls" width="400" height="400">
+        <source src="videos/coco.mp4" type="video/mp4" />
+        [Fallback]
+    </video>
+    <video controls="controls" width="400" height="400">
+        <source src="videos/drifter.mp4" type="video/mp4" />
+        [Fallback]
+    </video>
+    <br />
+    <audio controls style="width: 400px">
+        <source src="audio/rosco.mp3" type="audio/mpeg" />
+        <source src="audio/rosco.ogg" type="audio/ogg" />
+    </audio>
+    <audio controls style="width: 400px">
+        <source src="audio/coco.mp3" type="audio/mpeg" />
+        <source src="audio/coco.ogg" type="audio/ogg" />
+    </audio>
+    <audio controls style="width: 400px">
+        <source src="audio/drifter.mp3" type="audio/mpeg" />
+        <source src="audio/drifter.ogg" type="audio/ogg" />
+    </audio>
+    <br />
     <main>
         <section>
             <h2>Funny Doggo Stories</h2>
@@ -88,73 +117,6 @@
             </article>
         </section>
     </main>
-    <hr />
-    <table>
-        <caption>High Performance Cars</caption>
-        <tr><th>Make<th>Model<th>BHP</tr>
-        <template id="row">
-            <tr><td><td><td></tr>
-        </template>
-    </table>
-    <hr />
-    <video controls="controls" width="400" height="400">
-        <source src="videos/rosco.mp4" type="video/mp4" />
-        [Fallback]
-    </video>
-    <br />
-    <audio controls style="width: 400px">
-        <source src="audio/rosco.mp3" type="audio/mpeg" />
-        <source src="audio/rosco.ogg" type="audio/ogg" />
-    </audio>
-    <br />
-    <video controls="controls" width="400" height="400">
-        <source src="videos/coco.mp4" type="video/mp4" />
-        [Fallback]
-    </video>
-    <br />
-    <audio controls style="width: 400px">
-        <source src="audio/coco.mp3" type="audio/mpeg" />
-        <source src="audio/coco.ogg" type="audio/ogg" />
-    </audio>
-    <br />
-    <video controls="controls" width="400" height="400">
-        <source src="videos/drifter.mp4" type="video/mp4" />
-        [Fallback]
-    </video>
-    <br />
-    <audio controls style="width: 400px">
-        <source src="audio/drifter.mp3" type="audio/mpeg" />
-        <source src="audio/drifter.ogg" type="audio/ogg" />
-    </audio>
-    <br />
-    <hr />
-    <img id="ctl" src="ctl.png" width="32"
-         height="32" alt="control" />
-    <progress id="bar" value="0"></progress>
-    <span id="num">[Audio]</span>
-    <hr />
-    <div id="wrapper">
-        <div id="hdr">
-            Header Panel<br>
-            <img src="images/tile.png" width="250" height="25" alt="Box">
-        </div>
-        <div id="nav">
-            Navigation Panel
-            <ul>
-                <li>Link</li>
-                <li>Link</li>
-            </ul>
-        </div>
-        <div id="ads">
-            Supplement Panel<br>
-            <img src="images/tile.png" width="75" height="100" alt="Box">
-        </div>
-        <div id="txt">
-            Content Panel<br>
-            <img src="images/tile.png" width="150" height="200" alt="Box">
-        </div>
-    </div>
-    <div id="ftr">Footer Panel</div>
     <hr />
     <p>
         This 12pt high text can become

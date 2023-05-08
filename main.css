@@ -21,10 +21,9 @@ a:focus {
     Credit to Vanessa @ BYTHEBUTTERFLY@GMAIL.COM
 */
 @font-face {
-    font-family: "puppybelliesmedium";
-    src: url(fonts/webfontkit/puppybellies-webfont.woff);
+    font-family: 'puppybelliesmedium';
+    src: url(fonts/webfontkit-pets/puppybellies-webfont.woff);
 }
-
 *#pets {
     font-family: puppybelliesmedium, Arial, sans-serif;
 }
