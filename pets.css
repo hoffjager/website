@@ -26,7 +26,7 @@ a {
 */
 @font-face {
     font-family: 'puppybelliesmedium';
-    src: url(fonts/webfontkit-pets/puppybellies-webfont.woff);
+    src: url(webfontkit-pets/puppybellies-webfont.woff);
 }
 
 *#pets {
