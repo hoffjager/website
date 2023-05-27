@@ -22,7 +22,8 @@ a {
 
 /*
     Food Custom Font: choco_chiciscript;
-    Credit to https://www.fontspace.com/choco-chici-font-f78972
+    Credit to BasniBee @ https://www.fontspace.com/choco-chici-font-f78972
+    Contact BasniBee @ bery.arisandi@basnistudio.com
 */
 @font-face {
     font-family: 'choco_chiciscript';
@@ -34,8 +35,6 @@ a {
 *#food {
     font-family: choco_chiciscript, Arial, sans-serif;
 }
-
-/* More Custom Fonts to be added asap */
 
 /*
 div {

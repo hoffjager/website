@@ -21,19 +21,19 @@ a {
     }
 
 /*
-    Pets Custom Font: puppybelliesmedium;
-    Credit to Vanessa @ BYTHEBUTTERFLY@GMAIL.COM
+    Hama Beads Custom Font: cream_sugarregular;
+    Credit to Mozarella @ https://www.fontspace.com/cream-sugar-font-f83512 mailto:mozatype.std@gmail.com
 */
 @font-face {
-    font-family: 'puppybelliesmedium';
-    src: url(fonts/webfontkit-pets/puppybellies-webfont.woff);
+    font-family: 'cream_sugarregular';
+    src: url(../webfontkit-hamabeads/CreamSugar-MVRpw.otf);
+    src: url(../webfontkit-hamabeads/creamsugar-mvrpw-webfont.woff);
+    src: url(../webfontkit-hamabeads/creamsugar-mvrpw-webfont.woff2);
 }
 
-*#pets {
-    font-family: puppybelliesmedium, Arial, sans-serif;
+*#hamabeads {
+    font-family: cream_sugarregular, Arial, sans-serif;
 }
-
-/* More Custom Fonts to be added asap */
 
 /*
 div {
