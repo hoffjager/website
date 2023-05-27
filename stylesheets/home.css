@@ -1,8 +1,9 @@
 ﻿/* Hyperlink States */
 a {
-    text-decoration: underline;
+    text-decoration: none;
     color: navy;
 }
+/*
 a:hover {
     font-weight: bold;
 }
@@ -15,6 +16,7 @@ a:visited {
 a:focus {
     color: black;
 }
+*/
 
 /*
     Home Custom Font: rengard_freeregular;

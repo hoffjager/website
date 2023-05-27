@@ -1,29 +1,30 @@
 ﻿/* Hyperlink States */
 a {
-    text-decoration: underline;
+    text-decoration: none;
     color: navy;
 }
+/*
+a:hover {
+    font-weight: bold;
+}
 
-    a:hover {
-        font-weight: bold;
-    }
+a:active {
+    color: red;
+}
 
-    a:active {
-        color: red;
-    }
+a:visited {
+    color: purple;
+}
 
-    a:visited {
-        color: purple;
-    }
-
-    a:focus {
-        color: black;
-    }
-
+a:focus {
+    color: black;
+}
+*/
 /*
     Otaku Custom Font: okashiregular;
     Credit to Wakraz @ https://www.fontspace.com/okashi-font-f41025 http://www.shapedfonts.com/okashi
 */
+
 @font-face {
     font-family: 'okashiregular';
     src: url(../webfontkit-otaku/OkashiRegular-L33Z3.ttf);

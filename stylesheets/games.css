@@ -1,24 +1,25 @@
 ﻿/* Hyperlink States */
 a {
-    text-decoration: underline;
+    text-decoration: none;
     color: navy;
 }
+/*
+a:hover {
+    font-weight: bold;
+}
 
-    a:hover {
-        font-weight: bold;
-    }
+a:active {
+    color: red;
+}
 
-    a:active {
-        color: red;
-    }
+a:visited {
+    color: purple;
+}
 
-    a:visited {
-        color: purple;
-    }
-
-    a:focus {
-        color: black;
-    }
+a:focus {
+    color: black;
+}
+*/
 
 /*
     Games Custom Font: emotion_engineregular;
