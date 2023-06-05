@@ -1,0 +1,173 @@
+TAGS:
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta />
+	<title></title>
+	<link />
+	<script></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a>
+				<img />
+		</nav>
+
+	</header>
+	<hr />
+	<br />
+	<p></p>
+		<sub></sub>	displays subscript text
+		<sup></sup>	displays superscript text
+		<var></var>	displays a variable 
+		<samp></samp>	displays sample output from a program
+		<data></data>	displays machine-readable code
+		<time></time>	displays machine-readable time
+		<pre></pre>	displays pre-formatted text
+		<code></code>	displays fragment of computer code
+
+	<h1></h1>
+	<section>
+	<article>
+		<h2></h2>
+		<p></p>
+	</article>
+	</section>
+
+	<ol>
+		<li>
+	</ol>
+
+	<ul>
+		<li>
+	</ul>
+
+	<form>
+		<p>
+			<input />
+		</p>
+	</form>
+
+	<form>
+		<fieldset>			represents a set of form controls 
+			<legend></legend>
+		<label>
+			<input />
+		</label>
+		<button>
+			<img />
+		</button>
+		</fieldset>
+		<textarea></textarea>	     a multi-line plain text edit control
+	</form>
+	<figure>
+		<img />
+		<figcaption></figcaption>
+	</figure>
+	<object>				represents external resource
+		<param />			represents parameters
+	</object>
+	<div></div>
+	<p>
+		<span></span>
+	</p>
+
+	<dl>					represents description list
+		<dt>				represents description term
+			<dfn></dfn>		instance of definition
+		</dt>			
+		<dd></dd>			represents description definition
+	</dl>
+
+	<table>
+		<caption></caption>		represents table's title
+		<thead>				represents column's titles
+			<tr>				represents table row
+				<td></td>		represents table data cell
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>				represents table row
+				<td></td>		represents table data cell
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>				represents table row
+				<td></td>		represents table data cell
+			</tr>
+		</tbody>
+	</table>
+	
+	<colgroup></colgroup>
+
+	<picture>		container with multiple sources for img's
+		<source />
+		<source />
+		<img />
+	</picture>
+	
+	<embed />		external non-HTML application	
+
+	<ruby>			East Asian annotation & pronunciation of phrases
+		<rb></rb>	
+		<rp></rp>	fallback text such as ()
+		<rt></rt>	represents ruby text component of annotation
+		<rp></rp>	fallback text such as ()
+		<rtc></rtc>	represents ruby text container for components
+	</ruby>
+
+	<blockquote>		content quoted from another source
+		<q></q>		phrasing content quoted from another source
+	</blockquote>
+
+	<strong></strong>	represents importance/urgency of text
+	<em></em>		represents stress emphasis of text
+	<wbr />			represents a line break opportunity
+	<s></s>			represents a strikethrough line on text
+	<mark></mark>		highlights a block of text
+	<u></u>			span of text with annotation (underline)
+	<abbr></abbr>		abbreviation or acronym
+	<cite></cite>		cites a reference from another source
+	<kbd></kbd>		user keyboard input
+	<aside></aside>		represents a sidebar to an article
+
+	<select>			represents a control for selecting options
+		<optgroup>		group of option elements with a common label
+			<option>	option in a select element
+		</optgroup>
+	</select>	
+
+	<datalist>		set of option elements with options for controls
+		<option>
+	</datalist>
+
+	<template></template>	declares HTML fragments to re-use by script
+	<del></del>		represents a removal from the document
+	<ins></ins>		represents an insert into the document
+	<output></output>	represents the result of calculation or user action
+	<iframe></iframe>	nested browsing context
+	<map>			image map (with img and area tags)
+		<area />	hyperlink with text & area on image map
+	</map>		
+	<video>			playing video files & audio files with captions
+		<source />
+	</video>
+	<audio>			playing sound or audio stream
+		<source />
+	</audio>
+	
+	<main></main>		main content of the body tag
+	
+
+<footer>
+	<p>
+		<a></a>
+	</p>
+	<address></address>	represents contact information.
+	<small></small>		represents side content such as fine print.
+</footer>
+
+	
+
+</body>
