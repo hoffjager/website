@@ -11,52 +11,56 @@
     <!--JavaScript functionality to be added in the future-->
     <!--<script></script>-->
 </head>
-<body id="home" onload="alert('Web page currently being developed.')">
+<body onload="alert('Web page currently being developed.')">
     <main>
         <header>
-            <nav>
+            <nav id="topnav">
                 <a id="top" href="home.html" target="_blank" title="Home Page!" accesskey="1">
-                    <img src="images/home.png" alt="Home Page!" width="45" height="45" />
+                    <img id="home" src="images/home.png" alt="Home Page!" width="50" height="50" />
                 </a>
                 &nbsp;
                 <a href="food.html" target="_blank" title="Food & Fitness!" accesskey="2">
-                    <img src="images/ramen.png" alt="Food & Fitness!" width="50" height="50" />
+                    <img id="food" src="images/ramen.png" alt="Food & Fitness!" width="50" height="50" />
                 </a>
                 &nbsp;
                 <a href="games.html" target="_blank" title="Video Games!" accesskey="3">
-                    <img src="images/controller.png" alt="Video Games!" width="55" height="55" />
+                    <img id="games" src="images/controller.png" alt="Video Games!" width="50" height="50" />
                 </a>
                 &nbsp;
                 <a href="hamabeads.html" target="_blank" title="Arts & Crafts!" accesskey="4">
-                    <img src="images/logo.png" alt="Arts & Crafts!" width="65" height="65" />
+                    <img id="hamabeads" src="images/logo.png" alt="Arts & Crafts!" width="50" height="50" />
                 </a>
                 &nbsp;
                 <a href="music.html" target="_blank" title="Music!" accesskey="5">
-                    <img src="images/note.jpg" alt="Music!" width="65" height="65" />
+                    <img id="music" src="images/note.jpg" alt="Music!" width="50" height="50" />
                 </a>
                 &nbsp;
                 <a href="otaku.html" target="_blank" title="Otaku!" accesskey="6">
-                    <img src="images/chill.jpg" alt="Otaku!" width="65" height="65" />
+                    <img id="otaku" src="images/chill.jpg" alt="Otaku!" width="50" height="50" />
                 </a>
                 &nbsp;
                 <a href="pets.html" target="_blank" title="Pets!" accesskey="7">
-                    <img src="images/heart.png" alt="Pets!" width="50" height="50" />
+                    <img id="pets" src="images/heart.png" alt="Pets!" width="50" height="50" />
                 </a>
                 &nbsp;
                 <a href="tv.html" target="_blank" title="TV & Movies!" accesskey="8">
-                    <img src="images/oldtimey.png" alt="TV & Movies!" width="65" height="65" />
+                    <img id="tv" src="images/oldtimey.png" alt="TV & Movies!" width="50" height="50" />
                 </a>
             </nav>
         </header>
         <hr />
         <h1>Overview</h1>
         <section>
-            <p>
-                On this website, I will be building several web pages with my life interests, such as video gaming, pets and hama bead arts &amp; crafts.
-            </p>
+            <article id="overview">
+                On this website, I will be building several web pages with my life interests.
+                <br />
+                These interests can be found in the navigation bar above with a link to each.
+                <br />
+                Links to my Gmail, GitHub and LinkedIn are accessible at the footer of the page.
+            </article>
             <hr />
             <h2>Professional Profile</h2>
-            <article>
+            <article id="profile">
                 I have recently completed a certification in HTML &amp; CSS and I wanted to showcase my newly acquired skills to potential employers.
                 <br />
                 I am currently studying JavaScript to add to the HTML &amp; CSS certification above.
@@ -67,20 +71,109 @@
             </article>
         </section>
         <hr />
-        <footer>
-            <p>
-                Home Custom Font = rengard_freeregular
+        <section>
+            <h2>Cars</h2>
+            <article id="cars">
+                Here I would like to display both cars I have purchased.
                 <br />
-                Credit to nazzars @ Craft Supply Co. |
-                <a href="https://www.fontspace.com/rengard-font-f96099">nazzars</a> |
-                <a href="mailto:bythebutterfly@gmail.com">Contact</a>
+                <img src="images/yaris.jpg" alt="Toyota Yaris!" width="300" height="300" />
+                <p id="yaris">
+                    I never had an avid interest in driving from a young age, mainly due to the cost of purchasing a car, as well as regularly maintaining it with insurance costs etc just was not feasible for me.
+                    <br />
+                    Once I dug in and got driving lessons and passed the test, my brother found this lovely starter car for me!
+                    <br />
+                    A bargain at €500, this Toyota Yaris came with a 1L engine so the tax was very affordable as were the insurance costs.
+                </p>
+                <br />
+                <img src="images/hondafit.jpg" alt="Honda Fit!" width="300" height="300" />
+                <p id="hondafit">
+                    After 2 years of driving, I could take those Novice stickers off my Yaris!
+                    <br />
+                    But I wanted to reward myself by upgrading from my reliable Yaris to a more eco-friendly model.
+                    <br />
+                    Here we have the Honda Fit, imported from Japan (also known as the Honda Jazz in Europe).
+                    <br />
+                    My brother and I decided to take this for a test drive down in Ennis, and one aspect about the car that excited me was the automatic transmission.
+                    <br />
+                    I also was interested to learn more about the self-charging hybrid aspect of the Honda Fit, as I felt more eco-friendly cars were appearing around Ireland
+                    and I wanted to sample the technology for myself.
+                    <br />
+                    I found it to be fantastic, the automatic transmission made accelerating so smooth, so seamless compared to manual transmission.
+                    I gently push down on the accelerator and the electric motor would move my car forward, as opposed to firmly pushing down which activates the internal combustion engine (ICE).
+                    I noticed I have saved quite a chunk of cash on topping up my fuel, I am mindful of how I drive and use of the electric motor requires less fuel to consume compared to traditional means.
+                </p>
+            </article>
+            <!--
+    <table>
+        <caption>Car Specs of Yaris &amp; Fit</caption>
+        <thead>
+            <tr>
+                <td></td>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td></td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    -->
+        </section>
+        <hr />
+        <h2>Holidays</h2>
+        <section>
+            <article id="holidays">
+                Here are all the holiday destinations I have been to in my life:
+                <br />
+                Manchester 2008 &amp; 2009
+                <br />
+                New York City &amp; Boston 2010
+                <br />
+                Edinburgh 2010 &amp; 2013
+                <br />
+                Barcelona 2010
+                <br />
+                Dingle 2011
+                <br />
+                Salou 2014
+                <br />
+                Munich 2016
+                <br />
+                Paris 2017
+                <br />
+                Athlone 2018
+                <br />
+                Croatia 2023
+            </article>
+            <p>
+                Photos and more information to be posted on each destination at a later date!
             </p>
+        </section>
+        <footer>
             <hr />
-            <a id="bottom" href="#top">Back to Top</a> |
-            <a href="mailto:jonnygrealish64@gmail.com">Email</a> |
-            <a href="http://github.com/hoffjager">Github</a> |
-            <a href="http://linkedin.com/ie/jonnygrealish64">LinkedIn</a>
-            <br />
+            <nav id="bottomnav">
+                <a id="bottom" href="#top" title="Top of Page!" accesskey="9">
+                    <img src="images/upwardarrow.jpg" alt="Upward Arrow!" width="30" height="30" />
+                </a>
+                &nbsp;
+                <a href="mailto:jonnygrealish64@gmail.com" target="_blank" title="My Email!" accesskey="10">
+                    <img src="images/gmaillogo.png" alt="Gmail Logo!" width="30" height="30" />
+                </a>
+                &nbsp;
+                <a href="http://github.com/hoffjager" target="_blank" title="My Github!" accesskey="11">
+                    <img src="images/githublogo.png" alt="Github Logo!" width="30" height="30" />
+                </a>
+                &nbsp;
+                <a href="http://linkedin.com/ie/jonnygrealish64" target="_blank" title="My LinkedIn!" accesskey="12">
+                    <img src="images/linkedinlogo.jfif" alt="LinkedIn Logo!" width="30" height="30" />
+                </a>
+            </nav>
+            <hr />
             <address>
                 742 Evergreen Terrace, Springfield, US &amp; A
             </address>

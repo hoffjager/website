@@ -1,38 +1,94 @@
-﻿/* Hyperlink States */
-a {
+﻿/* Main Body */
+body
+{
+    background-color: black;
+    color: white;
+}
+
+/* Navigation Bars */
+nav#topnav
+{
+    background-color: silver;
+    color: black;
+}
+nav#bottomnav
+{
+    background-color: silver;
+    color: black;
+}
+
+/* Headings */
+h1
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    color: darkred;
+}
+h2
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    color: darkred;
+}
+
+/* Hyperlink States */
+a
+{
     text-decoration: none;
     color: navy;
 }
-/*
-a:hover {
+a:hover
+{
     font-weight: bold;
 }
-a:active {
+a:active
+{
     color: red;
 }
-a:visited {
+a:visited
+{
     color: purple;
 }
-a:focus {
-    color: black;
-}
-*/
-
-/*
-    Home Custom Font: rengard_freeregular;
-    Credit to nazzars @ Craft Supply Co: https://www.fontspace.com/rengard-font-f96099 https://paypal.me/nazzars
-*/
-@font-face {
-    font-family: 'rengard_freeregular';
-    src: url(../webfontkit-home/RengardfreeRegular-JR3MB-webfont.otf);
-    src: url(../webfontkit-home/rengardfreeregular-jr3mb-webfont.woff);
-    src: url(../webfontkit-home/rengardfreeregular-jr3mb-webfont.woff2);
-}
-*#home {
-    font-family: rengard_freeregular, Arial, sans-serif;
-    font-weight: bold;
+a:focus
+{
+    color: deeppink;
 }
 
+/* Overview */
+article#overview
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    color: silver;
+}
+/* Professional Profile */
+article#profile
+{    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-style: italic;
+    color: pink;
+}
+/* Cars */
+article#cars
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p#yaris
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+}
+p#hondafit
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+article#holidays
+{
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
 /*
 div {
     width: 50%;
