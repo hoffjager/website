@@ -1,29 +1,47 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-	<meta />
-	<title>HTML Tags</title>
-	<link />
-	<script></script>
-</head>
-<body>
-	<main>
-		<header>
-			<nav>
-				<a>
-					<img />
-				</a>
-			</nav>
-		</header>
-	<hr />
-	<br />
-	<h1></h1>
-		<section>				defines specific section
-			<article>			defines article(s) in specific section
-				<p></p>			defines paragraph of text
-			</article>
-		</section>
-	<h2></h2>
+<!DOCTYPE HTML>					v
+<html>							v
+<head>							v
+	<meta />					v
+	<title>HTML Tags</title>	v
+	<link />					v
+	<script></script>			
+</head>							v
+<body>							v
+	<main>						v
+		<header>				v
+			<nav>				v
+				<a>				v
+					<img />		v
+				</a>			v
+			</nav>				v
+		</header>				v
+	<hr />						v
+	<br />						v
+	<h1></h1>					v
+		<section>				v
+			<article>			v
+				<p></p>			v
+			</article>			v
+		</section>				v
+	<h2></h2>					v
+	<table>
+		<caption></caption>		represents table's title
+		<thead>					represents column's titles
+			<tr>				represents table row
+				<td></td>		represents table data cell
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>				represents table row
+				<td></td>		represents table data cell
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>				represents table row
+				<td></td>		represents table data cell
+			</tr>
+		</tbody>
+	</table>
 	<ol>						displays ordered lists
 		<li>
 	</ol>
@@ -53,24 +71,6 @@
 	<map>					   image map (with img and area tags)
 		<area />			   hyperlink with text & area on image map
 	</map>
-	<table>
-		<caption></caption>		represents table's title
-		<thead>					represents column's titles
-			<tr>				represents table row
-				<td></td>		represents table data cell
-			</tr>
-		</thead>
-		<tfoot>
-			<tr>				represents table row
-				<td></td>		represents table data cell
-			</tr>
-		</tfoot>
-		<tbody>
-			<tr>				represents table row
-				<td></td>		represents table data cell
-			</tr>
-		</tbody>
-	</table>
 	<dl>					   represents description list
 	<dt>					   represents description term
 		<dfn></dfn>		       instance of definition

@@ -89,6 +89,34 @@ article#holidays
 {
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
 }
+
+/* Car Table */
+table#carinfo > caption
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border: 1px solid white;
+    border-width: thin;
+}
+table#carinfo > thead
+{
+    background-color: aqua;
+}
+table#carinfo > tr, td
+{
+    width: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid white;
+}
+table#carinfo > tbody
+{
+    background-color: aqua;
+}
+table#carinfo > tfoot
+{
+    background-color: forestgreen;
+}
+
 /*
 div {
     width: 50%;
