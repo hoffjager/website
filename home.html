@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="description" content="Professional Profile" />
     <meta name="keywords" content="interests, career, experiences" />
-    <meta name="author" content="Jonathon Grealish" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hoff_home</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/home.css" />
@@ -68,6 +67,32 @@
                 I have also completed a Higher Diploma in Data Analytics at Atlantic Technological University (ATU) Galway.
                 <br />
                 It contained many interesting modules to study, but I found that Web Application Development and Applied Databases were the modules I wished to further learn about.
+                <dl>
+                    <dt>
+                        <dfn></dfn>
+                    </dt>
+                    <dd></dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <dfn>HTML:</dfn>
+                    </dt>
+                    <dd>
+                        Hyper Text Markup Language (HTML) is a programming language that allows web designers to implement textual content in their web pages.
+                    </dd>
+                    <dt>
+                        <dfn>CSS:</dfn>
+                    </dt>
+                    <dd>
+                        Cascading Style Sheets (CSS) is a programming language that allows web designers to implement various styles on HTML elements in their web pages.
+                    </dd>
+                    <dt>
+                        <dfn>JavaScript:</dfn>
+                    </dt>
+                    <dd>
+                        JavaScript (js) is a programming language that allows web designers to implement functions in their web pages.
+                    </dd>
+                </dl>
             </article>
         </section>
         <hr />
@@ -86,6 +111,9 @@
                 </p>
                 <br />
                 <img src="images/hondafit.jpg" alt="Honda Fit!" width="300" height="300" />
+                <object data="videos/fit.mp4" width="300" height="300">
+                    <param name="autoplay" value="true" />
+                </object>
                 <p id="hondafit">
                     After 2 years of driving, I could take those Novice stickers off my Yaris!
                     <br />
@@ -102,8 +130,16 @@
                     I gently push down on the accelerator and the electric motor would move my car forward, as opposed to firmly pushing down which activates the internal combustion engine (ICE).
                     I noticed I have saved quite a chunk of cash on topping up my fuel, I am mindful of how I drive and use of the electric motor requires less fuel to consume compared to traditional means.
                 </p>
+                <video controls width="400" height="400">
+                    <source src="videos/fit.mp4" type="video/mp4" />
+                </video>
             </article>
+            <iframe src="https://en.wikipedia.org/wiki/Honda_Fit" title="Honda Fit" width="480" height="480">
+            </iframe>
             <table id="carinfo">
+                <caption>
+                    Comparing Toyota Yaris &amp; Honda Fit
+                </caption>
                 <thead>
                     <tr>
                         <td>Yaris</td>
@@ -118,13 +154,10 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>Silver</td>
+                        <td>Black</td>
                     </tr>
                 </tfoot>
-                <caption>
-                    Information about Toyota Yaris &amp; Honda Fit
-                </caption>
             </table>
         </section>
         <hr />
@@ -133,25 +166,31 @@
             <article id="holidays">
                 Here are all the holiday destinations I have been to in my life:
                 <br />
-                Manchester 2008 &amp; 2009
-                <br />
-                New York City &amp; Boston 2010
-                <br />
-                Edinburgh 2010 &amp; 2013
-                <br />
-                Barcelona 2010
-                <br />
-                Dingle 2011
-                <br />
-                Salou 2014
-                <br />
-                Munich 2016
-                <br />
-                Paris 2017
-                <br />
-                Athlone 2018
-                <br />
-                Croatia 2023
+                <ol>
+                    <li>Manchester 2008 &amp; 2009</li>
+                    <li>New York City &amp; Boston 2010</li>
+                    <li>Edinburgh 2010 &amp; 2013</li>
+                    <li>Barcelona 2010</li>
+                    <li>Dingle 2011</li>
+                    <li>Salou 2014</li>
+                    <li>Munich 2016</li>
+                    <li>Paris 2017</li>
+                    <li>Athlone 2018</li>
+                    <li>Croatia 2023</li>
+                </ol>
+                <audio controls width="400">
+                    <source src="audio/croatia.mp3" type="audio/mp3" />
+                    <source src="audio/croatia.ogg" type="audio/ogg" />
+                </audio>
+                <picture>
+                    <source media="(min-width:600px)" srcset="images/papuk.jpg" height="480" width="360" />
+                    <source media="(min-width:600px)" srcset="images/papuk2.jpg" height="480" width="360" />
+                    <img src="images/papuk3.jpg" height="480" width="360" />
+                </picture>
+                <figure>
+                    <img src="images/paris.jpg" height="360" width="360"/>
+                    <figcaption>Bird's Eye View from the Eiffel Tower</figcaption>
+                </figure>
             </article>
             <aside>
                 Photos and more information to be posted on each destination at a later date!
@@ -163,18 +202,117 @@
             <article id="charity">
                 This article will outline charity work I have participated in with numerous charities who do wonderful work in matters that are important to me.
                 <br />
-                Trocaire
+                <img src="images/charity.png" usemap="#charities" width="500" height="500" alt="Charities!">
+                <map name="charities">
+                    <area shape="rect" coords="34,44,270,350" href="https://www.specialeffect.org.uk/" alt="SpecialEffect!">
+                    <area shape="rect" coords="290,172,333,250" href="https://www.cancer.ie/" alt="Irish Cancer Society!">
+                    <area shape="circle" coords="337,300,44" href="https://www.aware.ie/" alt="Aware!">
+                </map>
+                <ol>
+                    <li>Trocaire</li>
+                    <li>Aware</li>
+                    <li>Irish Cancer Society</li>
+                    <li>SpecialEffect</li>
+                </ol>
+                <ul>
+                    <li>2005-2007</li>
+                    <li>2010</li>
+                    <li>2014</li>
+                    <li>2017</li>
+                </ul>
+                <embed type="image/jpg" src="https://oxfordshire.org/wp-content/uploads/2014/11/Special-Effect-logo.jpg" width="200" height="200">
+                <form action="stuff.php" method="post">
+                    <fieldset>
+                        <legend>
+                            Personal Information:
+                        </legend>
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" />
+                        <br /><br />
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" />
+                        <br /><br />
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" />
+                        <br /><br />
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" />
+                        <br /><br />
+                        <label for="birthday">Birthday:</label>
+                        <input type="date" id="birthday" name="birthday" />
+                        <br /><br />
+                        <textarea>
+                        </textarea>
+                        <br /><br />
+                        <input type="submit" value="Submit" />
+                        <button>
+                            <img src="images/redbutton.jfif" width="30" height="11" alt="Big Red Button!" />
+                        </button>
+                    </fieldset>
+                </form>
+                <hr />
+                <label for="skills">Choose Skills:</label>
                 <br />
-                Aware
+                <select name="skills" id="skills">
+                    <optgroup label="Front-End Programming">
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="SQL">SQL</option>
+                    </optgroup>
+                    <optgroup label="Back-End Programming">
+                        <option value="PHP">PHP</option>
+                        <option value="jQuery">jQuery</option>
+                    </optgroup>
+                </select>
                 <br />
-                Irish Cancer Society
+                <label for="ice-cream">Choose an Ice Cream:</label>
                 <br />
-                SpecialEffect
-                <br />
+                <input list="ice-cream-flavours" id="ice-cream" name="ice-cream" />
+                <datalist id="ice-cream-flavours">
+                    <option value="Vanilla">
+                    <option value="Strawberry">
+                    <option value="Chocolate">
+                    <option value="Mint Choc Chip">
+                    <option value="Raspberry Ripple">
+                </datalist>
             </article>
+            <hr />
             <aside>
                 Photos and more information to be posted on each charity at a later date!
             </aside>
+            <!--     
+            Final HTML tags to be implemented into the page soon.
+    <div>
+        <strong></strong>		   represents importance/urgency of text
+        <em></em>				   represents stress emphasis of text
+        <wbr />					   represents a line break opportunity
+        <s></s>					   represents a strikethrough line on text
+        <mark></mark>			   highlights a block of text
+        <u></u>					   span of text with annotation (underline)
+        <abbr></abbr>			   abbreviation or acronym
+        <cite></cite>			   cites a reference from another source
+        <kbd></kbd>				   user keyboard input
+        <aside></aside>			   represents a sidebar to an article
+        <template></template>	   declares HTML fragments to re-use by script
+        <del></del>				   represents a removal from the document
+        <ins></ins>				   represents an insert into the document
+        <output></output>		   represents the result of calculation or user action
+        <span></span>			   represents an emphasized phrase
+        <sub></sub>				   displays subscript text
+        <sup></sup>				   displays superscript text
+        <var></var>				   displays a variable
+        <samp></samp>			   displays sample output from a program
+        <data></data>			   displays machine-readable code
+        <time></time>			   displays machine-readable time
+        <pre></pre>				   displays pre-formatted text
+        <code></code>			   displays fragment of computer code
+        <colgroup></colgroup>
+        <blockquote>               content quoted from another source
+            <q></q>				   phrasing content quoted from another source
+        </blockquote>
+    </div>
+            -->
         </section>
         <footer>
             <hr />
@@ -183,15 +321,19 @@
                     <img src="images/upwardarrow.jpg" alt="Upward Arrow!" width="30" height="30" />
                 </a>
                 &nbsp;
-                <a href="mailto:jonnygrealish64@gmail.com" target="_blank" title="My Email!" accesskey="10">
+                <a href="https://www.wix.com/" target="_blank" title="Wix!" accesskey="10">
+                    <img src="images/wixlogo.png" alt="Wix Logo!" width="30" height="30" />
+                </a>
+                &nbsp;
+                <a href="mailto:jonnygrealish64@gmail.com" target="_blank" title="My Email!" accesskey="11">
                     <img src="images/gmaillogo.png" alt="Gmail Logo!" width="30" height="30" />
                 </a>
                 &nbsp;
-                <a href="http://github.com/hoffjager" target="_blank" title="My Github!" accesskey="11">
+                <a href="http://github.com/hoffjager" target="_blank" title="My Github!" accesskey="12">
                     <img src="images/githublogo.png" alt="Github Logo!" width="30" height="30" />
                 </a>
                 &nbsp;
-                <a href="http://linkedin.com/ie/jonnygrealish64" target="_blank" title="My LinkedIn!" accesskey="12">
+                <a href="http://linkedin.com/ie/jonnygrealish64" target="_blank" title="My LinkedIn!" accesskey="13">
                     <img src="images/linkedinlogo.jfif" alt="LinkedIn Logo!" width="30" height="30" />
                 </a>
             </nav>

@@ -24,79 +24,79 @@
 			</article>			v
 		</section>				v
 	<h2></h2>					v
-	<table>
-		<caption></caption>		represents table's title
-		<thead>					represents column's titles
-			<tr>				represents table row
-				<td></td>		represents table data cell
-			</tr>
-		</thead>
-		<tfoot>
-			<tr>				represents table row
-				<td></td>		represents table data cell
-			</tr>
-		</tfoot>
-		<tbody>
-			<tr>				represents table row
-				<td></td>		represents table data cell
-			</tr>
-		</tbody>
-	</table>
-	<ol>						displays ordered lists
-		<li>
-	</ol>
-	<ul>						displays unordered lists
-		<li>
-	</ul>
-	<video>						playing video files & audio files with captions
-		<source />
-	</video>
-	<audio>						playing sound or audio stream
-		<source />
-	</audio>
-	<picture>				    container with multiple sources for img's
-		<source />
-		<source />
-		<img />
-	</picture>
-	<embed />				    external non-HTML application
-	<figure>
-		<img />
-		<figcaption></figcaption>
-	</figure>
-	<object>				   represents external resource
-		<param />			   represents parameters
-	</object>
-	<iframe></iframe>		   nested browsing context
-	<map>					   image map (with img and area tags)
-		<area />			   hyperlink with text & area on image map
-	</map>
-	<dl>					   represents description list
-	<dt>					   represents description term
-		<dfn></dfn>		       instance of definition
-	</dt>			
-	<dd></dd>			       represents description definition
-	</dl>
-	<form>
-		<fieldset>			   represents a set of form controls 
-			<legend></legend>
-		<label>
-			<input />
-		</label>
-		<button>
-			<img />
-		</button>
-		</fieldset>
-		<textarea></textarea>   a multi-line plain text edit control
-	</form>
-	<select>				    represents a control for selecting options
-		<optgroup>			    group of option elements with a common label
-			<option>		    option in a select element
-		</optgroup>
-	</select>	
-	<datalist>				    set of option elements with options for controls
-		<option>
-	</datalist>
+	<table>						v
+		<caption></caption>		represents table's title	v
+		<thead>					represents column's titles	v
+			<tr>				represents table row		v
+				<td></td>		represents table data cell	v
+			</tr>				v
+		</thead>				v
+		<tbody>					v
+			<tr>				represents table row		v
+				<td></td>		represents table data cell	v
+			</tr>				v
+		</tbody>				v
+		<tfoot>					v
+			<tr>				represents table row		v
+				<td></td>		represents table data cell	v
+			</tr>				v
+		</tfoot>				v
+	</table>					v
+	<ol>						displays ordered lists		v
+		<li>					v
+	</ol>						v
+	<ul>						displays unordered lists	v
+		<li>					v
+	</ul>						v
+	<video>						playing video files & audio files with captions	v
+		<source />				v
+	</video>					v	
+	<audio>						playing sound or audio stream	v
+		<source />				v
+	</audio>					v
+	<picture>				    container with multiple sources for img's	v
+		<source />				v
+		<source />				v
+		<img />					v
+	</picture>					v
+	<embed />				    external non-HTML application	v
+	<figure>					v
+		<img />					v
+		<figcaption></figcaption>								v
+	</figure>													v
+	<object>				   represents external resource		v
+		<param />			   represents parameters			v
+	</object>													v
+	<iframe></iframe>		   nested browsing context			v
+	<map>					   image map (with img and area tags)			v
+		<area />			   hyperlink with text & area on image map		v
+	</map>																	v
+	<dl>					   represents description list					v
+	<dt>					   represents description term					v
+		<dfn></dfn>		       instance of definition						v
+	</dt>																	v
+	<dd></dd>			       represents description definition			v
+	</dl>																	v
+	<form>																	v
+		<fieldset>															v
+			<legend></legend>												v
+		<label>																v
+			<input />														v
+		</label>															v
+		<textarea></textarea>   a multi-line plain text edit control		v
+		<button>															v
+			<img />															v
+		</button>															v
+		</fieldset>															v
+	</form>																	v
+	<select>				    represents a control for selecting options					v
+		<optgroup>			    group of option elements with a common label				v
+			<option>		    option in a select element									v
+		</optgroup>																			v
+	</select>																				v
+	<datalist>				    set of option elements with options for controls			v		
+		<option>																			v
+	</datalist>																				v
 	<div>
 		<strong></strong>		   represents importance/urgency of text
 		<em></em>				   represents stress emphasis of text
@@ -126,20 +126,20 @@
 			<q></q>				   phrasing content quoted from another source
 		</blockquote>
 	</div>
-	<ruby>					       East Asian annotation & pronunciation of phrases
-		<rb></rb>	
-		<rp></rp>			       fallback text such as ()
-		<rt></rt>			       represents ruby text component of annotation
-		<rp></rp>			       fallback text such as ()
-		<rtc></rtc>			       represents ruby text container for components
-	</ruby>
-	<footer>
-		<p>
-			<a></a>
-		</p>
-		<address></address>	   represents contact information.
-		<small></small>		   represents side content such as fine print.
-	</footer>
-</main>
-</body>
-</html>
+	<ruby>					       East Asian annotation & pronunciation of phrases		v
+		<rb></rb>																		v
+		<rp></rp>			       fallback text such as ()								v
+		<rt></rt>			       represents ruby text component of annotation			v
+		<rp></rp>			       fallback text such as ()								v
+		<rtc></rtc>			       represents ruby text container for components		v
+	</ruby>																				v
+	<footer>																			v
+		<p>																				v
+			<a></a>																		v
+		</p>																			v
+		<address></address>	   represents contact information.							v
+		<small></small>		   represents side content such as fine print.				v
+	</footer>																			v
+</main>																					v
+</body>																					v
+</html>																					v
