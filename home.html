@@ -51,7 +51,7 @@
         <h1>Overview</h1>
         <section>
             <article id="overview">
-                On this website, I will be building several web pages with my life interests.
+                On this website, I will be building several web pages with my <span>life interests.</span>
                 <br />
                 These interests can be found in the navigation bar above with a link to each.
                 <br />
@@ -60,6 +60,14 @@
             <hr />
             <h2>Professional Profile</h2>
             <article id="profile">
+                <p>
+                    <cite>
+                        <a href="http://linkedin.com/ie/jonnygrealish64" target="_blank">LinkedIn</a>
+                    </cite>
+                </p>
+                <p>
+                    Press <kbd>Ctrl</kbd> + <kbd>T</kbd> to open a <span style="color:yellow;font-weight:bolder;">new tab.</span>
+                </p>
                 I have recently completed a certification in HTML &amp; CSS and I wanted to showcase my newly acquired skills to potential employers.
                 <br />
                 I am currently studying JavaScript to add to the HTML &amp; CSS certification above.
@@ -69,30 +77,33 @@
                 It contained many interesting modules to study, but I found that Web Application Development and Applied Databases were the modules I wished to further learn about.
                 <dl>
                     <dt>
-                        <dfn></dfn>
-                    </dt>
-                    <dd></dd>
-                </dl>
-                <dl>
-                    <dt>
-                        <dfn>HTML:</dfn>
+                        <dfn><u>HTML:</u></dfn>
                     </dt>
                     <dd>
-                        Hyper Text Markup Language (HTML) is a programming language that allows web designers to implement textual content in their web pages.
+                        <abbr title="Hyper Text Markup Language">HTML</abbr>
+                        is a programming language that allows web designers to implement textual content in their web pages.
                     </dd>
                     <dt>
-                        <dfn>CSS:</dfn>
+                        <dfn><u>CSS:</u></dfn>
                     </dt>
                     <dd>
-                        Cascading Style Sheets (CSS) is a programming language that allows web designers to implement various styles on HTML elements in their web pages.
+                        <abbr title="Cascading Style Sheets">CSS</abbr>
+                        is a programming language that allows web designers to implement various styles on HTML elements in their web pages.
                     </dd>
                     <dt>
-                        <dfn>JavaScript:</dfn>
+                        <dfn><u>JavaScript:</u></dfn>
                     </dt>
                     <dd>
-                        JavaScript (js) is a programming language that allows web designers to implement functions in their web pages.
+                        <abbr title="JavaScript">js</abbr>
+                        is a programming language that allows web designers to implement functions in their web pages.
                     </dd>
                 </dl>
+                <p>
+                    I also have qualifications and work experience with pharmaceutical and medical device companies.
+                    During my time studying Chemical &amp; Pharmaceutical Science at Atlantic Technological University (ATU) Galway,
+                    I used various chemicals such as H<sub>2</sub>SO<sub>4</sub> (Sulphuric Acid),
+                    and performed numerous calculations with acquired experimental data, using powers such as 3.14<sup>2</sup>.
+                </p>
             </article>
         </section>
         <hr />
@@ -129,6 +140,9 @@
                     I found it to be fantastic, the automatic transmission made accelerating so smooth, so seamless compared to manual transmission.
                     I gently push down on the accelerator and the electric motor would move my car forward, as opposed to firmly pushing down which activates the internal combustion engine (ICE).
                     I noticed I have saved quite a chunk of cash on topping up my fuel, I am mindful of how I drive and use of the electric motor requires less fuel to consume compared to traditional means.
+                    <blockquote cite="https://www.optimumautos.ie/about-us/">
+                        <q>Check out Optimum Autos where I purchased the Honda Fit, they also stock other Japanese imports, including the Toyota Aqua &amp; Mitsubishi Mirage.</q>
+                    </blockquote>
                 </p>
                 <video controls width="400" height="400">
                     <source src="videos/fit.mp4" type="video/mp4" />
@@ -136,6 +150,33 @@
             </article>
             <iframe src="https://en.wikipedia.org/wiki/Honda_Fit" title="Honda Fit" width="480" height="480">
             </iframe>
+            <table>
+                <colgroup>
+                    <col span="2" style="background-color:darkred" />
+                    <col style="background-color:yellow" />
+                </colgroup>
+                <caption>
+                    Comparing Toyota Yaris &amp; Honda Fit
+                </caption>
+                <thead>
+                    <tr>
+                        <td>Yaris</td>
+                        <td>Fit</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Toyota Released in Europe: March 1999</td>
+                        <td>Honda Fit Released in Europe: </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Silver</td>
+                        <td>Black</td>
+                    </tr>
+                </tfoot>
+            </table>
             <table id="carinfo">
                 <caption>
                     Comparing Toyota Yaris &amp; Honda Fit
@@ -159,12 +200,13 @@
                     </tr>
                 </tfoot>
             </table>
+            <var>Variable text defined:</var> a calculation using variables to follow.
         </section>
         <hr />
         <h2>Holidays</h2>
         <section>
             <article id="holidays">
-                Here are all the holiday destinations I have been to in my life:
+                Here are all the <strong>holiday</strong> destinations I have been to in my life:
                 <br />
                 <ol>
                     <li>Manchester 2008 &amp; 2009</li>
@@ -193,14 +235,25 @@
                 </figure>
             </article>
             <aside>
-                Photos and more information to be posted on each destination at a later date!
+                <mark>Photos and information to be posted on each destination at a later date!</mark>
             </aside>
         </section>
         <hr />
         <h2>Charity Work</h2>
         <section>
             <article id="charity">
-                This article will outline charity work I have participated in with numerous charities who do wonderful work in matters that are important to me.
+                <pre>
+                    <code>
+                        #include<stdio.h>
+                        int main()
+                        {
+                            printf("This article will outline charity work I have
+                                    participated in with numerous charities who do
+                                    wonderful work in matters that are important to
+                                    me.");
+                        }
+                    </code>
+                </pre>
                 <br />
                 <img src="images/charity.png" usemap="#charities" width="500" height="500" alt="Charities!">
                 <map name="charities">
@@ -208,12 +261,12 @@
                     <area shape="rect" coords="290,172,333,250" href="https://www.cancer.ie/" alt="Irish Cancer Society!">
                     <area shape="circle" coords="337,300,44" href="https://www.aware.ie/" alt="Aware!">
                 </map>
-                <ol>
-                    <li>Trocaire</li>
-                    <li>Aware</li>
-                    <li>Irish Cancer Society</li>
-                    <li>SpecialEffect</li>
-                </ol>
+                <ul>
+                    <li><data value="21001">Trocaire</data></li>
+                    <li><data value="21002">Aware</data></li>
+                    <li><data value="21003">Irish Cancer Society</data></li>
+                    <li><data value="21004">SpecialEffect</data></li>
+                </ul>
                 <ul>
                     <li>2005-2007</li>
                     <li>2010</li>
@@ -221,6 +274,11 @@
                     <li>2017</li>
                 </ul>
                 <embed type="image/jpg" src="https://oxfordshire.org/wp-content/uploads/2014/11/Special-Effect-logo.jpg" width="200" height="200">
+                <!--JavaScript to show template below on the web page-->
+                <template>
+                    <h2>Flower</h2>
+                    <img src="images/flowers-in-croatia.jpg" width="300" height="300" alt="Flowers in Croatia!" />
+                </template>
                 <form action="stuff.php" method="post">
                     <fieldset>
                         <legend>
@@ -251,6 +309,12 @@
                     </fieldset>
                 </form>
                 <hr />
+                <br />
+                <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                    <input type="range" id="a" value="50" />
+                    + <input type="number" id="b" value="25" />
+                    = <output name="x" for="a b"></output>
+                </form>
                 <label for="skills">Choose Skills:</label>
                 <br />
                 <select name="skills" id="skills">
@@ -279,40 +343,11 @@
             </article>
             <hr />
             <aside>
-                Photos and more information to be posted on each charity at a later date!
+                <em>Photos and
+                <s>more</s> information to be posted on each charity
+                <del>at a later date</del>
+                <ins>as soon as possible</ins>!</em>
             </aside>
-            <!--     
-            Final HTML tags to be implemented into the page soon.
-    <div>
-        <strong></strong>		   represents importance/urgency of text
-        <em></em>				   represents stress emphasis of text
-        <wbr />					   represents a line break opportunity
-        <s></s>					   represents a strikethrough line on text
-        <mark></mark>			   highlights a block of text
-        <u></u>					   span of text with annotation (underline)
-        <abbr></abbr>			   abbreviation or acronym
-        <cite></cite>			   cites a reference from another source
-        <kbd></kbd>				   user keyboard input
-        <aside></aside>			   represents a sidebar to an article
-        <template></template>	   declares HTML fragments to re-use by script
-        <del></del>				   represents a removal from the document
-        <ins></ins>				   represents an insert into the document
-        <output></output>		   represents the result of calculation or user action
-        <span></span>			   represents an emphasized phrase
-        <sub></sub>				   displays subscript text
-        <sup></sup>				   displays superscript text
-        <var></var>				   displays a variable
-        <samp></samp>			   displays sample output from a program
-        <data></data>			   displays machine-readable code
-        <time></time>			   displays machine-readable time
-        <pre></pre>				   displays pre-formatted text
-        <code></code>			   displays fragment of computer code
-        <colgroup></colgroup>
-        <blockquote>               content quoted from another source
-            <q></q>				   phrasing content quoted from another source
-        </blockquote>
-    </div>
-            -->
         </section>
         <footer>
             <hr />
@@ -342,8 +377,17 @@
                 742 Evergreen Terrace, Springfield, US &amp; A
             </address>
             <small>
+                Open <time>09:00</time> to <time>17:00</time>, what a way to make a living!
+            </small>
+            <br />
+            <small>
                 &copy; 2023 hoff_jager. Thank you for visiting!
             </small>
+            <p>
+                <samp>
+                    File Not Found! Press Enter to continue.
+                </samp>
+            </p>
         </footer>
     </main>
 </body>

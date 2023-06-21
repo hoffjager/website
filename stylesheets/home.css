@@ -85,6 +85,7 @@ p#hondafit
 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 article#holidays
 {
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
@@ -115,6 +116,13 @@ table#carinfo > tbody
 table#carinfo > tfoot
 {
     background-color: forestgreen;
+}
+
+kbd
+{
+    border-radius: 2px;
+    padding: 2px;
+    border: 1px solid black;
 }
 
 /*
