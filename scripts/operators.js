@@ -1,4 +1,3 @@
-// JavaScript source code
 // Topic 1: Operators, Methods, and Keywords
 
 // Increment and Decrement Operators:
