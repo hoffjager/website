@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hoff_home</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/home.css" />
-    <!--<script type="text/javascript" src="scripts/operators.js"></script>-->
+    <script type="text/javascript" src="scripts/home.js"></script>
 </head>
-<body>
+<body onload="welcome()">
     <main>
         <header>
             <nav id="topnav">
@@ -49,11 +49,11 @@
         <hr />
         <h1>Overview</h1>
         <section>
+            <input type="button" onclick="sizes()" value="Do It!" /> <br/><br/>
+            <span id="output"></span>
             <article id="overview">
-                On this website, I will be building several web pages with my <span>life interests.</span>
-                <br />
-                These interests can be found in the navigation bar above with a link to each.
-                <br />
+                On this website, I will be building several web pages with my <span>life interests.</span> <br />
+                These interests can be found in the navigation bar above with a link to each. <br />
                 Links to my Gmail, GitHub and LinkedIn are accessible at the footer of the page.
             </article>
             <hr />

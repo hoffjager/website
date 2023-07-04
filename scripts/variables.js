@@ -89,8 +89,8 @@ I would generally recommend that you try to avoid working with this statement un
 
 /*
 Creating JavaScript Arrays
-	MyArray = new Array()	// creating a new object of the type Array(), and then calling the variable MyArray.
-	MyArray = new Array(5)	// creating a new object of the type Array(), but has five elements ready to be populated with values.
+	MyArray = new Array()			// creating a new object of the type Array(), and then calling the variable MyArray.
+	MyArray = new Array(5)			// creating a new object of the type Array(), but has five elements ready to be populated with values.
 
 	MyArray[0] = 23;				// 23 is assigned to the element at index 0
 	MyArray[1] = 67.35;				// 67.35 is assigned to the element at index 1
