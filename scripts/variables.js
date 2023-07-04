@@ -1,4 +1,25 @@
 ﻿// Topic 2: Variables, Data Types, and Functions
+/*
+	Comparison Operators (==, ===, !=, !==, >, >=, <, <=)
+	Logical Operators (&&, ||, !)
+	Bitwise Operators
+	Operator Precedence
+	Operator Associativity
+	The with keyword
+	Creating JavaScript Arrays
+	Retrieving Array Values
+	Using Array Elements as Indexes
+	Using Associative Arrays
+	Creating and Accessing a Two-Dimensional Array
+	3D Multi-Dimensional Associative Arrays
+	Adding and Removing Array Elements
+	Writing Functions
+	Passing Arguments
+	Accessing Arguments
+	Using the arguments Object
+
+
+*/
 
 /*
 Comparison Operators
@@ -106,7 +127,7 @@ Creating JavaScript Arrays
 */
 
 /*
-Retrieving Values
+Retrieving Array Values
 	document.write(MyArray[0])
 	MyIndex = 713;
 	document.write(MyArray[MyIndex]);

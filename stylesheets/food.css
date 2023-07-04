@@ -1,5 +1,6 @@
 ﻿/* Hyperlink States */
-a {
+a
+{
     text-decoration: none;
     color: navy;
 }
@@ -33,7 +34,7 @@ a:focus {
     src: url(../webfontkit-food/chocochici-vmbpz-webfont.woff2);
 }
 
-*#food {
+h1, h2 {
     font-family: choco_chiciscript, Arial, sans-serif;
 }
 

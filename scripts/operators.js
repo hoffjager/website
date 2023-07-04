@@ -1,4 +1,12 @@
 // Topic 1: Operators, Methods, and Keywords
+/*
+	Increment and Decrement Operators (x++, x--, ++x, --x)
+	Compound Assignment Operators
+	try, catch, throw, finally
+	Browser Object Model (BOM) Interaction
+	typeof operator
+	Alerts, Prompts & Confirm Boxes
+*/
 
 // Increment and Decrement Operators:
 function incAndDec()

@@ -9,284 +9,548 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/food.css" />
     <script type="text/javascript" src="scripts/food.js"></script>
 </head>
-<body id="food" onload="alert(muffinIngs)">
-    <header>
-        <nav>
-            <a id="top" href="home.html" target="_blank" title="Home Page!" accesskey="1">
-                <img src="images/home.png" alt="Home Page!" width="45" height="45" />
-            </a>
-            &nbsp;
-            <a href="food.html" target="_blank" title="Food & Fitness!" accesskey="2">
-                <img src="images/ramen.png" alt="Food & Fitness!" width="50" height="50" />
-            </a>
-            &nbsp;
-            <a href="games.html" target="_blank" title="Video Games!" accesskey="3">
-                <img src="images/controller.png" alt="Video Games!" width="55" height="55" />
-            </a>
-            &nbsp;
-            <a href="hamabeads.html" target="_blank" title="Arts & Crafts!" accesskey="4">
-                <img src="images/logo.png" alt="Arts & Crafts!" width="65" height="65" />
-            </a>
-            &nbsp;
-            <a href="music.html" target="_blank" title="Music!" accesskey="5">
-                <img src="images/note.jpg" alt="Music!" width="65" height="65" />
-            </a>
-            &nbsp;
-            <a href="otaku.html" target="_blank" title="Otaku!" accesskey="6">
-                <img src="images/chill.jpg" alt="Otaku!" width="65" height="65" />
-            </a>
-            &nbsp;
-            <a href="pets.html" target="_blank" title="Pets!" accesskey="7">
-                <img src="images/heart.png" alt="Pets!" width="50" height="50" />
-            </a>
-            &nbsp;
-            <a href="tv.html" target="_blank" title="TV & Movies!" accesskey="8">
-                <img src="images/oldtimey.png" alt="TV & Movies!" width="65" height="65" />
-            </a>
-        </nav>
-    </header>
+<body>
+    <main>
+        <header>
+            <nav>
+                <a id="top" href="home.html" target="_blank" title="Home Page!" accesskey="1">
+                    <img src="images/home.png" alt="Home Page!" width="45" height="45" />
+                </a>
+                &nbsp;
+                <a href="food.html" target="_blank" title="Food & Fitness!" accesskey="2">
+                    <img src="images/ramen.png" alt="Food & Fitness!" width="50" height="50" />
+                </a>
+                &nbsp;
+                <a href="games.html" target="_blank" title="Video Games!" accesskey="3">
+                    <img src="images/controller.png" alt="Video Games!" width="55" height="55" />
+                </a>
+                &nbsp;
+                <a href="hamabeads.html" target="_blank" title="Arts & Crafts!" accesskey="4">
+                    <img src="images/logo.png" alt="Arts & Crafts!" width="65" height="65" />
+                </a>
+                &nbsp;
+                <a href="music.html" target="_blank" title="Music!" accesskey="5">
+                    <img src="images/note.jpg" alt="Music!" width="65" height="65" />
+                </a>
+                &nbsp;
+                <a href="otaku.html" target="_blank" title="Otaku!" accesskey="6">
+                    <img src="images/chill.jpg" alt="Otaku!" width="65" height="65" />
+                </a>
+                &nbsp;
+                <a href="pets.html" target="_blank" title="Pets!" accesskey="7">
+                    <img src="images/heart.png" alt="Pets!" width="50" height="50" />
+                </a>
+                &nbsp;
+                <a href="tv.html" target="_blank" title="TV & Movies!" accesskey="8">
+                    <img src="images/oldtimey.png" alt="TV & Movies!" width="65" height="65" />
+                </a>
+            </nav>
+        </header>
+        <hr />
         <h1>Food &amp; Fitness</h1>
         <h2>Recipes</h2>
-        <p>
-            I will start the recipe list off with a favourite of mine and my family and friends, the chocolate cola muffins.
+        <section>
+            <input type="button" onclick="sizes()" value="Press!" /> <br /><br />
+            <span id="output"></span>
+            <article>
+                <p>
+                    I will start the recipe list off with a favourite of mine and my family and friends, the chocolate cola muffins.
+                    <br />
+                    I found the original recipe years ago thanks to Odlums Ireland, link to the original recipe can be found here:
+                    <a href="https://www.odlums.ie/recipes/chocolate-cola-cake/" target="_blank">Odlums</a>
+                    <br />
+                    I baked the cake but I wasn't satisfied with the result, I found the top of the cake tended to burn easily, and the cake itself seemed uneven.
+                    <br />
+                    So one day, I decided to pour the batter into individual muffin cases instead, and after tweaking the baking time, the muffins were glorious!
+                    <br />
+                    The muffins were much easier to handle, and far less messy than its cake counterpart, the flavours were rich and dense, and one muffin would be plenty for anyone's insatiable appetite XD
+                    <br />
+                    I will be planning on adding more recipes on this page, such as my recipe for peanut butter bread, and many more to come :)
+                </p>
+                <br />
+                <p>
+                    I will also have a record and charts tracking my personal health &amp; fitness to manage my weight throughout the year.
+                </p>
+            </article>
+            <hr />
+            <dl>
+                <dt>What is a Cruffin?</dt>
+                <dd>A fusion of a croissant and a muffin</dd>
+                <dt>Where can I eat it?</dt>
+                <dd>Ideally in France :P</dd>
+            </dl>
+            <img src="images/cruffin.jpeg" />
+            <dl>
+                <dt><dfn>Croquembouche</dfn></dt>
+                <dd class="grammar">noun</dd>
+                <dd class="spoken">[cro-kem-boo-shh]</dd>
+                <dd>
+                    A decorative dessert consisting of choux pastry and
+                    crystallized fruit or other confectionery items arranged in
+                    a cone and held together by a caramel sauce.
+                </dd>
+                <dt><dfn>Ćevapi</dfn></dt>
+                <dd class="grammar">noun</dd>
+                <dd class="spoken">[shuh-vah-pi]</dd>
+                <dd>
+                    Grilled, skinless finger-shaped sausages made with minced veal and spices, served with pommes frites and orange pepper pesto.
+                </dd>
+            </dl>
+            <img src="images/croque.jpeg" />
+            <img src="images/cevapi.jpeg" />
+            <hr />
+            <table id="data">
+                <caption>A Table Spanning Columns of Food (soon)</caption>
+                <thead>
+                    <tr><td colspan="4">Header Information</tr>
+                </thead>
+                <tfoot>
+                    <tr><td colspan="4">Footer Information</tr>
+                </tfoot>
+                <tbody>
+                    <tr><th>Row 1<td colspan="2">Cell 1.1 + Cell 1.2<td>Cell 1.3</tr>
+                    <tr><th>Row 2<td colspan="3" rowspan="2">Cell 2.1 + Cell 2.2 + Cell 2.3 + Cell 3.1 + Cell 3.2 + Cell 3.3</tr>
+                    <tr><th>Row 3</tr>
+                </tbody>
+                <tbody>
+                    <tr><th colspan="4" class="next">Next Section</tr>
+                    <tr><th>Row 4<td>Cell 4.1<td>Cell 4.2<td>Cell 4.3</tr>
+                    <tr><th>Row 5<td>Cell 5.1<td>Cell 5.2<td>Cell 5.3</tr>
+                    <tr><th>Row 6<td>Cell 6.1<td>Cell 6.2<td>Cell 6.3</tr>
+                </tbody>
+            </table>
+            <hr />
+            <table id="sep">
+                <caption>Calendar</caption>
+                <colgroup span="5" class="weekday"></colgroup>
+                <colgroup span="2" class="weekend"></colgroup>
+                <thead>
+                    <tr><th colspan="7">September 2023</tr>
+                </thead>
+                <tfoot>
+                    <tr><th colspan="7">Birthday</tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>Mon
+                        <td>Tue
+                        <td>Wed
+                        <td>Thu
+                        <td>Fri
+                        <td>Sat
+                        <td>Sun
+                    <tr>
+                        <td>1
+                        <td>2
+                        <td>3
+                        <td>4
+                        <td>5
+                        <td>6
+                        <td id="birthday">7
+                    <tr>
+                        <td>8
+                        <td>9
+                        <td>10
+                        <td>11
+                        <td>12
+                        <td>13
+                        <td>14
+                    <tr>
+                        <td>15
+                        <td>16
+                        <td>17
+                        <td>18
+                        <td>19
+                        <td>20
+                        <td>21
+                    <tr>
+                        <td>22
+                        <td>23
+                        <td>24
+                        <td>25
+                        <td>26
+                        <td>27
+                        <td>28
+                    <tr>
+                        <td>29
+                        <td>30
+                </tbody>
+            </table>
+            <hr />
+            <h2>Professional Profile</h2>
+            <article id="profile">
+                <p>
+                    <cite>
+                        <a href="http://linkedin.com/ie/jonnygrealish64" target="_blank">LinkedIn</a>
+                    </cite>
+                </p>
+                <p>
+                    Press <kbd>Ctrl</kbd> + <kbd>T</kbd> to open a <span style="color:yellow;font-weight:bolder;">new tab.</span>
+                </p>
+                I have recently completed a certification in HTML &amp; CSS and I wanted to showcase my newly acquired skills to potential employers.
+                <br />
+                I am currently studying JavaScript to add to the HTML &amp; CSS certification above.
+                <br />
+                I have also completed a Higher Diploma in Data Analytics at Atlantic Technological University (ATU) Galway.
+                <br />
+                It contained many interesting modules to study, but I found that Web Application Development and Applied Databases were the modules I wished to further learn about.
+                <dl>
+                    <dt>
+                        <dfn><u>HTML:</u></dfn>
+                    </dt>
+                    <dd>
+                        <abbr title="Hyper Text Markup Language">HTML</abbr>
+                        is a programming language that allows web designers to implement textual content in their web pages.
+                    </dd>
+                    <dt>
+                        <dfn><u>CSS:</u></dfn>
+                    </dt>
+                    <dd>
+                        <abbr title="Cascading Style Sheets">CSS</abbr>
+                        is a programming language that allows web designers to implement various styles on HTML elements in their web pages.
+                    </dd>
+                    <dt>
+                        <dfn><u>JavaScript:</u></dfn>
+                    </dt>
+                    <dd>
+                        <abbr title="JavaScript">js</abbr>
+                        is a programming language that allows web designers to implement functions in their web pages.
+                    </dd>
+                </dl>
+                <p>
+                    I also have qualifications and work experience with pharmaceutical and medical device companies.
+                    During my time studying Chemical &amp; Pharmaceutical Science at Atlantic Technological University (ATU) Galway,
+                    I used various chemicals such as H<sub>2</sub>SO<sub>4</sub> (Sulphuric Acid),
+                    and performed numerous calculations with acquired experimental data, using powers such as 3.14<sup>2</sup>.
+                </p>
+            </article>
+        </section>
+        <hr />
+        <section>
+            <h2>Cars</h2>
+            <article id="cars">
+                Here I would like to display both cars I have purchased.
+                <br />
+                <img src="images/yaris.jpg" alt="Toyota Yaris!" width="300" height="300" />
+                <p id="yaris">
+                    I never had an avid interest in driving from a young age, mainly due to the cost of purchasing a car, as well as regularly maintaining it with insurance costs etc just was not feasible for me.
+                    <br />
+                    Once I dug in and got driving lessons and passed the test, my brother found this lovely starter car for me!
+                    <br />
+                    A bargain at €500, this Toyota Yaris came with a 1L engine so the tax was very affordable as were the insurance costs.
+                </p>
+                <br />
+                <img src="images/hondafit.jpg" alt="Honda Fit!" width="300" height="300" />
+                <object data="videos/fit.mp4" width="300" height="300">
+                    <param name="autoplay" value="true" />
+                </object>
+                <p id="hondafit">
+                    After 2 years of driving, I could take those Novice stickers off my Yaris!
+                    <br />
+                    But I wanted to reward myself by upgrading from my reliable Yaris to a more eco-friendly model.
+                    <br />
+                    Here we have the Honda Fit, imported from Japan (also known as the Honda Jazz in Europe).
+                    <br />
+                    My brother and I decided to take this for a test drive down in Ennis, and one aspect about the car that excited me was the automatic transmission.
+                    <br />
+                    I also was interested to learn more about the self-charging hybrid aspect of the Honda Fit, as I felt more eco-friendly cars were appearing around Ireland
+                    and I wanted to sample the technology for myself.
+                    <br />
+                    I found it to be fantastic, the automatic transmission made accelerating so smooth, so seamless compared to manual transmission.
+                    I gently push down on the accelerator and the electric motor would move my car forward, as opposed to firmly pushing down which activates the internal combustion engine (ICE).
+                    I noticed I have saved quite a chunk of cash on topping up my fuel, I am mindful of how I drive and use of the electric motor requires less fuel to consume compared to traditional means.
+                    <blockquote cite="https://www.optimumautos.ie/about-us/">
+                        <q>Check out Optimum Autos where I purchased the Honda Fit, they also stock other Japanese imports, including the Toyota Aqua &amp; Mitsubishi Mirage.</q>
+                    </blockquote>
+                </p>
+                <video controls width="400" height="400">
+                    <source src="videos/fit.mp4" type="video/mp4" />
+                </video>
+            </article>
+            <iframe src="https://en.wikipedia.org/wiki/Honda_Fit" title="Honda Fit" width="480" height="480">
+            </iframe>
+            <table id="data">
+                <colgroup>
+                    <col span="2" style="background-color:darkred" />
+                    <col style="background-color:yellow" />
+                </colgroup>
+                <caption>A Table Spanning Rows of Food (soon)</caption>
+                <thead>
+                    <tr><td colspan="4">Header Information</tr>
+                </thead>
+                <tfoot>
+                    <tr><td colspan="4">Footer Information</tr>
+                </tfoot>
+                <tbody>
+                    <tr><th>Row 1<td rowspan="2">Cell 1.1 + Cell 2.1<td>Cell 1.2<td rowspan="3">Cell 1.3 + Cell 2.3 + Cell 3.3</tr>
+                    <tr><th>Row 2<td rowspan="2">Cell 2.2 + Cell 3.2</tr>
+                    <tr><th>Row 3<td>Cell 3.1</tr>
+                </tbody>
+            </table>
+            <var>Variable text defined:</var> a calculation using variables to follow.
+        </section>
+        <hr />
+        <h2>Holidays</h2>
+        <section>
+            <article id="holidays">
+                Here are all the <strong>holiday</strong> destinations I have been to in my life:
+                <br />
+                <ol>
+                    <li>Manchester 2008 &amp; 2009</li>
+                    <li>New York City &amp; Boston 2010</li>
+                    <li>Edinburgh 2010 &amp; 2013</li>
+                    <li>Barcelona 2010</li>
+                    <li>Dingle 2011</li>
+                    <li>Salou 2014</li>
+                    <li>Munich 2016</li>
+                    <li>Paris 2017</li>
+                    <li>Athlone 2018</li>
+                    <li>Croatia 2023</li>
+                </ol>
+                <audio controls width="400">
+                    <source src="audio/fryingpan.mp3" type="audio/mp3" />
+                    <source src="audio/fryingpan.ogg" type="audio/ogg" />
+                </audio>
+                <picture>
+                    <source media="(min-width: 500px)" srcset="images/large.png" height="480" width="360" />
+                    <source media="(min-width: 200px)" srcset="images/small.png" height="480" width="360" />
+                    <img alt="Mamma Mia" src="images/mamamia.png" width="103" height="125" />
+                </picture>
+                <hr />
+                <figure>
+                    <img src="images/paris.jpg" height="360" width="360" />
+                    <figcaption>Bird's Eye View from the Eiffel Tower</figcaption>
+                </figure>
+            </article>
+            <aside>
+                <mark>Photos and information to be posted on each destination at a later date!</mark>
+            </aside>
+        </section>
+        <hr />
+        <h2>Charity Work</h2>
+        <section>
+            <article id="charity">
+                <pre>
+                <code>
+                        #include<stdio.h>
+                        int main()
+                        {
+                            printf("This article will outline charity work I have
+                                    participated in with numerous charities who do
+                                    wonderful work in matters that are important to
+                                    me.");
+                        }
+                    </code>
+                </pre>
+                <br />
+                <img src="images/charity.png" usemap="#charities" width="500" height="500" alt="Charities!">
+                <map name="charities">
+                    <area shape="rect" coords="34,44,270,350" href="https://www.specialeffect.org.uk/" alt="SpecialEffect!">
+                    <area shape="rect" coords="290,172,333,250" href="https://www.cancer.ie/" alt="Irish Cancer Society!">
+                    <area shape="circle" coords="337,300,44" href="https://www.aware.ie/" alt="Aware!">
+                </map>
+                <ul>
+                    <li><data value="21001">Trocaire</data></li>
+                    <li><data value="21002">Aware</data></li>
+                    <li><data value="21003">Irish Cancer Society</data></li>
+                    <li><data value="21004">SpecialEffect</data></li>
+                </ul>
+                <ul>
+                    <li>2005-2007</li>
+                    <li>2010</li>
+                    <li>2014</li>
+                    <li>2017</li>
+                </ul>
+                <embed type="image/jpg" src="https://oxfordshire.org/wp-content/uploads/2014/11/Special-Effect-logo.jpg" width="200" height="200">
+                <!--JavaScript to show template below on the web page-->
+                <template>
+                    <h2>Flower</h2>
+                    <img src="images/flowers-in-croatia.jpg" width="300" height="300" alt="Flowers in Croatia!" />
+                </template>
+                <form action="stuff.php" method="post">
+                    <fieldset>
+                        <legend>
+                            Personal Information:
+                        </legend>
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" />
+                        <br /><br />
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" />
+                        <br /><br />
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" />
+                        <br /><br />
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" />
+                        <br /><br />
+                        <label for="birthday">Birthday:</label>
+                        <input type="date" id="birthday" name="birthday" />
+                        <br /><br />
+                        <textarea>
+                        </textarea>
+                        <br /><br />
+                        <input type="submit" value="Submit" />
+                        <button>
+                            <img src="images/redbutton.jfif" width="30" height="11" alt="Big Red Button!" />
+                        </button>
+                    </fieldset>
+                </form>
+                <hr />
+                <form method="get" action="http://localhost/echo.pl">
+                    <fieldset>
+                        <legend>Pizza Topping</legend>
+                        <input id="pepperoni" type="checkbox"
+                               name="Toppings" value="Pepperoni" /> Pepperoni |
+                        <input id="mushroom" type="checkbox"
+                               name="Toppings" value="Mushroom" /> Mushroom |
+                        <input id="bbqsauce" type="checkbox"
+                               name="Toppings" value="BBQ Sauce" /> BBQ Sauce
+                    </fieldset>
+                    <input type="reset" value="Reset Form" />
+                    <input type="button" value="Choose For Me" id="btn" />
+                    <input type="submit" value="Submit Form" />
+                </form>
+                <hr />
+                <br />
+                <form method="get" action="http://localhost/echo.pl">
+                    <dl>
+                        <dt>Username:
+                        <dd><input type="text" name="Name" />
+                        <dt>Password:
+                        <dd><input type="password" name="Password" />
+                        <dt>City:
+                        <dd><input type="text" name="City" value="Dallas" />
+                        <dt>Area:
+                        <dd><input type="text" name="Area" value="Downtown" disabled />
+                        <dt>State:
+                        <dd><input type="text" name="State" value="Texas" readonly />
+                        <dt>Zip Code:
+                        <dd><input type="text" name="Zip Code" size="5" maxlength="5" />
+                    </dl>
+                    <p>
+                        <input type="submit" value="Submit Form" />
+                    </p>
+                </form>
+                <p>
+                    This is text in the document that...
+                    <br />
+                    <object data="docs/piechart.pdf" type="application/pdf"
+                            width="480" height="320">
+                        [PDF Document - may require the Adobe Reader plugin]
+                    </object>
+                    <br />
+                    ...continues around an embedded resource.
+                </p>
+                <hr />
+                <embed src="videos/movie.swf" width="270" height="202" type="application/x-shockwave-flash" />
+                <embed src="videos/movie.svg" width="283" height="202" type="image/svg+xml" />
+                <hr />
+                <label for="skills">Choose Skills:</label>
+                <br />
+                <select name="skills" id="skills">
+                    <optgroup label="Front-End Programming">
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="SQL">SQL</option>
+                    </optgroup>
+                    <optgroup label="Back-End Programming">
+                        <option value="PHP">PHP</option>
+                        <option value="jQuery">jQuery</option>
+                    </optgroup>
+                </select>
+                <br />
+                <label for="ice-cream">Choose an Ice Cream:</label>
+                <br />
+                <input list="ice-cream-flavours" id="ice-cream" name="ice-cream" />
+                <datalist id="ice-cream-flavours">
+                    <option value="Vanilla">
+                    <option value="Strawberry">
+                    <option value="Chocolate">
+                    <option value="Mint Choc Chip">
+                    <option value="Raspberry Ripple">
+                </datalist>
+                <p id="equalize">
+                    Enjoy the sunsets, the restaurants, the
+                    fishing, the diving... the lifestyle of the Florida Keys!
+                </p>
+                <p>
+                    Line <span class="up">Superscript</span>
+                    <span class="down">Subscript</span>
+                    <span class="top">Top</span>
+                </p>
+                <hr />
+                <p>
+                    The Geologic Story at the
+                    <span class="spread">Grand Canyon</span>
+                    attracts the attention of the world for many reasons, but
+                    perhaps its greatest significance lies in the geologic record
+                    preserved and exposed here.
+                </p>
+                <p>
+                    The rocks at the
+                    <span class="spread">Grand Canyon</span>
+                    are not inherently unique, but the
+                    <span class="space">
+                        variety of rocks clearly exposed
+                        present a complex geologic story.
+                    </span>
+                </p>
+                <hr />
+            </article>
+            <hr />
+            <aside>
+                <em>
+                    Photos and <s>more</s> information to be posted on each charity <del>at a later date</del> <ins>as soon as possible</ins>!
+                </em>
+            </aside>
+        </section>
+        <footer>
+            <hr />
+            <nav id="bottomnav">
+                <a id="bottom" href="#top" title="Top of Page!" accesskey="9">
+                    <img src="images/upwardarrow.jpg" alt="Upward Arrow!" width="30" height="30" />
+                </a>
+                &nbsp;
+                <a href="https://www.wix.com/" target="_blank" title="Wix!" accesskey="10">
+                    <img src="images/wixlogo.png" alt="Wix Logo!" width="30" height="30" />
+                </a>
+                &nbsp;
+                <a href="mailto:jonnygrealish64@gmail.com" target="_blank" title="My Email!" accesskey="11">
+                    <img src="images/gmaillogo.png" alt="Gmail Logo!" width="30" height="30" />
+                </a>
+                &nbsp;
+                <a href="http://github.com/hoffjager" target="_blank" title="My Github!" accesskey="12">
+                    <img src="images/githublogo.png" alt="Github Logo!" width="30" height="30" />
+                </a>
+                &nbsp;
+                <a href="http://linkedin.com/ie/jonnygrealish64" target="_blank" title="My LinkedIn!" accesskey="13">
+                    <img src="images/linkedinlogo.jfif" alt="LinkedIn Logo!" width="30" height="30" />
+                </a>
+            </nav>
+            <hr />
+            <p>
+                Food Custom Font: choco_chiciscript
+                Credit to BasniBee @ <a href="https://www.fontspace.com/choco-chici-font-f78972">Font</a> |
+                <a href="mailto:bery.arisandi@basnistudio.com">Contact</a>
+            </p>
+            <address>
+                742 Evergreen Terrace, Springfield, US &amp; A
+            </address>
+            <small>
+                Open <time>09:00</time> to <time>17:00</time>, what a way to make a living!
+            </small>
             <br />
-            I found the original recipe years ago thanks to Odlums Ireland, link to the original recipe can be found here: <a href="https://www.odlums.ie/recipes/chocolate-cola-cake/">Odlums</a>
-            <br />
-            I baked the cake but I wasn't satisfied with the result, I found the top of the cake tended to burn easily, and the cake itself seemed uneven.
-            <br />
-            So one day, I decided to pour the batter into individual muffin cases instead, and after tweaking the baking time, the muffins were glorious!
-            <br />
-            The muffins were much easier to handle, and far less messy than its cake counterpart, the flavours were rich and dense, and one muffin would be plenty for anyone's insatiable appetite XD
-            <br />
-            I will be planning on adding more recipes on this page, such as my recipe for peanut butter bread, and many more to come :)
-        </p>
-        <br />
-        <p id="muffins"></p>
-    <hr />
-    <p>
-        I will also have a record and charts tracking my personal health &amp; fitness to manage my weight throughout the year.
-    </p>
-    <hr />
-    <dl>
-        <dt>What is a Cruffin?</dt>
-        <dd>A fusion of a croissant and a muffin</dd>
-        <dt>Where can I eat it?</dt>
-        <dd>Ideally in France :P</dd>
-    </dl>
-    <img src="cruffin.jpeg" />
-    <dl>
-        <dt><dfn>Croquembouche</dfn></dt>
-        <dd class="grammar">noun</dd>
-        <dd class="spoken">[cro-quem-bouche]</dd>
-        <dd>
-            A decorative dessert consisting of choux pastry and
-            crystallized fruit or other confectionery items arranged in
-            a cone and held together by a caramel sauce.
-        </dd>
-        <dt><dfn>Ćevapi</dfn></dt>
-        <dd class="grammar">noun</dd>
-        <dd class="spoken">[shuh-vah-pi]</dd>
-        <dd>
-            Grilled, skinless finger-shaped sausages made with minced veal and
-            spices, served with pommes frites and orange pepper pesto.
-        </dd>
-    </dl>
-    <hr />
-    <table id="data">
-        <caption>A Table Spanning Rows of Food (soon)</caption>
-        <thead>
-            <tr><td colspan="4">Header Information</tr>
-        </thead>
-        <tfoot>
-            <tr><td colspan="4">Footer Information</tr>
-        </tfoot>
-        <tbody>
-            <tr><th>Row 1<td rowspan="2">Cell 1.1 + Cell 2.1<td>Cell 1.2<td rowspan="3">Cell 1.3 + Cell 2.3 + Cell 3.3</tr>
-            <tr><th>Row 2<td rowspan="2">Cell 2.2 + Cell 3.2</tr>
-            <tr><th>Row 3<td>Cell 3.1</tr>
-        </tbody>
-    </table>
-    <hr />
-    <table id="data">
-        <caption>A Table Spanning Columns of Food (soon)</caption>
-        <thead>
-            <tr><td colspan="4">Header Information</tr>
-        </thead>
-        <tfoot>
-            <tr><td colspan="4">Footer Information</tr>
-        </tfoot>
-        <tbody>
-            <tr><th>Row 1<td colspan="2">Cell 1.1 + Cell 1.2<td>Cell 1.3</tr>
-            <tr><th>Row 2<td colspan="3" rowspan="2">Cell 2.1 + Cell 2.2 + Cell 2.3 + Cell 3.1 + Cell 3.2 + Cell 3.3</tr>
-            <tr><th>Row 3</tr>
-        </tbody>
-        <tbody>
-            <tr><th colspan="4" class="next">Next Section</tr>
-            <tr><th>Row 4<td>Cell 4.1<td>Cell 4.2<td>Cell 4.3</tr>
-            <tr><th>Row 5<td>Cell 5.1<td>Cell 5.2<td>Cell 5.3</tr>
-            <tr><th>Row 6<td>Cell 6.1<td>Cell 6.2<td>Cell 6.3</tr>
-        </tbody>
-    </table>
-    <hr />
-    <table id="sep">
-        <caption>Calendar</caption>
-        <colgroup span="5" class="weekday"></colgroup>
-        <colgroup span="2" class="weekend"></colgroup>
-        <thead>
-            <tr><th colspan="7">September 2023</tr>
-        </thead>
-        <tfoot>
-            <tr><th colspan="7">Birthday</tr>
-        </tfoot>
-        <tbody>
-            <tr>
-                <td>Mon
-                <td>Tue
-                <td>Wed
-                <td>Thu
-                <td>Fri
-                <td>Sat
-                <td>Sun
-            <tr>
-                <td>1
-                <td>2
-                <td>3
-                <td>4
-                <td>5
-                <td>6
-                <td id="birthday">7
-            <tr>
-                <td>8
-                <td>9
-                <td>10
-                <td>11
-                <td>12
-                <td>13
-                <td>14
-            <tr>
-                <td>15
-                <td>16
-                <td>17
-                <td>18
-                <td>19
-                <td>20
-                <td>21
-            <tr>
-                <td>22
-                <td>23
-                <td>24
-                <td>25
-                <td>26
-                <td>27
-                <td>28
-            <tr>
-                <td>29
-                <td>30
-        </tbody>
-    </table>
-    <hr />
-    <form method="get" action="http://localhost/echo.pl">
-        <dl>
-            <dt>Username:
-            <dd><input type="text" name="Name" />
-            <dt>Password:
-            <dd><input type="password" name="Password" />
-            <dt>City:
-            <dd><input type="text" name="City" value="Dallas" />
-            <dt>Area:
-            <dd><input type="text" name="Area" value="Downtown" disabled />
-            <dt>State:
-            <dd><input type="text" name="State" value="Texas" readonly />
-            <dt>Zip Code:
-            <dd><input type="text" name="Zip Code" size="5" maxlength="5" />
-        </dl>
-        <p>
-            <input type="submit" value="Submit Form" />
-        </p>
-    </form>
-    <hr />
-    <form method="get" action="http://localhost/echo.pl">
-        <fieldset>
-            <legend>Pizza Topping</legend>
-            <input id="pepperoni" type="checkbox"
-                   name="Toppings" value="Pepperoni" /> Pepperoni |
-            <input id="mushroom" type="checkbox"
-                   name="Toppings" value="Mushroom" /> Mushroom |
-            <input id="bbqsauce" type="checkbox"
-                   name="Toppings" value="BBQ Sauce" /> BBQ Sauce
-        </fieldset>
-        <input type="reset" value="Reset Form" />
-        <input type="button" value="Choose For Me" id="btn" />
-        <input type="submit" value="Submit Form" />
-    </form>
-    <hr />
-    <picture>
-        <source media="(min-width: 500px)" srcset="images/large.png" />
-        <source media="(min-width: 200px)" srcset="images/small.png" />
-        <img alt="Regular Guy" src="images/medium.png"
-             width="103" height="125" />
-    </picture>
-    <hr />
-    <p>
-        This is text in the document that...
-        <br />
-        <object data="docs/piechart.pdf" type="application/pdf"
-                width="480" height="320">
-            [PDF Document - may require the Adobe Reader plugin]
-        </object>
-        <br />
-        ...continues around an embedded resource.
-    </p>
-    <hr />
-    <embed src="movie.swf" width="270" height="202"
-           type="application/x-shockwave-flash" />
-    <embed src="movie.svg" width="283" height="202"
-           type="image/svg+xml" />
-    <hr />
-    <p>
-        Enjoy the sunsets, the restaurants, the fishing, the
-        diving... the lifestyle of the Florida Keys!
-    </p>
-    <p id="equalize">
-        Enjoy the sunsets, the restaurants, the
-        fishing, the diving... the lifestyle of the Florida Keys!
-    </p>
-    <p>
-        Line <span class="up">Superscript</span>
-        <span class="down">Subscript</span>
-        <span class="top">Top</span>
-    </p>
-    <hr />
-    <p>
-        The Geologic Story at the
-        <span class="spread">Grand Canyon</span>
-        attracts the attention of the world for many reasons, but
-        perhaps its greatest significance lies in the geologic record
-        preserved and exposed here.
-    </p>
-    <p>
-        The rocks at the
-        <span class="spread">Grand Canyon</span>
-        are not inherently unique, but the
-        <span class="space">
-            variety of rocks clearly exposed
-            present a complex geologic story.
-        </span>
-    </p>
-    <hr />
-    <footer>
-        <p>
-            Food Custom Font: choco_chiciscript
-            Credit to BasniBee @ <a href="https://www.fontspace.com/choco-chici-font-f78972">Font</a> |
-            <a href="mailto:bery.arisandi@basnistudio.com">Contact</a>
-        </p>
-        <a id="bottom" href="#top">Back to Top</a> |
-        <a href="mailto:jonnygrealish64@gmail.com">Contact</a>
-        <br />
-        <address>
-            742 Evergreen Terrace, Springfield
-        </address>
-        <small>&copy; 2023 hoff_jager</small>
-    </footer>
+            <small>
+                &copy; 2023 hoff_jager. Thank you for visiting!
+            </small>
+            <p>
+                <samp>
+                    File Not Found! Press Enter to continue.
+                </samp>
+            </p>
+        </footer>
+    </main>
 </body>
 </html>
