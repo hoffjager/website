@@ -1,0 +1,24 @@
+﻿/*
+Refer back to:
+dlist.html
+1. Create a style sheet to color the question and definition terms in the lists,
+and to color some specific descriptions.
+2. Save the HTML document and style sheet, then open the web page in your
+browser to see the name/value pairs.
+The <dt> element alone does not indicate that its content is a term being
+defined – a nested <dfn> element must be used for that purpose.
+Do not use a definition list to mark up dialog – use paragraphs to mark up each
+piece of dialog instead.
+*/
+dt {
+    color: blue}
+
+dfn {
+    color: red;
+    font-size: 20pt}
+
+dd.grammar {
+    color: green}
+
+dd.spoken {
+    color: blue}

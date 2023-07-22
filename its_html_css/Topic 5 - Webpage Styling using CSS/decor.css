@@ -1,0 +1,51 @@
+﻿/*
+    Refer back to:
+    decor.html
+1. Create a linked style sheet with rules to specify fonts and colors.
+2. Next add style rules to decorate spanned text with lines.
+3. Now add style rules to transform the case of spanned text.
+4. Finally add a style rule to remove the default underline from a
+hyperlink.
+5. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the text decorations and case transformations.
+Avoid using the blink value as blinking text is despised by many users,
+and is not supported by default in some browsers.
+*/
+
+#para-1 {
+    background: #CCCCFF;
+    font: medium "Courier", monospace;
+}
+
+#sig {
+    color: purple;
+    font: xx-large "Lucida Handwriting", cursive;
+}
+
+span.under {
+    text-decoration: underline
+}
+
+span.thru {
+    text-decoration: line-through
+}
+
+span.rails {
+    text-decoration: overline underline blink
+}
+
+span.lower {
+    text-transform: lowercase
+}
+
+span.upper {
+    text-transform: uppercase
+}
+
+span.caps {
+    text-transform: capitalize
+}
+
+a.plain {
+    text-decoration: none
+}

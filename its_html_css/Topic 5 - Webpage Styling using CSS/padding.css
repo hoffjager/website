@@ -1,0 +1,32 @@
+﻿/*
+    Refer back to:
+    padding.html
+1. create style sheet rules to color the paragraph and span elements.
+2. Next add a style rule to add padding to the left and right sides of
+the first span content box.
+3. Now add a style rule to add padding to the top and bottom sides of
+the second span content box.
+4. Then add a style rule to add uniform padding to all sides of the
+third span element.
+5. Save the style sheet alongside the HTML file then open the web page
+in a browser to see the added padding.
+Notice how the background color fills the content area and padding area
+– extending up to the outer edge of the border area.
+*/
+
+p {
+    background: aqua
+}
+span {
+    background: yellow;
+    border: 0.3em red dashed
+}
+span#pad-h {
+    padding: 0 3em 0 3em
+}
+span#pad-v {
+    padding: 1em 0 1em 0
+}
+span#pad-hv {
+    padding: 1em
+}

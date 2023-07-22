@@ -1,0 +1,51 @@
+﻿<!--
+1. Create an HTML5 document containing heading, sub-heading, and paragraph elements.
+2. In the head section of the document, immediately after the closing </title> tag, insert a style element block
+containing style rule sets for each content element.
+3. Save the HTML file then open it in a web browser to see the styles applied to the content elements.
+Internal style sheets should only be used where it is desirable to create a
+single HTML document for portability – external style sheets, described overleaf,
+are always preferable.
+Style rules can also be applied internally to individual HTML elements by
+assigning "inline" properties and values to the style attribute of that element.
+This will override the rules applicable to the same properties of that element
+that may have been specified in any other style sheet.
+4. Edit the heading elements in the body section to reverse the colors specified
+in the style sheet within the document's head section.
+5. Save the HTML file again then re-open it in a web browser to see the previous
+styles get overridden.
+The use of inline style rules should be avoided at all costs – always place
+style rules within a style sheet instead.
+Although described here for completeness there are drawbacks to using internal
+style rules. Multiple individual inline styles are more difficult to maintain
+than a single style rule in a style sheet as they would need to be individually
+altered to affect a style change to a number of elements. An internal style sheet
+is only applicable to the HTML document in which it is contained, whereas an
+external style sheet can apply to multiple web pages to consistently style an
+entire website from a single file.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Internal Style Rules</title>
+    <style type="text/css" rel="stylesheet" media="screen">
+        h1 {
+            color: blue;
+            background: yellow
+        }
+        h2 {
+            color: white;
+            background: green
+        }
+        p {
+            color: red
+        }
+    </style>
+</head>
+<body>
+    <h1>Heading styled by CSS</h1>
+    <h2>Sub-heading styled by CSS</h2>
+    <p>Paragraph styled by CSS</p>
+</body>
+</html>

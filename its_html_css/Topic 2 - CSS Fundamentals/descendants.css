@@ -1,0 +1,44 @@
+/*
+Refer back to:
+descendants.html
+1. Create a linked style sheet with style rules to color the items in
+each list.
+2. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the list items styled by descendant selectors.
+Although it is generally preferable to reference the element from which
+the target element directly descends, it is sometimes useful to simply
+reference a higher level – say, that from which the containing element
+descends. This means that the direct containing element is omitted from
+the selector and the element is selected by reference to the higher level
+containing element.
+3. Edit the style sheet by replacing the previous style rules with a
+single rule to color the items of both lists in a single color.
+4. Save the amended style sheet then refresh the browser window to see
+the list items styled without reference to their direct containing
+elements.
+In this case, a descendant selector of div li would also select all list
+items but it is better to reference the id value so as not to select list
+items in other div elements.
+More specific selection can be made, however, by stating each containing
+element in the line of descent in a descendant selector.
+5. Edit the style sheet once more by replacing the previous style rule
+with two style rules to color the items of both lists in different colors.
+6. Save the newly-amended style sheet then refresh the browser window
+again to see the list items styled by reference to their lines of descent.
+State the line of descent wherever possible when using descendant
+selectors to make specific selections.
+*/
+
+#menu ul li {
+	color: orange
+}
+#menu ol li {
+	color: purple
+}
+
+ul li {
+	color: red
+}
+ol li {
+	color: blue
+}

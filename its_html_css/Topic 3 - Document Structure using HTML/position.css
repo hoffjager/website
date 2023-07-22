@@ -1,0 +1,13 @@
+﻿/*
+    Refer back to:
+    position.html
+1. Create the style sheet to add borders and color to each element, then save the
+HTML document and style sheet and open the page in your browser to see the structure.
+Always use white page backgrounds, as colored backgrounds can make content
+difficult to read.
+*/
+
+p {
+    color: orange;
+    background: blue
+}

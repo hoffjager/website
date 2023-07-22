@@ -1,0 +1,32 @@
+﻿<!--
+1. Create an HTML document containing a heading, two paragraphs, a list, and
+including two spanned phrases.
+2. Create a linked style sheet with various style rules.
+Refer to:
+relationship.css
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Selecting by Relationship</title>
+    <link type="text/css" rel="stylesheet"
+          href="relationship.css" media="screen" />
+</head>
+<body>
+    <h3>Heading: Child</h3>
+    <p>Paragraph: Child</p>
+    <p>
+        Paragraph: Child
+        <span>Span: Grandchild</span>
+    </p>
+    <ul>
+        <li>List Item: Grandchild</li>
+        <li>
+            List Item: Grandchild
+            <span>Span: Great-Grandchild</span>
+        </li>
+    </ul>
+</body>
+</html>

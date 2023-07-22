@@ -1,0 +1,37 @@
+﻿/*
+    Refer back to:
+    collapse.css
+1. Create a style sheet rule to specify table width and its features.
+2. Next add style rules to specify the size and color of the table
+border and each table cell.
+3. Now add a style rule to collapse the borders of the second table.
+4. Save the style sheet alongside the HTML document then open the web
+page in a browser to see tables drawn with both regular and collapsed
+borders.
+*/
+
+table {
+    width: 500px;
+    height: 60px;
+    margin: 20px
+}
+
+table {
+    border: 2px solid black;
+}
+
+td.twin {
+    border: 5px double green
+}
+
+td.dots {
+    border: 5px dotted red
+}
+
+td.full {
+    border: 5px solid blue
+}
+
+table.fold {
+    border-collapse: collapse
+}

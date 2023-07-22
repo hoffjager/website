@@ -1,0 +1,49 @@
+﻿/*
+Refer back to:
+    popup.html
+1. Create a style sheet that removes browser defaults and initially hides the images.
+2. Next, add rules to size and position both paragraphs.
+3. Now, add rules to style the hyperlinks.
+4. Save the style sheet, then open the web page in your browser and place the
+cursor over any hyperlink to see its associated image appear above the text
+paragraph.
+Notice that the foreground and background colors for the hyperlink’s hover state
+are specified using hexadecimal shorthand values for red and white.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0}
+
+img.pop {
+    position: absolute;
+    top: 20px;
+    left: 190px;
+    padding: 15px;
+    visibility: hidden;
+    height: 0px}
+
+p {
+    width: 150px;
+    float: left;
+    margin: 20px 0 0 20px}
+
+p #models a {
+    display: block;
+    padding: 5px;
+    margin: 0 0 20px 0;
+    color: white;
+    background: blue;
+    text-decoration: none}
+
+p #models a:hover {
+    color: #FFF;
+    background: #F00}
+
+p #models a:hover img.pop {
+    border: 5px solid red;
+    background: #FFF;
+    z-index: 10;
+    visibility: visible;
+    height:auto}

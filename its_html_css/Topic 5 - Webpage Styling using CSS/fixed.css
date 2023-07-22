@@ -1,0 +1,31 @@
+﻿/*
+    Refer back to:
+    fixed.html
+1. Create a linked style sheet with a rule to fix the heading element to
+the top of the browser window and above other page content.
+2. Now add a style rule to position the paragraph below the heading
+element.
+3. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the elements positioned by the style rules.
+4. Now scroll the browser window to see the heading remain in place
+while the paragraph content slides beneath it.
+Fixed positioning is sometimes used to display an identity logo that
+remains visible at a constant position regardless of where the page is
+scrolled.
+*/
+
+h1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    background: lime;
+    width: 100%;
+    z-index: 2
+}
+
+p {
+    position: absolute;
+    top: 100px;
+    z-index: 1
+}

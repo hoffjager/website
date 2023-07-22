@@ -1,0 +1,531 @@
+﻿Topic 1: HTML Fundamentals
+
+Learning Material:
+Chapter 1:
+1.	Introducing HTML5
+2.	Addressing web pages
+3.	Defining document structure
+4.	Creating a document
+5.	Validating documents
+6.	Employing an HTML editor
+7.  	Summary
+
+1. Introducing HTML5
+Historically, the desire to have text printed in specific formats meant that original manuscripts were “marked up”
+with annotation to indicate to the book-printer how the author would like sections of text laid out.
+This annotation had to be concise and needed to be easily understood by both the printer and the author.
+A series of commonly recognized abbreviations therefore formed the basis of a standard markup language.
+HyperText Markup Language (HTML) is a modern standard markup language that uses common abbreviations called “tags”
+to indicate to the web browser how the author would like to have sections of a web page laid out.
+It was first devised in March 1989 by British physicist Tim Berners-Lee at CERN in Switzerland (the European
+organization for nuclear research) to share all computer-stored information between the CERN physicists.
+Berners-Lee created a text browser to transfer information over the Internet using hypertext to provide
+point-and-click navigation.
+In May 1990, this system was named the World Wide Web, and was enhanced in 1993 when college student Marc Andreessen
+added an image tag. Now that HTML could display both text and images, the World Wide Web quickly became hugely
+popular.
+As various web browsers were developed, their makers began to add individual proprietary tags – effectively creating
+their own versions of HTML!
+The World Wide Web Consortium (W3C) standards organization recognized the danger that HTML could become fragmented,
+so they created a standard specification to which all web browsers should adhere. This successfully encouraged the
+browser makers to support the standard tags.
+The W3C’s HTML specification was continually revised to introduce new features until the publication of HTML version
+4.01 at the turn of the century.
+At that time the W3C also published a specification for XHTML (eXtensible HTML), which strictly required all code to
+be “well-formed”, to comply with the rules of eXtensible Markup Language (XML).
+This attempt to coerce web authors into adopting rigorous syntax, as Berners-Lee admits, did not work.
+So the W3C returned to HTML and finally produced a specification for version 5 in October 2014.
+This was updated on November 1, 2016 to version 5.1.
+The W3C is the recognized body that oversees the HTML standard and other standards on the web.
+See the latest developments on their informative website at http://www.w3.org
+Placing great emphasis on backward compatibility, HTML5 is largely a superset of the previous versions, but it
+introduces some new features that let authors create more meaningful web pages:
+• <main> – a structural element to contain the main content
+• <article> – a structural element to contain stand-alone items of content, such as a self-contained topic
+• <section> – a structural element to group together associated content, such as articles related to a common topic
+• <aside> – a structural element to contain related content
+• <figure>, <figcaption> – structural elements to contain stand-alone illustrations, diagrams, or photos for reference
+• <header> – a structural element to contain page header content, such as a title, logo, and navigation
+• <footer> – a structural element to contain page footer content, such as copyright information and contact details
+• <ruby>, <rt>, and <rp> – semantic elements to indicate pronunciation for East	Asian languages, such as Japanese
+• <audio>, <video>, and <source> – embedding elements to incorporate audio and video media, such as MP3 music files
+• <embed> – an embedding element to incorporate media that does require an external plug-in, such as movies in SWF format
+• <canvas> – an embedding element to create an area in which to dynamically draw bitmap graphics, such as graphs
+• <details>, <summary> – interactive elements to contain additional information	that users can choose to read
+• <menu>, <menuitem> – elements to add functionality to the web browser’s context menu
+Drawing on the area provided by the <canvas> element is accomplished exclusively using JavaScript and the Canvas 2D
+API (Application Programming Interface).
+HTML5 also includes Drag and Drop, Web Storage, and Messaging APIs with which JavaScript can provide dynamic web page
+functionality.
+Much effort has been made in HTML5 so that it does not “break the web” – by continuing to define how browsers should
+deal with legacy markup code.
+HTML5 finally brings intrinsic support for audio and video content with codec support built into the browsers.
+
+2. Addressing Web Pages
+The World Wide Web (WWW) comprises a series of large-capacity computers, known as “web servers”, which are connected
+to the internet via telephone lines and satellites.
+The web servers each use the HyperText Transfer Protocol (HTTP) as a common communication standard to allow any
+computer connected to any web server to access files across the World Wide Web.
+HTML web pages are merely plain text files that have been saved with a “.htm” or “.html” file extension, such as
+index.html.
+In order to access a file across the web, its web address must be entered into the address field of the web browser.
+The web address is formally known as its “Uniform Resource Locator” (URL) and typically has three parts:
+• Protocol – any URL using the HTTP protocol begins by specifying the protocol as http:// or secure https://
+• Domain – the host name of the computer from which the file can be downloaded: www.example.com
+• Path – the virtual path to the file on the named domain, including any parent directory names: /htdocs/index.html
+A URL describing the location of a file by protocol, domain, and path is stating its “absolute address”.
+So the absolute address of the file described by the protocol, domain, and path components above is:
+http://www.example.com/htdocs/index.html
+A web page address (URL) cannot contain any blank spaces.
+Where an address states only the HTTP protocol and a domain name, most web servers are configured to seek a file
+named index.html in their default directory.
+Code contained within an HTML web page can reference other HTML files in any domain by their absolute address.
+HTML files resident within the same domain can also be referenced more simply by their “relative address”, which
+means that files located within the same directory can be referenced just by their file name.
+For instance, a file named “adjacent.html” located in the same directory can be referenced simply as adjacent.html.
+Additionally, a relative address can reference a file within the parent directory by prefixing its name with “../”.
+For instance, a file named “higher.html” in the parent directory can be referenced from the current directory as
+../higher.html.
+
+2.i	How do web servers work?
+When you enter a URL into the browser address field, the browser first examines the protocol. Where the protocol is
+specified as HTTP, or assumed to be HTTP if unspecified, the browser recognizes that a file is being sought from a
+web server.
+It then contacts a Domain Name Server (DNS) to look up the numerical Internet Protocol (IP) address of the specified
+domain name.
+Next, a connection is established with the web server at that IP address to request the file at the specified path.
+When the file is successfully located, it is copied back to the browser, otherwise the web server sends an error
+code, such as “404 – Page Not Found”:
+Web Browser & UI - HTTP Request - Connection to Web Server & Domain, HTTP Response
+The Domain Name Server (DNS) is typically run by your Internet Service Provider (ISP) or by your company.
+A successful response sends HTTP headers to the web browser, describing the nature of the response, along with a
+copy of the requested file.
+The HTTP headers are not normally visible but can be examined using various development tools, such as the F12
+Developer Tools feature in the Microsoft Edge web browser.
+Notice in the headers that the Content-Type is “text/html” – the MIME type used by all web servers to describe
+plain text HTML files.
+
+3. Defining document structure
+The structure of an HTML5 document has these three parts:
+• Document type declaration – declaring precisely which version of HTML is used to mark up the document
+• Head section – providing descriptive data about the document itself, such as the document’s title and the character set used
+• Body section – containing the content that is to appear when the document gets loaded into a web browser
+
+3.i		Document type declaration
+The document type declaration must appear at the start of the first line of every HTML5 document to ensure the web
+browser will “render” (display) the document in “Standards Mode” – following the HTML5 specifications.
+The document type declaration tag for all HTML5 documents looks like this:
+<!DOCTYPE HTML>
+It is important to note that HTML5 is not a case-sensitive language – so the document type declaration tag, and all
+other tags, may alternatively be written in any combination of uppercase and lowercase characters.
+For example, the following are all valid: <!DOCTYPE html> <!Doctype Html> <!doctype html>
+The choice of capitalization is yours, but it is recommended you adhere consistently to whichever style you choose.
+The document type declaration tag capitalization style favoured throughout this book uses all uppercase to emphasize
+its prominence as the very first tag on each page – but all other tags are all in lowercase.
+Those familiar with previous versions of HTML may be surprised at the simplicity of the HTML5 document type
+declaration. In fact, the document type declaration in earlier versions was not actually part of the HTML language –
+so required lengthy references to schema documents. By contrast, the HTML5 document type declaration is an intrinsic
+part of HTML itself.
+The document type declaration in earlier versions of HTML was part of the Standard Generalized Markup Language (SGML)
+from which HTML is derived.
+The entire document head section and body section can be enclosed within a pair of <html> </html> tags to contain
+the rest of the document. The HTML5 specification actually states that these are optional, but it is logical to
+provide a single “root” element.
+Most HTML tags are used in pairs like this to act as “containers” with the syntax <tagname> data </tagname>
+
+3.ii	Head section
+The document’s head section begins with an HTML opening <head> tag and ends with a corresponding closing </head> tag.
+Data describing the document can be added later between these two tags to complete the HTML document’s head section:
+<head> data </head>
+
+3.iii	Body section
+The document’s body section begins with an HTML opening <body> tag and ends with a corresponding closing </body> tag.
+Data content to appear in the browser can be added later between these two tags to complete the HTML document’s body
+section:
+<body> data </body>
+
+3.iv	Code comments
+Comments can be added at any point within both the head and body sections between a pair of <!-- and --> tags.
+Anything that appears between the comment tags is ignored by the browser:
+<!-- This text won't appear on the web page -->
+
+3.v		Fundamental structure
+So, the markup tags that create the fundamental structure of every HTML5 document look like this:
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!-- Data describing the document to be added here -->
+	</head>
+	<body>
+		<!-- Data content to appear in the browser to be added here -->
+	</body>
+</html>
+
+An HTML “element” is any matching pair of opening and closing tags, or any single tag not requiring a closing tag –
+as described in the HTML5 element tags list on the inside front cover of this book.
+The “invisible” characters that represent tabs, newlines, carriage returns, and spaces are collectively known as
+“whitespace”. They may optionally be used to inset the tags for clarity.
+
+4.	Creating a document
+The fundamental HTML5 document structure, described here, can be used to create a simple HTML5 document in any
+plain text editor – such as Windows’ Notepad application. In order to create a valid “barebones” HTML5 document,
+information must first be added defining the document’s primary written language, its character encoding format, and
+its title.
+The document’s primary language is defined by assigning a standard language code to a lang “attribute” within the
+opening <html> root tag. For the English language the code is en, so the complete opening root element looks like
+this:
+<html lang=“en”>
+
+The <meta> tag is a single tag – it does not have a matching closing tag.
+The document’s character encoding format is defined by assigning a standard character-set code to a charset
+attribute within a <meta> tag placed in the document’s head section. The recommended encoding is the popular 8-bit
+Unicode Transformation Format for which the code is UTF-8, so the complete element looks like this:
+<meta charset=“UTF-8”>.
+Finally, the document’s title is defined by text between a pair of <title> </title> tags placed in the document’s
+head section.
+
+Refer to:
+hello.html
+
+The quotation marks around an attribute value are usually optional, but are required for multiple values. For
+consistency, attribute values in the examples throughout this book are all surrounded by quotation marks.
+Windows’ Notepad automatically adds a hidden “Byte Order Mark” (BOM) to the file, while other editors (such as
+Notepad++ shown here) allow this to be omitted. Notepad++ can be freely downloaded from:
+http://www.notepad-plus-plus.org
+
+5.	Validating documents
+The W3C’s online HTML validator can be found at:
+http://www.validator.w3.org
+Just as text documents may contain spelling and grammar errors, HTML documents may contain various errors that
+prevent them from conforming to the specification rules. In order to verify that an HTML document does indeed
+conform to the rules of its specified document type declaration, it can be tested by a validator tool.
+Only HTML documents that pass the validation test successfully are sure to be valid documents.
+Web browsers make no attempt at validation, so it is well worth verifying every HTML document with a validator tool
+before it is published, even when the content looks fine in your web browser. When the browser encounters HTML
+errors it will make a guess at what is intended – but different browsers can make different interpretations so may
+display the document incorrectly. Conversely, valid HTML documents should always appear correctly in any
+standards-compliant browser.
+
+The World Wide Web Consortium (W3C) provides a free online validator tool that checks the syntax of web documents:
+1. With an Internet connection, open your web browser and navigate to the W3C Validator Tool at
+http://www.validator.w3.org, then click on the “Validate by File Upload” tab. Other tabs in the validator allow you
+to enter the web address of an HTML document located on a web server to “Validate by URL” or copy and paste all code
+from a document to “Validate by Direct Input”.
+2. Click the “Browse” button, then navigate to the HTML document you wish to validate – once selected, its local
+path appears in the validator’s “File” field.
+3. Next, click the validator’s “Check” button to upload a copy of the HTML document and run the validation test –
+the results will then be displayed. If validation fails, the errors are listed so you may easily correct them. When
+validation succeeds, you may choose to include an icon at the end of the document demonstrating HTML5 support.
+The validator automatically detects the document’s character set and HTML version.
+The HTML5 support logo is available in several sizes and formats – find more details online at:
+http://www.w3.org/html/logo
+
+6.	Employing an HTML editor
+HTML code can be created in any plain text editor that provides encoding in the recommended UTF-8 format. As long as
+the code in the new text file is saved with a file extension of “.htm” or “.html”, an HTML document is created.
+This file can then be opened in any web browser, such as Microsoft Edge, to see how the HTML code is interpreted to
+“render” (display) the content on the screen.
+At the time of writing, Expression Web 4 is available free for download at:
+http://www.microsoft.com/en-us/download/details.aspx?id=36179
+Older web browsers, such as Internet Explorer 8 or earlier, will not fully recognize the modern HTML5 markup code.
+It is best, therefore, to view HTML5 web pages in the latest version of Microsoft Edge, Internet Explorer, Firefox,
+Google Chrome, Opera, and Safari web browsers.
+Some HTML authors prefer to use specialized HTML editors that colorize the various parts of the source code for
+greater clarity, and offer further features.
+Microsoft’s Expression Web editor, shown below, is a popular choice for some HTML authors.
+The Expression Web interface also allows web pages to be created visually by dragging components onto its Design
+window – but knowledge of HTML is often helpful in fine-tuning the web page.
+The Split view in Expression Web provides a live preview of what the HTML document will look like in a web browser.
+Additionally, a built-in menu lets you quickly view the document in any web browser installed on your computer.
+Expression Web’s “Compatibility Checker” tool lets you easily locate code errors that do not conform to the declared
+document type. Additionally, like other Microsoft development tools, the Expression Web editor has “IntelliSense”,
+which identifies syntax errors live as you type the HTML code. This feature also provides context-sensitive menus
+that can insert HTML tags compatible with the current point in the document. For example, when you type a “<” in the
+head section, IntelliSense presents a list of tags that may be inserted at that point.
+After selecting a tag and typing a space, IntelliSense then presents a list of attributes that may be inserted
+within that tag.
+By default, IntelliSense automatically inserts a matching closing tag, if appropriate, whenever you type an opening
+tag. Some authors dislike this ability, however, but the Expression Web options allow IntelliSense features to be
+turned on and off individually to customize the editor to your personal taste.
+The W3C online validator tool can also be used to verify correct HTML code, along with Expression Web’s
+Compatibility Checker tool.
+Expression Web also provides a customizable Code Snippet facility to quickly insert frequently used chunks of code –
+press Ctrl + Enter to see the Code Snippet list.
+
+7. Summary
+• The World Wide Web Consortium (W3C) is the recognized body that oversees standards on the web.
+• HTML5 introduces intrinsic support for audio and video media content.
+• JavaScript can draw on canvas areas and provide dynamic web page functionality using the new HTML5 APIs.
+• HyperText Transfer Protocol (HTTP) is the common communication standard used by web servers.
+• Uniform Resource Locator (URL) is an absolute web address comprising protocol, domain, and path components.
+• A relative address can reference an adjacent file by its file name and may use the syntax “../” to reference a
+  parent directory.
+• Web servers send response headers back to the requesting computer and a copy of the file requested, or an error
+  code.
+• Each HTML5 document should have a document type declaration, head section, and body section.
+• Information about the document itself is contained within the head section, and content is contained within the
+  body section.
+• The document’s written language is specified to the lang attribute in the opening <html> root element tag.
+• The document’s character-set encoding is specified to the charset attribute in a <meta> tag, within the head
+  section.
+• The document’s title is specified between <title> </title> tags, within the head section.
+• The free online W3C validator tool should be used to verify that the HTML5 document is free of errors.
+• HTML5 documents can be created in a plain text editor or a specialized HTML editor such as Microsoft Expression
+  Web.
+
+Chapter 2:
+1. 	Bestowing a title
+2. 	Specifying a character set
+3. 	Refreshing the page
+4. 	Describing the document
+5. 	Incorporating scripts
+6. 	Incorporating style sheets
+7.	Linking more resources
+8. 	Summary
+
+1.	Bestowing a title
+The specifications require every HTML5 document to have a title, but its importance is often overlooked. The
+document title should be carefully considered, however, as it is used extensively:
+• Bookmarks – save the document title to link back to its URL
+• Title Bar – a web browser window may display the title
+• Navigation Tab – a web browser tab may display the title
+• History – saves the document title to link back to its URL
+• Search Engines – read the document title and typically display it in search results to link back to its URL
+You can find a chart of all character entities at: http://www.dev.w3.org/html5/htmlauthor/charref
+The specifications do not define a naming scheme for document titles, but do encourage authors to consider
+accessibility issues in all aspects of their web page designs.
+Document titles should ideally be short and meaningful – each tab on a modern tabbed browser may display only 10
+characters.
+Document titles throughout a website should follow a consistent naming convention and capitalize all major words.
+One popular naming convention provides a personal or company name and brief page description separated by a hyphen.
+For example, “Amazon - HTML5 in easy steps”. An alternative places the description first, so it remains visible when
+the title is truncated. For example, “HTML5 in easy steps - Amazon”.
+Document titles, and document content, may contain special characters that are known in HTML5 as “entities”. Each
+entity reference begins with an ampersand and ends with a semi-colon. For example, the entity &lt; (less than)
+creates a “<” character, and the entity &gt; (greater than) creates a “>” character. These are often needed to avoid
+confusion with the angled brackets that surround each HTML tag. Other frequently used entities include &nbsp;
+(a single non-breaking space), &copy; (©), &reg; (®), and &trade; (™).
+These are best avoided in document titles, however, as the vocal narrator used by visually impaired viewers may read
+each entity character as a word.
+Title text that is not visible on the tab will still be read by a narrator. Press WinKey + Enter to launch the
+narrator on Windows 10, then click the tab to hear the title.
+
+Refer to:
+title.html
+
+2.	Specifying a character set
+The examples in this book are each files saved with Unicode endings using the UTF-8 character-set. This
+character-set supports all characters in both Western and English languages, which allows the HTML document to
+contain characters from any language. Further character sets exist that also support all languages, while others
+exclusively support Western languages. The five most popular character-sets are listed below:
+• UTF-8: Multi-lingual Universal Transformation Format
+• BIG5: Multi-lingual traditional Chinese characters
+• SHIFT_JIS: Multi-lingual traditional Japanese characters
+• US-ASCII: US ASCII standard Western alphabet characters
+• ISO-8859-1: ISO standard Western alphabet characters
+Character-set names are not case-sensitive – so “BIG5”, “Big5”, and “big5” are equivalent.
+Although UTF-8 supports Chinese and Japanese characters, they may appear as a simplified equivalent of those in the
+more specialized character sets, which create traditional characters.
+
+Refer to:
+big5.html
+&
+utf-8.html
+	
+3.	Refreshing the page
+Meta information is simply data that describes other data. In the context of HTML, document meta data describes the
+document itself – rather than the document’s contents.
+HTML meta data is defined in the head section of the HTML document using the <meta> tag. Previous examples have used
+this tag to specify the document’s character-set – as one piece of information describing that document.
+Further <meta> tags can be added to describe other aspects of the document.
+The <meta> tag is an “empty” tag that needs no matching closing tag to create an HTML element.
+It is only used to specify information with its tag attributes.
+For example, its http-equiv attribute can represent a document HTTP header property and its content attribute
+specify that property’s value.
+The W3C discourages the use of meta refresh as it can disorient users – but the meta refresh uses described here are
+considered legitimate.
+Assigning the HTTP “refresh” property to a <meta> tag’s http-equiv attribute can be used to reload the page after a
+number of seconds specified by its content attribute. For example, to reload the page after five seconds, like this:
+<meta http-equiv = “refresh” content = “5”>
+This technique is often used on websites to dynamically update news or status items, as it does not depend on
+JavaScript support.
+Another popular use redirects the browser to a new web page after a specified number of seconds, like this:
+<meta http-equiv = “refresh” content= “5; url = ’TOPIC1new-page.html’ ”>
+In this case, the <meta> tag’s content attribute specifies both the number of seconds to delay and the new URL to
+load.
+
+Refer to:
+refresh.html
+&
+new-page.html
+
+4.	Describing the document
+In addition to specifying the document’s character-set and expiry date, <meta> tags can be used to provide
+descriptive information that may be useful to search engines. This offers no guarantee of high ranking, however, as
+search engines also use other page information for that purpose – especially the document title.
+Nevertheless, it is helpful to provide a description and a list of keywords relevant to the contents of that page so
+that search engine “spiders” might usefully add the page to their index.
+All search engine spiders find pages to add to their index – even if the page has never been submitted to them.
+Descriptive <meta> tags always have a name attribute, to specify a page feature, and a content attribute to specify
+that feature’s value. For example, the “description” name allows you to specify text content describing the page.
+This should be short, succinct sentences that might appear in a search engine’s results page. Any description longer
+than around 200 characters may get truncated. Similarly, the “keywords” name allows you to specify text content in
+the format of a comma-separated list of relevant keywords. These may be used by search engines to influence their
+results. For example, a search for “italian ceramics” could return all web pages with “italian” and “ceramics” in
+their keywords list.
+Promotion of the web page by keywords is best achieved by following some simple guidelines:
+• Use only lowercase characters
+• Keep all keywords on a single line
+• Never repeat a keyword in a list
+• Limit the keywords list to 1,000 characters or less
+• Try to use the plural form for keywords – to match searches made with both the single and plural forms of that word
+To specify that a web page should not be indexed by search engines, the “robots” name should have a content value of
+“noindex”. Conversely, this may be set to “all” to explicitly allow indexing, but as that is the default state it’s
+not really necessary.
+Always include the three most important keywords in the description.
+
+Refer to:
+keywords.html
+
+5.	Incorporating scripts
+Scripts can be incorporated within HTML documents to interact with the user and to provide dynamic effects. This
+ability has become increasingly important with the development of Web 2.0 pages in which sections of the page can be
+dynamically updated. Previously, the browser would typically request an entire new page from the web server, which
+was less efficient and more cumbersome, so Web 2.0 is a great improvement.
+Scripts enclosed by <script> </script> tags can be added within the head section of an HTML document but, in line
+with the aim of HTML5 to separate content from
+presentation, are best contained in a separate file. The <script> tag
+automatically assumes a type attribute value of “text/javascript”, as scripts are
+expected to use the JavaScript language by default. This means that the type
+attribute can be omitted from the tag unless you are incorporating a script that
+uses a different scripting language. The URL of the script file must be assigned
+to a src attribute within the <script> tag when incorporating an external script.
+For example, add an adjacent script file named “script.js”, like this:
+<script src = "script.js"> </script>
+Alternative fallback content can be provided in the document’s body section
+between <noscript></noscript> tags, which will only be displayed when script
+functionality is absent or disabled.
+Remember that the <script> tag always needs to have a matching closing tag.
+
+Refer to:
+script.html
+&
+script.js
+
+6.	Incorporating style sheets
+Style sheets can be incorporated within HTML documents to control the
+presentational aspects of each element on the page.
+The use of style sheets has replaced all features of HTML that formerly related
+to presentation. For example, the <font> tag has become obsolete, as font family,
+weight, style, and size are now specified by a style sheet rule.
+Style sheets enclosed by <style> </style> tags can be added within the head
+section of an HTML document to enclose rules governing how the content will
+appear. The <style> tag automatically assumes a type attribute value of
+“text/css”, as style sheets are expected to use the Cascading Style Sheet
+language by default. This means that the type attribute can be omitted from the
+tag unless you are incorporating a style sheet that uses a different styling
+language. For example, a simple style sheet containing rules to
+determine the appearance of all size-one headings could look like this:
+<style>
+	h1 {color: red; background: yellow}
+</style>
+This is acceptable and will validate but, in line with the aim of HTML5 to
+separate content from presentation, style sheets are best contained within a
+separate file. The great advantage of placing style sheets and scripts in
+separate files is that they can be applied to multiple HTML documents – thus
+making website maintenance much easier.
+Editing a shared style sheet or script instantly affects each HTML document that
+shares that file.
+An external style sheet is incorporated within an HTML document by adding a
+<link> tag in the document’s head section. This must contain a rel (relationship)
+attribute assigned a “stylesheet” value, and the URL of the style sheet must be
+assigned to its href attribute. Once again, this tag automatically assumes a type
+attribute value of “text/css” for style sheets, so the type attribute can be
+omitted unless you are incorporating a style sheet that uses a different styling
+language. For example, add an adjacent style sheet file named "style.css", like
+this:
+<link rel = "stylesheet" href = "style.css">
+The <link> tag is a single tag – it does not have a matching closing tag.
+See the element tags list on the inside front cover of this book to find other
+single tags.
+
+Refer to:
+style.html
+&
+style.css
+
+7.	Linking more resources
+The <link> tag that was used in the previous example to incorporate a style sheet
+in an HTML5 document can also be used to incorporate other resources into a
+document.
+This tag may only appear in the head section of a document, but the head section
+can contain many <link> tags. Each <link> tag must contain rel and href
+attributes, stating the relationship and location of the link resource, together
+with a type attribute where appropriate to specify the MIME type of the link
+resource.
+MIME (Multipart Internet Mail Extension) types describe file types – such as
+text/html for HTML files. You can find the list of official MIME types at
+iana.org/assignments/media-types/media-types.xhtml
+
+Permitted rel (relationship) values:
+	alternate author bookmark help icon
+	license next nofollow noreferrer prev
+	search stylesheet tag
+
+Many of the link types above are intended to help search engines locate resources
+associated with that HTML document, and the <link> tag may also include a title
+attribute to further describe the resource. For example, a version of the page in
+another language:
+	<link rel=“alternate” type=“text/html” href=“esp.html”
+		  title=“Esta página en Español - This page in Spanish” >
+
+The W3C HTML 5.1 specifications introduced a rev reverse link attribute for the
+<link> tag that can be used to specify how the document is related to the link.
+In this case, the location of the resource is specified using a relative address
+that, by default, the browser will seek in the directory in which the HTML
+document is located.
+The browser can, however, be made to seek a relative address in a different
+directory by inserting a <base> tag at the start of the document’s head section.
+Its href attribute can then specify the absolute directory address.
+For example, to specify a separate “resources” directory, like this:
+	<base href= “http://localhost/resources/”>
+
+It is popular to link an icon resource to display in the web browser’s address
+field. This can be placed in a directory specified by the <base> tag for most
+browsers, but Internet Explorer insists the icon is located in the web server’s
+root directory and named exactly as “favicon.ico”. All browsers do, however,
+recognize all other resources in the directory specified by the <base> tag.
+When using a <base> element it must be placed in the head section before any
+<link> elements.
+
+Refer to:
+link.html
+
+	Summary
+• A document title is used by search engines and may be seen in a browser’s title
+bar, navigation tab, bookmarks, and history.
+• Document content and titles can include character entity references to display
+special characters, such as &copy; for ©.
+• Character-sets that support Eastern language characters often also support
+Western language characters.
+• A <meta> tag can be used to refresh the page at a specified interval or to
+redirect the browser to a different page.
+• Search engine spiders can use the keywords and description specified in <meta>
+tags to add a web page to their index.
+• A keywords list should comprise only non-repeating lowercase keywords on a
+single line of the HTML document.
+• Scripts can be added to the head section of an HTML5 document between <script>
+</script> tags, but are best created in a separate file for incorporation by this
+tag’s src attribute.
+• Style sheets can be added to the head section of an HTML5 document between
+<style> </style> tags, but are best created in a separate file for incorporation
+by a <link> tag.
+• Editing a shared script or shared style sheet instantly affects each HTML
+document that shares that file – making website maintenance much easier.
+• A <link> tag may only appear in the head section of an HTML document, and must
+contain rel and href attributes to describe the resource’s relationship and
+location.
+• A <base> tag can be added at the start of the head section to specify a
+particular directory in which to seek relative addresses.
+• An icon link type can incorporate an icon named favicon.ico that may appear in
+the browser window and on favorite lists.

@@ -1,0 +1,13 @@
+﻿table#data {
+    width: 580px;
+    font-family: sans-serif;
+    border: 5px solid black}
+
+table#data tr,td {
+    border: 1px solid black}
+
+table#data td[rowspan="2"] {
+    background: yellow}
+
+table#data td[rowspan="3"] {
+    background: aqua}

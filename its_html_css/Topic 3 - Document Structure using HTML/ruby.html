@@ -1,0 +1,33 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections.
+3. In the body section, insert an element for Japanese text with its appropriate
+pronunciation annotation.
+4. Surround the pronunciation with ruby parentheses for non-supporting browsers
+and add an English equivalent.
+5. Next, insert a complete ruby element for Chinese text.
+6. Save the document, then open it in different browsers to compare how the ruby
+annotations get displayed.
+The ruby elements are illustrated with an added border style for clarity.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Ruby Example</title>
+</head>
+<body>
+    <ruby>
+        <rb>東 京</rb>
+        <rt>tō kyō</rt>
+        <rp>(</rp> <rt>tō kyō</rt> <rp>)</rp>
+        <rtc>Tokyo</rtc>
+    </ruby>
+    <ruby>
+        <rb>北 京</rb>
+        <rp>(</rp><rt>běi jīng</rt><rp>)</rp>
+        <rtc>Beijing</rtc>
+    </ruby>
+</body>
+</html>

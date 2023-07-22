@@ -1,0 +1,48 @@
+﻿<!--
+1. Create an HTML document with a paragraph containing Hebrew character
+entities and stepped whitespace.
+2. Next begin a definition list with the same entities.
+3. Now add two more definitions to complete the list, again featuring
+the same Hebrew character entities.
+4. Save the HTML document then create a linked style sheet with style
+rules to color element backgrounds and preserve whitespace in paragraphs.
+    Refer to:
+    direction.css
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Text Space &amp; Direction</title>
+    <link type="text/css" rel="stylesheet"
+          href="direction.css" media="screen" />
+</head>
+<body>
+    <p>
+        Hebrew "Congratulations" with mazel tov:
+        &#1502;&#1494;&#1500; [mazel]
+        + &#1496;&#1493;&#1489; [tov]
+        = &#1502;&#1494;&#1500; &#1496;&#1493;&#1489;
+    </p>
+    <dl>
+        <dt>LTR Default Direction (lines begin at the LEFT):</dt>
+        <dd class="ltr">
+            &#1502;&#1494;&#1500; [mazel]
+            &#1496;&#1493;&#1489; [tov]
+        </dd>
+    </dl>
+    <dl>
+        <dt>RTL Custom Direction (lines begin at the RIGHT):</dt>
+        <dd class="rtl">
+            &#1502;&#1494;&#1500; [mazel]
+            &#1496;&#1493;&#1489; [tov]
+        </dd>
+        <dt>LTR Explicit Direction + BiDirectional Override:</dt>
+        <dd class="bidi-off ltr">
+            No longer reads as mazel tov :
+            &#1502;&#1494;&#1500; &#1496;&#1493;&#1489;
+        </dd>
+    </dl>
+</body>
+</html>

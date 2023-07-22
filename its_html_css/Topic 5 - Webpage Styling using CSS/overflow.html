@@ -1,0 +1,38 @@
+﻿<!--
+1. Create an HTML document with six "div" elements that each contain the
+same image.
+2. Save the HTML document then create a linked style sheet with rules
+that specify the absolute position and size of each div element.
+Refer to:
+    overflow.css
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Overflow</title>
+    <link type="text/css" rel="stylesheet"
+          href="overflow.css" media="screen" />
+</head>
+<body>
+    <div class="crop auto-clip">
+        <img src="patch.png" alt="Blocks">
+    </div>
+    <div class="crop blok-clip">
+        <img src="patch.png" alt="Blocks">
+    </div>
+    <div class="crop line-clip">
+        <img src="patch.png" alt="Blocks">
+    </div>
+    <div class="spill show-overflow">
+        <img src="patch.png" alt="Blocks">
+    </div>
+    <div class="spill hide-overflow">
+        <img src="patch.png" alt="Blocks">
+    </div>
+    <div class="spill keep-overflow">
+        <img src="patch.png" alt="Blocks">
+    </div>
+</body>
+</html>

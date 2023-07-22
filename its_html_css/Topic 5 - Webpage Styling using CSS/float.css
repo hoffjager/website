@@ -1,0 +1,39 @@
+﻿/*
+    Refer back to:
+    float.html
+1. Create a linked style sheet with a rule to color all paragraph
+backgrounds.
+2. Now add a style rule to float the first image to the right side of
+its containing paragraph element and add a border.
+3. Next add a style rule to float the second image to the left side of
+its containing paragraph element and add a border.
+4. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the floated images.
+Floated content boxes are not removed from normal flow layout but merely
+repositioned within it – the space at their original position gets filled
+with surrounding content.
+5. Edit the style sheet to add a rule that prevents the final paragraph
+flowing alongside the second floated image.
+6. Save the style sheet once more then refresh the browser window to see
+the final paragraph now appear below the second image.
+With CSS any element can be floated to the side of its containing
+element by setting its float property.
+*/
+
+p {
+    background: yellow
+}
+
+img[src="viper-1.png"] {
+    float: right;
+    border: 3px dashed red
+}
+
+img[src="viper-2.png"] {
+    float: left;
+    border: 3px dashed blue
+}
+
+p.clear {
+    clear: left
+}

@@ -1,0 +1,28 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections.
+3. Within the body section, insert a paragraph wrapper.
+4. Within the paragraph, insert a PDF object to embed.
+5. Save the HTML document alongside the specified resource file, then
+open the web page to see it embedded.
+If you can disable PDF support, then re-open this example. You will see
+the fallback text appear in place of the embedded PDF document.
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Embedding Objects</title>
+</head>
+<body>
+    <p>
+        This is text in the document that...<br />
+        <object data="piechart.pdf" type="application/pdf"
+                width="580" height="310">
+            [PDF Document - May Require the Adobe Reader plugin]
+        </object>
+        <br />...continues around an embedded resource.
+    </p>
+</body>
+</html>

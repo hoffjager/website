@@ -1,0 +1,45 @@
+﻿<!--
+1. Start a new HTML5 document.
+2. In the body section, insert a form element containing a submit button to send
+form data by the GET method.
+3. Now, in the form element, insert a paragraph containing a checkbox to appear
+automatically checked.
+The <fieldset> element only groups the related elements it encloses for visual
+presentation – it does not associate them programmatically.
+4. Next, in the form element, insert a fieldset containing a legend and five
+checkboxes to appear unchecked.
+5. Save the HTML document, then open the web page in your browser, check some
+boxes, and submit the form.
+Notice that the checked attribute need have no assigned value – its mere presence
+sets the switch to “on”, and its absence leaves the switch in its default “off”
+state.
+As the checkboxes for the Walking and Jogging activities are unchecked, their
+name=value pairs are not sent to the server.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Checkbox Example</title>
+</head>
+<body>
+    <form method="get" action="http://localhost/echo.pl">
+        <p>
+            <input type="submit" value="Submit Form" />
+        </p>
+        <p>
+            Yes, I would like to receive details
+            <input type="checkbox" name="Ask For" value="Details" checked />
+        </p>
+        <fieldset>
+            <legend>Activities of Interest...</legend>
+            Sailing <input type="checkbox" name="Do" value="Sail" /><br />
+            Walking <input type="checkbox" name="Do" value="Walk" /><br />
+            Driving <input type="checkbox" name="Do" value="Drive" /><br />
+            Skiing <input type="checkbox" name="Do" value="Ski" /><br />
+            Jogging <input type="checkbox" name="Do" value="Jog" /><br />
+        </fieldset>
+    </form>
+</body>
+</html>

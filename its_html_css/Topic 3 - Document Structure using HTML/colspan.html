@@ -1,0 +1,49 @@
+﻿<!--
+1. Make a copy of table.html, and rename it colspan.html
+2. Change the document and table titles.
+3. In the table data element containing the text “Cell 1.1”, insert an attribute
+in its opening tag and edit its content.
+4. Now, delete the table data element containing the text “Cell 1.2” – as this
+cell is now spanned.
+Refer to:
+colspan.css
+5. Save the HTML document, then re-open the colspan.css style sheet and add
+rules to style cells spanning columns.
+6. Save the style sheet, then open the web page in your browser to see the cell
+spanning two columns on Row 1.
+7. Reopen the HTML document, then insert an attribute into the table data element
+containing the text “Cell 2.1”:
+<td colspan=”3”>Cell 2.1+2.2+2.3</td>
+8. Now, delete the table data elements containing the text “Cell 2.2” and
+“Cell 2.3” – as these cells are now spanned.
+9. Save the amended HTML document, then open it in your browser to see the cell
+spanning three columns on Row 2.
+10. Reopen the HTML document once more, then insert another attribute into the
+table data element containing the text “Cell 2.1+2.2+2.3” and edit its content:
+<td colspan=”3” rowspan=”2”>Cell 2.1+2.2+2.3+3.1+3.2+3.3</td>
+11. Now, delete the table data elements containing the text “Cell 3.1”, “Cell 3.2”
+and “Cell 3.3” – cells now spanned.
+12. Save the amended HTML document, then open it in your browser to see the cell
+span three columns and two rows.
+Combined spans are rectangular – they cannot span an L-shape.
+Column spanning and row spanning can be combined to create large rectangular
+blocks of cells extending over multiple columns and across multiple rows
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Column Spanning Example</title>
+    <link type="text/css" rel="stylesheet"
+          href="colspan.css" media="screen" />
+</head>
+<body>
+    <table id="data">
+        <caption>A Table Spanning Columns</caption>
+        <tr><th>Row 1<td colspan="2">Cell 1.1 + Cell 1.2<td>Cell 1.3</tr>
+        <tr><th>Row 2<td colspan="3" rowspan="2">Cell 2.1 + Cell 2.2 + Cell 2.3 + Cell 3.1 + Cell 3.2 + Cell 3.3</tr>
+        <tr><th>Row 3</tr>
+    </table>
+</body>
+</html>

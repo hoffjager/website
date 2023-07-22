@@ -1,0 +1,19 @@
+﻿/*
+Refer back to:
+nav.html
+1. Create a style sheet to position the logo image and navigation menus.
+2. Save the HTML document and style sheet, then open the web page in your
+browser and try out the navigation links.
+It is popular to create vertical navigation menus as unordered lists.
+*/
+
+#logo {
+    float: left}
+
+#horizontal {
+    padding-left: 100px;
+    display: block}
+
+#vertical {
+    float: left;
+    padding: 0px 30px 130px 30px}

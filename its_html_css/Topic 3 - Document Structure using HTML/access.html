@@ -1,0 +1,38 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections, with a link element
+pointing to a style sheet.
+3. Within the body section, insert two hyperlinks that designate different
+numeric access key characters.
+4. Save the HTML document, then create a similar second document containing the
+same two hyperlinks.
+Refer to:
+catalog.html
+5. Save the second HTML document, then create a style sheet to remove the default
+hyperlink styles and to highlight each hyperlink when they receive focus.
+Refer to:
+access.css
+6. Now, save the style sheet, then open the first web page in your browser to see
+the hyperlinks without default styles.
+7. Hit the Tab key repeatedly until the second hyperlink receives focus, then hit
+Return to follow that link.
+8. Press the appropriate access key combination for your browser and number 1 key,
+such as ALT + 1, then hit Return to follow the first hyperlink.
+Removing the default hyperlink styles means they are no longer easily recognizable
+as links – so it is best avoided unless some other indication makes the user aware
+they can be used for navigation purposes.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Access Example</title>
+    <link type="text/css" rel="stylesheet"
+          href="access.css" media="screen" />
+</head>
+<body>
+    <a href="access.html" accesskey="1">Home Page</a> |
+    <a href="catalog.html" accesskey="2">Catalog Page</a>
+</body>
+</html>

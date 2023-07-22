@@ -1,0 +1,726 @@
+Topic 6 - Accessibility, Readability & Testing
+
+Overview
+6.1 Construct well-formed HTML and CSS markup that conforms to industry
+    best practices: 
+        Reusing rules and rule sets, commenting, web-safe fonts,
+        cross-platform usability, separation of structure (HTML) and
+        style (CSS). 
+
+6.2 Apply accessibility principles and evaluate content accessibility:
+        Text alternatives, color contrast and usage, legibility of
+        typography, tab order, text resizing, text hierarchy, translate. 
+
+6.3 Evaluate the structural integrity of HTML and CSS markup:
+        Syntax errors, tag mismatch, cascading issues.
+
+Reading Material
+Bullet Points on Web Content Accessibility Guidelines (WCAG) 2.1 at a
+Glance (E/L):
+https://www.w3.org/WAI/standards-guidelines/wcag/glance/
+https://www.w3.org/TR/WCAG21/
+
+Links:
+WCAG 2.1 Overview
+How to Meet WCAG 2.1 (Quick Reference)
+
+Principle 1 - Perceivable:
+    Guideline 1.1 - Text Alternatives
+        Provide text alternatives for any non-text content so that it
+        can be changed into other forms people need, such as large print,
+        braille, speech, symbols or simpler language.
+            1.1.1 Non-text Content - Level A
+                All non-text content that is presented to the user has a
+                text alternative that serves the equivalent purpose,
+                except for the situations listed below:
+                    Controls, Input: If non-text content is a control or accepts user input, then it has a name that describes its purpose. (Refer to Success Criterion 4.1.2 for additional requirements for controls and content that accepts user input.)
+                    Time-Based Media: If non-text content is time-based media, then text alternatives at least provide descriptive identification of the non-text content. (Refer to Guideline 1.2 for additional requirements for media.)
+                    Test: If non-text content is a test or exercise that would be invalid if presented in text, then text alternatives at least provide descriptive identification of the non-text content.
+                    Sensory: If non-text content is primarily intended to create a specific sensory experience, then text alternatives at least provide descriptive identification of the non-text content.
+                    CAPTCHA: If the purpose of non-text content is to confirm that content is being accessed by a person rather than a computer, then text alternatives that identify and describe the purpose of the non-text content are provided, and alternative forms of CAPTCHA using output modes for different types of sensory perception are provided to accommodate different disabilities.
+                    Decoration, Formatting, Invisible: If non-text content is pure decoration, is used only for visual formatting, or is not presented to users, then it is implemented in a way that it can be ignored by assistive technology.
+                        Understanding 1.1.1
+                        Sufficient Techniques
+                        Situation A: If a short description can serve the same purpose and present the same information as the non-text content:
+                            G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content
+                            Short text alternative techniques for Situation A:
+                            ARIA6: Using aria-label to provide labels for objects
+                            ARIA10: Using aria-labelledby to provide a text alternative for non-text content
+                            G196: Using a text alternative on one item within a group of images that describes all items in the group
+                            FLASH1: Setting the name property for a non-text object
+                            FLASH5: Combining adjacent image and text buttons for the same resource
+                            FLASH28: Providing text alternatives for ASCII art, emoticons, and leetspeak in Flash
+                            H2: Combining adjacent image and text links for the same resource
+                            H35: Providing text alternatives on applet elements
+                            H37: Using alt attributes on img elements
+                            H53: Using the body of the object element
+                            H86: Providing text alternatives for ASCII art, emoticons, and leetspeak
+                            PDF1: Applying text alternatives to images with the Alt entry in PDF documents
+                            SL5: Defining a Focusable Image Class for Silverlight 
+                        Situation B: If a short description can not serve the same purpose and present the same information as the non-text content (e.g., a chart or diagram):
+                            G95: Providing short text alternatives that provide a brief description of the non-text content
+                            Short text alternative techniques for Situation B:
+                            ARIA6: Using aria-label to provide labels for objects
+                            ARIA10: Using aria-labelledby to provide a text alternative for non-text content
+                            G196: Using a text alternative on one item within a group of images that describes all items in the group
+                            FLASH1: Setting the name property for a non-text object
+                            FLASH5: Combining adjacent image and text buttons for the same resource
+                            FLASH28: Providing text alternatives for ASCII art, emoticons, and leetspeak in Flash
+                            H2: Combining adjacent image and text links for the same resource
+                            H35: Providing text alternatives on applet elements
+                            H37: Using alt attributes on img elements
+                            H53: Using the body of the object element
+                            H86: Providing text alternatives for ASCII art, emoticons, and leetspeak
+                            PDF1: Applying text alternatives to images with the Alt entry in PDF documents
+                            SL5: Defining a Focusable Image Class for Silverlight 
+                            Long text alternative techniques for Situation B:
+                            ARIA15: Using aria-describedby to provide descriptions of images
+                            G73: Providing a long description in another location with a link to it that is immediately adjacent to the non-text content
+                            G74: Providing a long description in text near the non-text content, with a reference to the location of the long description in the short description
+                            G92: Providing long description for non-text content that serves the same purpose and presents the same information
+                            FLASH2: Setting the description property for a non-text object in Flash
+                            FLASH11: Providing a longer text description of an object
+                            H45: Using longdesc
+                            H53: Using the body of the object element
+                            SL8: Displaying HelpText in Silverlight User Interfaces
+                        Situation C: If non-text content is a control or accepts user input:
+                            G82: Providing a text alternative that identifies the purpose of the non-text content
+                            Text alternative techniques for controls and input for Situation C:
+                            ARIA6: Using aria-label to provide labels for objects
+                            ARIA9: Using aria-labelledby to concatenate a label from several text nodes
+                            FLASH6: Creating accessible hotspots using invisible buttons
+                            FLASH25: Labeling a form control by setting its accessible name
+                            FLASH27: Providing button labels that describe the purpose of a button
+                            FLASH29: Setting the label property for form components
+                            FLASH30: Specifying accessible names for image buttons
+                            FLASH32: Using auto labeling to associate text labels with form controls
+                            H24: Providing text alternatives for the area elements of image maps
+                            H30: Providing link text that describes the purpose of a link for anchor elements
+                            H36: Using alt attributes on images used as submit buttons
+                            H44: Using label elements to associate text labels with form controls
+                            H65: Using the title attribute to identify form controls when the label element cannot be used
+                            SL18: Providing Text Equivalent for Nontext Silverlight Controls With AutomationProperties.Name
+                            SL26: Using LabeledBy to Associate Labels and Targets in Silverlight
+                            SL30: Using Silverlight Control Compositing and AutomationProperties.Name 
+                        Situation D: If non-text content is time-based media (including live video-only and live audio-only); a test or exercise that would be invalid if presented in text; or primarily intended to create a specific sensory experience:
+                                 Providing a descriptive label
+                        Short text alternative techniques for Situation D:
+                            ARIA6: Using aria-label to provide labels for objects
+                            ARIA10: Using aria-labelledby to provide a text alternative for non-text content
+                            G196: Using a text alternative on one item within a group of images that describes all items in the group
+                            FLASH1: Setting the name property for a non-text object
+                            FLASH5: Combining adjacent image and text buttons for the same resource
+                            FLASH28: Providing text alternatives for ASCII art, emoticons, and leetspeak in Flash
+                            H2: Combining adjacent image and text links for the same resource
+                            H35: Providing text alternatives on applet elements
+                            H37: Using alt attributes on img elements
+                            H53: Using the body of the object element
+                            H86: Providing text alternatives for ASCII art, emoticons, and leetspeak
+                            PDF1: Applying text alternatives to images with the Alt entry in PDF documents
+                            SL5: Defining a Focusable Image Class for Silverlight 
+                            ARIA6: Using aria-label to provide labels for objects
+                            ARIA10: Using aria-labelledby to provide a text alternative for non-text content
+                            G68: Providing a short text alternative that describes the purpose of live audio-only and live video-only content
+                        Short text alternative techniques for Situation D:
+                            ARIA6: Using aria-label to provide labels for objects
+                            ARIA10: Using aria-labelledby to provide a text alternative for non-text content
+                            G196: Using a text alternative on one item within a group of images that describes all items in the group
+                            FLASH1: Setting the name property for a non-text object
+                            FLASH5: Combining adjacent image and text buttons for the same resource
+                            FLASH28: Providing text alternatives for ASCII art, emoticons, and leetspeak in Flash
+                            H2: Combining adjacent image and text links for the same resource
+                            H35: Providing text alternatives on applet elements
+                            H37: Using alt attributes on img elements
+                            H53: Using the body of the object element
+                            H86: Providing text alternatives for ASCII art, emoticons, and leetspeak
+                            PDF1: Applying text alternatives to images with the Alt entry in PDF documents
+                            SL5: Defining a Focusable Image Class for Silverlight 
+                            G100: Providing a short text alternative which is the accepted name or a descriptive name of the non-text content
+                        Short text alternative techniques for Situation D:
+                            ARIA6: Using aria-label to provide labels for objects
+                            ARIA10: Using aria-labelledby to provide a text alternative for non-text content
+                            G196: Using a text alternative on one item within a group of images that describes all items in the group
+                            FLASH1: Setting the name property for a non-text object
+                            FLASH5: Combining adjacent image and text buttons for the same resource
+                            FLASH28: Providing text alternatives for ASCII art, emoticons, and leetspeak in Flash
+                            H2: Combining adjacent image and text links for the same resource
+                            H35: Providing text alternatives on applet elements
+                            H37: Using alt attributes on img elements
+                            H53: Using the body of the object element
+                            H86: Providing text alternatives for ASCII art, emoticons, and leetspeak
+                            PDF1: Applying text alternatives to images with the Alt entry in PDF documents
+                            SL5: Defining a Focusable Image Class for Silverlight
+                        Situation E: If non-text content is a CAPTCHA:
+                            G143: Providing a text alternative that describes the purpose of the CAPTCHA AND G144: Ensuring that the Web Page contains another CAPTCHA serving the same purpose using a different modality 
+                        Situation F: If the non-text content should be ignored by assistive technology:
+                            Implementing or marking the non-text content so that it will be ignored by assistive technology
+                            Techniques to indicate that text alternatives are not required for Situation F:
+                            C9: Using CSS to include decorative images
+                            FLASH3: Marking objects in Flash so that they can be ignored by AT
+                            H67: Using null alt text and no title attribute on img elements for images that AT should ignore
+                            PDF4: Hiding decorative images with the Artifact tag in PDF documents 
+
+                        Advisory Techniques
+                            H46: Using noembed with embed
+                            C18: Using CSS margin and padding rules instead of spacer images for layout design
+                            SL19: Providing User Instructions With AutomationProperties.HelpText in Silverlight
+
+                        Failures
+                            F3: Failure of Success Criterion 1.1.1 due to using CSS to include images that convey important information
+                            F13: Failure of Success Criterion 1.1.1 and 1.4.1 due to having a text alternative that does not include information that is conveyed by color differences in the image
+                            F20: Failure of Success Criterion 1.1.1 and 4.1.2 due to not updating text alternatives when changes to non-text content occur
+                            F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)
+                            F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them
+                            F39: Failure of Success Criterion 1.1.1 due to providing a text alternative that is not null (e.g., alt="spacer" or alt="image") for images that should be ignored by assistive technology
+                            F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute or text alternative on img elements, area elements, and input elements of type "image"
+                            F67: Failure of Success Criterion 1.1.1 and 1.2.1 due to providing long descriptions for non-text content that does not serve the same purpose or does not present the same information
+                            F71: Failure of Success Criterion 1.1.1 due to using text look-alikes to represent text without providing a text alternative
+                            F72: Failure of Success Criterion 1.1.1 due to using ASCII art without providing a text alternative 
+        Guideline 1.2 - Time-based Media
+            Provide alternatives for time-based media.
+            1.2.1 Audio-only and Video-only (Prerecorded) - Level A
+                For prerecorded audio-only and prerecorded video-only media, the following are true, except when the audio or video is a media alternative for text and is clearly labeled as such:
+                    Prerecorded Audio-only: An alternative for time-based media is provided that presents equivalent information for prerecorded audio-only content.
+                    Prerecorded Video-only: Either an alternative for time-based media or an audio track is provided that presents equivalent information for prerecorded video-only content.
+                    Understanding 1.2.1
+                    Sufficient Techniques
+                    Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                    Situation A: If the content is prerecorded audio-only:
+                        G158: Providing an alternative for time-based media for audio-only content
+                        SL17: Providing Static Alternative Content for Silverlight Media Playing in a MediaElement 
+                    Situation B: If the content is prerecorded video-only:
+                        G159: Providing an alternative for time-based media for video-only content
+                        G166: Providing audio that describes the important video content and describing it as such
+                        SL17: Providing Static Alternative Content for Silverlight Media Playing in a MediaElement 
+                    Advisory Techniques
+                        H96: Using the track element to provide audio descriptions
+                    Failures
+                        F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)
+                        F67: Failure of Success Criterion 1.1.1 and 1.2.1 due to providing long descriptions for non-text content that does not serve the same purpose or does not present the same information
+            1.2.2 Captions (Prerecorded) - Level A
+                Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such.
+                Understanding 1.2.2
+                    Sufficient Techniques
+                    Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                    G93: Providing open (always visible) captions
+                    G87: Providing closed captions
+                    G87: Providing closed captions
+                        SM11: Providing captions through synchronized text streams in SMIL 1.0
+                        SM12: Providing captions through synchronized text streams in SMIL 2.0
+                        H95: Using the track element to provide captions
+                        FLASH9: Applying captions to prerecorded synchronized media
+                        SL16: Providing Script-Embedded Text Captions for MediaElement Content
+                        SL28: Using Separate Text-Format Text Captions for MediaElement Content 
+                    Failures
+                        F8: Failure of Success Criterion 1.2.2 due to captions omitting some dialogue or important sound effects
+                        F75: Failure of Success Criterion 1.2.2 by providing synchronized media without captions when the synchronized media presents more information than is presented on the page
+                        F74: Failure of Success Criterion 1.2.2 and 1.2.8 due to not labeling a synchronized media alternative to text as an alternative
+            1.2.3 Audio Description or Media Alternative (Prerecorded) - Level A
+                An alternative for time-based media or audio description of the prerecorded video content is provided for synchronized media, except when the media is a media alternative for text and is clearly labeled as such.
+                Understanding 1.2.3
+                    Sufficient Techniques
+                    Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                    G69: Providing an alternative for time based media
+                        G58: Placing a link to the alternative for time-based media immediately next to the non-text content
+                        SL17: Providing Static Alternative Content for Silverlight Media Playing in a MediaElement 
+                    Linking to the alternative for time-based media using one of the following techniques
+                        H53: Using the body of the object element 
+                     G78: Providing a second, user-selectable, audio track that includes audio descriptions
+                     G78: Providing a second, user-selectable, audio track that includes audio descriptions AND SL1: Accessing Alternate Audio Tracks in Silverlight Media
+                     G173: Providing a version of a movie with audio descriptions
+                        SM6: Providing audio description in SMIL 1.0
+                        SM7: Providing audio description in SMIL 2.0
+                        FLASH26: Applying audio descriptions to Flash video
+                        SL1: Accessing Alternate Audio Tracks in Silverlight Media
+                        Using any player that supports audio and video
+                    G8: Providing a movie with extended audio descriptions
+                        SM1: Adding extended audio description in SMIL 1.0
+                        SM2: Adding extended audio description in SMIL 2.0
+                        FLASH26: Applying audio descriptions to Flash video
+                        SL1: Accessing Alternate Audio Tracks in Silverlight Media
+                        Using any player that supports audio and video
+                    G203: Using a static text alternative to describe a talking head video 
+                    Advisory Techniques
+                        H96: Using the track element to provide audio descriptions
+            1.2.4 Captions (Live) - Level AA
+                Captions are provided for all live audio content in synchronized media.
+                Understanding 1.2.4
+                    Sufficient Techniques
+                    Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                      G9: Creating captions for live synchronized media AND G93: Providing open (always visible) captions
+                      G9: Creating captions for live synchronized media AND G87: Providing closed captions
+                      G9: Creating captions for live synchronized media
+                        SM11: Providing captions through synchronized text streams in SMIL 1.0
+                        SM12: Providing captions through synchronized text streams in SMIL 2.0 
+                      AND G87: Providing closed captions
+                        SM11: Providing captions through synchronized text streams in SMIL 1.0
+                        SM12: Providing captions through synchronized text streams in SMIL 2.0 
+            1.2.5 Audio Description (Prerecorded) - Level AA
+                Audio description is provided for all prerecorded video content in synchronized media.
+                Understanding 1.2.5
+                    Sufficient Techniques
+                    Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                      G78: Providing a second, user-selectable, audio track that includes audio descriptions
+                      G78: Providing a second, user-selectable, audio track that includes audio descriptions AND SL1: Accessing Alternate Audio Tracks in Silverlight Media
+                      G173: Providing a version of a movie with audio descriptions
+                        SM6: Providing audio description in SMIL 1.0
+                        SM7: Providing audio description in SMIL 2.0
+                        FLASH26: Applying audio descriptions to Flash video
+                        Using any player that supports audio and video
+                      G8: Providing a movie with extended audio descriptions
+                        SM1: Adding extended audio description in SMIL 1.0
+                        SM2: Adding extended audio description in SMIL 2.0
+                        FLASH26: Applying audio descriptions to Flash video
+                        Using any player that supports audio and video
+                      G203: Using a static text alternative to describe a talking head video 
+                    Advisory Techniques
+                        H96: Using the track element to provide audio descriptions
+            1.2.6 Sign Language (Prerecorded) - Level AAA
+                Sign language interpretation is provided for all prerecorded audio content in synchronized media.
+                Understanding 1.2.6
+                    Sufficient Techniques
+                    Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                      G54: Including a sign language interpreter in the video stream
+                      G81: Providing a synchronized video of the sign language interpreter that can be displayed in a different viewport or overlaid on the image by the player
+                        SM13: Providing sign language interpretation through synchronized video streams in SMIL 1.0
+                        SM14: Providing sign language interpretation through synchronized video streams in SMIL 2.0
+            1.2.7 Extended Audio Description (Prerecorded) - Level AAA
+                Where pauses in foreground audio are insufficient to allow audio descriptions to convey the sense of the video, extended audio description is provided for all prerecorded video content in synchronized media.
+                Understanding 1.2.7
+                    Sufficient Techniques
+                    Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                        G8: Providing a movie with extended audio descriptions
+                            SM1: Adding extended audio description in SMIL 1.0
+                            SM2: Adding extended audio description in SMIL 2.0
+                            Using any player that supports audio and video
+                    Advisory Techniques
+                        H96: Using the track element to provide audio descriptions
+            1.2.8 Media Alternative (Prerecorded) - Level AAA
+                An alternative for time-based media is provided for all prerecorded synchronized media and for all prerecorded video-only media.
+                Understanding 1.2.8
+                    Sufficient Techniques
+                    Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                    Situation A: If the content is prerecorded synchronized media:
+                        G69: Providing an alternative for time based media
+                            G58: Placing a link to the alternative for time-based media immediately next to the non-text content
+                            SL17: Providing Static Alternative Content for Silverlight Media Playing in a MediaElement 
+                        Linking to the alternative for time-based media using one of the following techniques
+                            H53: Using the body of the object element  
+                    Situation B: If the content is prerecorded video-only:
+                        G159: Providing an alternative for time-based media for video-only content.
+                    Advisory Techniques
+                        H46: Using noembed with embed
+                    Failures
+                        F74: Failure of Success Criterion 1.2.2 and 1.2.8 due to not labeling a synchronized media alternative to text as an alternative
+            1.2.9 Audio-only (Live) - Level AAA
+                An alternative for time-based media that presents equivalent information for live audio-only content is provided.
+                Understanding 1.2.9
+                Sufficient Techniques
+                Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                       G151: Providing a link to a text transcript of a prepared statement or script if the script is followed
+                       G150: Providing text based alternatives for live audio-only content
+                       G157: Incorporating a live audio captioning service into a Web page  
+    Guideline 1.3 - Adaptable
+        Create content that can be presented in different ways (for example simpler layout) without losing information or structure.
+            1.3.1 Info and Relationships - Level A
+               Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.
+               Understanding 1.3.1
+               Sufficient Techniques
+               Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+               Situation A: The technology provides semantic structure to make information and relationships conveyed through presentation programmatically determinable:
+                    ARIA11: Using ARIA landmarks to identify regions of a page
+                    ARIA12: Using role=heading to identify headings
+                    ARIA13: Using aria-labelledby to name regions and landmarks
+                    ARIA16: Using aria-labelledby to provide a name for user interface controls
+                    ARIA17: Using grouping roles to identify related form controls
+                    ARIA20: Using the region role to identify a region of the page
+                    G115: Using semantic elements to mark up structure AND H49: Using semantic markup to mark emphasized or special text
+                    G117: Using text to convey information that is conveyed by variations in presentation of text
+                    G140: Separating information and structure from presentation to enable different presentations
+                    ARIA24: Semantically identifying a font icon with role="img"
+                    Making information and relationships conveyed through presentation programmatically determinable using the following techniques:
+                        G138: Using semantic markup whenever color cues are used
+                        H51: Using table markup to present tabular information
+                        PDF6: Using table elements for table markup in PDF Documents
+                        PDF20: Using Adobe Acrobat Pro's Table Editor to repair mistagged tables
+                        H39: Using caption elements to associate data table captions with data tables
+                        FLASH31: Specifying caption text for a DataGrid
+                        H73: Using the summary attribute of the table element to give an overview of data tables
+                        FLASH23: Adding summary information to a DataGrid
+                        H63: Using the scope attribute to associate header cells and data cells in data tables
+                        H43: Using id and headers attributes to associate data cells with header cells in data tables
+                        FLASH21: Using the DataGrid component to associate column headers with cells
+                        H44: Using label elements to associate text labels with form controls
+                        H65: Using the title attribute to identify form controls when the label element cannot be used
+                        PDF10: Providing labels for interactive form controls in PDF documents
+                        PDF12: Providing name, role, value information for form fields in PDF documents
+                        FLASH32: Using auto labeling to associate text labels with form controls
+                        FLASH29: Setting the label property for form components
+                        FLASH25: Labeling a form control by setting its accessible name
+                        H71: Providing a description for groups of form controls using fieldset and legend elements
+                        SL20: Relying on Silverlight AutomationPeer Behavior to Set AutomationProperties.Name
+                        SL26: Using LabeledBy to Associate Labels and Targets in Silverlight
+                        H85: Using OPTGROUP to group OPTION elements inside a SELECT
+                        H48: Using ol, ul and dl for lists or groups of links
+                        H42: Using h1-h6 to identify headings
+                        PDF9: Providing headings by marking content with heading tags in PDF documents
+                        SCR21: Using functions of the Document Object Model (DOM) to add content to a page
+                        PDF11: Providing links and link text using the Link annotation and the /Link structure element in PDF documents
+                        PDF17: Specifying consistent page numbering for PDF documents
+                        PDF21: Using List tags for lists in PDF documents
+                        H97: Grouping related links using the nav element 
+                Situation B: The technology in use does NOT provide the semantic structure to make the information and relationships conveyed through presentation programmatically determinable:
+                    G117: Using text to convey information that is conveyed by variations in presentation of text
+                    FLASH8: Adding a group name to the accessible name of a form control
+                    Making information and relationships conveyed through presentation programmatically determinable or available in text using the following techniques:
+                        T1: Using standard text formatting conventions for paragraphs
+                        T2: Using standard text formatting conventions for lists
+                        T3: Using standard text formatting conventions for headings 
+                Àdvisory Techniques
+                    C22: Using CSS to control visual presentation of text
+                    G162: Positioning labels to maximize predictability of relationships
+                    ARIA1: Using the aria-describedby property to provide a descriptive label for user interface controls
+                    ARIA2: Identifying a required field with the aria-required property
+                    G141: Organizing a page using headings 
+                Failures
+                    F2: Failure of Success Criterion 1.3.1 due to using changes in text presentation to convey information without using the appropriate markup or text
+                    F33: Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to create multiple columns in plain text content
+                    F34: Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to format tables in plain text content
+                    F42: Failure of Success Criteria 1.3.1, 2.1.1, 2.1.3, or 4.1.2 when emulating links
+                    F43: Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content
+                    F46: Failure of Success Criterion 1.3.1 due to using th elements, layout tables
+                    F48: Failure of Success Criterion 1.3.1 due to using the pre element to markup tabular information
+                    F87: Failure of Success Criterion 1.3.1 due to inserting non-decorative content by using :before and :after pseudo-elements and the 'content' property in CSS
+                    F90: Failure of Success Criterion 1.3.1 for incorrectly associating table headers and content via the headers and id attributes
+                    F91: Failure of Success Criterion 1.3.1 for not correctly marking up table headers
+                    F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information 
+        1.3.2 Meaningful Sequence - Level A
+            When the sequence in which content is presented affects its meaning, a correct reading sequence can be programmatically determined.
+            Understanding 1.3.2
+            Sufficient Techniques
+            Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+               G57: Ordering the content in a meaningful sequence
+               Marking sequences in the content as meaningful AND G57: Ordering the content in a meaningful sequence
+                    H34: Using a Unicode right-to-left mark (RLM) or left-to-right mark (LRM) to mix text direction inline
+                    H56: Using the dir attribute on an inline element to resolve problems with nested directional runs
+                    C6: Positioning content based on structural markup
+                    C8: Using CSS letter-spacing to control spacing within a word 
+               C27: Making the DOM order match the visual order
+               FLASH15: Using the tabIndex property to specify a logical reading order and a logical tab order in Flash
+               PDF3: Ensuring correct tab and reading order in PDF documents
+               SL34: Using the Silverlight Default Tab Sequence and Altering Tab Sequences With Properties 
+            Failures
+                F34: Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to format tables in plain text content
+                F33: Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to create multiple columns in plain text content
+                F32: Failure of Success Criterion 1.3.2 due to using white space characters to control spacing within a word
+                F49: Failure of Success Criterion 1.3.2 due to using an HTML layout table that does not make sense when linearized
+                F1: Failure of Success Criterion 1.3.2 due to changing the meaning of content by positioning information with CSS
+        1.3.3 Sensory Characteristics - Level A
+            Instructions provided for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound.
+            Note 1: For requirements related to color, refer to Guideline 1.4.
+            Understanding 1.3.3
+            Sufficient Techniques
+            Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                G96: Providing textual identification of items that otherwise rely only on sensory information to be understood.
+            Failures
+                F14: Failure of Success Criterion 1.3.3 due to identifying content only by its shape or location
+                F26: Failure of Success Criterion 1.3.3 due to using a graphical symbol alone to convey information.
+        1.3.4 Orientation - Level AA (Added in 2.1)
+            Content does not restrict its view and operation to a single display orientation, such as portrait or landscape, unless a specific display orientation is essential.
+            Understanding 1.3.4
+            Sufficient Techniques
+            Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+               Using CSS to set the orientation to allow both landscape and portrait.
+               Use of show/hide controls to allow access to content in different orientations.
+            Failures
+               F97: Failure due to locking the orientation to landscape or portrait view.
+        1.3.5 Identify Input Purpose - Level AA (Added in 2.1)
+            The purpose of each input field collecting information about the user can be programmatically determined when:
+                The input field serves a purpose identified in the Input Purposes for User Interface Components section; and
+                The content is implemented using technologies with support for identifying the expected meaning for form input data.
+            Understanding 1.3.5
+        1.3.6 Identify Purpose - Level AAA (Added in 2.1)
+            In content implemented using markup languages, the purpose of User Interface Components, icons, and regions can be programmatically determined.
+            Understanding 1.3.6
+            Sufficient Techniques
+            Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+              ARIA11: Using ARIA landmarks to identify regions of a page
+              Using microdata to markup user interface components (future link) 
+            Advisory Techniques
+              Enable user agents to find the version of the content that best fits their needs.
+              Using semantics to identify important features (coga-simplification="simplest").
+              Use of aria-invalid and aria-required.
+
+    Guideline 1.4 - Distinguishable
+      Make it easier for users to see and hear content including separating foreground from background.
+        1.4.1 Use of Color - Level A
+            Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.
+            Note 1: This success criterion addresses color perception specifically. Other forms of perception are covered in Guideline 1.3 including programmatic access to color and other visual presentation coding.
+            Understanding 1.4.1
+            Sufficient Techniques
+            Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+            Situation A: If the color of particular words, backgrounds, or other content is used to indicate information:
+               G14: Ensuring that information conveyed by color differences is also available in text
+               G205: Including a text cue for colored form control labels
+               G182: Ensuring that additional visual cues are available when text color differences are used to convey information
+               G183: Using a contrast ratio of 3:1 with surrounding text and providing additional visual cues on focus for links or controls where color alone is used to identify them
+            Situation B: If color is used within an image to convey information:
+               G111: Using color and pattern
+               G14: Ensuring that information conveyed by color differences is also available in text
+            Advisory Techniques
+               C15: Using CSS to change the presentation of a user interface component when it receives focus.
+            Failures
+               F13: Failure of Success Criterion 1.1.1 and 1.4.1 due to having a text alternative that does not include information that is conveyed by color differences in the image
+               F73: Failure of Success Criterion 1.4.1 due to creating links that are not visually evident without color vision
+               F81: Failure of Success Criterion 1.4.1 due to identifying required or error fields using color differences only 
+        1.4.2 Audio Control - Level A
+            If any audio on a Web page plays automatically for more than 3 seconds, either a mechanism is available to pause or stop the audio, or a mechanism is available to control audio volume independently from the overall system volume level.
+            Note 1: Since any content that does not meet this success criterion can interfere with a user's ability to use the whole page, all content on the Web page (whether or not it is used to meet other success criteria) must meet this success criterion. See Conformance Requirement 5: Non-Interference.
+            Understanding 1.4.2
+            Sufficient Techniques
+            Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                 G60: Playing a sound that turns off automatically within three seconds
+                G170: Providing a control near the beginning of the Web page that turns off sounds that play automatically
+                G171: Playing sounds only on user request
+                SL24: Using AutoPlay to Keep Silverlight Media from Playing Automatically
+                FLASH18: Providing a control to turn off sounds that play automatically in Flash
+                FLASH34: Turning off sounds that play automatically when an assistive technology is detected
+                SL3: Controlling Silverlight MediaElement Audio Volume 
+            Failures
+                F23: Failure of 1.4.2 due to playing a sound longer than 3 seconds where there is no mechanism to turn it off
+                F93: Failure of Success Criterion 1.4.2 for absence of a way to pause or stop an HTML5 media element that autoplays 
+        1.4.3 Contrast (Minimum) - Level AA
+            The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:
+                Large Text: Large-scale text and images of large-scale text have a contrast ratio of at least 3:1;
+                Incidental: Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.
+                Logotypes: Text that is part of a logo or brand name has no contrast requirement.
+            Understanding 1.4.3
+            Sufficient Techniques
+            Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+            Situation A: text is less than 18 point if not bold and less than 14 point if bold
+                 G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text
+                G148: Not specifying background color, not specifying text color, and not using technology features that change those defaults
+                G174: Providing a control with a sufficient contrast ratio that allows users to switch to a presentation that uses sufficient contrast
+                SL13: Providing A Style Switcher To Switch To High Contrast     
+            Situation B: text is at least 18 point if not bold and at least 14 point if bold
+                G145: Ensuring that a contrast ratio of at least 3:1 exists between text (and images of text) and background behind the text
+                G148: Not specifying background color, not specifying text color, and not using technology features that change those defaults
+                G174: Providing a control with a sufficient contrast ratio that allows users to switch to a presentation that uses sufficient contrast
+                SL13: Providing A Style Switcher To Switch To High Contrast 
+            Advisory Techniques
+                G156: Using a technology that has commonly-available user agents that can change the foreground and background of blocks of text.
+            Failures
+                 F24: Failure of Success Criterion 1.4.3, 1.4.6 and 1.4.8 due to specifying foreground colors without specifying background colors or vice versa
+                 F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) 
+        1.4.4 Resize Text - Level AA
+            Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality.
+            Understanding 1.4.4
+            Sufficient Techniques
+            Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                 G142: Using a technology that has commonly-available user agents that support zoom
+                 SL22: Supporting Browser Zoom in Silverlight
+                 SL23: Using A Style Switcher to Increase Font Size of Silverlight Text Elements
+                 Ensuring that text containers resize when the text resizes AND using measurements that are relative to other measurements in the content by using one or more of the following techniques:
+                    C28: Specifying the size of text containers using em units
+                    Techniques for relative measurements
+                        C12: Using percent for font sizes
+                        C13: Using named font sizes
+                        C14: Using em units for font sizes 
+                    Techniques for text container resizing
+                        SCR34: Calculating size and position in a way that scales with text size
+                        G146: Using liquid layout 
+                 G178: Providing controls on the Web page that allow users to incrementally change the size of all text on the page up to 200 percent
+                 G179: Ensuring that there is no loss of content or functionality when the text resizes and text containers do not change their width 
+            Advisory Techniques
+                 C17: Scaling form elements which contain text
+                 C20: Using relative measurements to set column widths so that lines can average 80 characters or less when the browser is resized
+                 C22: Using CSS to control visual presentation of text 
+            Failures
+                 F69: Failure of Success Criterion 1.4.4 when resizing visually rendered text up to 200 percent causes the text, image or controls to be clipped, truncated or obscured
+                 F80: Failure of Success Criterion 1.4.4 when text-based form controls do not resize when visually rendered text is resized up to 200%
+                 F94: Failure of Success Criterion 1.4.4 due to text sized in viewport units 
+        1.4.5 Images of Text - Level AA
+            If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text except for the following:
+                Customizable: The image of text can be visually customized to the user's requirements;
+                Essential: A particular presentation of text is essential to the information being conveyed.
+            Note 1: Logotypes (text that is part of a logo or brand name) are considered essential.
+            Understanding 1.4.5
+            Sufficient Techniques
+            Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                C22: Using CSS to control visual presentation of text
+                SL31: Using Silverlight Font Properties to Control Text Presentation
+                C30: Using CSS to replace text with images of text and providing user interface controls to switch
+                G140: Separating information and structure from presentation to enable different presentations
+                PDF7: Performing OCR on a scanned PDF document to provide actual text 
+            Advisory Techniques
+                C12: Using percent for font sizes
+                C13: Using named font sizes
+                C14: Using em units for font sizes
+                C8: Using CSS letter-spacing to control spacing within a word
+                C6: Positioning content based on structural markup 
+        1.4.6 Contrast (Enhanced) - Level AAA
+            The visual presentation of text and images of text has a contrast ratio of at least 7:1, except for the following:
+                Large Text: Large-scale text and images of large-scale text have a contrast ratio of at least 4.5:1;
+                Incidental: Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.
+                Logotypes: Text that is part of a logo or brand name has no contrast requirement.
+            Understanding 1.4.6
+            Sufficient Techniques
+            Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+            Situation A: text is less than 18 point if not bold and less than 14 point if bold
+                 G17: Ensuring that a contrast ratio of at least 7:1 exists between text (and images of text) and background behind the text
+                G148: Not specifying background color, not specifying text color, and not using technology features that change those defaults
+                G174: Providing a control with a sufficient contrast ratio that allows users to switch to a presentation that uses sufficient contrast
+                SL13: Providing A Style Switcher To Switch To High Contrast 
+            Situation B: text is as least 18 point if not bold and at least 14 point if bold
+                 G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text
+                G148: Not specifying background color, not specifying text color, and not using technology features that change those defaults
+                G174: Providing a control with a sufficient contrast ratio that allows users to switch to a presentation that uses sufficient contrast
+                SL13: Providing A Style Switcher To Switch To High Contrast 
+            Advisory Techniques
+                G156: Using a technology that has commonly-available user agents that can change the foreground and background of blocks of text.
+            Failures
+                 F24: Failure of Success Criterion 1.4.3, 1.4.6 and 1.4.8 due to specifying foreground colors without specifying background colors or vice versa
+                 F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text)  
+        1.4.7 Low or No Background Audio - Level AAA
+            For prerecorded audio-only content that (1) contains primarily speech in the foreground, (2) is not an audio CAPTCHA or audio logo, and (3) is not vocalization intended to be primarily musical expression such as singing or rapping, at least one of the following is true:
+                No Background: The audio does not contain background sounds.
+                Turn Off: The background sounds can be turned off.
+                20 dB: The background sounds are at least 20 decibels lower than the foreground speech content, with the exception of occasional sounds that last for only one or two seconds. Per the definition of "decibel," background sound that meets this requirement will be approximately four times quieter than the foreground speech content.
+            Understanding 1.4.7
+            Sufficient Techniques
+            Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                G56: Mixing audio files so that non-speech sounds are at least 20 decibels lower than the speech audio content
+        1.4.8 Visual Presentation - Level AAA
+            For the visual presentation of blocks of text, a mechanism is available to achieve the following:
+                1. Foreground and background colors can be selected by the user.
+                2. Width is no more than 80 characters or glyphs (40 if CJK).
+                3. Text is not justified (aligned to both the left and the right margins).
+                4. Line spacing (leading) is at least space-and-a-half within paragraphs, and paragraph spacing is at least 1.5 times larger than the line spacing.
+                5. Text can be resized without assistive technology up to 200 percent in a way that does not require the user to scroll horizontally to read a line of text on a full-screen window.
+            Understanding 1.4.8
+            Sufficient Techniques
+            Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                First Requirement: Techniques to ensure foreground and background colors can be selected by the user
+                     C23: Specifying text and background colors of secondary content such as banners, features and navigation in CSS while not specifying text and background colors of the main content OR
+                     C25: Specifying borders and layout in CSS to delineate areas of a Web page while not specifying text and text-background colors OR
+                    G156: Using a technology that has commonly-available user agents that can change the foreground and background of blocks of text OR
+                    G148: Not specifying background color, not specifying text color, and not using technology features that change those defaults OR
+                    G175: Providing a multi color selection tool on the page for foreground and background colors OR 
+                Second Requirement: Techniques to ensure width is no more than 80 characters or glyphs (40 if CJK)
+                    G204: Not interfering with the user agent's reflow of text as the viewing window is narrowed OR
+                     C20: Using relative measurements to set column widths so that lines can average 80 characters or less when the browser is resized 
+                Third Requirement: Techniques to ensure text is not justified (aligned to both the left and the right margins)
+                     C19: Specifying alignment either to the left OR right in CSS OR
+                    G172: Providing a mechanism to remove full justification of text OR
+                    G169: Aligning text on only one side                     
+                Fourth Requirement: Techniques to ensure line spacing (leading) is at least space-and-a-half within paragraphs, and paragraph spacing is at least 1.5 times larger than the line spacing
+                    G188: Providing a button on the page to increase line spaces and paragraph spaces OR
+                     C21: Specifying line spacing in CSS 
+                Fifth Requirement: Techniques to ensure text can be resized without assistive technology up to 200 percent in a way that does not require the user to scroll horizontally to read a line of text on a full-screen window
+                    Not interfering with the user agent's reflow of text as the viewing window is narrowed
+                    G146: Using liquid layout AND using measurements that are relative to other measurements in the content by
+                        C12: Using percent for font sizes OR
+                        C13: Using named font sizes OR
+                        C14: Using em units for font sizes OR
+                        C24: Using percentage values in CSS for container sizes OR
+                        FLASH33: Using relative values for Flash object dimensions OR
+                        SCR34: Calculating size and position in a way that scales with text size
+                    G206: Providing options within the content to switch to a layout that does not require the user to scroll horizontally to read a line of text 
+            Failures
+                F24: Failure of Success Criterion 1.4.3, 1.4.6 and 1.4.8 due to specifying foreground colors without specifying background colors or vice versa
+                F88: Failure of Success Criterion 1.4.8 due to using text that is justified (aligned to both the left and the right margins) 
+        1.4.9 Images of Text (No Exception) - Level AAA
+            Images of text are only used for pure decoration or where a particular presentation of text is essential to the information being conveyed.
+            Note 1: Logotypes (text that is part of a logo or brand name) are considered essential.
+            Understanding 1.4.9
+            Sufficient Techniques
+            Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                C22: Using CSS to control visual presentation of text
+                SL31: Using Silverlight Font Properties to Control Text Presentation
+                C30: Using CSS to replace text with images of text and providing user interface controls to switch
+                G140: Separating information and structure from presentation to enable different presentations
+                PDF7: Performing OCR on a scanned PDF document to provide actual text 
+            Advisory Techniques
+                C12: Using percent for font sizes
+                C13: Using named font sizes
+                C14: Using em units for font sizes
+                 C8: Using CSS letter-spacing to control spacing within a word
+                 C6: Positioning content based on structural markup 
+        1.4.10 Reflow - Level AA (Added in 2.1)
+            Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for:
+                Vertical scrolling content at a width equivalent to 320 CSS pixels;
+                Horizontal scrolling content at a height equivalent to 256 CSS pixels;
+            Except for parts of the content which require two-dimensional layout for usage or meaning.
+            Understanding 1.4.10
+            Sufficient Techniques
+            Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                C32: Using media queries and grid CSS to reflow columns
+                C31: Using CSS Flexbox to reflow content
+                C33: Allowing for Reflow with Long URLs and Strings of Text
+                C38: Using CSS width, max-width and flexbox to fit labels and inputs
+                SCR34: Calculating size and position in a way that scales with text size
+                G206: Providing options within the content to switch to a layout that does not require the user to scroll horizontally to read a line of text
+                @@ New: Using PDF/UA when creating PDFs.            
+            Advisory Techniques
+                C34: Using media queries to un-fixing sticky headers / footers
+                C37: Using CSS max-width and height to fit images
+                @@ CSS, Reflowing simple data tables.
+                @@ CSS, Fitting data cells within the width of the viewport.
+                @@ Mechanism to allow mobile view at any time               
+            Failures
+                @@ Using fixed sized containers and fixed position content (CSS)
+                @@ (HTML) Using preformatted text or excluding preformatting text as an exception to no two dimensional scrolling.
+        1.4.11 Non-Text Contrast (Level AA) (Added in 2.1)
+            The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):
+                User Interface Components: Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author;
+                Graphical Objects: Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.
+            Understanding 1.4.11
+            Sufficient Techniques
+            Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+            User Interface Component contrast
+                G195: Using an author-supplied, highly visible focus indicator 
+            Graphics with sufficient contrast
+                G207: Ensuring that a contrast ratio of 3:1 is provided for icons
+                G209: Provide sufficient contrast at the boundaries between adjoining colors 
+            Text in or over graphics
+                @@ Include labels and values with the graphic (TBD)
+                 G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text
+                G145: Ensuring that a contrast ratio of at least 3:1 exists between text (and images of text) and background behind the text
+                G174: Providing a control with a sufficient contrast ratio that allows users to switch to a presentation that uses sufficient contrast
+            Advisory Techniques
+                G183: Using a contrast ratio of 3:1 with surrounding text and providing additional visual cues on focus for links or controls where color alone is used to identify them.
+            Failures
+                 F78: Failure of Success Criterion 2.4.7 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator 
+        1.4.12 Text Spacing - Level AA (Added in 2.1)
+            In content implemented using markup languages that support the following text style properties, no loss of content or functionality occurs by setting all of the following and by changing no other style property:
+                Line height (line spacing) to at least 1.5 times the font size;
+                Spacing following paragraphs to at least 2 times the font size;
+                Letter spacing (tracking) to at least 0.12 times the font size;
+                Word spacing to at least 0.16 times the font size.
+            Exception: Human languages and scripts that do not make use of one or more of these text style properties in written text can conform using only the properties that exist for that combination of language and script.
+            Understanding 1.4.12
+            Sufficient Techniques
+            Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                C36: Allowing for text spacing override
+                C35: Allowing for text spacing without wrapping 
+            Advisory Techniques
+                 C8: Using CSS letter-spacing to control spacing within a word
+                C21: Specifying line spacing in CSS
+                C28: Specifying the size of text containers using em units 
+            Failures
+                Failure of Success Criterion 1.4.12 due to not allowing for spacing override. (Future technique)
+        1.4.13 Content on Hover or Focus - Level AA (Added in 2.1)
+            Where receiving and then removing pointer hover or keyboard focus triggers additional content to become visible and then hidden, the following are true:
+                Dismissible: A mechanism is available to dismiss the additional content without moving pointer hover or keyboard focus, unless the additional content communicates an input error or does not obscure or replace other content;
+                Hoverable: If pointer hover can trigger the additional content, then the pointer can be moved over the additional content without the additional content disappearing;
+                Persistent: The additional content remains visible until the hover or focus trigger is removed, the user dismisses it, or its information is no longer valid.
+                Exception: The visual presentation of the additional content is controlled by the user agent and is not modified by the author.
+            Understanding 1.4.13
+            Sufficient Techniques
+            Note: Other techniques may also be sufficient if they meet the success criterion. See Understanding Techniques.
+                @@ ARIA: Using role="tooltip"
+                @@ CSS: Using hover and focus pseudo classes
+            Failures
+                F95: Failure of Success Criterion 1.4.13 due to content shown on hover not being hoverable
+                @@ Failure to make content dismissable without moving pointer hover or keyboard focus
+                @@ Failure to meet by content on hover or focus not remaining visible until dismissed or invalid

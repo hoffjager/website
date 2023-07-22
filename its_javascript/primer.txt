@@ -1,0 +1,1128 @@
+﻿ITS in JavaScript
+
+JavaScript: 20 Lessons to Successful Web Development
+By Robin Nixon
+
+Lesson 1: Introduction to JavaScript
+
+Overview
+At the dawn of the Internet, webmasters were a strange breed (and few
+and far between), and nobody really knew what their mastery entailed.
+But their development toolkit was nothing compared to what we have today;
+they had a knowledge of HTML (HyperText Markup Language) and a basic
+understanding of the HTTP (HyperText Transfer Protocol) interface for
+serving up web pages, and really that was all — there actually wasn’t a
+lot to building web pages.
+You see, there were no such things as plug-ins or style sheets, and the
+Web was actually quite a dull and drab experience as a consequence, but
+it was so new and fascinating that design, layout, and dynamic
+interactivity weren’t important.
+All users wanted was more and more information (and funny cat pictures).
+In fact, what most casual web users probably know today would likely have
+been considered webmaster skills in the early 1990s.
+But time marches on and, in the case of the Web, it does so at Internet
+Time (which is several times faster than normal), and pretty soon the
+latest browsers supported loading plug-ins for greater functionality,
+such as playing audio or video, style sheets were adopted to vastly
+improve the display of fonts and web layout and design, new graphical
+enhancements were developed such as the animated GIF (Graphics Interchange
+Format), and probably most important of all was the introduction of a
+scripting language.
+It was realized quite early on that, as powerful as HTML was, it simply
+didn’t offer the interactivity that users were calling out for.
+Something new was needed, but what?
+Clearly a programming language of some sort had to be the answer, but
+not just any old language — a new one would have to be designed from the
+ground up in order to hook directly into HTML, so that the two could
+work together seamlessly.
+And that language came to be known as JavaScript.
+
+In The Beginning
+The JavaScript programming language was written by Brendan Eich at
+Netscape and was previously known by both of the names Mocha and
+LiveScript.
+It was first incorporated into the Netscape Navigator browser in 1995,
+at the same time that Netscape added support for Sun’s Java technology.
+JavaScript is a quite different language from Java, but, as part of a
+marketing deal made between Netscape and Sun Microsystems, it was given
+its name to try and benefit from the general buzz surrounding the Java
+language.
+To justify this naming, in JavaScript, all Java keywords are reserved,
+its standard library follows Java’s naming conventions, and its Math and
+Date objects are based on Java 1.0 classes.
+Also, the trademark name JavaScript belongs to Oracle, but the
+similarities end there.
+Because the name JavaScript is trademarked (by Oracle since its purchase
+of Sun, which developed Java), when the language was submitted to ECMA
+(European Computer Manufacturers Association, a nonprofit standards
+organization), the standard was officially given the name ECMAScript.
+However, you rarely hear people referring to the standard as such in
+general use (ECMAScript simply doesn’t have the same ring to it as
+JavaScript).
+Technically, therefore, both JavaScript and JScript are dialects of
+ECMAScript, but in the same way that the trademarked word Aspirin fell
+into common use for acetylsalicylic acid in many countries, all dialects
+of this scripting language tend to be referred to simply as JavaScript.
+Microsoft’s version, called JScript, was released a year later as a
+component of Internet Explorer (IE) 3.0 and, as you might expect, it
+differed in several important respects, making it less than 100 percent
+compatible with JavaScript.
+Unfortunately, that remains true to this day; although IE9 addressed
+many of the prior incompatibilities and IE10 became even more compatible
+with the other browsers, IE11 (the latest at the time of writing) still
+retains a number of niggling differences that developers have to take
+into account.
+
+In-Browser Scripting
+Unlike other languages used for creating websites, such as Perl, PHP,
+and Ruby, JavaScript runs within the web browser and not on a web server.
+This makes it the perfect tool for creating dynamic web pages because it
+can modify HTML elements in real time.
+It is also the technology behind Web 2.0 Ajax functionality, in which
+data is transferred between a web server and web browser behind the
+scenes, without the user being aware of it.
+JavaScript’s great power lies in its ability to access HTML’s Document
+Object Model (DOM), in which every element on a web page can be
+individually addressed (either reading or modifying its value), and
+elements can also be created and deleted on the fly, as well as layered
+over each other and moved about.
+You can even go so far as to treat a web browser window as a blank
+canvas and build entire applications and arcade games from scratch,
+using JavaScript and the DOM (although it takes some quite advanced
+programming skills).
+What’s more, with new HTML5 features such as the canvas and geolocation,
+JavaScript has become even more of a backbone for modern, dynamic web
+pages.
+
+Info for Programmers
+If you can already program in another language such as C or Java, for
+example, you’ll find yourself at home with JavaScript, and here are a
+few things you should know about the language that will make your
+learning process even quicker.
+To begin with, JavaScript supports much of the structured programming
+syntax used in C, such as if() statements, while() and for() loops,
+switch() statements, and so on.
+Unlike many languages, it is not necessary to terminate statements with
+a semi-colon, unless more statements will follow on the same line.
+JavaScript is a scripting language that used to be interpreted but is
+nowadays compiled on the fly by the latest browsers.
+In common with other scripting languages, it uses dynamic typing in
+which types are associated with values rather than variable names.
+Values are interpreted as integers, floating point, strings, or other
+types according to the way in which they are used within an expression.
+
+All About Objects
+The JavaScript language is based on objects that are associative arrays.
+Properties of objects can be accessed using either the period operator
+(object.height) or with square brackets (object[′height′]).
+Object properties can be enumerated using for(…'in'…) loops.
+In JavaScript, functions are themselves objects, so they have properties
+such as length and methods such as call().
+This means they may also be assigned to variables, passed as arguments,
+and returned by other functions.
+Functions are referenced by naming them without parentheses
+(a = funcname) or invoked by adding the parentheses (a = funcname()).
+The former case sets the variable a to contain a copy of the function
+object with the name funcname, whereas the latter assigns the result
+returned by calling the function to the variable a.
+You may create inner functions within other functions, and these retain
+the scope of the outer function, including its constants, local variables,
+and argument values.
+Rather than implementing classes, JavaScript uses prototypes for
+inheritance.
+Functions can double as object constructors, and prefixing a function
+with the 'new' keyword creates a new object, calling that function with
+its local 'this' keyword.
+
+Why You Need to Know JavaScript
+Although it is possible to get by with a basic knowledge of HTML and
+maybe a smattering of CSS (Cascading Style Sheets), if you are at all
+serious about developing professional-looking websites that attract
+repeat visitors and build an audience, then there’s no getting around
+the fact that you have to learn JavaScript in order to access all the
+latest goodies your users will expect.
+The following list contains just some of the features you may wish to
+include in a web page, and which require the use of JavaScript to one
+extent or another:
+1. Animations: Some animation can be achieved with CSS transitions, but
+for true interactivity, you need to control graphics directly using
+JavaScript.
+2. Geolocation: To provide location-aware services to your users, you
+must access the data using JavaScript.
+3. Canvas: The only way to draw on the HTML5 canvas is with JavaScript
+commands.
+4. Audio and Video: You can add these with simple HTML5 tags, but to
+control playback directly, you will need JavaScript.
+5. Form Processing: If you wish to make your forms easier to use by
+having in-browser validation, user prompting, and error checking, then
+you have to do much of this with JavaScript, although HTML5 is making
+some great inroads in this direction.
+6. Ajax: Any behind-the-scenes communication with a web server you need
+to make has to be done via JavaScript calls.
+7. Dynamic Elements: Some elements can be changed via CSS and
+mouse-overs, but for anything more, such as resizing, moving, or dragging
+and dropping, you have to use JavaScript.
+8. In-Browser Gaming: Games that run in the browser without plug-ins
+such as Flash, are written in JavaScript.
+9. Floating Elements: Pop-ups and other floating elements that follow
+the page as you scroll are all implemented with JavaScript.
+10. Hover Effects: Thumbnail or advanced tooltips that hover over HTML
+elements are created and controlled with JavaScript.
+
+And this list is by no means exhaustive; just take a look at:
+http://www.tinyurl.com/cooljsexamples/ to see some very clever features
+that have been built with JavaScript, or check out everyday websites
+such as Facebook, Gmail, and Twitter, all of which subtly use JavaScript
+behind the scenes to provide their slick interfaces.
+For example, if you have a Gmail account, next time you log in,
+right-click and select the View Source option in your browser to see how
+the page is constructed.
+As well as all the JavaScript files that Gmail calls up from its server,
+the main web page itself is completely packed with JavaScript.
+Don’t let that put you off, Google packs its JavaScript as tightly as
+possible to save on bandwidth and to make it difficult for the casual
+observer to determine what’s going on.
+I guarantee that the original source code will be neatly laid out one
+line at a time and clearly documented so that a team of programmers can
+work with it.
+It’s probably only when the time comes to publish an update that the
+nice and tidy code gets run through another program to squish it into
+production web pages.
+
+Summary
+As I said, if you are new to programming, don’t worry about any of these
+terms because I explain them later in the book at the appropriate places.
+And I promise, they are just words, and their use will become second
+nature to you as you learn JavaScript, because it really is a simple
+language to learn.
+
+Self-Test Questions
+Test how much you have learned in this lesson with these questions.
+If you don’t know an answer, go back and re-read the relevant section
+until your knowledge is complete.
+You can find the answers in Appendix A.
+1.  What is the name of the official language of which JavaScript and
+	Jscript are dialects?
+	ECMAScript.
+2.  From where does JavaScript get its name?
+	A marketing tie-in between Netscape & Sun Microsystem's Java.
+3.  Who owns the trademark for the JavaScript name?
+	Oracle Corporation after purchasing Sun Microsystems, developers of
+	Java.
+4.  Why did a new programming language have to be invented?
+	To support tight integration with HTML elements.
+5.  What does the acronym HTML stand for?
+	HyperText Markup Language.
+6.  What does the acronym HTTP stand for?
+	HyperText Transfer Protocol.
+7.  What does the acronym CSS stand for?
+	Cascading Style Sheets.
+8.  What does the acronym DOM stand for?
+	Document Object Model.
+9.  On what are JavaScript’s Math and Date objects based?
+	Java 1.0 classes.
+10. How can you view the source HTML/JavaScript of a web page?
+	Right-click & View Page Source.
+
+Lesson 2: Incorporating JavaScript into a Web Page
+
+Overview
+The whole point of JavaScript is that it is designed to offer dynamic
+functionality to what previously were static web pages.
+Therefore, JavaScript code is generally embedded within the web page to
+which it applies.
+This can be in the form of embedding the code directly in the HTML
+document itself, or by means of a tag that tells the browser the
+location of a file containing some JavaScript to load in and execute.
+This external file may be on the same or a different web server.
+Additionally, the location within a web page at which you insert the
+JavaScript (or link to a JavaScript file) becomes the default location
+in which any output from the JavaScript will be inserted.
+Of course, because it is a programming language, you can tell it exactly
+where in a web page to display anything, but if you use a simple
+JavaScript function such as write(), it will insert whatever is written
+in the current location.
+Therefore, for this and other reasons, where you place your JavaScript
+can be important, and I will explain how you can choose the right
+location a little later on.
+First, though, let’s take a look at the basics.
+
+Using Comments
+Before looking at the JavaScript language and its syntax, I want to
+introduce the commenting feature.
+Using comments, you can add text to a JavaScript program that explains
+what it does.
+This will help you later when you are debugging, and is especially
+helpful when other people have to maintain code that you write.
+There are two ways to create a comment in JavaScript, the first of which
+is to preface it with two slashes:
+// This is a comment.
+You can also place a comment after a JavaScript statement:
+anumber = 42 // Assigns 42 to anumber.
+If you wish to temporarily restrict a line of code from executing, you
+can insert a comment tag before it and the statement will be completely
+ignored:
+// anumber = 42
+Sometimes you need to be able to comment out more than a single line of
+text.
+In this case, you can use the multiline form of commenting in which you
+start the comment with /* and end it with */:
+/*  This is a multi-line
+	set of comments, which
+	can appear over any
+	number of lines. */
+As well as supporting extensive documentation, this form of commenting
+lets you temporarily comment out complete blocks of code by simply
+placing the start and end tags as required — something that can be
+extremely helpful when debugging.
+
+Using Semi-Colons
+If you like, you may add a semi-colon after every JavaScript statement,
+and many programmers choose to do this.
+However, I prefer not to because semicolons are not mandatory.
+On the other hand, if you wish to place more than one statement on a
+single line, you must separate them with a semicolon.
+For example, the three following sets of code are all valid syntax:
+a = 1
+b = 2
+
+a = 1; b = 2
+
+a = 1;
+b = 2;
+
+However, the following set is not valid, as JavaScript will not know how
+to make sense of it due to the omission of a semicolon:
+
+a = 1 b = 2
+
+Think of the semicolon as acting like a newline as far as the JavaScript
+interpreter is concerned (or vice versa).
+If in doubt, always add one and, although you may end up with more
+semicolons than you need, at least your code will run correctly
+(assuming no other errors).
+In this book, however, I use semicolons only where they are necessary.
+
+Where to Place the JavaScript Code
+As previously mentioned, where you place your JavaScript code can make a
+difference.
+For example, if you wish default output to go straight into the current
+document, you may choose to place your JavaScript directly within the
+<body></body> tags.
+On the other hand, if you have a very long web page that takes more than
+a second or so to load, you might choose to place your JavaScript code
+within the <head></head> tags, so that it will be executed as soon as
+that part of the document is loaded in.
+
+In the Document Head
+To insert your JavaScript within the <head> of a document, you must
+place <script></script> tags where the script is to go:
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Intro to JavaScript</title>
+	<script>//Your JavaScript goes here</script>
+</head>
+<body>
+	<!--The document body goes here-->
+</body>
+</html>
+
+In the Document Body
+To insert your JavaScript within the <body> of a document, you must
+place <script></script> tags where the script is to go:
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Intro to JavaScript</title>
+</head>
+<body>
+	<script>//Your JavaScript goes here</script>
+	<!--The document body goes here-->
+</body>
+</html>
+
+Including JavaScript Files
+If you wish to keep your JavaScript code separate from your document
+contents (something you are likely to want to do once your JavaScript
+starts to become any length other than small), you can place it in its
+own file (usually with the file extension .js) and, instead of inserting
+script between <script></script> tags, you would include the code like
+this:
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Intro to JavaScript</title>
+	<script src='myscript.js'></script>
+</head>
+<body>
+	<!--The document body goes here-->
+</body>
+</html>
+If the script file is not in the current directory, you must include the
+path along with the filename:
+<script src=′pathtofolder/myscript.js’></script>
+Or if the code is on another server, include the correct http:// (or
+https:// prefix, domain, and path):
+<script src=′http://server.com/folder/script.js’&gt;&amp;lt;/script&gt;
+When including a script rather than embedding it in a web document, you
+may still choose where you wish to insert it, for example, into the body
+rather than the head:
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Intro to JavaScript</title>
+</head>
+<body>
+	<script src='myscript.js'></script>
+	<!--The document body goes here-->
+</body>
+</html>
+When you include an external JavaScript file this way, you must not have
+any <script></script> tags in the included document because a <script>
+tag has already been used to pull the file in.
+
+JavaScript Language Syntax
+I’ve already discussed some of the syntax used by the JavaScript
+language, such as how to comment out sections of code and where
+semicolons need to be used.
+But what is meant by syntax?
+Well, it’s a set of rules that define how to correctly structure a
+JavaScript program.
+In this section, I’ll outline the major syntax issues so that when you
+start programming, you’ll introduce the minimum of errors, so please
+forgive me if there’s a little overlap with earlier sections.
+
+Case Sensitivity
+JavaScript is what is known as a case-sensitive language.
+This means that it distinguishes between the use of the uppercase (A-Z)
+and lowercase letters (a-z).
+For example, the variable MyVariable is quite different from myvariable
+(variables being special names used to stand in for values such as
+numbers or strings of characters).
+JavaScript will treat these as two totally different variables, so you
+need to be careful when choosing your variable names.
+Generally, I observe the following guidelines so that I can more easily
+go back and understand code I may have written in the past:
+1. All global variables that are accessible anywhere in a program are
+set to all uppercase, such as HIGHSCORE.
+2. Temporary variables used in loops are single letters in lowercase,
+such as j.
+3. Function names use a capital letter at the start of each word, like
+MyFunctionName().
+This is only a naming convention that I use, and you may choose to apply
+different uppercase and lowercase rules to this, or simply stick to all
+lowercase — it’s entirely up to you.
+
+Whitespace
+Any spaces and tabs are known as whitespace, and any combination of
+these is usually treated by JavaScript as if it were a single space.
+The exception is when they are placed inside quotation marks, in which
+case they form part of a string, and all the characters are used.
+Newline or carriage return characters are also treated as whitespace by
+JavaScript (unless within quotes), except that each one creates an
+implied semicolon, which, as you saw in the previous section, is used to
+denote the end of a statement.
+For example, the statement a = b + c is valid on a single line, but if
+you format it as follows, 'a' will be assigned the value in 'b' and then
+an implied semicolon will be added, so that the + c line following is
+then interpreted on its own, causing a syntax error:
+
+a = b
++ c
+
+Variables
+A variable in any programming language is simply a container for a value.
+For example, imagine that you have a few empty plastic pots into which
+you can place items.
+Think of these as a metaphor for variables, in that you can take a small
+piece of paper and write the number 42, for example, on it and insert it
+into one of the pots.
+If you then take a marker pen and write MyVariable on the pot, it is
+just like a JavaScript variable being set using this line of code:
+
+MyVariable = 42
+
+You can now manipulate this variable in a variety of ways.
+For example, you can add another value to it, like this:
+
+MyVariable = MyVariable + 13
+
+This has the effect of adding 13 to the value of 42 already stored in
+the variable so that the result is 55, the new value held in the
+variable.
+This is analogous to taking the piece of paper with the number 42 out of
+the pot labeled MyVariable, noting the value, adding 13 to it, and then
+replacing that piece of paper with another one on which you have written
+the number 55, which you then place back into the pot.
+
+Likewise, you might issue the following command, that will multiply the
+current value in the variable (55) by the value 3:
+
+MyVariable = MyVariable * 3
+
+Again, this is equivalent to taking the paper from the pot, performing
+the multiplication, and placing a new piece of paper with the result of
+165, back into the pot.
+All the time, the current numeric value is updated and popped inside the
+pot with the label MyVariable on it, so that any time that value needs
+to be referenced (looked up), the pot can simply be opened and the slip
+of paper inside is then read.
+
+Variable Naming
+There are a number of rules governing how you use the JavaScript
+programming language.
+For instance, variables must begin with either an uppercase or lowercase
+letter (A-Z or a-z), or the $ or _ symbols.
+No other character may begin a variable name (except for some Unicode
+characters, but these should generally never be used in variable names).
+Variables may not contain any mathematical operators (such as + or *),
+punctuation (such as ! or &), or spaces, but after the first character,
+they may include the digits 0-9 or any of the characters that can begin
+a variable name.
+All JavaScript keywords (such as window, open, string, etc.) are
+reserved and may not be used as variable names (although they can be
+used as part of a variable name, such as mywindow or string3).
+
+String Variables
+When a variable is used to store a number, it’s known as a numeric
+variable.
+However, it’s also possible to store text in a variable, in which case
+the variable is called a string variable (because sequences of
+characters are called strings in programming languages).
+Examples of strings include the name ″Bill Smith″, the sequence of
+characters ″A23bQ%j″, and even the characters ″123″ that, in this case,
+are a string of digits, not the number 123 (because of the quotes).
+In the same way that you can store a number in a variable, so you can a
+string, and you use the same method of assignment:
+
+Name = ″Mary Jones″
+
+Notice the use of double quotation marks around this string.
+These are what tell JavaScript that the value is a string and is how you
+can assign the string ″123″ to a variable, as opposed to the number 123.
+In terms of the pot and paper metaphor, the preceding statement is
+equivalent to labeling a new pot as ″Name″ and writing ″Mary Jones″ on a
+piece of paper that you place in it.
+Obviously, you can’t perform arithmetic on strings, but there are other
+actions you can take, such as:
+1. shortening them;
+2. adding more characters to the front, middle, or end;
+3. extracting a portion of a string value; and more.
+For example, you can concatenate two strings together (attach one to the
+other) using the same + operator you use for performing additions:
+
+Singer = "Pharrell"
+Singer = Singer + " Williams"
+
+The result of these two statements is to concatenate the string
+″Pharrell″ (first assigned to and then read from the variable Singer)
+with the string ″ Williams″ and place the resulting string back into the
+variable Singer.
+Lesson 4 shows some other operations you can perform on strings.
+
+Using Quotation Marks in Strings
+You have seen the use of the double quote character to indicate the
+start and end of a string, but you may also use the single quote if you
+prefer:
+
+Dinner = 'Fish and Chips'
+
+The end result is identical, whichever type of quotation marks you use.
+But there is a good reason why you may choose one type instead of the
+other, and that’s when you need to include a particular quotation mark
+within a string.
+For example, suppose you needed to store the string:
+″Isn’t the weather fine?″
+As it stands, using double quotation marks works just fine, but what
+would happen if you surrounded the string with single quotation marks
+instead:
+′Isn’t the weather fine?′
+You would get a syntax error because JavaScript would see only the
+string:
+
+′Isn′
+
+and then some gibberish following it:
+
+t the weather fine?′
+
+Then again, what about the string:
+
+′Jane said, ″Hello″′?
+
+This time, this string works using single quotes, but because of the
+double quotes within it, if you were to surround the string with double
+quotes like this:
+
+″Jane said, ″Hello″″
+
+JavaScript would see one string, like this:
+
+″Jane said, ″
+
+some gibberish (to JavaScript) like this:
+
+Hello
+
+and another string with nothing in it, like this:
+
+″″
+
+It would give up at all this and generate an error.
+Placing a pair of quotes together with nothing between them results in
+what is called the empty string.
+It is commonly used for erasing or initializing the value of a string
+variable.
+
+Escaping Characters
+But things can get more interesting, because what about the occasions
+when you might require both types of quotes to be included within a
+string, like this:
+
+″Timmy said, ″I can’t wait″″
+
+As it stands, this string will cause a syntax error, but you can easily
+fix it using the escape character, which is simply a backslash,
+like this:
+
+″Timmy said, \″I can’t wait\″″
+
+What the escape character does is tell JavaScript to ignore the \
+character and to use the character following it as a string element, and
+not a string container.
+You may escape either of the quotation marks inside a string to ensure
+they are used only as string elements, and can also use escape
+characters to insert other characters that you cannot easily type in
+such as tabs and newlines, as follows:
+
+1. \' = single quote
+2. \" = double quote
+3. \\ = backslash
+4. \b = backspace
+5. \f = form feed
+6. \n = newline
+7. \r = carriage return
+8. \t = tab
+
+Variable Typing and Casting
+In JavaScript, unlike some other programming languages, a variable can
+change its type automatically.
+For example, a string can become a number, and vice versa, according to
+the way in which the variable is referenced.
+For example, take the following assignment in which the variable MyVar
+is given the string value of ″12345″:
+
+MyVar = "12345"
+
+Although the string is created from a group of all digits, it is a
+string.
+However, JavaScript is smart enough to understand that sometimes a
+string can be a number, so in the following assignment, it converts the
+string value in MyVar to a number prior to applying the subtraction, and
+then the resulting value (which is now the number 12000) is stored back
+in MyVar, which is now a numeric variable:
+
+MyVar = MyVar - 345
+
+Likewise, a number can be automatically converted to a string, as in the
+following two lines, which first set the numeric variable Time to the
+value 6, then the string ″ O’clock″ is appended to the number value in
+Time, which is first turned into a string to make this string
+concatenation possible:
+
+Time = 6
+Time = Time + " O'clock"
+
+The result is that Time is now a string variable with the value
+″6 O’clock″.
+Because of this changing of variables from one type to another
+(known as automatic type casting), it is not actually correct to think
+of JavaScript variables in terms of type, so I will no longer do so.
+Instead, you should consider only their contents and how JavaScript will
+interpret them.
+However, sometimes it is necessary for you to force the type of a
+variable.
+For example, consider the following statement and ask yourself what you
+think JavaScript will do with it:
+
+MyVar = "12345" + 678
+
+If you think it will turn the string ″12345″ into a number and then add
+678 to it (to result in the number 13023), you are unfortunately wrong.
+Although that might seem the appropriate action, JavaScript chooses to
+turn the number 678 into the string ″678″ and then concatenate it with
+″12345″, resulting in the string ″12345678″.
+If this is the result you want, then that’s good, but if not, then you
+must force the type that JavaScript should use by using the function
+Number(), like this:
+
+MyVar = Number("12345") + 678
+
+Now, before you say, “Why not simply make the string a number in the
+first place?”, consider the case of already having the variable MyVar,
+whose contents may be either a string or number (and you do not know
+which), but you then must add a number to it (rather than append a
+string) like this:
+
+MyVar = MyVar + 678
+
+If MyVar happens to be a string, a concatenation will occur, but if it
+is a number, an addition will take place.
+In this case, it is necessary to use the Number() function to ensure you
+always get the correct result intended, like this:
+
+MyVar = Number(MyVar) + 678
+
+If you know for sure that you are only using numbers in a particular
+variable and it will never contain anything else, you will not need to
+use the Number() function to cast the value.
+Generally, the occasions on which you will find it beneficial to use
+casting are when dealing with values over which you have less control,
+such as user input that you are processing.
+
+The Cast Functions
+The following three functions are available for forcing the type of a
+variable (or casting it):
+1. Boolean() = cast the value to either true or false.
+2. Number() = cast the value to a number.
+3. String() = cast the value to a string.
+Values that are cast to Boolean can become one of only two values: true
+or false.
+Any string of at least one character in length, any object, or any
+number other than 0 will be cast to the value true.
+An empty string, the number 0, and the values undefined or null, result
+in the value false.
+When a value is cast to a number, if it is a string containing characters
+other than digits (or for another reason it cannot be converted to a
+number), then the JavaScript value NaN (Not a Number) will be returned
+by Number(), instead of a number.
+Because NaN values cannot have arithmetic operations performed on them,
+any attempt to do so will see the value remain as NaN, so the following
+results in MyVar containing the value NaN, and not the value 23, as you
+might expect:
+
+MyVar = Number(″A string″) + 23
+
+The String() function is the most flexible in that it can safely turn
+any value into a string, even including JavaScript values such as NaN,
+null, undefined, true, and false.
+
+Summary
+We’ve actually covered quite a lot of ground in this lesson, which has
+explained some of the simpler JavaScript syntax and data handling
+capabilities.
+In the following lesson, we’ll start to see how these come together with
+operators to enable you to start creating simple JavaScript expressions.
+
+Self-Test Questions
+Test how much you have learned in this lesson with these questions.
+If you don’t know an answer, go back and re-read the relevant section
+until your knowledge is complete.
+You can find the answers in Appendix A.
+1.  How do you create a single-line comment and a multiline comment?
+	// and /* */
+2.  Do you need to end lines of code with semicolons?
+	No, unless you intend to include another instruction on the same
+	line, then the semicolon will act as a new line to separate them.
+	However, if you begin a new line with either a ( or [, you should
+	place a semicolon either at the start of that line or at the end of
+	the preceding one; otherwise JavaScript will run the two lines
+	together.
+3.  Name three places you can put JavaScript code in a web document.
+	<head>, <body> and external .js file placed in the src attribute of
+	the <script> tag.
+4.  Is JavaScript case-sensitive or case-insensitive?
+	Case-sensitive, as the variables YourName, yourname, YOURNAME
+	contain separate values.
+5.  Which characters can you use in a variable name?
+	A-Z, a-z, $, or _, and may include 0-9 afterwards.
+6.  With which operator do you add two values together?
+	+
+7.  With which operator do you concatenate two objects into a string?
+	+
+8.  How can you incorporate the same quotation mark within a string that
+	encloses it?
+	Escape it with a \ character:
+	"He said, \"Hello\".".
+9.  How can you change a string to a number?
+	The Number() function
+10. What does NaN stand for?
+	Not a Number.
+
+Skillsoft Getting Started Questions:
+1. What are some of the features of the Internet Explorer 11 Developer
+   console?
+   Emulating a Windows Phone browser v
+   Tracking errors and warnings in the console v
+   Generating a report on UI responsiveness v
+   Ability to provide JavaScript input to the console v
+   Providing an integrated development environment x
+		Navigating to code by selecting the interface element v
+
+2. Which of the following ways of adding JavaScript are valid for HTML
+   4.01 documents?
+   A script tag with the src attribute v
+   A script tag with language and type attributes v
+
+3. Which lines of code are valid ways to declare and initialize a
+   variable in JavaScript?
+   var lap1 = 125.59; v
+   var lap1;
+   lap1 = 125.59; v
+
+4. In what ways can you include JavaScript in web pages?
+   Include script tags at the head element level. v
+   Include script tags at the body element level. v
+   Include JavaScript statements between script tags in a .html file. v
+   Reference an external JavaScript file with the src attribute in a
+   script tag. v
+
+5. What should you install when setting up a JavaScript development
+   environment?
+   A web server, if integrating JavaScript with server-side scripts. v
+   A text editor or an integrated development environment (IDE). v
+
+6. What are some of the recommended practices for JavaScript code
+   spacing and formatting?
+   Indent the code. v
+   Include a semicolon at the end of a statement. v
+
+Skillsoft Loops and Arrays Questions:
+1. Which line of code can you use to complete the array declaration?
+   var students = ["Karen", "Sharon", "Clifford", "Taku", "Latitia"];
+
+2. As long as b is less than 50, you want to increment the value of b
+   by 1. What can you use to do this?
+   var b = 10;
+   while (b < 50) {
+		document.getElementById('output').innerHTML += (b + "<br/>");
+		b++;
+   }
+
+3. You want to loop through the animal array and display all the array
+   elements in a list. Which piece of code can you use to do this?
+   var animal = new Array("lizard", "bear", "spider", "squid", "wolf",
+   "ant");
+   function output() {
+		var len = animal.length;
+		for(var i = 0; i < len; i++) {
+			document.getElementById('output').innerHTML += animal[i]
+			+ "<br/>";
+			}
+		}
+
+4. Which line of code uses the correct for loop syntax?
+   for(var b = 10; b < 50; b++) {
+		document.getElementById('output').innerHTML += (b + "<br/>");	
+   }
+
+5. You want to display an employee's name based on what the employee
+   number, empNo, is. Complete the code to do so.
+	var empNo = EN5625;
+	var name;
+	function checkEmp() {
+		switch(empNo) {
+			case "EN5960":
+				name = "Elke Bauer"
+			case "EN5314":
+				name = "Grant Ginelli"
+			case "EN5625":
+				name = "Oralia Tallon"
+			...
+			default:
+				name = "This employee number does not exist."
+		}
+	} v
+   
+Basic Data Types
+Undefined Variables
+<script type="text/javascript">
+	// numbers, strings, boolean, undefined, etc.
+	var x = 10;
+	// var x; undefined
+	alert('x = ' + x + '; ' + typeof x);
+</script>
+
+<script type="text/javascript">
+	// undefined.
+	var x;
+	if(typeof x === 'undefined') {
+		alert('x undefined');
+	}
+	else {
+		alert('x = ' + x + '; ' + typeof x);
+	}
+</script>
+
+Null Variables
+<script type="text/javascript">
+	// numbers, strings, boolean, objects, null, etc.
+	var x = {};
+	x = null; // null strips values from variables, not the type.
+	alert('x = ' + x + '; x is of type: ' + typeof x);
+</script>
+
+Regular Expressions
+<script type="text/javascript">
+	// numbers, strings, boolean, objects, null, etc.
+	var str = 'This is a sample string';
+	// var re = /Sample/i;
+	// var re = newRegExp("sample", "i");
+	
+	var check = re.exec(str);
+	if(check) {
+		alert("Found a match");
+		alert(check);
+	}
+	else {
+		alert("No match found");
+	}
+
+	var check2 = re.test(str);
+	alert(check2);
+</script>
+
+Substrings
+<script type="text/javascript">
+	var str = "Hello world!";
+
+	var n = str.substr(2, 3);
+	document.writeIn("This is the result of the substr method: " + n + "<br/>");
+
+	var m = str.substring(2, 3);
+	document.writeIn("This is the result of the substring method: " + m + "<br/>");
+
+</script>
+
+Formatting Strings
+<script type="text/javascript">
+	var str = "		Hello world!	";
+
+	var a = str.toLowerCase();
+	document.writeIn("This is the result of the toLowerCase method: " + a + "<br/>");
+
+	var b = str.toUpperCase();
+	document.writeIn("This is the result of the toUpperCase method: " + b + "<br/>");
+
+	var c = str.trim();
+	document.writeIn("This is the result of the trim method: " + c + "<br/>");
+
+	var d = str.bold();
+	document.writeIn("This is the result of the bold method: " + d + "<br/>");
+
+</script>
+
+Number Object
+<script type="text/javascript">
+
+	var myNum1 = 123.45678910;
+	var myNum20 = myNum1.toFixed(2);
+
+	document.writeIn("This is the result of the toFixed method: " + myNum20 + "<br/>");
+
+	var myNum2 = 123.45678910;
+
+	document.writeIn("This is the result of myNum2.toPrecision(): " + myNum2.toPrecision() + "<br/>");
+	document.writeIn("This is the result of myNum2.toPrecision(2): " + myNum2.toPrecision(2) + "<br/>");
+	document.writeIn("This is the result of myNum2.toPrecision(3): " + myNum2.toPrecision(3) + "<br/>");
+
+	document.writeIn("LocalString: " + myNum2.toLocaleString() + "<br/>");
+
+</script>
+
+Math Object & Random Numbers
+<script type="text/javascript">
+
+	function rollDice() {
+		var num1 = Math.floor((Math.random() * 6) + 1);
+		var num2 = Math.floor((Math.random() * 6) + 1);
+
+		var results = document.getElementById("div1");
+		results.innerHTML = "Die #1 is: " + num1 + "Die #2 is: " + num2;
+	}
+	
+</script>
+
+Date and Time
+<script type="text/javascript">
+
+	var today = new Date();
+	var anniversary = new Date("September 3, 2022 14:00:00");
+	var birthday = new Date(1989, 09, 07);
+
+	document.writeIn("This is the result of creating a standard Date object: " + today.toString() + "<br/>");
+	document.writeIn("This is the result of using the GMT string: " + anniversary.toGMTString() + "<br/>");
+	document.writeIn("This is the result of using the UTC string: " + anniversary.toUTCString() + "<br/>");
+	document.writeIn("This is the result of using theLocaleString: " + birthday.toLocaleString() + "<br/>");
+
+	document.writeIn("This is the milliseconds: " + today.getMilliseconds() + "<br/>");
+
+	birthday.setYear(1991);
+	document.writeIn("This is the new date: " + birthday.toLocaleDateString() + "<br/>");
+
+</script>
+
+Boolean
+<script type="text/javascript">
+
+	a = false;
+	b = new Boolean(false);
+	
+	document.write(typeof a); // boolean
+	document.write(typeof b); // object
+
+	c = Boolean(2 > 5);
+	d = Boolean(0);
+	
+	alert("c is " + c);
+	alert("d is " + d);
+
+</script>
+
+Basic Data Types Test
+1. Remove the whitespace from the variable t and place result into the variable f.
+	var t = "		Hello world!	";
+	var f = t.trim();
+	document.writeIn("This is the result of the trim method: " + f + "<br/>"); v
+
+2. Present the current date on the homepage using locale conventions.
+	var d = new Date();
+	var tday = d.toLocaleDateString(); v
+
+3. Given the variable testStr, which substring method will return the
+   substring 'pit' as the variable result?
+	var testStr = "Jupiter is the largest planet";
+		var result = testStr.substring(2, 5); v
+
+4. Complete the code to create a regular expression using the Regular
+   Expression object that searches for an instance of the word 'Dominate'.
+	var myTestRe = newRegExp("dominate", "i");
+
+5. Which statement describes null variables?
+	Null variables strip the value and type from a variable. v
+
+6. Which options will create Boolean values?
+	b = Boolean(0); v
+	t = false; v
+
+7. You want to generate a random number between 1 and 10, but you want
+   the result rounded down to its nearest integer.
+	var myRandomNum = Math.floor((Math.random() * 10) + 1); v
+
+8. Which statement regarding undefined variables is true?
+	Undefined variables can be used to check if an event has been
+	triggered in your code. v
+
+9. Format the variable myValue1 to two decimal places and assign it to
+   the variable myValue2.
+	var myValue1 = 17.268745
+	var myValue2 = myValue1.toFixed(2); v
+
+Controlling Program Flow
+Nesting If Statements
+
+<script type="text/javascript">
+
+	var x = 12;
+
+	if (x > 5) {
+		if (x < 11) {
+			alert("within range");
+		}
+		else {
+			alert("outside range");
+		}
+	}
+	else {
+		alert("outside range");
+	}
+
+</script>
+
+Nesting Loops
+<script type="text/javascript">
+
+	document.write("Here's the for loop: <br/>");
+
+	for (i = 1; i <= 10; i++) {
+		document.writeIn("The value of i is: " + i + "<br/>");
+
+		for (j = 1; j <= 10; j++) {
+			document.writeIn("The value of j is: " + j + "<br/>");
+		}
+	}
+
+</script>
+
+Break and Continue Statements
+<script type="text/javascript">
+
+	var x = 10;
+
+	out: for (y = 0; y < 10; y++) {
+		document.write(y + "<br/>");
+		myInnerLoop:
+			do {
+				x += 1;
+
+				document.write(x + "<br/>");
+				if (x == 12) {
+					// continue myInnerLoop;
+					break out;
+				}
+			}
+			while (x <= 15);
+		}
+
+</script>
+
+The Conditional Operator
+<script type="text/javascript">
+
+	function conditionalTest(x) {
+		if (x >= 21) {
+			alert("Welcome to the beer festival!");
+		}
+		else {
+			alert("Sorry, you must be at least 21 to enter.");
+		}
+	}
+
+	// x >= 21 ? alert("Welcome to the beer festival!") : alert("Sorry, you must be at least 21 to enter.");
+
+</script>
+
+Controlling Program Flow Test
+1. Complete the code to break the loop after 'The number is now 3' shows.
+	var i;
+		for (i = 0; i < 10; i++) {
+			if (i == 4) {
+				break;
+			}
+	document.write("The number is now" + i + "<br/>");
+		} v
+
+2. Which statement about nested loops in JavaScript is accurate?
+	The outer loop changes only after the inner loop is finished. v
+
+3. Complete the code that rewrites this if else statement using
+   conditional operators.
+	if (time < 12) {
+		alert("Good morning.");
+	}
+	else {
+		alert("Good afternoon.");
+	}
+
+	time < 12 ? alert("Good morning") : alert("Good afternoon"); v
+
+4. Complete the nested if statement.
+	if (temp < 25) {
+		if (temp < 16) {
+			alert("Bring a jumper!");
+		}
+		else {
+			alert("It's between 16 and 25, no jumper required.");
+		}
+	}

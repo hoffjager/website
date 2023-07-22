@@ -1,0 +1,29 @@
+/*
+Refer back to:
+relationship.html
+1. Create a linked style sheet with a style rule to select the first sibling
+immediately following the heading.
+2. Next add a style rule to select the span child of the paragraph element.
+3. Now add style rules to select in turn each descendant element in the list by
+describing its hierarchy.
+4. Save the style sheet alongside the HTML document then open the web page in a
+browser to see the elements styled by sibling and child selectors.
+The text in this example describes each element's relationship to the <body>
+element.
+*/
+
+h3 + p {
+    background: yellow
+}
+p > span {
+    background: lime
+}
+body > ul {
+    background: fuchsia
+}
+body > ul > li {
+    background: aqua
+}
+body > ul > li > span {
+    background: orange
+}

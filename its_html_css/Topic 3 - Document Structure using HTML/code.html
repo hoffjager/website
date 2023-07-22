@@ -1,0 +1,47 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections.
+3. In the body section, insert a program description containing variables,
+sample input, and sample output.
+4. Next, in the body section, insert preformatted program code.
+5. Now, in the body section, state the program code source.
+6. Save the HTML document, then open it in your web browser to see how the
+program description, code and source details appear.
+Note that all angled bracket characters in the program code have been replaced by
+character entities to avoid conflict with the HTML tags.
+Remember to insert the phrasing <code> element within a <pre> flow element to
+preserve the program code layout in an HTML document.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Program Code Example</title>
+</head>
+<body>
+    <p>This program assigns an input value to <var>degF</var>, then
+    performs a conversion on that value, assigning the result to
+    <var>degC</var> for output.<br />
+    For example, input of <samp>98.6</samp>
+    will output <samp>37<sup>o</sup>C</samp>.</p>
+    <data value="978-1-84078-719-1">C++ Programming In Easy Steps, 5th
+    Edition</data>
+    <time datetime="2016-12-15">(December 15th 2016)</time>
+    <pre>
+<code>
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main() {
+    float degF, degC;
+    cout &lt;&lt; "Enter Fahrenheit Temperature: ";
+    cin &gt;&gt; degF;
+    degC = ((degF - 32.0)*(5.0 / 9.0));
+    cout &lt;&lt; degF &lt;&lt; "F is " &lt;&lt; degC &lt;&lt; "C";
+    cout &lt;&lt: endl;
+    return 0;
+    }
+</code>
+</pre>
+</body>
+</html>

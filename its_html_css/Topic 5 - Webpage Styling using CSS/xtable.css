@@ -1,0 +1,50 @@
+﻿/*
+    Refer back to:
+    xtable.xml
+1. Create a style sheet rule that assigns table characteristics to the
+XML tags.
+2. Next add a style rule that specifies the table features.
+3. Now add style rules to color the headers and row cells.
+4. Save the style sheet alongside the XML document then open the document
+in a browser to see the La Liga table.
+*/
+
+cap {
+    display: table-caption
+}
+
+liga {
+    display: table
+}
+
+hdrs {
+    display: table-header-group
+}
+
+rows {
+    display: table-row-group
+}
+
+team {
+    display: table-row
+}
+
+name, pos, pts, lbl {
+    display: table-cell
+}
+
+liga {
+    margin: auto;
+    margin-top: 20px;
+    width: 300px;
+    border-spacing: 3px;
+    border: 8px ridge lime
+}
+
+hdrs {
+    background: lime
+}
+
+rows {
+    background: aqua
+}

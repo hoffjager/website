@@ -1,0 +1,34 @@
+﻿/*
+    Refer back to:
+    fontsize.html
+1. Create a linked style sheet containing a rule specifying a default
+font size for the entire paragraph.
+2. Next add style rules specifying font sizes for the spanned.
+3. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the sections of text appear in the specified
+font sizes.
+*/
+
+p {
+    font-size: 12pt
+}
+
+span.lg {
+    font-size: larger
+}
+
+span.sm {
+    font-size: smaller
+}
+
+span.xxl {
+    font-size: xx-large
+}
+
+span.xxs {
+    font-size: xx-small
+}
+
+span.huge {
+    font-size: 500%
+}

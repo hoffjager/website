@@ -1,0 +1,42 @@
+﻿<!--
+1. Start a new HTML5 document.
+2. In the body section, insert a form element containing a submit button to send
+form data by the GET method.
+3. Now, in the form element, insert a fixed height select option list with one
+option automatically selected.
+4. Next, in the form element, insert a drop-down select option list with one
+option automatically selected.
+5. Save the HTML document, then open the web page in your browser, open the
+drop-down list and submit the form to see the default option values get submitted.
+Always include a selected attribute to automatically select one option in each
+option list – to provide a default choice.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Select Option Example</title>
+</head>
+<body>
+    <form method="get" action="http://localhost/echo.pl">
+        <p>
+            <input type="submit" value="Submit Form" />
+        </p>
+        <select name="HTML List Type Selector One" size="4">
+            <optgroup label="List Type 1">
+                <option value="UL">Unordered List</option>
+                <option value="OL" selected>Ordered List</option>
+                <option value="DL">Definition List</option>
+            </optgroup>
+        </select>
+        <select name="HTML List Type Selector Two">
+            <optgroup label="List Type 2">
+                <option value="UL">Unordered List</option>
+                <option value="OL">Ordered List</option>
+                <option value="DL" selected>Definition List</option>
+            </optgroup>
+        </select>
+    </form>
+</body>
+</html>

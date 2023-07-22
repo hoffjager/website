@@ -1,0 +1,40 @@
+﻿/*
+    Refer back to:
+    size.css
+1. Create a style sheet rule to size an element by absolute units.
+2. Next add a rule to size an element by monitor resolution.
+3. Now add a rule to size an element by percentage.
+4. Then add a rule to size an element relative to font height.
+5. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the element sizes.
+It is often considered good practice to use em units wherever possible
+for maximum flexibility.
+*/
+
+div#absolute {
+    width: 3in;
+    height: 0.5in;
+    background: red;
+    color: yellow
+}
+
+div#container {
+    width: 400px;
+    height: 200px;
+    background: blue;
+    color: aqua
+}
+
+div#percent {
+    width: 50%;
+    height: 50%;
+    background: green;
+    color: yellow
+}
+
+div#relative {
+    width: 20em;
+    height: 2em;
+    background: yellow;
+    color: blue
+}

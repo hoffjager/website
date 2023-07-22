@@ -1,0 +1,33 @@
+﻿/*
+    Refer back to:
+    fontfamily.html
+1. Create a linked style sheet containing a rule suggesting a default
+font for the entire paragraph.
+2. Next add style rules suggesting fonts for the spanned text.
+3. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the sections of text appear in the named fonts
+or generic family fonts.
+It is good practice to specify a generic font family preference in every
+font-family declaration.
+*/
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+span.serif {
+    font-family: "Times New Roman", serif
+}
+
+span.fantasy {
+    font-family: "Castellar", fantasy
+}
+
+span.mono {
+    font-family: "Courier", monospace
+}
+
+span.cursive {
+    font-family: "Segoe Script", cursive
+}
+

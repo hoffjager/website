@@ -1,0 +1,43 @@
+﻿<!--
+1. Start a new HTML5 document that incorporates a script.
+2. In the body section, insert a form element containing a reset button, a push
+button, and a submit button to send form data by the GET method.
+3. Within the form element, insert a fieldset containing a legend and a checkbox
+group.
+Refer to:
+button.js
+4. Create a script that designates a function when the page gets loaded to attach
+a behavior to the form’s push button.
+5. Save the HTML document and script, then open the web page in your browser,
+and push the button to check a box.
+6. Now, push the reset button to clear the form, then check the other two boxes
+and submit the form.
+The mere presence of a Boolean checked attribute in an HTML element checks the
+box, but in script, the box’s checked property needs to be assigned a true value
+to check the box.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Button Example</title>
+    <script src="TOPIC3button.js"></script>
+</head>
+<body>
+    <form method="get" action="http://localhost/echo.pl">
+        <input type="reset" value="Reset Form" />
+        <input type="button" value="Choose For Me" id="btn" />
+        <input type="submit" value="Submit Form" />
+        <fieldset>
+            <legend>Pizza Topping</legend>
+            <input id="pepperoni" type="checkbox"
+                   name="Toppings" value="Pepperoni" /> Pepperoni |
+            <input id="mushroom" type="checkbox"
+                   name="Toppings" value="Mushroom" /> Mushroom |
+            <input id="bbqsauce" type="checkbox"
+                   name="Toppings" value="BBQ Sauce" /> BBQ Sauce
+        </fieldset>
+    </form>
+</body>
+</html>

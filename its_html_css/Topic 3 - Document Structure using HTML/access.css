@@ -1,0 +1,12 @@
+﻿/*
+Refer back to:
+    access.html
+*/
+a {
+    text-decoration: none;
+    color: black
+}
+a:focus {
+    background: red;
+    color: white
+}

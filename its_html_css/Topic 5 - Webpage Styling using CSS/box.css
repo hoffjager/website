@@ -1,0 +1,29 @@
+﻿/*
+    Refer back to:
+    box.html
+1. Create a style rule that sets the width and background color of the
+core content area.
+2. Next add a style rule to add some padding.
+3. Now add a style rule to add a border.
+4. Finally add a style rule to add a margin.
+5. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the content boxes with added padding, borders,
+and margin.
+*/
+
+p {
+    background: yellow;
+    width: 20em
+}
+
+p.pad {
+    padding: 1em
+}
+
+p.bdr {
+    border: 0.5em red solid
+}
+
+p.mgn {
+    margin: 2em
+}

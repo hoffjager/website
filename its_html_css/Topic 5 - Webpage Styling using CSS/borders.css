@@ -1,0 +1,32 @@
+﻿/*
+    Refer back to:
+    borders.html
+1. Create a style sheet rule to add a border that inherits a color.
+2. Next add a rule with shorthand declarations to create a border above
+and below the content area only.
+3. Now add a rule creating a border from separate properties.
+4. Then add a rule creating a border on all four sides using the
+recommended CSS shorthand technique.
+Notice how the browser miters the borders diagonally where they meet –
+this offers some creative possibilities.
+*/
+
+#p1 {
+    color: red;
+    border: solid
+}
+
+#p2 {
+    border-top: 0.5em orange dotted;
+    border-bottom: 0.5em green dashed
+}
+
+#p3 {
+    border-style: ridge double;
+    border-width: 1em;
+    border-color: blue
+}
+
+#p4 {
+    border: 1em yellow outset
+}

@@ -1,0 +1,15 @@
+﻿/*
+Refer back to:
+    quote.html
+1. Link this style sheet into the head section of the document, then reload
+the page to reveal the blocks.
+By default, the paragraph element block will fill the width of its containing
+element – like the <h1> element block in quote.html.
+The flow elements are shown here with red solid borders, and the phrasing
+elements with a light blue background.
+*/
+
+p, blockquote {
+    border: 1px solid red}
+q {
+    background: aqua}

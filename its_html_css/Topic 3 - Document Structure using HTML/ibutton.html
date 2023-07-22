@@ -1,0 +1,42 @@
+﻿<!--
+1. Start a new HTML5 document that incorporates a script.
+2. In the body section, insert a form element containing a text input field, which
+both have an identity for scripting.
+3. Next, in the form element, insert an image button that will simply submit the
+form.
+4. Now, in the form element, insert an image button that will perform validation
+then submit the form.
+Note that the image button that will perform validation is given an identity so
+script can attach a behavior to it.
+Refer to:
+ibutton.js
+5. Create a script that designates a function when the page gets loaded – to
+attach a behavior to an image button.
+6. Save the HTML document and script, then open the web page in your browser,
+enter an incomplete email address and submit the form using each button.
+7. When validation fails using the button with scripted behavior, complete the
+email address correctly then use the validating button again to submit the form
+successfully.
+The script in this example checks the input text against a regular expression
+pattern that describes the format of any valid email address. The pattern must
+appear on a single line – exactly as it is listed here.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Image Button Example</title>
+    <script src="ibutton.js"></script>
+</head>
+<body>
+    <form id="form-1" method="get" action="http://localhost/echo.pl">
+        Please Supply Your Email Address:
+        <input id="adr" name="Address" type="text" size="45" /><br />
+        <input type="image" src="ibutton.png" alt="Submit Button"
+               title="Click to submit form" />
+        <img id="btn" src="ibutton.png" alt="Submit Button"
+             title="Click to submit with JavaScript validation" />
+    </form>
+</body>
+</html>

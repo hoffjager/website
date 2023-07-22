@@ -1,0 +1,40 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections.
+3. Within the body section, insert a container element.
+The <source> element does not require a closing tag. It is also used
+within the <audio> and <video> elements.
+4. Next, insert an image source for display only on devices whose screen
+width exceeds 500 pixels.
+5. Now, insert an image source for display only on smaller devices whose screen
+width exceeds 200 pixels.
+6. Finally, insert an image source for display only on older browsers
+that do not support the selection feature.
+large.png = 205 x 250
+medium.png = 103 x 125
+small.png = 62 x 75
+7. Save the HTML document, then open the web page fullscreen in a
+desktop web browser to see the large image.
+8. Open the web page on a small device, or re-size the browser window,
+to see the small image.
+9. Open the page on an old browser to see the medium image.
+If you examine the browser cache you should see that it has only
+efficiently downloaded the appropriate image to be displayed, not all
+images.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Picture Example</title>
+</head>
+<body>
+    <picture>
+        <source media="(min-width: 500px)" srcset="large.png" />
+        <source media="(min-width: 200px)" srcset="small.png" />
+        <img alt="Regular Guy" src="medium.png"
+             width="103" height="125"/>
+    </picture>
+</body>
+</html>

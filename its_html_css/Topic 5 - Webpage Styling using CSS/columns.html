@@ -1,0 +1,41 @@
+﻿<!--
+1. Create an HTML document containing "div" elements for header and
+content panels, all wrapped in an outer container element that is
+followed by a footer element.
+2. Save the HTML document then create a linked style sheet with a rule
+to remove all margins and padding, and to center all content.
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Column Construction</title>
+    <link type="text/css" rel="stylesheet"
+          href="columns.css" media="screen" />
+</head>
+<body>
+    <div id="wrapper">
+        <div id="hdr">
+            Header Panel<br>
+            <img src="tile.png" width="250" height="25" alt="Box">
+        </div>
+        <div id="nav">
+            Navigation Panel
+            <ul>
+            <li>Link</li>
+                <li>Link</li>
+            </ul>
+        </div>
+        <div id="ads">
+            Supplement Panel<br>
+            <img src="tile.png" width="75" height="100" alt="Box">
+        </div>
+        <div id="txt">
+            Content Panel<br>
+            <img src="tile.png" width="150" height="200" alt="Box">
+        </div>
+    </div>
+    <div id="ftr">Footer Panel</div>
+</body>
+</html>

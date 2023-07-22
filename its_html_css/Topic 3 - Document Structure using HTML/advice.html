@@ -1,0 +1,56 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections.
+3. In the body section, insert a paragraph containing an abbreviation with
+tooltip advice.
+4. Next, insert a citation reference with tooltip advice.
+5. Now, insert a definitive term with tooltip advice.
+6. Then, insert a keyboard instruction with tooltip advice.
+7. Finally, add an element in the head section to identify a script that will
+respond to the keyboard instruction.
+Refer to:
+advice.js
+8. Save the HTML document, then exactly copy the script below and save it as
+“advice.js” alongside the HTML file.
+9. Open the HTML document and place the cursor over the elements to see the
+individual tooltips.
+10. With JavaScript support enabled in your browser, press the Y key to see the
+script response.
+Remember to use single quote marks for nested quotes – as with ‘HTML’ in Step 5.
+The script looks at the keycode when the key gets pressed and will respond to
+lowercase “y” and uppercase “Y”.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Advice Example</title>
+    <script src="advice.js"></script>
+</head>
+<body>
+    <p>
+        <abbr title="HyperText Markup Language">HTML</abbr>
+        5 in Easy Steps
+    </p>
+    <p>
+        <cite title="Inventor of the HyperText Markup Language">
+            Sir Tim Berners Lee
+        </cite>
+    </p>
+    <p>
+        <dfn title="The popular language of the World Wide Web.
+        Commonly abbreviated to 'HTML'">
+            HyperText Markup
+            Language
+        </dfn>
+    </p>
+    <p>
+        <kbd title="Press Y to execute a script. This requires
+        JavaScript to be enabled in your browser.">
+            Click Y to
+            continue.
+        </kbd>
+    </p>
+</body>
+</html>

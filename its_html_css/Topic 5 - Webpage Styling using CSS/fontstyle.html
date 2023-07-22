@@ -1,0 +1,34 @@
+﻿<!--
+1. Create an HTML document with two paragraphs and a heading containing
+spanned sections of text.
+2. Save the HTML document then create a linked style sheet containing
+rules specifying default font styles for each paragraph.
+    Refer to:
+    fontstyle.css
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Font Styling</title>
+    <link type="text/css" rel="stylesheet"
+          href="fontstyle.css" media="screen" />
+</head>
+<body>
+    <p id="para-1">
+        This normal style text can become
+        <span class="ital">italicized</span> or
+        <span class="oblq">oblique</span>
+    </p>
+    <p id="para-2">
+        This italic style text can become
+        <span class="reg">normal</span>
+    </p>
+    <h2>
+        ...And Here's a
+        <span class="reg-caps">Heading</span>
+        with Small Caps
+    </h2>
+</body>
+</html>

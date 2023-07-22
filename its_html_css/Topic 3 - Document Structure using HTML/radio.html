@@ -1,0 +1,42 @@
+﻿<!--
+1. Start a new HTML5 document.
+2. In the body section, insert a form element containing a submit button to send
+form data by the GET method.
+3. Next, in the form element, insert a fieldset with a legend.
+4. Now, in the fieldset, insert radio buttons with one selected.
+5. Save the HTML document, then open the web page, select the correct answer,
+and submit the form.
+Always include a checked attribute to automatically select one button in each
+radio button group – to provide a default choice.
+Radio button elements resemble the buttons on old radios where each button
+selected a particular radio station – but, of course, no two stations could be
+selected simultaneously.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Radio Button Example</title>
+</head>
+<body>
+    <form method="get" action="http://localhost/echo.pl">
+        <p>
+
+        </p>
+
+        <p>
+            <input type="submit" value="Submit Form" />
+        </p>
+        <fieldset>
+            <legend>What kind of language is HTML?</legend>
+            Scripting <input type="radio"
+                             name="Definition" value="Scripting"><br />
+            Markup <input type="radio"
+                          name="Definition" value="Markup"><br />
+            Programming <input type="radio"
+                               name="Definition" value="Programming" checked>
+        </fieldset>
+    </form>
+</body>
+</html>

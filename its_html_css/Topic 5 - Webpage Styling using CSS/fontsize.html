@@ -1,0 +1,29 @@
+﻿<!--
+1. Create an HTML document containing a paragraph with several spanned
+sections of text.
+2. Save the HTML document then create a linked style sheet containing a
+rule specifying a default font size for the entire paragraph.
+    Refer to:
+    fontsize.css
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Font Sizing</title>
+    <link type="text/css" rel="stylesheet"
+          href="fontsize.css" media="screen" />
+</head>
+<body>
+    <p>
+        This 12pt high text can become
+        <span class="lg">larger</span> or
+        <span class="sm">smaller</span> <br>It can get
+        <span class="xxl">extremely large</span> or
+        <span class="xxs">extremely small</span> <br>
+        and it may even grow to be
+        <span class="huge">huge</span>
+    </p>
+</body>
+</html>

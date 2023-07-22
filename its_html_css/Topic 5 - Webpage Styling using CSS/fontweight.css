@@ -1,0 +1,35 @@
+﻿/*
+    Refer back to:
+    fontweight.html
+1. Create a linked style sheet containing rules specifying a default
+font weight for each paragraph.
+2. Next add style rules specifying font weights for the spanned
+sections of text.
+3. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the sections of text appear in the specified
+font weights.
+*/
+
+p#para-1 {
+    font-weight: 400
+}
+
+p#para-2 {
+    font-weight: 700
+}
+
+span.bold {
+    font-weight: bold
+}
+
+span.more {
+    font-weight: bolder
+}
+
+span.norm {
+    font-weight: normal
+}
+
+span.less {
+    font-weight: lighter
+}

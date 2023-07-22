@@ -1,0 +1,35 @@
+﻿/*
+Refer back to:
+    rollover.html
+1. Create a style sheet beginning with a rule to set the paragraph container
+element to the same size as the button image and to specify the container’s
+background image.
+2. Next, add a style rule to set the nested hyperlink element to the same size as
+the button image.
+3. Now, add a style rule to remove the default border from around the nested
+button image element.
+4. Finally, add a style rule to hide the button image when the cursor is placed
+over it.
+5. Save the style sheet then open the web page in your browser to see the border
+removed and the rollover effect.
+Unlike some other rollover techniques, here both images are already loaded, so the
+rollover performs instantly – and the <img> tag provides alternative text when
+images are disabled.
+*/
+
+p.btn {
+    width: 192px;
+    height: 67px;
+    background: url(rollover-bg.png);
+}
+p.btn a {
+    display: block;
+    width: 192px;
+    height: 67px;
+}
+p.btn a img {
+    border: 0px;
+}
+p.btn a:hover img {
+    visibility: hidden;
+}

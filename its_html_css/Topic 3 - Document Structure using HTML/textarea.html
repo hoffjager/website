@@ -1,0 +1,33 @@
+﻿<!--
+1. Start a new HTML5 document.
+2. In the body section, insert a form element containing a submit button to send
+form data by the POST method.
+3. Now, in the form element, insert a text input area that has 8 rows and is 70
+average character widths wide.
+4. Save the HTML document, then open the web page in your browser, enter some
+data and submit the form.
+5. The text is not appended to the URL, so examine the response headers to see it
+has been sent as “Form Data”.
+The average character width may vary between browsers − so the physical size of
+the text area field may vary too.
+You can use the Developer Tools in the Google Chrome web browser to examine
+response headers.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Text Area Example</title>
+</head>
+<body>
+    <form method="post" action="http://localhost/echo.pl">
+        <p>
+            <input type="submit" value="Submit Form" />
+        </p>
+        <textarea name="The Future Web" rows="8" cols="70">
+
+        </textarea>
+    </form>
+</body>
+</html>

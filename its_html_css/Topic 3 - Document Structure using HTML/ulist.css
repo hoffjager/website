@@ -1,0 +1,27 @@
+﻿/*
+Refer back to:
+    ulist.html
+1. Create a style sheet to position each list and to specify their individual
+bulletpoint styles.
+go.png = 21x21px
+2. Save the HTML document and style sheet, then open the web page in your
+browser to see the list bullet points.
+Note that in CSS terms, the lists are written in a content box with their
+bullet-points drawn in its left padding area.
+*/
+
+ul.disc-bullets {
+    list-style-type: disc; float: left
+}
+
+ul.circle-bullets {
+    list-style-type: circle; float: left
+}
+
+ul.square-bullets {
+    list-style-type: square; float: left
+}
+
+ul.image-bullets {
+    list-style-image: url(go.png); clear: both
+}

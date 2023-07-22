@@ -1,0 +1,31 @@
+﻿<!--
+1. Create an HTML document containing four nested "div" elements to be
+positioned overlapping.
+2. Save the HTML document then create a linked style sheet containing a
+rule to set the size and color of the outermost containing element.
+Refer to:
+    relative.css
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Relative Positioning</title>
+    <link type="text/css" rel="stylesheet"
+          href="relative.css" media="screen" />
+</head>
+<body>
+    <div id="pale-gray">
+        <div id="light-gray">
+            <div id="dark-gray">
+                <div id="text-box">
+                    Text content here on the innermost
+                    element = outer offset elements create a drop
+                    shadow effect
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

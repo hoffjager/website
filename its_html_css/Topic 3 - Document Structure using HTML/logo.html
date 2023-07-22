@@ -1,0 +1,44 @@
+﻿<!--
+1. Start a new HTML5 document.
+2. In the body section, insert a form element containing a fieldset with a legend
+and a text input field.
+3. In the fieldset, insert a scripting logo button specifying a snippet of script
+to execute when that button gets clicked.
+4. Now, within the button element, insert an image element and text that will
+appear on the face of the button.
+5. Next, add a button element to submit the form.
+6. Finally, add a button element to reset the form.
+7. Save the HTML document, then open the web page in your browser and click the
+“Help” button.
+8. Enter a color in the text box, then click the reset logo button to clear the
+text box.
+9. Enter a color in the text box again then submit the form.
+You can specify a default value for a text input to the value attribute of its
+<input> tag.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Logo Button Example</title>
+</head>
+<body>
+    <form method="get" action="http://localhost/echo.pl">
+        <fieldset>
+            <legend>Favorite Color</legend>
+            <input type="text" name="color" />
+            <button type="button"
+                    onclick="alert('Enter your favorite color in the text box')">
+                <img src="logo-help.png" alt="Help" />Help
+            </button>
+            <button type="submit">
+                <img src="logo-submit.png" alt="Submit" />Submit
+            </button>
+            <button type="reset">
+                <img src="logo-reset.png" alt="Reset" />Reset
+            </button>
+        </fieldset>
+    </form>
+</body>
+</html>

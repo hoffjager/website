@@ -1,0 +1,35 @@
+﻿<!--
+1. Create an HTML document with two paragraphs containing spanned
+sections of text.
+2. Now add a heading containing a spanned section of text.
+3. Save the HTML document then create a linked style sheet containing
+rules specifying a default font weight for each paragraph.
+    Refer to:
+    fontweight.css
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Font Weights</title>
+    <link type="text/css" rel="stylesheet"
+          href="fontweight.css" media="screen" />
+</head>
+<body>
+    <h2>
+        ...here's a heading with
+        <span class="less">lighter</span> text
+    </h2>
+    <p id="para-1">
+        This normal weight text can become
+        <span class="bold">bold</span> or
+        <span class="more">bolder</span>
+    </p>
+    <p id="para-2">
+        This bold weight text can get
+        <span class="norm">light</span> or
+        <span class="less">lighter</span>
+    </p>
+</body>
+</html>

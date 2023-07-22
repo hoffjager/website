@@ -1,0 +1,29 @@
+﻿<!--
+1. Start a new HTML5 document.
+2. In the body section, insert an element to embed a video resource and
+display user controls for video playback.
+3. Next, in the video element, insert elements to embed a video and
+specify a subtitle file.
+4. Save the HTML document, then open the web page in any browser and use
+the controls to see video playback.
+This short video displays the first subtitle for 4 seconds, and displays
+the second subtitle at the end of playback.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Video Example</title>
+</head>
+<body>
+    <video controls="controls" width="480" height="480">
+        <source src="movie.mp4" type="video/mp4" />
+        [Fallback]
+    </video>
+    <video controls="controls" width="480" height="480">
+        <source src="movie2.mp4" type="video/mp4" />
+        [Fallback]
+    </video>
+</body>
+</html>

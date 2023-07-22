@@ -1,0 +1,33 @@
+﻿<!--
+1. Create an HTML document containing two tables with similar content.
+2. Save the HTML document then create a linked style sheet containing a
+rule to specify table width and its features.
+    Refer to:
+    collapse.css
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Collapsing Table Borders</title>
+    <link type="text/css" rel="stylesheet"
+          href="collapse.css" media="screen" />
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="twin">1</td>
+            <td class="dots">2</td>
+            <td class="full">3</td>
+        </tr>
+    </table>
+    <table class="fold">
+        <tr>
+            <td class="twin">1</td>
+            <td class="dots">2</td>
+            <td class="full">3</td>
+        </tr>
+    </table>
+</body>
+</html>

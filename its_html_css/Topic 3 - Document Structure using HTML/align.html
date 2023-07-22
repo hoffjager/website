@@ -1,0 +1,63 @@
+﻿<!--
+1. Make a copy of the table.html document, created here, and rename it “align.html”
+2. Change the document and table titles.
+3. Now, edit each table row element to assign class names for styling content
+alignment.
+Refer to:
+align.css
+4. Save the HTML document, then reopen the align.css style sheet and add
+rules to style cell content alignment, cell height, and background color.
+5. Save the style sheet, then open the web page in your browser to compare the
+cell content alignment on each row.
+Table cells are automatically spaced apart at a fixed distance by default, but the
+cell spacing can be removed by a style rule specifying a collapse value to the
+table’s border-collapse property. The outer table border can be explicitly
+suppressed by a style rule specifying a none value to the table’s border property,
+and individual cell borders can be removed by a style rule specifying a value of
+zero to the cell’s border property.
+Notice that the final row aligns content to the bottom of each cell in both <th>
+and <td> elements, as they inherit the rule applied to that row’s <tr> element.
+6. Edit the align.html document to assign class names for styling the table
+element and the top left empty table cell.
+7. Reopen the align.css style sheet again and add rules to remove the table
+and top left cell borders, and cell spacing.
+8. Save the HTML document and style sheet once more, then reopen the web page
+to see the borders removed.
+Cell and table borders can be removed or styled individually using their
+border-top, border-right, border-bottom, and border-left properties.
+It is particularly useful to remove the top left empty cell in tables without
+borders.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Alignment Example</title>
+    <link type="text/css" rel="stylesheet"
+          href="align.css" media="screen" />
+</head>
+<body>
+    <table id="data" class="no-border">
+        <caption>A Table with Aligned Content</caption>
+        <tr class="default">
+            <th class="cut-border">Row 1
+            <td>Cell 1.1
+            <td>Cell 1.2
+            <td>Cell 1.3
+        </tr>
+        <tr class="center">
+            <th>Row 2
+            <td>Cell 2.1
+            <td>Cell 2.2
+            <td>Cell 2.3
+        </tr>
+        <tr class="bottom right">
+            <th>Row 3
+            <td>Cell 3.1
+            <td>Cell 3.2
+            <td>Cell 3.3
+        </tr>
+    </table>
+</body>
+</html>

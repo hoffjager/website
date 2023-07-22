@@ -1,0 +1,12 @@
+﻿/*
+Refer back to:
+footer.html
+1. Create a style sheet to control the position of the page footer contents.
+2. Save the HTML document and the style sheet, then open the web page in your
+browser to see how the footers appear.
+<section> elements are not required in short documents like this one – unless you
+particularly want to add section headings and footers.
+*/
+
+footer #page {
+    margin-top: 20px}

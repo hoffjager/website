@@ -1,0 +1,1770 @@
+IT Specialist in JavaScript
+	Exam Objectives
+		Candidates for this exam should be able to recognize and write syntactically correct JavaScript code that will logically solve a given problem and use
+		data types supported by JavaScript.
+		Candidates are expected to have at least 150 hours of instruction or hands-on experience with the JavaScript programming language.
+		Candidates should be familiar with JavaScript features and capabilities, and understand how to write, debug, and maintain well-formed, well-documented
+		JavaScript code.
+		To be successful on the test, the candidate is also expected to have the following pre-requisite knowledge and skills:
+			• 8th grade reading skills
+			• Algebra I
+			• Fundamental knowledge of HTML
+			• Fundamental knowledge of CSS
+
+	1. JavaScript Operators, Methods, and Keywords
+		1.1 Complete and debug code that uses assignment and arithmetic operators:
+				• Assignment, increment, decrement, addition, subtraction, division, multiplication, modulus, compound assignment operators (+=, -=, *=, /=, %=)
+		1.2 Apply JavaScript best practices:
+				• Comments, indentation, naming conventions, noscript, constants, reserved keywords, debugger keyword, setting breakpoints, console.log
+		1.3 Evaluate the use of internal and external scripts:
+				• When to use, how to use, what happens when scripts are used at multiple levels.
+		1.4 Implement exception handling:
+				• try, catch, finally
+		1.5 Complete and debug code that interacts with the Browser Object Model (BOM)
+				• Displaying dialogs, determining screen size
+
+	2. Variables, Data Types, and Functions
+		2.1 Declare and use variables of primitive data types:
+				• Number, Boolean, String, null, undefined, typeof, type-checking functions, use strict, converting between data types (parseInt, parseFloat),
+				  formatting numbers, string operations, eval(), toFixed(), toLocaleString(), toPrecision(), single vs double quotes (nesting), initialization.
+		2.2 Declare and use arrays:
+				• Single-dimensional arrays; multi-dimensional arrays; iteration; initialization; defining, sorting, and searching an array;
+				  push, pop, shift, and unshift methods; length property; accessing an array element.
+		2.3 Complete and debug code that uses objects:
+				• Properties, methods, instantiation, Date object, retrieving date & time parts, localizing date format (MM/DD v DD/MM), adding & subtracting dates.
+		2.4 Complete and debug code that uses built-in Math functions:
+				• random, round, abs, floor, ceil, min, max, pow, sqrt
+		2.5 Complete and debug functions that accept parameters and return values:
+				• Reusable code, local vs. global scope, redefining variables, passing parameters, value vs. reference, return values
+
+	3. Decisions and Loops
+		3.1 Evaluate expressions that use logical and comparison operators:
+				• !=, <, >, <=, >=, !, ==, &&, ||
+		3.2 Complete and debug decision statements:
+				• Single alternative (if), dual alternative (if else if), nested if, multiple alternative (switch).
+		3.3 Complete and debug loops:
+				• for, for in, while, do while, break, continue
+
+	4. Document Object Model
+		4.1 Identify and construct the Document Object Model (DOM) tree:
+				• window, document, html, head, body, and other HTML elements
+		4.2 Identify and handle document, form, keyboard, and mouse events:
+				• onload, onfocus, onblur, onchange, onkeydown, onkeyup, onkeypress, onclick, onmouseover, onmouseout
+		4.3 Complete and debug code that outputs to an HTML document:
+				• document.write, innerHTML, textContent
+		4.4 Complete and debug code that locates, modifies, and adds HTML elements and attributes to documents:
+				• getElementById, getElementsByTagName, getElementsByClassName, setAttribute, createElement
+		4.5 Create events using event handlers and listeners:
+				• DOM events, HTML attribute event, addEventListener.
+
+	5. HTML Forms
+		5.1 Complete and debug code that retrieves form input and sets form field values:
+				• Retrieving form values; identifying the DOM path; getting values from different types of elements; prepopulating, masking, and updating values.
+		5.2 Complete and debug code that performs input validation:
+				• Case, string comparisons, Not-A-Number (NaN), not blank
+		5.3 Describe the form submission process:
+				• onsubmit, POST vs. GET, potential targets for submission
+
+	GMetrix Mock Exams
+	Complete 2 tests in Testing Mode, with scores of 80% or over.
+	Exam #1 (Training):
+		Q1: You are building a function to calculate the sales tax of an order.
+			The function must do the following:
+				Use what a user has input and calculated for a subtotal and a sales tax rate.
+				Calculate and return a sales tax amount that returns the product of the subtotal and sale tax rate.
+				The function should be called salesTax.
+				Build the function:
+					function salesTax(subtotal, salesTaxRate)
+					{
+						var salesTaxAmount = subtotal * salesTaxRate;
+						return salesTaxAmount;
+					}
+				The first line defines the function with two parameters: subtotal and salesTaxRate.
+				These are necessary, as the two amounts come from outside the function.
+				As the two amounts come from outside the function, they do not need to be explicitly declared within the function.
+				Then a variable, called SalesTaxAmount, is declared and	set to: the subtotal, multiplied by the salesTaxRate.
+				The salesTaxAmount is then returned, and the function is closed.
+
+		Q2: You have entered the following code into a webpage:
+				<script>
+					function incQty(field)
+					{
+						var qty = document.getElementById(field).value;
+						qty++
+						document.getElementById(field).value = qty;
+					}
+					function decQty(field)
+					{
+						qty--
+						document.getElementById(field).value = qty;
+					}
+				</script>
+			Upon running this code, you realise that at least one of the functions is not working.
+			Upon debugging the code, you get a 'qty not defined' error.
+			What are two possible solutions to the problem?
+				Declare the qty variable in the decQty function.
+				Move the qty variable above the incQty function.
+					You could move the variable declaration outside of the incQty function to solve this problem, or declare the qty variable within the decQty
+					function to solve the problem.
+					The fact that it is not declared in the decQty function, whether locally or globally, is the problem.
+					We don't know what numbers are being entered, or someone is clicking a button to fire the incQty and decQty functions, so we cannot assume a
+					number is being entered.
+					The qty variable is not properly declared in the decQty function, hence the 'qty not defined' error.
+		
+		Q3: You have an array called products that you want to display as a bulleted list.
+			You are trying to decide on the correct type of loop.
+			The code, except for the loop, has been written.
+			Choose the correct code to loop through the array.
+				for(var i = 0; i < productListLength; i++)
+				{
+					document.getElementById('productList').innerHTML += "<li>" + productList[i] + "</li>";
+				}
+				As the array has a defined length, a for loop is most appropriate here, as the loop is set to a fixed number of times, the number of times
+				corresponding with the length of the productList array.
+				The do and while loops are conditional loops.
+		
+		Q4: You are building a website for a fitness company.
+			You need to display a list of program dates based on a start date and an end date.
+			You need to build a loop that adds each date to a bulleted list inside of an element called programList.
+			The start and end dates are seven days apart, and you need to show all dates, in between the start and end dates.
+			The start date should always display.
+			Drag over the correct code snippets in the proper order to build a loop of dates:
+				do
+				{
+					document.getElementById("programList").innerHTML += programDate;
+					programDate += 7;
+				}
+				while
+					(programDate < programEndDate)
+				The loop should run until the programEndDate is reached.
+				It has to run at least once in order to display the start date, thus, this block of code starts with a do statement.
+				After that, the date is added to the innerHTML of the programList element.
+				Seven days are then added to the programDate variable.
+				The loop ends if the new programDate is not less than the programEndDate.
+
+		Q5: You have the following code used to set a discount percentage based on an amount ordered:
+				switch(true)
+				{
+					case(orderAmt >= 10000):
+						discountPct = .05;
+					case(orderAmt >= 5000):
+						discountPct = .02;
+					case(orderAmt >= 2000):
+						discountPct = .01;
+					default:
+						discountPct = .00;
+				}
+			You run through the code with an orderAmt of 20000 and the discountPct returns as 0. Why?
+				Break statements need to be inserted after each case evaluation.
+				Using the word true inside of the switch statement is correct, because each case evaluates an expression to	see if it is true or false.
+				This is the correct syntax when using less than or greater than symbols as part of a case evaluation.
+				As part of a switch statement, breaks must be inserted after each case, or the switch statement will continue to evaluate conditions and then the
+				principle of re-assigning values to variables takes over.
+				As is, the discountPct will always be 0, because that is the last assignment made to the discountPct variable:
+					switch(true)
+					{
+						case(orderAmt >= 10000):
+							discountPct = .05;
+							break;
+						case(orderAmt >= 5000):
+							discountPct = .02;
+							break;
+						case(orderAmt >= 2000):
+							discountPct = .01;
+							break;
+						default:
+							discountPct = .00;
+					}
+					
+		Q6: You want to set a variable named customerMsg with text based on the amount a customer has bought.
+			The element should be filled in as follows:
+				Orders over $300:
+					"Thank you! You will get $10 off of your next order."
+				Orders between $100 and $300:
+					"Thank you! You will get $5 off of your next order."
+				Orders under $100:
+					"Thank you!"
+			Construct the code necessary to correctly fill the customerMsg variable based on the stipulated conditions.
+				if(orderAmt > 300)
+				{
+					customerMsg = "Thank you! You will get $10 off of your next order.";
+				}
+				else if(orderAmt >= 100)
+				{
+					customerMsg = "Thank you! You will get $5 off of your next order.";
+				}
+				else
+				{
+					customerMsg = "Thank you!";
+				}
+			As this is an if- else if -else statement with a comparison operator, the largest amount needs to be the first condition.
+			Otherwise, the largest amount will never be met for a condition.
+			For example, if orderAmt >= 100 was the first condition, that message would display even if orderAmt > 300.
+			In if statements, the statement is over as soon as the condition is met.
+
+		Q7: You are trying to fill a variable called activity, with an activity based on the weather.
+			The activity to do will be based on the following scenarios:
+				If it is at least 70 degrees and the weather is clear; the activity will be golf.
+				If it is less than 50 degrees or the weather is not clear; the activity will be bowling.
+				Otherwise, the activity is hiking.
+			Construct the code necessary.
+				if(temp >= 70 && weather == "clear")
+				{
+					activity = "golf";
+				}
+				else if(temp < 50 || weather != "clear")
+				{
+					activity = "bowling";
+				}
+				else
+				{
+					activity = "hiking";
+				}
+			The first operator needed is a >= operator, as the condition calls for "at least 70 degrees", greater than or equal to 70 degrees.
+			The second operator needed is a && operator to represent "and".
+			The third operator needed is a == to fulfil the weather	being equal to clear.
+			The fourth operator needed is a < operator, as the condition calls for "less than 50 degrees", not less than or equal to 50 degrees.
+			The fifth operator needed is a || operator, to signify an or condition, as in either or, with this fitting "either it is under 50 degrees, or the
+			weather is not clear".
+			The sixth operator needed is a != operator to fulfil the not, as in "the weather is not clear".
+
+		Q8: Match the operator with its function:
+				Less than or equal to:		<=
+				Not equal to:				!=
+				Or:							||
+				And:						&&
+
+		Q9: You want to store a list of locations in an array, sorted in alphabetical order.
+			You also want an empty array for new locations, with the intention that the array is filled in with new locations as needed.
+			Fill in the proper code to declare both a filled array to the variable, locations, and an empty array to the variable, newLocations.
+			Then, add the code for alphabetizing the locations array before it is displayed and fill in the code that will make HQ the first element in the array.
+			Finally, add the code necessary to assign the number of	elements in the array to the variable, numberOfLocations.
+			Use the comments to help guide you as to where to add code for each task:
+				locations = ["North", "South", "East", "West"]; // filled array
+				newLocations = [];								// empty array
+				locations.sort();								// alphabetize the array
+				locations[0] = "HQ";							// make the first element HQ
+				numberOfLocations = locations.length;			// the number of locations in the array
+			When arrays are declared, square brackets surround the values.
+			The built-in sort() method will arrange the elements of an array in	alphabetical order.
+			Arrays are zero-based and accessed using square brackets, so the first element in an array is element[0].
+
+		Q10: You have the following variable with an array of values:
+				locations = ["North", "South", "East", "West"]
+			 Match the appropriate array method with its role in changing the array to a new set of values, based on adding or subtracting a value.
+				pop()		=	["North", "South", "East"]
+				push()		=	["North", "South", "East", "West", "HQ"]
+				shift()		=	["South", "East", "West"]
+				unshift()	=	["HQ", "North", "South", "East", "West"]
+					shift() removes the first item from an array.
+					pop() removes the last item from an array.
+					unshift() adds an item to the beginning of an array.
+					push() adds an item to the end of an array.
+
+		Q11: A Math expert knows that the area of a circle is PI * the radius squared.
+			 However, that Math expert does not know how to code that formula in JavaScript.
+			 Fill in the missing code to complete this calculation:
+				function getArea(radius)
+				{
+					var cirArea;
+					cirArea = Math.pow(Math.PI * radius, 2);
+					return cirArea;
+				}
+			The built-in JavaScript function for an exponent is the Math.pow() function.
+			The Math.pow() function takes two arguments: a value, and the power to which that value needs to be raised.
+			Given that the area of a circle is PI * radius squared, the value is PI * radius (Math.PI being the built-in value for PI), and the power is 2.
+
+		Q12: As part of a mapping app, you are building a custom message to tell someone the distance from a source to a destination.
+			 You want the message to indicate, given a mileage distance, that the destination is between the two integers closest to the distance.
+			 For example, if a destination is 5.5 miles away, the message should read "Your destination is between 5 and 6 miles from here."
+			 Drag the correct methods into the code:
+				function distanceMsg(distance)
+				{
+					distanceMsg = "Your destination is between"	+ "Math.floor(distance)" + " and " + "Math.ceil(distance)" + " miles from here.";
+					return distanceMsg;
+				}
+			Math.floor() is the method that takes a floating decimal and returns the base integer, so 5.5 will become 5.
+			Math.ceil() is the method that takes a floating decimal and	returns the next integer, so 5.5 will become 6.
+			Math.round() is not the correct method to use here, because	it is not consistent about returning the lower or higher number.
+			Math.abs() returns absolute value and is not a correct method for this function.
+
+		Q13: You are explaining to a new JavaScript developer the use of assignment operators.
+			 To show this, you wish to demonstrate these assignment operators and how they affect variables.
+			 You enter the following code:
+				var x = 5;
+				var y = 3;
+				x++;
+				y = ++x;
+				x += y;
+				x--;
+			Match the value of x with the results of each line of code:
+				x++;		// x = 6
+				x--;		// x = 13
+				y = ++x;	// x = 7
+				x += y;		// x = 14
+			The first calculation, x++, adds 1 to x, so x = 6.
+			The second calculation, y = ++x, sets x to 7, as x is incremented before it is assigned to another variable.
+			The third calculation, x += y, sets x to 14.
+			In the previous line, y was set to 7 as a result of the y = ++x calculation.
+			x += y is the same as x = x + y, so 7 + 7 = 14.
+			The fourth calculation, x--, decreases x by 1, so x = 13.
+			x is never equal to 10, as y is changed from 3 to 7 before it is added to x.
+
+		Q14: The following code example has missing arithmetic operators.
+			 Fill in the missing operators to achieve results in the code:
+				var x = 10;
+				var y = 3;
+				var division = x / y;			// result should be 3.3333333333
+				var remX =	   x % y;			// result should be 1
+				var remY =	   y % x;			// result should be 3
+				var complex =  x + y * x;		// result should be 40
+				var complex2 = (x + y) * x;		// result should be 130
+			 / is used for division, so x/y = 3.3333333333
+			 % is the modulus symbol, used to get a remainder.
+			 x % y has a modulus of 1, as x/y = 3 with a remainder of 1.
+			 With that, y%x = 3, as y/x = 0, with a remainder of 3.
+			 x + y * x = 40, as with the order of operations, y*x is performed first:
+				10 * 3 = 30; x + 30 => 10 + 30 = 40.
+			 (x + y) * x = 130, as with the order of operations, x+y is performed first:
+				10 + 3 = 13; 13 * x => 13 * 10 = 130.
+
+		Q15: When a user visits this webpage, the goal is to ask for a name and then displays it as part of a welcome message.
+			 Fill in the keywords needed to accomplish this task:
+				function welcome()
+				{
+					var username = prompt("Enter your name: ");
+					alert("Welcome, " + username + "!");
+				}
+			 The prompt keyword displays a dialog box for a user to fill in.
+			 The alert keyword is used to display a message without user input.
+			 The confirm keyword is used to display a message and then store the value of what a user clicks (OK or Cancel), so it is not the best keyword to use
+			 for either code snippet.
+
+		Q16: The following code example is almost complete.
+			 It just needs comment marks applied to the areas designated as comments.
+			 Add the correct comment symbols to finish this code:
+				function calcTotal(amount, shipping)
+				{
+					var grandTotal = amount + shipping;
+					// This is the shipping amount, not the shipping rate
+					return grandTotal;
+				}
+				/*
+					This code will take a subtotal and add the shipping
+					amount to return a grand total.
+				*/
+			 The // symbol comments a single line.
+			 The /* */ symbols open and close multi-line comments.
+
+		Q17: You have the following code as a function:
+				function grandTotal(amount, salesTax)
+					{
+						try
+						{
+							var orderTotal = amount + salesTax;
+							alert(orderTotal);
+						}
+						catch(err)
+						{
+							alert(err.message);
+						}
+						finally
+						{
+							alert("If there are no errors, you should have your total.");
+						}
+					}
+			 When this code runs, which alerts will display?
+				An error message, and "If there are no errors, you should have your total."
+			 The catch and finally blocks will execute, displaying first, the error message and then the "If there are no errors, you should have your total"
+			 message.
+			 In a try-catch-finally block, the code in the try block will execute.
+			 If there are no errors, the try block and finally block execute.
+			 If there is an error, the catch block and finally block execute.
+			 In this function, there is an error.
+			 In the try block, orderTotal is declared with a capital T, but referred to in the alert with a lowercase t, causing an error.
+
+		Q18: What will be output to the console inside of a web browser when this code is run?
+				<script>
+					var x = 5;
+					var y = 12;
+					var z = x * y;
+					console.log(z);
+					debugger
+					console.log("success")
+				</script>
+					60
+			 60 is written to the console.
+			 The console.log method writes text to the console when the console window is open.
+			 The debugger keyword pauses code from running while the console window is open.
+			 z is not in quotes, so the value of z will be written to the console.
+
+		Q19: You have an external JavaScript file called calculations, located in the scripts folder.
+			 Insert the proper reference to the script within the head section of the code example:
+				<head>
+					<title>Calculations Page</title>
+					<script src="scripts/calculations.js"> </script>
+				</head>
+			 
+		Q20: For each proposed variable name, select Yes if the variable name is permissible in JavaScript or No if it's not:
+				alert Msg	= No
+				$alertMsg	= Yes
+				alertMsg	= Yes
+				alert		= No
+				alert_Msg	= Yes
+			 JavaScript variables can have letters, numbers, underscores and dollar signs.
+			 They cannot start with a number and they cannot have spaces.
+			 alert is not a permissible variable name, because it is a reserved keyword.
+			 So, alertMsg, alert_Msg and $alertMsg are permissible.
+			 But, alert Msg and alert are not permissible.
+
+		Q21: As part of a car webpage, a developer is building cars as objects, and each car has multiple properties.
+			 Fill in the code pieces necessary to build an object named car1 and then display, in an HTML element named featuredCar, the color of the car:
+				car1 =
+				{
+					color: "blue",
+					type: "sedan",
+				};
+				document.getElementById("featuredCar").innerHTML = "The featured car color is " + car1.color;
+			 An object containing multiple properties has the properties inside curly braces.
+			 The notation for accessing an object's property is object.property, literal text and a property are combined using a plus sign.
+
+		Q22: The following code example has several declarations.
+			 Match each variable declaration with the value that will be returned should the typeof method be run against the variable:
+				function getVariables()
+				{
+					var inStock = 5;				// number
+					var inProduction = true;		// boolean
+					var serialNumber = "12234.23";	// string
+					var territory;					// undefined
+				}
+			 inStock is a whole number without quotes, so it is a number.
+			 JavaScript does not make the distinction between integers and floating decimals when using the typeof method, so a number is a number.
+			 inProduction is a boolean variable as it is set to true or false.
+			 serialNumber is a string as, even though it is a number, it is in quotes, not a floating decimal, meaning it would not be a number.
+			 territory is undefined, not null, as it has been declared, but has not had a value assigned to it.
+
+		Q23: The following code is inconsistent in its use of the var keyword to declare variables.
+			 Fill in the command which will force all variables to be declared using the var keyword:
+				<script>
+					"use strict";
+					function getTotal(orderAmt, salesTaxRate)
+					{
+						salesTax = orderAmt * (1 + salesTaxRate);
+						var grandTotal = orderAmt + salesTax;
+						return grandTotal;
+					}
+				</script>
+			 The "use strict" command (with the quotes) forces all variables within its context to be declared using the var keyword.
+			 This helps JavaScript differentiate keywords from objects, it does need to be in quotes.
+		
+		Q24: In this code example, you want to store two dates: today's date (in a variable called today), and startDate, with a date of October 2, 2017.
+			 startDate should be declared using the string method to declare a date.
+			 Fill in the missing pieces of code with the proper date declarations:
+				function declareDates()
+				{
+					startDate = new Date("October 2, 2017");
+					today = new Date();
+				}
+			 To get today's date, one should use new Date() with no arguments set.
+
+		Q25: You are trying to make sure that a result for a calculation is formatted to two decimal points.
+			 Select the correct built-in method to add to the existing calculation to ensure the result returns as a number, formatted to two decimal points:
+				function grandTotal(orderAmt, salesTax)
+				{
+					var orderTotal = (orderAmt * (1 + salesTax)).toFixed(2);
+					return orderTotal;
+				}
+			 The toFixed() method in JavaScript takes a number and returns it to a prescribed fixed number after the decimal point.
+			 toFixed(2) returns two numbers after a decimal point.
+			 toString and Number methods are not correct for this example.
+			 toFloat is not a legitimate method.
+
+		Q26: You have a form on a webpage, with an element with an id of "fullName" you wish to fill with two text input fields on a form: firstName and lastName.
+			 Drag the appropriate code segments into the code, with the firstName field and the lastName matching with their respective variable declarations:
+				function displayName()
+				{
+					var firstName = document.getElementById("firstName").value;
+					var lastName = document.getElementById("lastName").value;
+					fullName = firstName + " " + lastName;
+					return fullName;
+				}
+			 Form fields typically do not have inner text (innerHTML) between their opening and closing tags.
+			 The text that the user puts in an input field is stored in the value property.
+			 Similar to other elements, that value is usually retrieved through a form element's id, not a tag name.
+			 Thus, the document.getElementById method is used, with the id of the field, and the value is retrieved.
+
+		Q27: You have a long, complicated form that you want to list all of the elements for, so that you can decide which elements to keep and which ones are no
+			 longer needed.
+			 Which command would be used to retrieve all elements on the first form of a webpage?
+				document.forms[0].elements
+			 document.forms returns an array of the forms on a webpage.
+			 Given that forms are stored in an array, form 0 is the first form on the page.
+			 The elements are the next set objects in the Document Object Model (DOM) chain.
+			 The document.forms[1].elements statement would retrieve the elements from the second form on the page.
+			 document.forms[0].getElementsByTagName is not a proper use of the getElementsByTagName method.
+
+		Q28: You are working on a function that will take a state field on a form and convert it to uppercase text once a user leaves the form field.
+			 You also want to convert text entered into a product field to lowercase, as all of your products are in lowercase text through another function.
+			 You want to make this function versatile enough to where it can be applied to other form fields.
+			 Drag the correct methods into the code to accomplish the need for converting text to uppercase, and for converting text to lowercase:
+				function convertToUpper(text, field)
+				{
+					document.getElementById('field').value = text.toUpperCase();
+				}
+				function convertToLower(text, field)
+				{
+					document.getElementById('field').value = text.toLowerCase();
+				}
+			 The JavaScript methods for converting text to uppercase or lowercase are toUpperCase() and toLowerCase(), respectively, not toUpper() or toLower(),
+			 as is the case with other languages.
+
+		Q29: You are in the process of retrieving a city someone typed into a form and then a state selected from a dropdown list.
+			 These two values are being retrieved inside a function named getCityState.
+			 Complete the code example so that both the city and state are retrieved from the form:
+				function getCityState()
+				{
+					city = document.getElementById('city').value;
+					state = document.getElementById('state').value;
+				}
+			 Because this code is retrieving form values, the value property of a field is needed, not the innerHTML property.
+			 Both text fields and dropdown lists exhibit value properties.
+
+		Q30: For each statement regarding HTML output, select whether it is true or false:
+				The innerHTML property must be used within a document.write statement?					No.
+				document.write is best used for writing HTML code to a new document?					Yes.
+				The innerHTML property looks at text between the opening and closing tag of an element? Yes.
+			 The innerHTML property is used to look at text between the opening and closing tag of an element.
+			 It does not have to be used within a document.write statement, as a document.write statement writes all HTML code, not just innerHTML text.
+			 document.write is best used for writing HTML code to a new document, as it will overwrite existing text on all or part of a page.
+			 For existing pages, it is best to use the innerHTML property on existing tags (even if they are blank) to fill an existing page.
+
+		Q31: Build the loop needed to iterate through the properties in the car2 object:
+				car2 = {color: blue, type: SUV, drivetrain: full};
+				carOutput = "";
+				for(i in car2)
+				{
+					carOutput += car2[i] + "";
+				}
+				document.getElementById("featuredCar").innerHTML = carOutput;
+			 A for...in loop is best used to iterate through properties in an object or items in an array.
+			 The loop is not a conditional loop, so do and while are not the best loops to use in this instance.
+
+		Q32: As part of submitting a form, three things should happen:
+				1. The form should be validated, using the checkFields() function.
+				2. The user's information should be added to a database.
+				3. The user should be redirected to a thankyou.html page.
+			 Fill in the missing keywords to these three tasks:
+				<form action="thankyou.html" method="post" id="requestForm" onsubmit="checkFields();">
+			 When a form processes, the action attribute dictates the page, one will be sent to a processing script that needs to be run.
+			 The method is usually either get (which retrieves information), or post (which sends information to a database or server or similar area).
+			 The get method is not used here because information is being sent, not retrieved.
+			 onvalidate is not a valid event.
+			 The onsubmit event is used to run any necessary scripts to validate a form.
+
+		Q33: A new web developer is exploring form submission methods for retrieving data.
+			 Which method of form submission leaves field and value pairs in a resulting URL, leaving open a potential security hole?
+				get
+			 The get method for submitting a form leaves field and value pairs in the resulting URL.
+			 This can cause a security problem, as terms used in the form are exposed and could be manipulated to conduct an attack on a website.
+			 Neither the post nor put methods leave field values and pairs in the resulting URL.
+			 Post is typically used to create resources.
+			 Put is typically used to update resources.
+			 Patch is used for partial updates of data.
+
+		Q34: You are building a web page that will initially show a sale item based on a day of the week and show another sale item when a user clicks a button.
+			 When a user runs the mouse on the picture, the picture size doubles.
+			 When a user moves the mouse away from the picture, the picture size goes back to its original size.
+			 Choose the correct events to make the code run at the correct time:
+				<body onload="saleItemByDay()";>
+					<p>
+						Click the Sale button to see another sale item.
+					</p>
+					<button id="sale" onclick="showSaleItem();">
+						Show another sale item.
+					</button>
+					<p>
+						Hover the mouse on the picture below to show a close-up of the item.
+					</p>
+					<img src="item.jpg" onmouseover="doubleSize();" onmouseout="restoreSize(); alt="item" />
+					// The restoreSize function moves the picture back to its original size.
+				</body>
+			 For showing the first sale item when the page loads, the onload event needs to be invoked, as if to say "on load of the body tag, run the
+			 saleItemByDay() function."
+			 The button will take action when it is clicked, hence the onclick event for the button.
+			 To run the doubleSize function to double the size of the picture, the user needs to hover a mouse over the picture, using the onmouseover method.
+			 To run the restoreSize function to restore the picture to its original size, the user needs to move the mouse away from the picture, using the
+			 onmouseout method.
+			 
+		Q35: Match each JavaScript event with the context in which it is used:
+				An input field on a form is selected =		onfocus
+				One leaves an input field on a form =		onblur
+				A user updates a value in a form field =	onchange
+				A character-producing key is selected =		onkeypress
+			 The onchange event fires when an element, such as a form field, changes its value.
+			 The onfocus event fires when an input field is selected on a form.
+			 The onblur event fires when one leaves an input field on a form.
+			 The onkeypress event fires when any character-producing key is selected.
+			 The onkeydown event fires when any key is selected.
+		
+		Q36: You have a list of items to display when a user clicks a button.
+			 These items should display in a paragraph element with an id of list.
+			 Select the correct code to ensure that each item displays on its own line:
+				function listItems()
+				{
+					var itemList = ["Widget A", "Widget C", "Widget E"];
+					for(i = 0; i < itemList.length; i++)
+					{
+						document.getElementById("list").innerHTML += itemList[i] + "br/>";
+					}
+				}
+			 The getElementById method is used to access the HTML element with the name of items.
+			 To make sure each list item displays, you will want to use a for loop to loop through the items, starting with item 0, as arrays are zero-based.
+			 Items in for loops are separated with semicolons, not commas.
+			 For the getElementById portion, the += means "add to the current value", which is the innerHTML portion of the element.
+			 The code needs the item number plus a line break.
+			 The <p> tag is not used here as the element being filled up is a <p> tag onto itself.
+
+		Q37: Your web page has an audience which likes to have the option of clicking a button named "Larger Text" and showing a larger font for the main
+			 paragraph on a page.
+			 A fellow developer has started to build a function that will set the first paragraph to use the altPara class.
+			 This function will run when the button is clicked.
+			 Your job is to finish building this function, so use the dropdown list to choose the correct line of code to apply the altPara class to the first
+			 paragraph on the page:
+				function setAltParaClass()
+				{
+					document.getElementsByTagName("p")[0].setAttribute("class", "altPara");
+				}
+			 The getElementsByTagName method is used to refer to an element by its tag name.
+			 Elements are stored in arrays, so the first paragraph will be paragraph 0.
+			 The setAttribute method, used to change the attribute of an element, has two arguments: the attribute, and the value.
+			 Thus, to set the class of an element to altPara, the setAttribute method is called with ("class", "altPara") as the elements.
+
+		Q38: For each statement regarding the DOM, select whether it is true or false:
+				The forms object is part of the window object? No.
+				The getElementsByClassName method is part of the document object? Yes.
+				The open and close methods are part of the document	object? No.
+			 The forms object is part of the document object, not the window object.
+			 The open and close methods are part of the window object, not the document object.
+			 The best way to differentiate window and document objects is:
+				Think of window objects as part of a browser.
+				Think of document objects as part of a webpage.
+
+		Q39: As your team develops an app, you want to be clear as to what the browser size is, as the app is tested in different simulated screens
+			 (desktop, tablet, smartphone, etc.)
+			 You are building a function called showBrowserSize that will display the browser size in a paragraph with an id of size.
+			 Choose the correct DOM elements to fill out the code:
+				function showBrowserSize()
+				{
+					document.getElementById("size").innerHTML = "Width: " + window.innerWidth + "Height: " + window.innerHeight;
+				}
+			 Elements are part of the document object, thus an element and its method, such as getElementById, are part of the document object.
+			 innerWidth and innerHeight are browser settings, so they are part of the window object.
+		
+		Q40: What is the output of the winner variable?
+				contestants = "Robin, Shawn, Patsy";
+				winner = contestants.substr(7, 6);
+					Shawn,
+			 The substr method contains two possible arguments: a starting character in a string, and the number of characters to extract.
+			 substr is a one-based method, so with character 7 being the S in Shawn, and 6 characters being "Shawn,", "Shawn," is returned.
+
+		Q41: A web developer wants a pop-up message to appear with the word "Welcome" when a webpage is opened.
+			 Which line of code will satisfy this requirement?
+				<body onload="alert("Welcome!")">
+			 The onload HTML event should be placed in the body tag if action is to take place when a webpage loads.
+			 The onload HTML event attribute can take action, such as run a method when a webpage or element within a webpage loads.
+
+		Q42: A random number generator needs to be built for a game that chooses questions out of a question pool.
+			 There are 10 possible questions in the pool.
+			 Generate the code necessary to generate a random number between 1 and 10:
+				Math.floor(Math.random() * 10) + 1;
+			 The Math.random function generates a random number between 0 and 1.
+			 To make the number into a whole number, the number needs to be multiplied by the highest random number needed.
+			 Then the Math.floor function removes all the decimals from the result.
+			 Thus, for a random number with 10 as the highest, the Math.floor function will return a number between 0 and 9.
+			 Thus, 1 needs to be added to the number to make the number fall in the range of 1 to 10.
+	
+	Exam #2 (Training):
+		Q1: For each statement regarding the use of external scripts, select whether it is true or false:
+				External scripts increase overall code security for	websites?														 Yes.
+				If a variable is declared in both an inline script and an external script, the inline script always take precedence? No.
+				External scripts do not need script tags within them?																 Yes.
+			External scripts increase overall security for webpages due to the fact that someone viewing the source code from a browser	will see the reference to
+			the external script, but not the contents of the script.
+			This is in contrast to inline script code, which displays just like HTML code displays.
+			Unlike style sheets, inline scripts do not always take precedence over external scripts.
+			For example, an external script added to the head section of a webpage will take precedence over an inline script added	near the end of the page.
+			If the inline script is added to the page before the external script is referenced, it will take precedence.
+			External scripts just contain JavaScript, they do not need <script> tags within them.
+
+		Q2: You have a line of code in a webpage and want to make sure it displays only if the browser that a user is using does not support JavaScript.
+			Drag the correct set of tags into the missing areas:
+				<noscript>
+					This browser does not support JavaScript.
+				</noscript>
+			Any message that is supposed to show if a browser doesn't support JavaScript should be placed inside of <noscript> tags.
+
+		Q3: Look at the following code:
+				const stores = ["Raleigh", "Charlotte", "Columbia"];
+				for(i = 0; i < stores.length; i++)
+				{
+					storeList += stores[i] + "<br/>";
+				}
+			Which two statements about this code are true?
+				The stores variable cannot be redefined.
+				The stores line in the for loop should be indented.
+			A constant, declared with const, cannot be redeclared or redefined.
+			The for loop does not need to be indented under the array declaration.
+			However, that which is inside of a for loop or if statement or similar, should be indented.
+
+		Q4: Which two methods can be used to represent the operation of x = x - 1?
+				x--;
+				x -= 1;
+			x-- and x-=1 both mean "subtract 1 from x".
+			JavaScript supports the decrement (--) operator, which subtracts 1 from a variable.
+			In addition, x -= is the same as x = x - 1.
+
+		Q5: A new developer is using the Console window within a browser to test code for a new web app.
+			The developer wants to be able to pause the code from running to test the validity of variables within the code.
+			Which two methods can the developer use to pause code as necessary?
+				Add a breakpoint.
+				Add the code word, debugger.
+			Adding a breakpoint to code within the Console window will also cause the code to stop running, when reached as part of a webpage running.
+			The debugger keyword within code pauses code if the Console window is open when code runs on a webpage.
+
+		Q6: What is the output of the code?
+				rate = 5.99;
+				document.getElementById("results").innerHTML = parseInt("22 23") + parseFloat(" 25.99 is the price") + parseInt(" The cat is 10") + rate.toFixed(1);
+					22 25.99 NaN 6.0
+			When parseInt or parseFloat is used on multiple numbers within a block of text, only the first number is returned.
+			If text is involved, the number is returned if the number is before any text.
+			NaN is returned if the number comes after text.
+			Formatting a number to a fixed number of decimals rounds up	or down according to the next number left out of the formatted result.
+
+		Q7: On a webpage that is used as a reporting page for your site, you are attempting to display how many times the productList class is being used, with
+			the number of times the class is used to be displayed in a paragraph with an ID of productListOutput.
+			Complete the function with the correct lines of code:
+				function getClasses()
+				{
+					var classList = document.getElementsByClassName("productList");
+					document.getElementById("productListOutput").innerHTML += "The class is used " + productList.length + "times.";
+				}
+			In order to get a class for the purposes of displaying its information, the getElementsByClassName method needs to be used.
+			To display an item on a page, the getElementById method with the innerHTML property is used.
+
+		Q8: For each statement regarding the DOM, select whether it is true or false:
+				innerHeight is a Window property? Yes.
+				Body is a Document Object? Yes.
+				innerHTML is a Document property? No. 
+			As part of the Document Object Model (DOM), innerHeight and	innerWidth are both Window properties.
+			Body is a Document object.
+			innerHTML is part of an element, not a direct descendent of	the Document object.
+
+		Q9: You are writing code to generate a random number of 0, 1, or 2, so that a song can be played based on the number generated.
+			Fill in the variable declaration for the songNumber variable:
+				var songNumber = Math.floor((Math.random() * 3));
+			Random numbers in JavaScript are generated using the Math.random() function, generating a double up to the number 3.
+			To lower the number to the nearest lowest integer, the Math.floor() function needs to be used, to an integer of 0, 1, or 2.
+			
+		Q10: Complete the code so that it will do the following:
+				1. Attempt to display an order total.
+				2. Display the message "You have a problem" and the error message if there is an error.
+				3. Display the message "If there are no errors, you should have your total" whether the code works or does not work.
+				function grandTotal(amount, salesTax)
+				{
+					try
+					{
+						var orderTotal = amount + salesTax;
+						alert(ordertotal);
+					}
+					catch(err)
+					{
+						alert("You have a problem: ");
+						alert(err.message);
+					}
+					finally
+					{
+						alert("If there are no errors, you should have your total");
+					}
+				}
+			 The attempted code should be in a try block.
+			 Error messages should appear in a catch block.
+			 The finally block runs regardless of whether the try in a try-catch-finally block worked.
+
+		Q11: You are trying to build a function that will display the screen width and height when a user clicks a button:
+				function screenSize()
+				{
+					var pixelWidth = screen.width;
+					var pixelHeight = screen.height;
+				}
+			 The screen.width and screen.height properties retrieve a screen's height and width respectively.
+			 screen.width and screen.height are properties, not methods.
+
+		Q12: Match each Math function with the output result of that function:
+				w = 2;
+				x = 9;
+				y = -5;
+				z = -10;
+					Math.sqrt(x)			// 3
+					Math.min(w, x, y, z)	// -10
+					Math.max(w, x, y, z)	// 9
+			 The sqrt function returns the square root of a number, x(9) is 3.
+			 The min function returns the lowest number in a group of numbers, in w, x, y and z, -10 is the lowest number, it is a larger negative value than -5.
+			 The max function returns the highest number in a group of numbers, in w, x, y and z, 9 is the largest number.
+			 
+		Q13: You are writing a line of code to set a variable to be empty when one clicks a button.
+			 Indicate the correct code to make the qty variable empty:
+				<button id="clearQty" onclick="qty.value=null;">
+					Clear
+				</button>
+			 In JavaScript, setting a variable to null makes it empty, especially if it is declared as a numeric variable.
+
+		Q14: Which operator represents "not" in JavaScript?
+				!
+			 The ! operator represents, not, in JavaScript.
+			 The == operator represents equal to, when used in a conditional statement.
+			 The != operator represents, not equal to.
+
+		Q15: For each statement regarding functions, select whether it is true or false:
+				If x = 5 and y = 5, and then x is set to = 10, y is set to = 10?	  No.
+				The biggest benefit of building functions is to create reusable code? Yes.
+				Variables declared as constants can be redefined?					  No.
+			 When using function variables, if x = 5 and y = 5 and then x is set to 10, y is still = 5 as primitive data types are value-based.
+
+		Q16: You are writing code for a series of training sessions.
+			 The sessions occur every seven days until the end date is reached.
+			 However, if a break date is reached, no more sessions are to be scheduled.
+			 Fill in the missing pieces of the code to fulfill the logic needed for this code:
+				do
+				{
+					sessionStartDate.setDate(sessionStartDate.getDate() + 7);
+					if(sessionStartDate.getDate() == sessionBreakDate.getDate())
+					{
+						break;
+					}
+					detailsSchedule.innerHTML += "<br/>" + sessionStartDate.toLocaleDateString();
+				}
+				while(sessionStartDate < sessionEndDate);
+			 To address the missing pieces of this function, checking to see if the start date equals the break date is a conditional statement.
+			 An if keyword starts a conditional statement.
+			 To terminate a loop, use the break command.
+			 To continue a do loop while a condition exists, use the while keyword.
+
+		Q17: You have a seven-day loop for determining the discount percentage.
+			 On the fifth day, the discount percentage is doubled.
+			 Fill in the missing code to make this loop function properly:
+				var disc = .1;
+				for(var i = 0; i < 7; i++)
+				{
+					if(i == 4)
+					{
+						disc = .2;
+					}
+				}
+			 As this is checking a specific condition, an if statement is needed to check for the fifth day of the seven-day cycle.
+			 In addition, the day being checked for is actually day 4, as JavaScript is a zero-based language.
+			 And, a double equals sign (==) is needed to evaluate the truth of an expression.
+
+		Q18: Fill in the missing code pieces to make the code block below satisfy the following conditions:
+				1. When both options are checked, the optionsSelected element will read "You selected both options."
+				2. When only one option is checked, the message displayed in the optionsSelected element will be dependent upon the option checked.
+				3. If no options are checked, no message is displayed:
+					if(document.getElementById('optionOne').checked && (document.getElementById('optionTwo').checked)
+					{
+						document.getElementById('optionsSelected').innerHTML = "You selected both options.";
+					}
+					else if(document.getElementById('optionOne').checked || (document.getElementById('optionTwo').checked)
+					{
+						if(document.getElementById('optionOne').checked)
+						{
+							document.getElementById('optionsSelected').innerHTML = "You selected option one.";
+						}
+						else
+						{
+							document.getElementById('optionsSelected').innerHTML = "You selected option two.";
+						}
+					}
+					else
+					{
+						document.getElementById('optionsSelected').innerHTML = "";
+					}
+			The conditions stated has a nested if statement within the code.
+			&& represents that both options are checked.
+			|| represents that either option is checked.
+		
+		Q19: A new JavaScript developer wants to make sure that when a price is set on hat1, hat2 has the same price, and when the price on one hat changes, the
+			 other stays the same.
+			 In the same code, the developer has a coat to put in two stores, and wants both stores to update when another coat is added.
+			 Complete the code to satisfy both requirements:
+				var hat1 = 20;
+				var hat2 = hat1;
+				var store1 = ["coat1"];
+				var store2 = store1;
+			 Variables are stored as values in their own memory space.
+			 Thus, when one variable changes, the other does not, even if initially set to match a variable that does change.
+			 Objects, like arrays, are stored as references, so when one object is set to another, updating one object will update both objects.
+			 And, text needs to be in quotes but numbers do not, unless they are specifically being used as strings.
+
+		Q20: You are trying to fill an HTML element called locations, with a list of company locations:
+				var locations = ["HQ", "Central", "West"];
+				for(var i = 0; i < locations.length; i++)
+				{
+					document.getElementById('locations').innerHTML += locations[i];
+				}
+			 Arrays are stored in square brackets.
+			 The most common way to iterate through an array is through a for loop, with the number of iterations set to the array length.
+			 Finally, the += operator stands for "add this to itself", thus allowing each location to be added to the locations element through its innerHTML
+			 property.
+
+		Q21: What will be returned in the HTML element named result?
+				ids = [2, 22, 24, 26, 28];
+				document.getElementById('result').innerHTML	= ids.find(checkId);
+				function checkId(id)
+				{
+					return id > 20;
+				}
+					22
+			 22 is returned to the HTML element named result in the code, not the position (1), or the number of matches (4).
+			 The find() method within an array returns the first match in the array through a function.
+			 Undefined is returned if no matches are found.
+
+		Q22: You are attempting to construct a message based on a temperature.
+			 The message should read "hot" if the temperature is over 90 degrees.
+			 The message should read "warm" if the temperature is 78 degrees or more.
+			 The default message is "mild":
+				function compareClimates
+				{
+					if temperature > 90
+					{
+						return "hot";
+					}
+					else if temperature >= 78
+					{
+						return "warm";
+					}
+					else
+					{
+						return "mild";
+					}
+				}
+			 Given that the message needs to be "hot" if the temperature is over 90 degrees, the proper comparison operator to use for that condition is greater
+			 than (>).
+			 Given that the message needs to be "warm" if the temperature is 78 degrees or more, the proper comparison operator to use for that condition is
+			 greater than or equal to (>=).
+
+		Q23: A developer is demonstrating how to display the data type of a variable.
+			 The output of the code example being built needs to look like this:
+				"Button" is a string
+			 Complete the code needed to return the aforementioned result:
+				'"Button" is a ' + typeof "Button";
+			 To show quoted text, the quotes need to be nested inside of opposite quotes (double quotes inside single quotes, or vice versa).
+			 The typeof function checks and returns the data type of a variable, object, function, or expression.
+
+		Q24: A new JavaScript developer is learning about loops.
+			 A loop is needed to run a block of code so long as a condition is true.
+			 The loop should not run at all if the condition is never true when evaluated.
+			 Which type of loop should the developer use?
+				while
+			 for and for...in loops run a set number of times.
+			 do and while loops are conditional loops, a do loop always runs at least once however.
+
+		Q25: You are writing a function that will add a new paragraph element with a message "A new song has been added." to a webpage.
+			 As part of this function, the element needs to be created:
+				function addSongMsg()
+				{
+					var songP = document.createElement("p");
+					var songText = document.createTextNode("A new song has been added.");
+					songP.appendChild(songText);
+					document.getElementById('songList').appendChild(songP);
+				}
+			 The process for creating an element dynamically is to first create the element.
+			 Then a text node with the element contents needs to be created.
+			 That text node is then appended to the element using the appendChild method.
+			 From there, the element can be added as a child element to an existing page element when needed.
+
+		Q26: You want a message to display when a key on the keyboard is released in a form field.
+			 This task is done using the displayMessage function:
+				<input type="text" id="updateField" onkeyup="displayMessage()" />
+				function displayMessage()
+				{
+					document.getElementById("messageField").innerHTML = "Field has been updated.";
+				}
+			 The onkeyup event fires when a key on the keyboard is released.
+			 Parentheses are needed for any function call, and a semicolon is needed when a function is called.
+
+		Q27: A developer wants to display all elements of a bulleted list inside of an HTML element named "items".
+			 Fill in the code necessary to retrieve and display those list items:
+				<ul id="items">
+					<li>Cup</li>
+					<li>Plate</li>
+					<li>Saucer</li>
+				</ul>
+				<script>
+					document.getElementById("listItems").innerHTML = document.getElementById("items").textContent;
+				</script>
+			 The textContent property retrieves text from an element, minus the formatting such as bullet points.
+
+		Q28: You are working on a function that will display a message when a user presses any key on the keyboard.
+			 Indicate the event that will occur when any key is pressed which will, in this case, call the function:
+				function keyMessage()
+				{
+					alert("You pressed a key on the keyboard. Was this intentional?");
+				}
+				<input type="text" onkeydown="keyMessage();" />
+			 The onkeydown event occurs when a key is pressed on the keyboard, not just a character-producing key.
+
+		Q29: You are working on a function that will populate a form field called state with "UT" if the user enters "Orem" for a location:
+				function fillState(location)
+				{
+					var state = document.getElementById('state');
+					if(location == 'Orem')
+					{
+						state.value = 'UT';
+					}
+				}
+			 The value property controls what is inside of a form field, not the innerHTML property.
+			 The innerHTML property controls the text for the input tag, not the field for it.
+
+		Q30: For each test below, select Yes if true & No if false:
+				var productID = "3545";
+				var productPrice = 19.99;
+				var inStock = 12;
+					Number.isInteger(productID) = No.
+					Number.isInteger(productPrice) = No.
+					Number.isInteger(inStock) = Yes.
+			 The inStock variable is an integer, because it is a whole number.
+			 The productID variable is also a whole number, but it is not an integer, because the value is in quotation marks, indicating that this is a string.
+			 The productPrice variable is not a whole number, thus it is not an integer, it is a float number.
+
+		Q31: You are attempting to see if a city someone enters matches one of three cities someone types in a form field.
+			 The cities should match no matter how a user types those fields in (uppercase, lowercase, or mixedcase):
+				function checkCity(city)
+				{
+					city = city.toUpperCase();
+					if(city == 'BOISE' || city == 'MERIDIAN' || city == 'NAMPA')
+					{
+						document.getElementById('cityResults').innerHTML = 'You chose an Idaho location';
+					}
+				}
+			 Given that users could type city values in using a variety of casing, the best practice here is to convert what they type to uppercase (or lowercase,
+			 but uppercase is in this code) in order to eliminate how they type the casing as a factor.
+			 This is where the toUpperCase function comes in.
+			 Then, only one of three cities need to match, so the || symbol is needed twice, as this is a multiple OR condition.
+
+		Q32: Which are three potential locations for form submission that can be defined in a form tag's action attribute?
+				Database
+				Script
+				Another webpage
+			 Data can be added to a database or, as in the case of a search engine, data can be used to look up a database to return matches.
+			 Data can be directed to a script file for further processing.
+			 The script file is a go-between for a webpage submitting data to a data source such as a database.
+			 Many of these scripts are server-side scripts that use a variety of programming languages, such as C# or Python.
+			 Data can be processed on another webpage, and that webpage could have direct access to a database.
+
+		Q33: You are creating a form with an input field that will serve as a password field.
+			 In testing the field, users are reporting that the password shows in plain text, you want the password to be hidden while typing it in the field.
+			 Choose the correct attribute to make the field characters masked as they are typed:
+				<input type="text" name="password" id="password" type="password" />
+			 An input field with the type set to password will have its characters masked as a user inputs characters into the field.
+
+		Q34: In the following code:
+				startDate = new Date('July 5, 2018 09:00:00 PM');
+				document.getElementById('startMonth').innerHTML
+				= startDate.getMonth();
+				document.getElementById('hours').innerHTML
+				= "You have " + // need hours left from startDate - " left in the day.";
+					 What will be the text inside of the startMonth element at the end of this code?
+						July.
+					 Assuming the month name does not properly display, what would be a viable way to get the proper month to display?
+						Build an array matching the numeric result with the correct month.
+					 What code is needed to get the hours value from the startDate variable, to replace the comment?
+						24 - startDate.getHours();
+			 The getMonth() method returns the numeric index for the current month, getMonth will return 6, because the month indexes range from 0 (January) to 11
+			 (December).
+			 To actually show the current month by name, one can create an array to match the number with the month name to display.
+			 Or, if the number of the month needs to show, simply add 1 to the getMonth result.
+			 The getHours() method returns the number for the hour of day in 24-hour time, meaning 09:00:00 PM will return hour 21.
+			 To display the number of hours left in the day, the hour number needs to be subtracted from 24.
+
+		Q35: You have a problem with users entering negative numbers into a numeric field to report monthly revenues.
+			 Add the necessary code to convert whatever a user types to a positive number:
+				var revenue = Math.abs(document.getElementById('revenue').value);
+			 The Math.abs() function converts a number to its absolute value from zero, meaning it will always be a positive number.
+
+		Q36: You are working on a webpage that will display release dates for music for both the US and the UK.
+			 Select the correct method for assigning the releaseDate, in UK format, to the ukReleaseDate variable:
+				releaseDate = new Date('November 16, 2018 12:00:00 AM');
+				ukReleaseDate = releaseDate.toLocaleDateString('en-gb');
+			 To convert a date to a specific country (or region) format, the toLocaleDateString method is used, with the country or region specified as a
+			 parameter, where 'en-gb' is the UK date format.
+
+		Q37: You have a 2x2 multi-dimensional array named questionnaire.
+			 You want to assign the name "Bob" to the first row and first column of the array.
+			 How would the syntax look for this assignment?
+				questionnaire[0][0] = "Bob";
+			 Arrays, both single and multi-dimensional, are zero-based.
+			 Square brackets indicate the container numbers being assigned or retrieved (row & column).
+
+		Q38: You are writing code for a series of training sessions.
+			 The sessions occur every seven days until the end date is reached.
+			 However, there is also a break date, and if the session falls on a break date, the session should not occur on that day, but should continue seven
+			 days from then:
+				do
+				{
+					sessionStartDate.setDate(sessionStartDate.getDate() + 7);
+					if(sessionStartDate.getDate() == sessionBreakDate.getDate())
+					{
+						continue;
+					}
+					detailsSchedule.innerHTML += "<br/>" + sessionStartDate.toLocaleDateString();
+				}
+				while(sessionStartDate < sessionEndDate)
+			 Checking to see if the start date equals the break date, is a conditional statement.
+			 An if keyword starts a conditional statement.
+			 To skip one iteration in a loop, use the continue command.
+			 To continue a do loop while a condition exists, use the while keyword.
+
+		Q39: A user types a word into a number field on a form and then presses a calculation button, expecting a calculation to appear on the screen.
+			 What is the most likely outcome when this happens?
+				NaN displays.
+			 The Not a Number (NaN) indicator appears when a calculation expecting a number takes place.
+			 This result is a graceful way to show a user that a number should have been entered as part of a calculation.
+			 The code does not stop running, nor does it ignore the error.
+
+		Q40: A variable has been declared as follows:
+				var x = 20;
+			 For each statement regarding assignment operators, select Yes if true, and No if false:
+				x %= 5 makes x = 1:		No.
+				x *= 5 makes x = 100:	Yes.
+				x /= 5 makes x = 4:		Yes.
+			 %= is a modulus calculation to set a variable, not a percentage calculation, x %= 5 makes x = 0, because 20/5 = 4, no remainder, no modulus.
+
+		Q41: A developer is writing code to have a function called getCurrentDate run when someone clicks on a button with the id, getDate:
+				document.getElementById('getDate').addEventListener("click", getCurrentDate);
+			 The addEventListener method allows one to call a method, or run another type of action on an event, such as a mouse click.
+
+		Q42: A developer needs to be able to compare two strings, str1 and str2, and have the result:
+				return 0 if the strings are equal,
+				return -1 if the str1 is lower in the alphabet than str2,
+				return 1 if str1 is higher in the alphabet than str2.
+			 The developer then needs to set str2 to be empty, but keep the data type of the variable as string:
+				str1 = "hi";
+				str2 = "there";
+				document.getElementById("compareStrings").innerHTML = str1.localeCompare(str2);
+				str1 = null;
+			 The localeCompare method compares two strings and returns 0 if the strings are equal, -1 if the first string is lower than the second string, and 1
+			 if the first string is higher than the second string, alphabetically speaking.
+			 Making a variable null only empties the variable.
+			 Making a variable undefined removes both the value and type from the variable.
+
+Mock Exam #1:
+Completed on Mon 19th June 2023 @ 11:27pm
+Marks = 30.27/40.00
+Grade = 75.67%/100%
+You require 80% to pass this exam (Marks = 32+/40)
+You must wait before you can re-attempt this quiz. You will be allowed to start another attempt after Thursday 22nd June 2023 @ 11:27 PM.
+
+Q9 = 0.33/1 (-0.66):
+	The following form (currently a work in progress) is being created to check a child's ability to use a keyboard and accurately type a word.
+	Please complete the code so that the user can input their value into the second text box, click submit, and the strings will then be compared, ignoring case
+	(ie. 'PASSWORD' should be considered the same as 'password').
+		<body>
+			<form action="randomFile.php" onsubmit="checkSpelling()" name="spellingBee">
+				<input id="word1" type="text" name="wordToSpell" value="Exclamation" />
+				<input id="word2" type="text" name="userAttempt" />
+				<input type="submit" value="submit" />
+			</form>
+			<script>
+				function checkSpelling()
+				{
+					var wordToSpell = document.forms.spellingBee.wordToSpell.value;
+					var userAttempt = document.forms.spellingBee.userAttempt.value;
+					if(wordToSpell.word2 == userAttempt.toLowerCase())
+					{
+						alert("Great job!");
+					}
+					else
+					{
+						alert("Better luck next time!");
+					}
+				}
+			</script>
+
+Q15 = 0/1 (-1):
+	 When the user clicks on the <h1> HTML element, you wish to change the text to: 'Good luck with your exam!':
+		<body>
+			<h1 id="MyHeader" onclick="changeHeaderText()">
+				Click to see a new message!
+			</h1>
+			<script>
+				function changeHeaderText()
+				{
+					document.getElementById("MyHeader").innerHTML = "Good luck with your exam!";
+				}
+			</script>
+		</body>
+	 To access the HTML content of an element, we use the DOM's innerHTML property.
+
+Q16 = 0/1 (-1):
+	 Each time that the Press button is clicked in the webpage, I want to display a new header in the <div> element:
+		<body>
+			<p>
+				Click to create a h1 element with some text, and append it to the div element.
+			</p>
+			<div id="div">
+				div element
+			</div>
+			<button onclick="createNewHeader()">
+				Press
+			</button>
+			<script>
+				function createNewHeader()
+				{
+					 var header = document.createElement("H1");
+					 var text = document.createTextNode("This is a H1.");
+					 header.appendChild(text);
+					 document.getElementById("div").appendChild(header);
+				}
+			</script>
+		</body>
+	 The <h1> element consists of both an element node and a text node.
+	 To create a Header, we must therefore create both a <h1> element and a text node.
+	 The createElement() method creates an Element Node with the specified name.
+	 The createTextNode() method creates a Text Node with the specified text.
+
+Q19 = 0.5/1 (-0.5):
+	 Please select the appropriate options that will complete the statement and correctly display the courseTitle and courseDuration in the alert box.
+		<body>
+			<script>
+				var course =
+				{
+					courseCode: "98-382",
+					courseTitle: "Introduction to Programming Using JavaScript",
+					courseDuration: 20
+				};
+				var name = prompt("Please enter your name: ");
+				alert("Welcome to the " + course.courseTitle + " course " + name + ".\nYou have " + course.['courseDuration'] + " weeks to complete the course.\n
+					   Best of luck!");
+			</script>
+		</body>
+	 An object in JavaScript is a collection of Properties (Named Values).
+	 To access the property of an object, you can either use the period operator syntax, or the square bracket syntax:
+			course.courseTitle
+			course['courseDuration']
+
+Q23 = 0.6/1 (-0.4):
+	 Given the code below, select the correct options to complete the switch statement.
+		<script>
+			var bonusBall = 4;
+			var ballFound = false;
+			switch(bonusBall)
+			{
+				case 1:
+					ballFound = true;
+					break;
+				case 2:
+					ballFound = true;
+					break;
+				case 3:
+					ballFound = true;
+					break;
+				default;
+					break;
+			}
+			document.write("Lotto Bonus Ball Found? " + ballFound);
+		</script>
+			 The syntax of the switch statement is:
+				switch(expression)
+				{
+					case n:
+						code block;
+						break;
+					case n:
+						code block;
+						break;
+					case n:
+						code block;
+						break;
+					default:
+						code block;
+						break;
+				}
+
+Q27 = 0.5/1 (-0.5):
+	 Given the code below, what will be logged to the console?
+		<body>
+			<script>
+				var a = 1;
+				var b = "1";
+				var c = 10;
+				var d;
+				var e = undefined;
+				console.log(a + b); // 11:  string concatenation, as one of the operands is a string.
+				console.log(a + c); // 11:  straight forward addition.
+				console.log(a + d); // NaN: script attempts to add 1 to undefined, which doesn't return a number.  
+				console.log(a + e); // NaN: script attempts to add 1 to undefined, which doesn't return a number.
+			</script>
+		</body>
+
+Q28 = 0.66/1 (-0.33):
+	 Please evaluate the following statements and select if they are either true or false.
+		The query string is sent in the URL of a POST request.		false
+			The query string is sent in the URL of a GET request.
+		A GET request is limited to a maximum amount of characters. true
+			A URL has a maximum length of 2048 characters, so this will restrict the length of a GET request.
+		The POST method is more secure than the GET method.			true
+			The POST method is more secure than the GET method, because the data is not displayed in the URL, and the page cannot be cached or bookmarked.
+
+Q30 = 0.66/1 (-0.33):
+	 Examine the code below and select the three correct answers:
+		<body>
+			<script>
+				var firstname = "John";
+				var lastName = "Black";
+				document.write(firstname);
+				document.write(lastname);
+			</script>
+		</body>
+			a. It will print John.
+			b. It doesn't print lastName, as JavaScript is a case-sensitive language.
+			d. We should use camelCase naming convention, and use firstName instead of firstname.
+
+Q33 = 0/1 (-1):
+	 Given the code below, which will be displayed in the alert box:
+		<head>
+			<script>
+				function returnSomething()
+				{
+					x = 1;
+				}
+				var returnedThing = returnSomething();
+				alert(returnedThing);					// undefined
+			</script>
+		</head>
+	  As the return statement is missing from the function, an initial value is not assigned to returnedThing.
+	  It is the equivalent of writing: var returnedThing; so this results in the alert box displaying 'undefined'.
+
+Q36 = 0/1 (-1):
+	 Which output will be displayed on the webpage?
+		<body>
+			<script>
+				var x = 0;
+				var y = 5;
+				var cycleCount = 0;
+				while(x < y)
+				{
+					if(x == 1)
+					{
+						x++;
+						continue;
+					}
+					cycleCount++;
+					x++;
+					y--;
+				}
+				document.write("There were " + cycleCount + " cycles.");
+			</script>
+		</body>
+	 The while loop will execute while x < y is true:
+		 Iteration 1: Loop Test: 0 < 5
+			cycle count = 1
+			x = 1
+			y = 4
+		 Iteration 2: Loop Test: 1 < 4
+			if(x == 1) // evaluates to true
+				The continue statement executes, so we bypass the current loop iteration.
+			x = 2
+		 Iteration 3: Loop Test: 2 < 4
+			cycle count = 2
+			x = 3
+			y = 3
+		 The loop ends, as the while loop condition is now false (3 < 3).
+		 Therefore, the correct answer is:
+			There were 2 cycles.
+
+Q38 = 0/1 (-1):
+	 Please finish the statement (without spaces) that will enable you to access the element containing 'Mr C' and print the following statement in an alert box.
+		<script>
+			var array2D =
+			[
+				["Mrs P", "Mr M", "Ms T"],
+				["Mr Q", "Master M", "Mr C"],
+				["Miss L", "Mrs R", "Mr T"]
+			];
+			var gamer = _; // array2D[1][2];
+			alert(gamer + " is busy playing Footie Boss!");
+		</script>
+	 The syntax for referencing a particular element in a two dimensional array is to use a pair of square brackets.
+	 Within the first set of square brackets, you specify the row, this is the internal array.
+	 Within the second set of square brackets, you specify the column, this is the index of the specified array.
+	 Therefore, the result is:
+		array2D[1][2];
+
+Q39 = 0/1 (-1): 
+	 Is the output true or false?
+		<body>
+			<script>
+				 var paidInCash = false;
+				 var paidByCreditCard = true;
+				 var paymentMade = false;
+				 if((paidInCash == true) || (paidByCreditCard))
+				 {
+					paymentMade = true;
+				 }
+				 else
+				 {
+					paymentMade = false;
+				 }
+				 console.log(paymentMade);
+			</script>
+		</body>
+			True.
+	 When we test the value stored in a variable to see if it is true or false, we don't have to explicitly use the == operator for paidByCreditCard.
+	 JavaScript will automatically check to see what value is stored in the variable, and it is a Boolean.
+	 It is considered better programming practice to use the == operator, as it makes it explicitly clear what you (the web designer) are trying to do.
+	 Therefore, the correct answer is true.
+
+Q40 = 0/1 (-1):
+	 What is the output of the code below?
+		<body>
+			<p id="test"></p>
+			<script>
+				try
+				{
+					var myMessage = "Hello World";
+					alerting(myword);
+				}
+				catch(err)
+				{
+					document.getElementById("test").innerHTML
+					= err.message;
+				}
+			</script>
+		</body>
+			alerting is not defined.
+
+Mock Exam #2:
+Completed on Fri 23rd June 2023 @ 2:35am
+Marks = 30.27/40.00
+Grade = 75.67%/100%
+You require 80% to pass this exam (Marks = 32+/40)
+You must wait before you can re-attempt this quiz. You will be allowed to start another attempt after Monday 26th June 2023 @ 2:35am.
+
+26 marks + (0.33 + 0.5 + 0.8 + 0.5 + 0.66 + 0.66 + 0.67 + 0.33 + 0.8) = 26 marks + 5.27 marks = 31.27
+NOTE: Q26 = -1/1 (-2)
+
+Q5 = 0.33/1 (-0.66):
+	Given the code below, drag the options below to complete the syntax:
+		function checkOutWindow()
+		{
+			checkWin = window.open("checkout.htm", "Checkout", "width=300, height=300");
+		}
+			A Window object represents a browser window.
+			The properties of the Window object must be specified in this order: URL, name, and specs.
+
+Q17 = 0/1 (-1):
+	Given the output shown below, which methods were called on the following Date object?
+		Fri Dec 29 2017 14:30:09 GMT+0000 (GMT Standard Time)
+		Fri, 29 Dec 2017 14:30:09 GMT
+		Fri Dec 29 2017
+			<script>
+				var timestamp = new Date();
+				console.log(timestamp.toUTCString());
+				console.log(timestamp.toString());
+				console.log(timestamp.toDateString());
+			</script>
+		The toUTCString() method converts a date object to a string, according to universal time.
+		The toString() method converts a date object to a string, it is implicitly called on a date object in HTML.
+		The toDateString() method converts only the date portion into a string, the time portion is disregarded.
+
+Q19 = 0.5/1 (-0.5):
+	Given the code below, what will be printed to the console?
+		<script>
+			var a;
+			var b = null;
+			var c = undefined;
+			var d = "";
+			console.log(a == b);	// true
+			console.log(b == c);	// true
+			console.log(a == c);	// true
+			console.log(a == d);	// false
+		</script>
+			In Javascript, there are multiple comparison operators.
+			Here, we are using the comparison operator that allows for type-conversion, prior to comparison.
+			This means that even though some of the variables above are of different data types, their value may be considered equal after type-conversion.
+			null and undefined are considered equal using the == operator, because neither of them have a value.
+			They wouldn't be considered equal using the strict === operator, as null and undefined are different types.
+			var d = ""; is a valid string declaration (even though it's an empty string), so comparison against null or undefined would return false.
+
+Q20 = 0.8/1 (-0.2):
+	Given the code below, what will be the output of each console log statement?
+		<script>
+			var a = -5.4;
+			var b = 22.2;
+			console.log(Math.round(a));		// -5
+			console.log(Math.abs(a));		// 5.4
+			console.log(Math.floor(a));		// -6
+			console.log(Math.ceil(b));		// 23
+			console.log(Math.abs(b));		// 22.2
+		</script>
+
+Q21 = 0.5/1 (-0.5):
+	Given the code below, what will be the output to the console?
+		<script>
+			function changeValAndRef(localVal, localRef)
+			{
+				localVal = 2;
+				localRef[0] = 2;
+			}
+			var val = 1;
+			var ref = [1, 2, 3, 4, 5];
+
+			changeValAndRef(val, ref);
+
+			console.log(val);				// 1
+			console.log(ref[0]);			// 2
+		</script>
+			This question demonstrates the difference between passing by value, and passing by reference.
+			changeValAndRef(val, ref); actually passes the value of 1 and a reference to the array.
+			localVal initially has the value of 1, and is then assigned the value of 2.
+			The variable val is never changed though, and will still print 1 to the console.
+			As localRef references the same array as ref, any modifications made to any of the array's elements will be reflected through either reference.
+			This means that the statement localRef[0] = 2; actually modifies the array to [2, 2, 3, 4, 5].
+			Both console.log(localRef[0]) and console.log(ref[0]) would print 2.
+
+Q22 = 0.66/1 (-0.33):
+	Evaluate the following statements regarding <input> elements and determine whether they are true or false:
+		To pre-populate a text field, you use the value attribute.		True
+		To mask a value, you can write: type="hidden".					False
+			To mask a value, you pass the value of "password" to the type attribute.
+			<input type="hidden"> doesn't mask a value, it actually creates a hidden element, invisible on the webpage.
+		To retrieve a value from a text field, you use the innerHTML property. False
+			Void/self-closing elements do not have an innerHTML property.
+			
+Q23 = 0.66/1 (-0.33):
+	Given the above code, what will be displayed in the alert boxes when the following statements are added?
+		<script>
+			var a = 1;
+			var b = "string";
+			var c = 'STRING';
+			var d = 4.4;
+			var e;
+			alert(a * b);					// NaN
+			alert(b.toUpperCase() == c);	// true
+			alert(d * e);					// NaN				
+		</script>
+			If a calculation is expecting numeric values but a different data type is present, NaN (Not a Number) is returned.
+			The toUpperCase() method converts a string to uppercase letters, so b == c is true.
+
+Q25 = 0.66/1 (-0.33):
+	Evaluate the following statements regarding the form's target attribute, and determine whether they are true or false:
+		target="_self" displays the response in the same frame.			true
+		target="_parent" displays the response in the parent frame.		true   
+		target="_blank" displays the response in a new window or tab.	true
+
+Q26 = 0/1 (-1):
+	Which of the following options does not create a new date with the output shown below?
+		Mon Jan 01 1979 20:20:00 GMT+0000 (GMT Standard Time)
+			All options produce the output.
+				The date, month and year can be supplied in any order and a valid date object will be created.
+				Any time specified should be after the date month and year for the date to be valid.
+
+Q30 = 0/1 (-1):
+	The below code iterates through an array, and prints the numbers 1 to 5 in the console.
+	Unfortunately, we are unsure of how to apply the loop condition (to ensure that the loop is exited after the last defined element is printed to the console).
+	The <= operator must be used for this question and should also allow additional elements, that are added to the array, to be printed:
+		<script>
+			var elements = [1, 2, 3, 4, 5];
+			for(lcv = 0; lcv <= elements.length - 1; lcv++)
+			{
+				console.log(elements[lcv]);
+			}
+		</script>
+			There are 5 elements in the array, and our loop control variable is starting at 0.
+			We wish to increment the loop control variable until it reaches a value of 4, as this is the index of the last element in the array.
+			The array's length property currently has the value of 5.
+			To correctly exit the for loop after 5 iterations, we need to reference the length property and deduct 1.
+
+Q32 = 0.33/1 (-0.66):
+	Given the code below, what will be logged into the console?
+		<script>
+			var x = 9;
+			var y = ++x;
+			var z = y--;
+			console.log(x);		// 10
+			console.log(y);		// 9
+			console.log(z);		// 10
+		</script>
+			First, x is declared and given an initial value of 9.
+			x is then pre-incremented to 10, and y is given an initial value of 10.
+			z is first assigned the value of 10, and then y is then post-decremented to 9.
+
+Q33 = 0.8/1 (-0.2):
+	Given the code below, what will be output to the console?
+		<script>
+			var x = 10;
+			var y = 20;
+			console.log(x += y);		// 30
+			console.log(x -= y);		// 10
+			console.log(x *= y);		// 200
+			console.log(x /= y);		// 2
+			console.log(x %= y);		// 10
+		</script>
+
+Q37 = 0/1 (-1):
+	What will be displayed on the webpage?
+		<script>
+			const x = 7;
+			try
+			{
+				var y = x;
+				var z = y++;
+				document.write(x + y + z);
+			}
+			catch(err)
+			{
+				alert("Breakdown in logic!");
+			}
+		</script>
+			22
+				The value of a constant cannot be changed, once x is set to the value of 7, it is then left unchanged.
+				The variable y is assigned the value stored in x: 7.
+				The variable z is assigned the pre-increment value of y: 7.
+				Then y is assigned the post-increment value of 8.
+				Therefore, the result is (7 + 8 + 7) = 22.
+
+Q38 = 0/1 (-1):
+	There is a link to an external script, named script.js, containing the following line of code:
+		globalVar = "This will display!";
+	What is displayed in the alert box when the page is loaded?
+		<head>
+			<script type="text/javascript" src="script.js"></script>
+		</head>
+		<body>
+			<script>
+				globalVar = "This might display";
+				display();
+
+				function display()
+				{
+					globalVar = "Could this display?";
+					alert(globalVar);
+				}
+			</script>
+				Could this display?
+					The variable globalVar, which has global scope, is declared and initialized in the external js file.
+					The variable is then redefined, with the new value: 'This might display'.
+					The display() function is then invoked, and the variable is re-defined again.
+
+Mock Exam #2 Re-Attempt:
+Completed on Mon 26th June 2023 @ 1pm
+Marks = 35.77/40.00
+Grade = 89.42%/100%
+You require 80% to pass this exam (Marks = 35.77+/40)
+
+Q17 = 0/1 (-1):
+Given the output shown below, which methods were called on the following Date object?
+	Fri Dec 29 2017 14:30:09 GMT+0000 (GMT Standard Time)
+	Fri, 29 Dec 2017 14:30:09 GMT
+	Fri Dec 29 2017
+		<script>
+			var timestamp = new Date();
+			console.log(timestamp.toUTCString());
+			console.log(timestamp.toString());
+			console.log(timestamp.toDateString());
+		</script>
+		The toUTCString() method converts a date object to a string, according to universal time.
+		The toString() method converts a date object to a string, it is implicitly called on a date object in HTML.
+		The toDateString() method converts only the date portion into a string, the time portion is disregarded.
+
+Q19 = 0.5/1 (-0.5):
+Given the code below, what will be printed to the console?
+	<script>
+		var a;
+		var b = null;
+		var c = undefined;
+		var d = "";
+		console.log(a == b);	// true
+		console.log(b == c);	// true
+		console.log(a == c);	// true
+		console.log(a == d);	// false
+	</script>
+		In Javascript, there are multiple comparison operators.
+		Here, we are using the comparison operator that allows for type-conversion, prior to comparison.
+		This means that even though some of the variables above are of different data types, their value may be considered equal after type-conversion.
+		null and undefined are considered equal using the == operator, because neither of them have a value.
+		They wouldn't be considered equal using the strict === operator, as null and undefined are different types.
+		var d = ""; is a valid string declaration (even though it's an empty string), so comparison against null or undefined would return false.
+
+Q20 = 0.8/1 (-0.2):
+	Given the code below, what will be the output of each console log statement?
+		<script>
+			var a = -5.4;
+			var b = 22.2;
+			console.log(Math.round(a));		// -5
+			console.log(Math.abs(a));		// 5.4
+			console.log(Math.floor(a));		// -6
+			console.log(Math.ceil(b));		// 23
+			console.log(Math.abs(b));		// 22.2
+		</script>
+
+Q22 = 0.66/1 (-0.33):
+Evaluate the following statements regarding <input> elements and determine whether they are true or false:
+	To pre-populate a text field, you use the value attribute.		True
+	To mask a value, you can write: type="hidden".					False
+		To mask a value, you pass the value of "password" to the type attribute.
+		<input type="hidden"> doesn't mask a value, it actually creates a hidden element, invisible on the webpage.
+	To retrieve a value from a text field, you use the innerHTML property. False
+		Void/self-closing elements do not have an innerHTML property.
+
+Q33 = 0.8/1 (-0.2):
+	Given the code below, what will be output to the console?
+		<script>
+			var x = 10;
+			var y = 20;
+			console.log(x += y);		// 30
+			console.log(x -= y);		// 10
+			console.log(x *= y);		// 200
+			console.log(x /= y);		// 2
+			console.log(x %= y);		// 10
+		</script>
+
+Q38 = 0/1 (-1):
+	There is a link to an external script, named script.js, containing the following line of code:
+		globalVar = "This will display!";
+	What is displayed in the alert box when the page is loaded?
+		<head>
+			<script type="text/javascript" src="script.js"></script>
+		</head>
+		<body>
+			<script>
+				globalVar = "This might display";
+				display();
+
+				function display()
+				{
+					globalVar = "Could this display?";
+					alert(globalVar);
+				}
+			</script>
+				Could this display?
+					The variable globalVar, which has global scope, is declared and initialized in the external js file.
+					The variable is then redefined, with the new value: 'This might display'.
+					The display() function is then invoked, and the variable is re-defined again.
+
+Q40: Please evaluate the following code:
+	 After the user enters their username and then clicks OK on the confirm dialog, the alert message successfully displays. True or False?
+<body>
+	<script>
+		var username = prompt("Please enter your username");
+		var correct = confirm("Are you sure that " + username + " is your username?");
+		if(correct == 0)
+		{
+			alert("Hi " + username + "\nWelcome to the site!");
+		}
+	</script>
+</body>
+The prompt dialog will grab the username entered by the user, and store it in the variable username.
+The confirm dialog returns a value of either 1 or 0.
+1 for Yes, or OK.       
+0 for No, Cancel, or by closing the window with X.
+On this occasion, the alert message will not display, as the variable 'correct' has a value of 1, so the correct answer is False.

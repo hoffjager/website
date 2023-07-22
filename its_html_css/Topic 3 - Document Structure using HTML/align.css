@@ -1,0 +1,31 @@
+﻿table#data {
+    width: 580px;
+    font-family: sans-serif;
+    border: 5px solid black}
+
+table#data tr,td {
+    border: 1px solid black}
+
+table#data tr.default td {
+    height: 30px;
+    background: yellow}
+
+table#data tr.center td {
+    text-align: center;
+    height: 30px;
+    background: aqua}
+
+table#data tr.right td {
+    text-align: right;
+    height: 30px;
+    background: lime}
+
+table#data tr.bottom {
+    vertical-align: bottom}
+
+table#data.no-border {
+    border-collapse: collapse;
+    border: none}
+
+table#data tr th.cut-border {
+    border: 0}

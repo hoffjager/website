@@ -1,0 +1,41 @@
+/*
+Refer back to:
+type.html
+1. Add a style rule setting the width of the container element.
+2. Add a style rule setting the background color of all hyperlinks.
+3. Now add a style rule setting the background color of both the heading and
+list elements.
+4. Save the style sheet file alongside the HTML file then open the web page in a
+browser to see the elements styled by type selectors.
+The CSS * universal selector can be used to select elements of all types within
+an HTML document – as if it was a selector listing all element types as a
+comma-separated list.
+5. Edit the style sheet by adding a style rule with a universal selector to make
+all text italic.
+Beware: Remember that there must be a comma between the element types in a
+selector targeting multiple element types.
+6. Save the amended style sheet then refresh the browser to see both heading and
+list text become italic.
+7. Edit the style sheet by adding a style rule with a universal selector to add
+a border around all elements within the "div" container.
+8. Save the amended style sheet then refresh the browser once more to see borders
+added around the elements.
+The div * selector selects elements of all types within the div container, but
+not the <div> element itself.
+*/
+
+div {
+    width: 50%
+}
+a {
+    background: yellow
+}
+h1, ul {
+    background: aqua
+}
+* {
+    font-style: italic
+}
+div * {
+    border: 0.2em solid red
+}

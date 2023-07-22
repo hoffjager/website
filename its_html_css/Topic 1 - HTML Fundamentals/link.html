@@ -1,0 +1,32 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections.
+3. Within the head section, insert elements to specify a base “resources”
+directory and an icon resource:
+    <base href=“http://localhost/resources/”>
+    <link rel=“icon” href=“cubes.ico”>
+4. Save the HTML document, then open an icon editor, such as IcoFX, and
+create an icon sized 16x16 pixels.
+5. Now, save the icon in the “resources” directory, named as “cubes.ico”,
+and also save a copy in the root directory, named precisely as
+“favicon.ico” – for Internet Explorer.
+6. Open the HTML document in your web browser via a web server to see the
+icon resource appear in the address field.
+At the time of writing, this example is supported in all web browsers
+except Microsoft Edge.
+This page is served to the browser by a local web server using the
+default “localhost” domain. Simply opening a local copy of this example in
+a browser will not display the icon.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Link Example</title>
+    <base href="http://localhost/resources/" />
+    <link rel="icon" href="cubes.ico" />
+</head>
+<body>
+    <h1>Linked Icon</h1>
+</body>
+</html>

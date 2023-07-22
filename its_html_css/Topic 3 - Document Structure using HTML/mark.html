@@ -1,0 +1,34 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections.
+3. Within the body section, add a paragraph that marks a word-break opportunity.
+4. Next, within the body section, add a paragraph that marks a superseded price
+and provides a current price.
+5. Now, within the body section, add paragraphs that mark text for reference and
+mark a misspelled word.
+6. Save the HTML document then open it in your web browser to see how the text
+has been marked.
+Suggesting word-break opportunities with <wbr> is particularly suitable for small
+devices, but implementation is dependent upon support for this feature in the
+browser.
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Mark Example</title>
+</head>
+<body>
+    <p>
+        Microsoft Surface Pro 4
+        <wbr />- 128GB / Intel Core i5
+    </p>
+    <p><s>€999.99</s> €749.99</p>
+    <p>
+        Memory: <mark>4GB</mark>
+        <br />Screen: <mark>12.3"</mark>
+    </p>
+    <p>Surface <u>Penn</u> Included</p>
+</body>
+</html>

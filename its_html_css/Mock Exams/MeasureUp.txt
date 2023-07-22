@@ -1,0 +1,309 @@
+<form action = "/inventory.php">
+	Part Number: <input type = "text" name = "partNo">
+	<br>
+	<input type = "submit" value = "Submit">
+	<br>
+		The action attribute enables you to specify where the page should send the part number when the user submits the form.
+		The input element enables the user to enter data, it's not an attribute, therefore input would be on its own line.
+		The address element enables you to display the author or owner of the page in a standardized format.
+
+<ol type = "i">
+	<li>First Item</li>
+	<li>Second Item</li>
+	<li>Third Item</li>
+</ol>
+		The type attribute specifies the kind of marker to use in the list, such as numbers or Roman numerals.
+
+#style1 {
+	border: 10px double black;
+	padding: 45px;
+	background: url(logo.gif);
+	background-repeat: no-repeat;
+	background-origin: padding-box;
+}
+		The no-repeat value ensures that the company logo is not repeated in the frame.
+		The padding-box value ensures that the company logo will start from the upper left corner of the inner frame.
+		The content-box value causes the background image to start from the upper left corner of the content, not the inner frame.
+
+h1 {
+	background-color: lightblue;
+	width: 50%;
+	height: 100px;
+}
+		When the page changes size, the width property will re-calculate the actual width to ensure it has 50% of the page width.
+		When height is set to 100px, if the content does not fit within the specified height, it will overflow.
+		Max-width & min-width indicate that the width cannot be bigger or smaller than the specified value, this would not ensure that the h1 element is half the width of the page.
+
+<!DOCTYPE HTML>
+<html lang = "fr">
+<body>
+	...
+</body>
+</html>
+		You should use the <html lang = "fr"> tag to assist search engines and browsers in the use of French language in your website.
+		You should not use the <link href = "french.css" rel = "stylesheet"> tag, this is used to attach a stylesheet on your HTML website.
+		You should not use the <meta charset = "utf-8"> tag, this is used to encode all possible characters in your HTML code.
+		You should not use the <meta http-equiv = "refresh" content = "3" url = "https://www.mozilla.org"> tag, this tells the browser to refresh the website after 3 seconds.
+
+You need to create a responsive user interface in all platforms, such as desktops, tablets and smartphones.
+	By using the <meta> viewport element x
+		You should not use the <meta> viewport element, this is used to instruct the browser to scale the size of the website accordingly to the resolution, it does not make the content responsive.
+	By using media queries v
+		Media queries are a set of rules in CSS which make the interface responsive based on the rules defined.
+			The queries ensure that the width & height are responsive when the screen size changes.
+			The screen orientation is detected and specific content is displayed.
+			Screen resolution is changed whenever the screen size is changed.
+		@media only screen and (max-width: 600px) {
+			/* for mobile phones & tablets */		
+			[class* = "col-"] {
+				width: 100%;
+			}
+		}
+		@media only screen and (max-width: 768px) {
+			/* for desktops & laptops */
+			[class* = "col-"] {
+				width: 100%;
+			}
+		}
+
+<form action = "submitcomment.aspx" method = "POST">
+	Comments: <br/>
+	<textarea name = "comments" />
+	<input type = "submit" value = "Post Comment" />
+</form>
+		The action attribute of the form element specifies the URL to which the form must be submitted.
+		The method attribute describes the type of submission request, which can be either GET or POST.
+		GET passes data as query string parameters, extra data appended to a URL after the ? symbol, the following URL has a query string parameter named category whose value is set to Electronics: http://www.measureup.com?category=Electronics
+		POST passes data in the body of the HTTP request, and does not remain in the browser history.
+		When you submit forms, all form data elements with a name attribute are submitted to the server.
+		The type attribute specifies the type of input element, by setting it to Submit, you cause a button to be generated that is capable of submitting the form to the server when the button is clicked.
+		The value attribute specifies the text to be rendered by the input element, the value attribute should be set to Post Comment.
+
+You need to add a description for a table.
+	Legend x
+		The <legend> element defines a caption for the <fieldset> element. The <fieldset> tag is used to group related elements in a form, drawing a box around the related elements.
+	Caption v
+		The <caption> tag must be inserted immediately after the <table> tag.
+	The <header> element represents a container for introductory content or a set of navigational links, and should include one or more heading elements such as a logo or an icon.
+	The <section> element defines sections in a document such as chapters, headers, footers or any other sections of the document.
+	The <figcaption> element defines a caption for a figure, not a table.
+
+<ol>
+	<li>...</li>
+</ol>
+	You should always use the <ol> tag to create an ordered list in HTML, which can either be numerical or alphabetical and each item in a list must begin with <li>.
+	The <dl> tag is used to create a definition list, where each list item contains two or more entries: a term (dt) and a description (dd).
+	The <dt> tag is used for a description term element, used to define a term within a description list <dl> tag. After each <dt> tag within the <dl> tag, there must be at least one <dd> tag that describes the term found in the <dt> tag.
+
+<a href = "#rationale">
+	Go to Explanation
+</a>
+<h3 id = "rationale">
+	Explanation
+</h3>
+		The href attribute specifies the destination address of a link. The destination can be a local address, an external address, or a bookmark on the same page. In this scenario, you want the link to navigate to a bookmark on the page, so we specify the ID of the bookmark, preceded by the # symbol.
+
+You should use the <article> element to group related content. No
+		You should use the <article> element to define independent, self-contained content.
+You should use the <section> element to define independent content. No
+		You should use the <section> element to group related content.
+You should use the <aside> element to define content related to its surrounding content. Yes
+		You should use the <aside> element to define content related to its surrounding content.
+
+After a user visits a link, the color should change from blue to purple.
+When a user hovers over the link, the font size should increase from normal to large.
+	a:link must come before a:hover, a:link is needed to select all unvisited links and describe their style such as color, text underline.
+	a:visited must come before a:hover, a:visited describes the behaviour when a link has been visited at least once.
+
+<input type = "radio" name = "medal" value = "sapphire" checked> Sapphire <br/>
+<input type = "radio" name = "medal" value = "gold" checked> Gold <br/>
+<input type = "radio" name = "medal" value = "platinum" checked> Platinum <br/>
+	By setting each input type attribute to radio, and each name attribute to medal, you create a group of radio buttons that allows only one option to be selected at a time.
+	By setting all name attributes to the same value (medal), you cause all the radio buttons to be part of the same group, and only one radio button per group can be selected.
+	The checked attribute in the first input element causes the Sapphire radio button to be initially selected.
+
+You need to add copyright information to your company's website, it must be in a visible heading that can be clicked to view or hide details.
+	<section> x
+		The <section> element defines sections in a document, such as chapters, headers and footers.
+	<summary> v
+		The <summary> element should be placed inside the <details> element.
+	The <aside> element defines some content aside from the content it is placed in, and should be related to the surrounding content.
+	The <article> element specifies independent, self-contained content. Content marked up with the <article> element should make sense on its own and it should be possible to distribute it independently from the rest of the website.
+
+<audio controls>
+	<source src = "Podcast.mp3" type = "audio/mpeg">
+	<a href = "http://company1.com/Podcast.mp3"> Listen to Podcast </a>
+</audio>
+		The controls attribute tells the browser to display visual controls for playing, pausing, seeking and adjusting the volume of the audio.
+		The source element represents a distinct audio file and format.
+		If the browser cannot render the user interface to play the Podcast.mp3 file, it displays the Listen to Podcast hyperlink, which links to http://company1.com/Podcast.mp3
+
+The radius of the circle must be 40px.
+The circle coordinates must be (50, 70).
+The frame must be blue.
+The circle must be filled in red.
+		stroke = "blue", the stroke attribute defines the color of the outline on a given graphical element, default value is set to "none".
+		
+You need to center an image on a webpage.
+Which three properties of the <img> element should you set?
+	display: block	
+	margin-left: auto
+	margin-right: auto
+		The display:block property defines an element as a block element such as <p>, the block element starts on a new line and takes up the whole width.
+		The margin-left:auto & margin-right:auto properties enables the browser to calculate the left & right margins.
+		The display:inline property displays an element as an inline element such as <span>, any height and width properties will have no effect.
+		The margin-left:length & margin-right:length properties requires you to specify the right margin measured in px or pt.
+
+Define the Minimum Ratio (AA Rating) and Enhanced Ratio (AAA Rating) for the body text of your website.
+	4.5:1 & 7:1
+		Users with colour blindness who perceive low contrast and have difficulties distinguishing between similar colors benefit from having excellent color contrast on a website.
+
+You are preparing to embed a graphic on your company's webpage, where the graphic file is resolution-independent. You need to ensure that you can apply a class to the graphic.
+	The <svg> element is a container for a scalable vector graphic (SVG) file. When you use the <svg> element, each shape is remembered as an object,
+	if you change the attributes of an object, the browser can automatically render the shape again.
+	The <canvas> element is used to draw graphics via the JavaScript language. This element is resolution-dependent and only a container for graphics.
+	You must use JavaScript to draw the graphics, you can use methods for drawing paths, boxes, circles, text and adding images.
+	The <img> tag does not technically embed the graphic into the HTML page, it creates a holding space for a referenced image that is stored in another location,
+	preventing you from applying a class.
+	The <bdi> tag isolates a portion of text that might be formatted in a different direction from other text outside it, useful when embedding user-generated
+	content that has an unknown directionality.
+
+An inline style declaration overrides any external or embedded styles.
+An attribute selector is used within a style sheet when you need to select specific values and attributes for styling, it is not used to set the preference for which style sheets are used.
+An embedded style is located in the <head> tag, this will be overwritten by an inline style.
+The psuedo-class does not allow you to set the order of precedence for a style, it is used to add a special state to a selector, including :hover, :link, :valid, etc.
+
+You need to add a control that enables users to select a product from a list, and the solution must also enable autocomplete when users type the first few letters of the product name.
+	The input tag creates an editable textbox on the page, it needs an ID tag to be read by the datalist tag. The datalist tag enables you to specify option values, you would configure a list of the products to appear in the drop-down list, and it supports autocomplete with any values specified.
+	The fieldset tag is used to group related elements within a html tag, the input & fieldset combination will not produce a list of values for a drop-down list.
+	The textarea tag enables you to create a multi-line textarea that is resizable, where you can specify the number of rows and columns.
+		
+You are planning to enable users to submit comments on each article, as well as subscribe to a comment feed for each article. You need to mark user-submitted comments by using semantic HTML.
+	The <article> tag is used to denote content that makes sense on its own and can be used independently. User-submitted comments marked with the <article> element could then be included in a comment feed, you can also use the <article> tag to mark a forum post, a blog post or a news story.
+	The <section> tag defines sections in a document, such as chapters, headers, footers or any other sections of the document. The <section> element provides less-specific meaning than the <article> element and should not be used if the content would make sense on its own, such as in a feed.
+	The <details> tag specifies additional details that the user can view or hide on demand, and can be used to create an interactive widget that the user can open and close.
+	The <aside> tag defines some content aside from the content it is placed in, and should be related to the surrounding content.
+
+You are adding three radio buttons to a webpage including multiple forms. Provide a legend to be used by screen readers and provide text labels that can be read for each radio button. You need to group the radio buttons and associate the group to a specific form, meeting the accessibility requirements.
+	The fieldset tag is used to group related elements within a html tag, you can specify which form the <fieldset> belongs to, you can label each radio button and label the group as a whole, which is helpful in assistive technologies such as screen readers, enabling the users to know their location in the form.
+	The optgroup tag is used to group items in drop-down lists, not to group a set of radio buttons.
+	The datalist tag is used to create a drop-down list of items, not to group a set of radio buttons.
+	The section tag is used for semantic markup and enables you to define sections within a document, it does not provide a legend feature and cannot specify a group.
+
+You need to create a CSS rule-set to ensure that the logo is placed as shown.
+	img {float: right} causes the img element to float to the right of all content within its parent element, where the <p> content wraps around the <img>.
+	p {float: left}, the float property affects an element within its parent, this does not cause the logo to float to the right.
+	p, img {display: inline-block}, the display property specifies how or if an element is displayed, the inline-block value means that the element is displayed in-line with its surrounding content, while allowing you to specify its width & height, this does not cause the logo to float to the right.
+
+You should test the pages on all major web browsers, ensuring the pages are presented correctly on each browser, some browsers interpret CSS differently.
+You should ensure that all styles are defined in external documents, they can be cached by the browser so pages can load faster, also you can change styles without having to change the web page itself.
+You should group selectors that are identical into a single rule set, minimising the size of the CSS document and making it easier to maintain.
+
+<img src = "Image.jpg" style = "transform:scale(0.75)">
+	The image width is 75% of the width of the div element. When you specify the percentage for an element's width, it means the percentage of its parent, where div is the parent element to the img element.
+	You should use the CSS transform property to scale an image to 75% of its original width.
+	You should use the vw prefix to make the width relative to the viewport, 1vw = 1% of the viewport width.
+	You should use the vw prefix to make the width relative to the device screen width, but only when the viewport width is set to the device width.
+
+The <!DOCTYPE> declaration does not require a reference to a document type definition (DTD), a DTD outlines the rules for the markup language, HTML4 requires a DTD reference because it is based on standard generalized markup language (SGML).
+The <head> element does not need to be added to prevent validation errors, <head> is optional in HTML5, no errors will be generated during validation if it is left out.
+You can have only one <title> element in a HTML document, two or more <title> elements will generate a validation error.
+
+You should not use the <tr> element to create a row header, <tr> creates a row, you would need to use the <td> element for the cells in the first column and then apply custom formatting to those cells.
+You should use the <td> element to create a cell.
+You should use the <th> element to create a column header, which uses bold and centered text by default.
+
+You want to display the text of the blog posts pixel-perfect on all devices.
+	You should change the font size unit of measurement from px to em, to create responsive pixel-perfect websites. Pixels are static units, so when you specify the size of font in pixels, the text content will have the same size on every device, whereas when you specify em, the font size will be relative to the screen size.
+	If you use meta viewport, the website will shrink to fit the size of the device you are using, it will not change the font size relative to the screen size, the content will look smaller and will not be readable by a user.
+
+<select name = "categories" size = "2">
+	<option value = "x"> x </option>
+</select>
+	The code above renders a list box with four items total and only two items visible. The select element displays either a drop-down list or a list box. If the size attribute is set to 0 or 1 or if it is not present, then a drop-down list is rendered. If greater than 1, then a list box is rendered.
+
+html {
+	/* default font size is 16px */
+	font-size = 100%;
+}
+h1 {
+	font-size: .5em;
+}
+	The style will set the font-size of the text in <h1> to 8px. Because the default font-size is 16px, using .5em will set the size to half of 16px, to 8px. The em unit is relative to its parent, <html>.
+	If you change to .5rem, the style will set the font-size in <h1> to be 8px. The rem unit is similar to the em unit, in that it is relative (scalable) unit of measurement.
+	If you change to 2rem, the style will set the font-size in <h1> to be 32px.
+
+You can use the <figcaption> element to provide a single caption for the set of three photographs, <figcaption> is a child of <figure>, you can use this element to tie the caption to the image/images identified by the <figure> element.
+You should use one <img src> tag inside the <figure> element for each photograph to be displayed, <img src> specifies the location of each image file, so you need a separate line for each image.
+
+When the page width gets wider than 600px, the image width remains at 600px due to the max-width: 100% declaration, this means that the maximum width of the image should be 100% of its original width.
+When the page width gets narrower than 600px, the image width decreases and scales down, due to the min-width property not being set.
+As the page width changes, the height adjusts to keep the aspect ratio of the image the same, due to the height: auto declaration, this informs the browser to adjust the height of the image to fit its parent element.
+
+<table>
+	<tr>
+		<th>Month</th>
+			<th>Total Value</th>
+	</tr>
+...
+</table>
+The <tr> tag defines a row in an HTML table, the <th> tag defines a header cell, the <th> tag must go inside the first <tr> tag.
+The <thead> tag is used to group header content in an HTML table, it would not treat Month & Value as column headings and would not display the headings in a tabular format.
+
+
+<p>Company News</p>
+	<div style = "background-color:lightblue">
+	<h3>
+	<p>
+	</div>
+		The <div> element is used as a container for other HTML elements to style them using CSS.
+
+You should set the padding property to create a transparent area that is 10px wide between the content of a div and its border, padding can be any width.
+You should set the border property to create a solid colour that is 5px wide around the content of a div, where the border style can be solid, dotted, dashed, double, groove, ridge, inset, outset or hidden, it can also be any color or width.
+You should set the margin property to create a transparent area that is 20px wide between the parent of a div and its border, margin can be any width.
+
+p {color: green}
+	The p selector specifies all p elements.
+#p1, #p2, #p3 {color: green}
+	The # symbol allows you to select an element by its ID.
+
+<ol>
+<li value = "10">First Item</li>
+<li>Second Item</li>
+<li>Third Item</li>
+</ol>
+<ol>
+<li value = "10">First Item</li>
+<li value = "11">Second Item</li>
+<li value = "12">Third Item</li>
+</ol>
+		The value attribute specifies the numbering value of a list item, and the rest of the list items will increment from that number.
+
+You want to use JavaScript to draw a circle with centered text on a web page.
+	The <canvas> element allows you to draw pixel-based images and text via JavaScript.
+	The <svg> element requires that you use XML to draw vector-based images, it does not allow you to use JavaScript to draw images and text.
+
+You need to ensure that the text scales when the page size changes.
+	Viewport units ensure that text will scale when the viewport's size changes. Viewport units enable you to implement fluid typography that resizes smoothly, setting the font-size attribute to the value of 10vw means that the size will always be set to 10% of the browser's size.
+	Rem units are absolute which are fixed and always appear the same size.
+
+<ol type = "a">
+<li value = "3">First Item</li>
+<li>Second Item</li>
+<li>Third Item</li>
+</ol>
+		The type attribute on the <ol> tag specifies the kind of marker to use in the list, the value attribute specifies the value of the first list item, so 3 is c.
+
+You are preparing a webpage that will include several images, and you need to wrap text around the images and place them side by side.
+		The float property is used for positioning and layout on webpages.
+		The clear property specifies which elements can float beside the cleared element and on which side, often used in conjunction with the float property.
+		The overflow property specifies what should happen if content overflows an element's box, it specifies whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area.
+		The padding property creates extra space within an element.
+
+You should use the <video> element to embed the video, it does not require any additional plug-ins to be installed on the client's machine to run the video. 
+
+You need to add a <div> element to your webpage, you notice when the browser window is small, a horizontal scrollbar is added to the page because the <div> element is bigger than the window. You need to prevent scrollbars from being added when the window is small.
+		The max-width property will prevent the additional scrollbar from being added to the web page.
+
+You need to ensure that the most appropriate image is loaded automatically for the user.
+		The <picture> element enables you to configure different versions of an image to be loaded under different circumstances, the browser would choose the most appropriately sized version of an image to fill the viewport on that device.

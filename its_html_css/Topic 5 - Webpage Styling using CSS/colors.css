@@ -1,0 +1,51 @@
+﻿h1.red {
+    background: #FF0000 /*Red:rgb(100%,0%,0%),rgb(255,0,0)*/
+}
+p.orange {
+    background: #FFA500 /*Orange:rgb(100%,65%,0%),rgb(255,165,0)*/
+}
+p.yellow {
+    background: #FFFF00 /*Yellow:rgb(100%,100%,0%),rgb(255,255,0)*/
+}
+h2.fuchsia {
+    background: #FF00FF /*Fuchsia:rgb(100%,0%,100%),rgb(255,0,255)*/
+}
+p.lime {
+    background: #00FF00 /*Lime:rgb(0%,100%,0%),rgb(0,255,0)*/
+}
+p.green {
+    background: #008000 /*Green:rgb(0%,50%,0%),rgb(0,128,0)*/
+}
+h3.aqua {
+    background: #00FFFF /*Aqua:rgb(0%,100%,100%),rgb(0,255,255)*/
+}
+p.blue {
+    background: #0000FF /*Blue:rgb(0%,0%,100%),rgb(0,0,255)*/
+}
+p.maroon {
+    background: #800000 /*Maroon:rgb(50%,0%,0%),rgb(128,0,0)*/
+}
+h4.olive {
+    background: #808000 /*Olive:rgb(50%,50%,0%),rgb(128,128,0)*/
+}
+p.purple {
+    background: #800080 /*Purple:rgb(50%,0%,50%),rgb(128,0,128)*/
+}
+p.teal {
+    background: #008080 /*Teal:rgb(0%,50%,50%),rgb(0,128,128)*/
+}
+h5.navy {
+    background: #000080 /*Navy:rgb(0%,0%,50%),rgb(0,0,128)*/
+}
+p.gray {
+    background: #808080 /*Gray:rgb(50%,50%,50%),rgb(128,128,128)*/
+}
+p.silver {
+    background: #C0C0C0 /*Silver:rgb(75%,75%,75%),rgb(192,192,192)*/
+}
+h6.black {
+    background: #FFFFFF /*Black:rgb(0%,0%,0%),rgb(0,0,0)*/
+}
+p.white {
+    background: #000000 /*White:rgb(100%,100%,100%),rgb(255,255,255)*/
+}

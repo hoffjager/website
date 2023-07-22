@@ -1,0 +1,27 @@
+﻿<!--
+1. Start a new HTML5 document.
+2. In the body section, insert a form element containing a submit button to send
+form data by the POST method and specify the encoding type for Form Data.
+3. In the form element, insert a file element and a line break.
+4. Save the HTML document, then open the web page in your browser, select a file
+and submit the form.
+5. Examine the headers to see the file details as Form Data.
+To process this example, the files upload.pl and upload.css need to be added to
+the “htdocs” directory of a local running web server – these are located in the
+download archive for this book available from:
+http://www.ineasysteps.com/resourcecentre/downloads/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>File Upload Example</title>
+</head>
+<body>
+    <form method="post" action="http://localhost/echo.pl"
+          enctype="multipart/form-data"></form>
+    <input type="file" name="Upload" /><br />
+    <input type="submit" value="Submit Form" />
+</body>
+</html>

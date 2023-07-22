@@ -1,0 +1,56 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections, with a link element
+pointing to a style sheet.
+3. Within the body, insert a main document heading.
+4. Next, within the body, insert an article containing a heading, a paragraph, and
+an aside element.
+Avoid using the <aside> element to contain unrelated advertising.
+5. Now, within the body, insert a second article containing a heading, a
+paragraph, and an aside element.
+6. Insert an attribute into the opening tag of the first article element so it can
+be selected for sidebar styling.
+Refer to:
+    aside.css
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Aside Example</title>
+    <link type="text/css" rel="stylesheet"
+          href="aside.css" media="screen" />
+</head>
+<body>
+    <h1>Famous Quotes</h1>
+    <article class="sidebar">
+        <h2>Cynicism</h2>
+    <p>
+        <q>
+            A cynic is a man who knows the price of everything,<br />
+            but the value of nothing.
+        </q> <br />
+        <cite>Oscar Wilde</cite>
+    </p>
+    <aside>
+        Oscar Wilde (1854 - 1900)
+        was an Irish writer and poet.
+    </aside>
+</article>
+<article>
+    <h2>Happiness</h2>
+    <p>
+        <q>
+            The secret of happiness is not in doing what one likes,<br />
+            but in liking what one has to do.
+        </q> <br />
+        <cite>James M. Barrie</cite>
+    </p>
+    <aside>
+        James M. Barrie (1860 - 1937)
+        was a Scottish author and dramatist.
+    </aside>
+</article>
+</body>
+</html>

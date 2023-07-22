@@ -1,0 +1,41 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections.
+3. Within the body section, insert an image and map element.
+4. Within the map element, define a rectangular hot spot covering the top left
+quarter of the image – from a top left point at x,y:0,0 to a bottom right point at
+x,y:200,100.
+5. Now, in the map element, define three hot spots of the same size covering the
+other three quarters of the image.
+6. Save the HTML document, then open the web page in your browser to see the
+tooltips describe each hot spot that you can follow to open its associated target
+resource.
+Do not leave any spaces in the comma-separated list of coordinates.
+search.png = 400px x 200px
+Validation will fail unless each <area> tag includes an alt attribute.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Image Map Example</title>
+</head>
+<body>
+    <img src="search.png" alt="Search" usemap="#search" />
+    <map name="search">
+        <area shape="rect" coords="0,0,200,100"
+              href="http://www.bing.com"
+              alt="Bing Panel" title="Link to Bing" />
+        <area shape="rect" coords="200,0,400,100"
+              href="http://www.ask.com"
+              alt="Ask Panel" title="Link to Ask" />
+        <area shape="rect" coords="0,100,200,200"
+              href="http://www.google.com"
+              alt="Google Panel" title="Link to Google" />
+        <area shape="rect" coords="200,100,400,200"
+              href="http://www.yahoo.com"
+              alt="Yahoo Panel" title="Link to Yahoo" />
+    </map>
+</body>
+</html>

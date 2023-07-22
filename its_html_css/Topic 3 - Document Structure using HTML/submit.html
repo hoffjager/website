@@ -1,0 +1,33 @@
+﻿<!--
+1. Start a new HTML5 document.
+2. In the body section, insert an element to submit form data to a server-side
+script using the GET method.
+3. Now, in the form element, insert a paragraph containing a submission button –
+whose value will appear on the button.
+4. Save the HTML document, then open the web page your browser and click the
+button to submit the data in assigned to its name=value pair, and to see the
+response.
+To process the examples in this chapter, the files echo.pl, echo.css, perl.png and
+abyss.png should be placed in the “htdocs” directory of a local running web server
+– these are located in the download archive for this book available from
+ineasysteps.com/resource-centre/downloads
+Notice the data appended in the browser’s address field by the GET method – you
+can submit via the POST method to prevent this for sensitive data.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Form Submission</title>
+</head>
+<body>
+    <form method="GET" action="http://localhost/Perl-5.36.0-Windows.pl">
+        <p>
+            <input type="submit"
+                   name="My Submit Button Name"
+                   value="My Submit Button Value" />
+        </p>
+    </form>
+</body>
+</html>

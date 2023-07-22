@@ -1,0 +1,37 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections, with a link element
+pointing to a style sheet.
+3. Within the body section, insert a paragraph containing a hyperlink with a
+nested image of a specific size.
+4. Save the HTML document, then open the web page in your browser and follow
+the hyperlink.
+The dimensions of this button are exaggerated for illustration purposes – web page
+buttons are typically smaller.
+Browsers usually add a border around an image when it is nested within a hyperlink
+to indicate that it is not merely an illustration. Style rules can remove the
+image border and can also swap the image when the cursor is placed over it to
+perform a “rollover”. There are several ways to achieve this effect – the
+technique described below hides the image when the cursor is placed over it, to
+reveal the background image on the container element behind.
+Refer to:
+rollover.css
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Rollover Example</title>
+    <link type="text/css" rel="stylesheet"
+          href="rollover.css" media="screen" />
+</head>
+<body>
+    <p class="btn">
+        <a href="http://www.youtube.com">
+            <img src="rollover-btn.png" alt="Hyperlink to YouTube"
+                 width="192" height="67" />
+        </a>
+    </p>
+</body>
+</html>

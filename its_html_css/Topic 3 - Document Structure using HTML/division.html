@@ -1,0 +1,63 @@
+﻿<!--
+It should hopefully be obvious from the class attribute values that each
+anonymous <div> element can be easily replaced by more meaningful <header>, <nav>,
+<main> and <footer> elements.
+1. Replace the “header” class <div> with a <header> element.
+2. Replace the “nav” class <div> with a <nav> element.
+3. Replace the “main” class <div> with <main> and <article> elements.
+4. Replace the “footer” class <div> with a <footer> element.
+5. Save the document, then open it in your browser to see it appears the same –
+but it now has meaningful structure.
+Also amend any associated style sheet to select the new elements.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Division Example</title>
+</head>
+<body>
+    <!--Replacing div classes with specific elements-->
+    <!--<div class="header">
+        <h1>Web Languages</h1>
+    </div>-->
+    <header>
+        <h1>Web Languages</h1>
+    </header>
+    <!--<div class="nav">
+        <h2>Menu</h2>
+        <p><a href="js.html">JavaScript</a></p>
+        <p><a href="css.html">Cascading Style Sheets</a></p>
+    </div>-->
+    <nav>
+        <h2>Menu</h2>
+        <p><a href="js.html">JavaScript</a></p>
+        <p><a href="css.html">Cascading Style Sheets</a></p>
+    </nav>
+    <!--<div class="main">
+        <h2>HyperText <span>Markup</span> Language</h2>
+        <p>All about HTML...</p>
+        <h2>eXtensible <span>Markup</span> Language</h2>
+        <p>All about XML...</p>
+    </div>-->
+    <main>
+        <article>
+            <h2>HyperText <span>Markup</span> Language</h2>
+            <p>All about HTML</p>
+        </article>
+        <article>
+            <h2>eXtensible <span>Markup</span> Language</h2>
+            <p>All about XML</p>
+        </article>
+    </main>
+    <!--<div class="footer">
+        <p><small>Copyright &copy; Example Corporation</small></p>
+    </div>-->
+    <footer>
+        <p>
+            <small>Copyright &copy; 2023 Example Corporation</small>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+/*
+Refer back to:
+id.html
+1. Create a linked style sheet with style rules painting colored backgrounds
+behind the text in each span element.
+2. Now add a style rule to paint a colored background behind the rest of the
+paragraph and set its width.
+3. Save the style sheet file alongside the HTML document then open the web page
+in a browser to see the elements styled by the ID selectors.
+If a class selector and an ID selector both attempt to style the same property of
+one element the ID selector value would be applied as it takes preference.
+*/
+
+#span1 {
+    background: yellow
+}
+#span2 {
+    background: lime
+}
+p #para1 {
+    background: cyan;
+    width: 70%
+}

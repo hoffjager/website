@@ -1,0 +1,26 @@
+﻿/*
+    Refer back to:
+    space.html
+1. Create a linked style sheet containing a rule to indent the start of
+each paragraph.
+2. Next add a style rule to increase the letter spacing and set a
+background color on two spanned sections of text.
+3. Now add a style rule to increase the word spacing and set a
+background color on the other spanned text.
+4. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the indentations and spacing.
+*/
+
+p {
+    text-indent: 5em
+}
+
+span.spread {
+    letter-spacing: 1em;
+    background: yellow
+}
+
+span.space {
+    word-spacing: 1.5em;
+    background: aqua
+}

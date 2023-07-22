@@ -1,0 +1,1186 @@
+﻿// JavaScript source code
+// Topic 1: Operators, Methods, and Keywords
+
+// (+=, -=, *=, /=, %=)
+// (+, -, =, *, /)
+/*
+Operator		Description		Example		Result
++				Addition		3 + 11		14
+-				Subtraction		9 - 4		5
+*				Multiplication	3 * 4		12
+/				Division		21 / 7		3
+%				Modulus			21 % 8		5
+++Increment		a = 5;			++a			6
+--Decrement		a = 5;			--a			4
+*/
+
+// Pre-Incrementing & Pre-Decrementing
+	Time = 9
+	++Time
+	document.write('The time is ' + Time)
+	if (Time < 12) document.write('AM')
+	else document.write('PM')
+// Before the value in 'Time' is used, it's incremented. That value in 'Time' is used for displaying in the document.write() statement.
+
+// Post-Incrementing & Post-Decrementing
+	a = 10
+	document.write('a was ' + a++ + ' and is now ' + a)
+/*
+The value in 'a' being incremented is declared before the increment, then this value is the variable incremented.
+1. The string 'a was' is output,
+2. Then a++ is displayed, resulting in the current value of 'a' being displayed, and only then will 'a' be incremented.
+3. After this, the string 'and is now' is output,
+4. Then the new value in 'a', containing the incremented value from the earlier increment operation.
+*/
+	b = 10
+	document.write('b was ' + b + ' and is now ' + --b)
+	document.write('b was ' + b-- + ' and is now ' + b)
+
+// Arithmetic Functions
+// The initial uppercase M in Math is necessary, because JavaScript is case-sensitive):
+/*
+Math.abs(a)			Returns a as a positive number(or 0 if a is 0).
+Math.acos(a)		Returns the arccosine of a.
+Math.asin(a)		Returns the arcsine of a.
+Math.atan(a)		Returns the arctangent of a.
+Math.atan2(a, b)	Returns the arctangent of a / b.
+Math.ceil(a)		Rounds up to return the integer closest to a.
+Math.cos(a)			Returns the cosine of a.
+Math.exp(a)			Returns the exponent of a(Math.E to the power a).
+Math.floor(a)		Rounds down to return the integer closest to a.
+Math.log(a)			Returns the log of a base e.
+Math.max(a, b)		Returns the maximum of a and b.
+Math.min(a, b)		Returns the minimum of a and b.
+Math.pow(a, b)		Returns a to the power b.
+Math.random()		Returns a floating point random number greater than or equal to 0, but less than 1(from 0 to 0.999…).
+Math.round(a)		Rounds up or down to return the integer closest to a.
+Math.sin(a)			Returns the sine of a.
+Math.sqrt(a)		Returns the square root of a.
+Math.tan(a)			Returns the tangent of a.
+*/
+
+// For example, to return the square root of 64, you use the following:
+Math.sqrt(64)	// Returns 8
+
+// What Math.abs() does is take any value(negative, zero, or positive), and if it's negative, Math.abs() turns it into a positive value:
+Math.abs(27)	// Returns 27
+Math.abs(0)		// Returns 0
+Math.abs(-5)	// Returns 5
+
+// Math.random() returns a floating point value with a statistically random value (although not truly random) between 0 and 1.
+// If you have to emulate a 20-sided die, you must multiply the result of the function call and turn it into an integer:
+Math.floor(Math.random() * 20)		// Returns a random number between 0 & 19
+Math.floor(Math.random() * 20) + 1	// Returns a random number between 1 & 20
+
+// Assignment Operators
+/*
+Operator	Description		Example			Result
+=			Assignment		a = 21				21
++=			Addition		a = 21; a += 5		26
+-=			Subtraction		a = 21; a -= 2		19
+*=			Multiplication	a = 21; a *= 3		63
+/=			Division		a = 21; a /= 10		2.1
+%=			Modulus			a = 21; a %= 4		1
+*/
+// Instead of a = a + 5, you can use the more compact: a += 5.
+
+a = 10
+b = 25
+a += (b / 5)
+document.write(a)
+
+// Using 'onerror'
+window.onerror = function (msg, url, line)
+{
+	var temp = url.split('/')
+	url = temp[temp.length - 1]
+	alert('Error in line ' + line + ' of ' + url + '\n\n' + msg)
+}
+/*
+	document.writ(′Test′)
+		Error in line 18 of onerror.htm
+		Object doesn't support property or method 'writ'
+*/
+
+// Limiting the scope of onerror
+	// <img src =′image.jpg’ onerror =′fixError()′>
+
+/*
+<div onerror = 'fixError()'>
+	// Contents
+</div>
+*/
+
+// try and catch
+/*
+try
+{
+	// Place code to try here.
+}
+catch(e)
+{
+	// Place alternate code here.
+}
+*/
+/*
+catch(e)
+{
+	alert('Error: ' + e.message)
+}
+
+Error: 'MyObject' is undefined.
+*/
+
+// Ignoring the Error via ajax (Asynchronous JavaScript And XML)
+/*
+try
+{
+	var ajax = new XMLHttpRequest()
+}
+catch(e1)
+{
+	try
+	{
+		ajax = new ActiveXObject("Msxm12.XMLHTTP")
+	}
+	catch(e2)
+	{
+		try
+		{
+			ajax = new ActiveXObject("Microsoft.XMLHTTP")
+		}
+		catch(e3)
+		{
+			ajax = false
+		}
+	}
+}
+*/
+
+// Regular Expressions
+// Using test()
+/*
+Let’s say you want to find out whether one string occurs within another.
+For example, if you wish to know whether the string 'whether' occurs in Hamlet’s famous soliloquy, you might use code such as the following:
+*/
+s = "To be, or not to be, that is the question: " +	"Whether 'tis Nobler in the mind to suffer " + "The Slings and Arrows of outrageous Fortune, " +
+	"Or to take Arms against a Sea of troubles, " +	"And by opposing end them."
+RegExp = /whether/		// case sensitive
+RegExp = /whether/i		// case insensitive
+document.write(RegExp.test(s))
+document.write(/whether/i.test(s))
+
+// Using replace()
+/*
+The source string is not modified by this, because replace() returns a new string with all the changes made.
+For example, to replace the string ′tis in the soliloquy with the word it’s (although Shakespeare would surely object), you could use a regular expression and the
+replace() function like this:
+*/
+document.write(s.replace(/’tis/, "it's"))
+/*
+	To be, or not to be, that is the question:
+	Whether it's Nobler in the mind to
+	suffer The Slings and Arrows of
+	outrageous Fortune, Or to take Arms
+	against a Sea of troubles, And by
+	opposing end them.
+*/
+document.write(s.replace(/to/i, "TO"))
+/*
+	TO be, or not to be, that is the question:
+	Whether 'tis Nobler in the mind to
+	suffer The Slings and Arrows of
+	outrageous Fortune, Or to take Arms
+	against a Sea of troubles, And by
+	opposing end them.
+*/
+
+// Replacing Globally
+document.write(s.replace(/to/ig, "TO"))
+/*
+	TO be, or not TO be, that is the
+	question: Whether 'tis Nobler in the
+	mind TO suffer The Slings and Arrows
+	of outrageous Fortune, Or TO take
+	Arms against a Sea of troubles, And by
+	opposing end them.
+*/
+
+// Fuzzy Matching
+s = "Have you seen my BackPack anywhere?"
+document.write(/back *pack/i.test(s))
+
+// Matching any Character
+//	/<.*>/
+//  /<.+>/
+
+// Not Matching a Character
+//  [^>]+
+
+// List of Basic Metacharacters
+/*
+Metacharacters		Action
+/					Begins and ends a regular expression
+.					Matches any character other than newline
+*					Matches previous element zero or more times
++					Matches previous element one or more times
+?					Matches previous element zero or one time
+[characters]		Matches a single character out of those contained within the brackets
+[^ characters]		Matches a single character that is not contained within the brackets
+(regexp)			Treats regexp as a group for counting, or following *, + or ?
+left | right		Matches either left or right
+[l - r]				Matches a range of characters between l and r
+^					Requires the match to be at the search string's start
+$					Requires the match to be at the search string's end
+*/
+
+// List of Escape Metacharacters
+/*
+Other				Action
+\b					Matches a word boundary
+\B					Matches where there isn't a word boundary
+\d					Matches a digit(equivalent to[0-9])
+\D					Matches a non-digit(equivalent to[^0-9])
+\n					Matches a newline character
+\s					Matches a whitespace character(space, tab, carriage return, newline, or form feed)
+\S					Matches a non-whitespace character
+\t					Matches a tab character
+\w					Matches one of a-z, A-Z, 0-9, or _
+\W					Matches any character except a-z, A-Z, 0-9, or _
+\x					Treats x as a normal character
+{ n }				Matches exactly n times
+{ n,}				Matches n times or more
+{ min, max }		Matches at least min and at most max times
+*/
+
+// Examples
+/*
+Example				Matches
+\.					The first . in "Hello there, nice to see you."
+h					The first h in "My hovercraft is full of eels."
+lemon				The word lemon in "I like oranges and lemons."
+orange | lemon		Either orange or lemon in "I like oranges and lemons."
+bel [ei][ei] ve		Either believe or beleive (also beleeve or beliive)
+bel [ei]{2} ve		Either believe or beleive (also beleeve or beliive)
+bel {ei}|{ie} ve	Either believe or beleive (but not beleeve or beliive)
+2\.0*				2., 2.0, 2.00, and so on.
+j-m					Any of the characters j, k, l, or m.
+house$				Only the final house in "This house is my house."
+^can				Only the first can in "Can you open this can?"
+\d{1, 2}			Any one or two-digit number from 0 to 9 and 00 to 99
+[\w]+				Any group of at least one-word character
+[\w]{3}				Any group of three-word characters
+*/
+
+// Increment and Decrement:
+/*
+<div class="itemqty">
+	<p>
+		<input type="text" value="1" id="qty">
+			<input type="button" id="qtyadd" value="+" onclick="javascript: document.getElementById(" qty").value++;" />
+			<input type="button" id="qtysub" value="-" onclick="javascript: document.getElementById(" qty").value--;" />
+			<input type="button" id="qtyzero" value="0" onclick="javascript: document.getElementById(" qty").value == 0;" />
+	</p>
+</div>
+*/
+
+// Addition:
+/*
+	<div class="order_buttons">
+		<p>
+			<input type="button" class="buttons" value="Update Cart" onclick="javascript: document.getElementById(" subtotal").innerHTML
+			 = parseFloat(document.getElementById('mantotal').innerHTML)
+			 + parseFloat(document.getElementById('drumtotal').innerHTML)
+			 + parseFloat(document.getElementById('tromtotal').innerHTML); />
+		</p>
+		<p>
+			<input type="button" class="buttons" value="Checkout" />
+		</p>
+	</div>
+*/
+
+// Subtraction:
+/*
+	<div class="order_buttons">
+		<p>
+			<input type="button" class="buttons" value="Update Cart" onclick="javascript: document.getElementById(" subtotal").innerHTML
+			= parseFloat(document.getElementById('mantotal').innerHTML)
+			+ parseFloat(document.getElementById('drumtotal').innerHTML)
+			+ parseFloat(document.getElementById('tromtotal').innerHTML);
+			
+			document.getElementById("grandtotal").innerHTML
+			= parseFloat(document.getElementById('subtotal').innerHTML)
+			- parseFloat(document.getElementById('discount').innerHTML); />
+		</p>
+		<p>
+			<input type="button" class="buttons" value="Checkout" />
+		</p>
+	</div>
+*/
+
+// Division:
+/*
+	<p>
+		Enter the square footage:
+			<input type="text" id="sqft" />
+			<input type="button" class="buttons" value="Calculate" onclick="document.getElementById('sqftneeded').innerHTML
+			 = 'You will need ' + parseInt(document.getElementById('sqft').value / 25 + 1) + ' pieces.';" />
+	</p>
+*/
+
+// Multiplication:
+/*
+	<div class="order_buttons">
+		<p>
+			<input type="button" class="buttons" value="Update Cart" onclick="javascript: document.getElementById(" subtotal").innerHTML
+			= parseFloat(document.getElementById('mantotal').innerHTML)
+			+ parseFloat(document.getElementById('drumtotal').innerHTML)
+			+ parseFloat(document.getElementById('tromtotal').innerHTML);
+
+			document.getElementById('salesTax').innerHTML
+			= (parseFloat(document.getElementById('subtotal').innerHTML) * .07).toFixed(2);
+
+			document.getElementById("grandtotal").innerHTML
+			= parseFloat(document.getElementById('subtotal').innerHTML)
+			+ parseFloat(document.getElementById('salesTax').innerHTML)
+			- (parseFloat(document.getElementById('discount').innerHTML)).toFixed(2); />
+		</p>
+		<p>
+			<input type="button" class="buttons" value="Checkout" />
+		</p>
+	</div>
+*/
+
+// Modulus:
+/*
+	<p>
+		Enter the square footage:
+		<input type="text" id="sqft" />
+		<input type="button" class="buttons" value="Calculate" onclick="document.getElementById('sqftneeded').innerHTML
+		 = 'You will need ' + parseInt(document.getElementById('sqft').value / 25 + 1) + ' pieces.';
+
+		document.getElementById('sqftremaining').innerHTML = 'The last piece will have ' + parseInt(document.getElementById('sqft').value % 25) + ' square feet used.'"; />
+	</p>
+*/
+
+// Compound Assignment Operators:
+function addFive(qty)
+{
+	var newQty = parseInt(document.getElementById(qty).value);
+	newQty += 5; // newQty = newQty + 5
+	document.getElementById(qty).value = newQty;
+}
+/*
+	Addition: +=, x = x+5 => x += 5
+	Subtraction: -=, x = x-5 => x -= 5
+	Multiplication: *=, x = x*5 => x *= 5
+	Division: /=, x = x/5 => x /= 5
+*/
+
+// JavaScript Best Practices
+// Comments:
+/*
+	<p>
+		Enter the square footage:
+		<input type="text" id="sqft" />
+		<input type="button" class="buttons" value="Calculate" onclick="document.getElementById('sqftneeded').innerHTML
+		 = 'You will need ' + parseInt(document.getElementById('sqft').value / 25 + 1) + ' pieces.';
+
+		document.getElementById('sqftremaining').innerHTML = 'The last piece will have ' + parseInt(document.getElementById('sqft').value % 25) + ' square feet used.'"; />
+		// This has been a modulus example.
+		/*
+		Eventually this will be cleaned up, as right now it's not very clean.
+		*/
+//	</p>
+// */
+
+// Indentations:
+/*
+	<body>
+		<section id="main">
+			<section id="main_content">
+				<header>
+					<div id="sitelogo">
+						<a href="index.html">
+					</div>
+					<!-- InstanceBeginEditable name="pagecontents" -->
+					<div id="headerinfo">
+						<p>&nbsp;</p>
+						<p>Call now: <span style="font-size: 1.5em;">800.555.3839</span></p>
+					</div>
+				</header>
+				<p>
+					Enter the square footage:
+					<input type="text" id="sqft" />
+					<input type="button" class="buttons" value="Calculate" onclick="document.getElementById('sqftneeded').innerHTML
+					 = 'You will need ' + parseInt(document.getElementById('sqft').value / 25 + 1) + ' pieces.';
+				
+					 document.getElementById('sqftremaining').innerHTML = 'The last piece will have '
+					 + parseInt(document.getElementById('sqft').value % 25) + ' square feet used.'";/>
+				</p>
+*/
+
+// Naming Conventions:
+	// Camel casing:
+	/*
+	document.getElementById('sqft')
+	<p id="sqft">Paragraph</p>
+	*/
+
+	// noscript:
+	/*
+	<script language="JavaScript">
+		alert('This page is under construction.');
+	</script>
+	<noscript>
+		Your browser does not support JavaScript.
+	</noscript>
+	*/
+
+	// Constants:
+	/*
+	<body>
+		<div class="order_buttons">
+		<p>
+			<input type="button" class="buttons" value="Update Cart"
+			onclick="javascript: document.getElementById(" subtotal").innerHTML
+			= parseFloat(document.getElementById('mantotal').innerHTML)
+			+ parseFloat(document.getElementById('drumtotal').innerHTML)
+			+ parseFloat(document.getElementById('tromtotal').innerHTML);
+
+			document.getElementById('salesTax').innerHTML = (parseFloat(document.getElementById('subtotal').innerHTML) * salesTaxRate).toFixed(2);
+
+			document.getElementById("grandtotal").innerHTML
+			= parseFloat(document.getElementById('subtotal').innerHTML)
+			+ parseFloat(document.getElementById('salesTax').innerHTML)
+			- (parseFloat(document.getElementById('discount').innerHTML)).toFixed(2); />
+			</p>
+		<p>
+			<input type="button" class="buttons" value="Checkout" />
+		</p>
+		</div>
+		<script>
+			const salesTaxRate = .07;
+		</script>
+	</body>
+	*/
+
+// Reserved Keywords:
+	// Variables:
+	/*
+		Containers that store text, numbers & other types of data. When naming variables, try not to use words that JavaScript already uses in code.
+		These are known as reserved keywords:
+			function is a reserved keyword:
+				function = "Sign up for a class." :(
+				stepOne = "Sign up for a class."  :)
+			document is a reserved keyword:
+				document.getElementById
+	*/
+
+	// Debugger Keyword:
+	/*
+	<body>
+		<div class="order_buttons">
+			<p>
+				<input type="button" class="buttons" value="Update Cart" onclick="javascript: document.getElementById(" subtotal").innerHTML
+				= parseFloat(document.getElementById('mantotal').innerHTML)
+				+ parseFloat(document.getElementById('drumtotal').innerHTML)
+				+ parseFloat(document.getElementById('tromtotal').innerHTML);
+				debugger;
+
+				document.getElementById('salesTax').innerHTML = (parseFloat(document.getElementById('subtotal').innerHTML) * salesTaxRate).toFixed(2);
+
+				document.getElementById("grandtotal").innerHTML
+				= parseFloat(document.getElementById('subtotal').innerHTML)
+				+ parseFloat(document.getElementById('salesTax').innerHTML)
+				- (parseFloat(document.getElementById('discount').innerHTML)).toFixed(2); />
+			</p>
+			<p>
+				<input type="button" class="buttons" value="Checkout" />
+			</p>
+		</div>
+		<script>
+			const salesTaxRate = .07;
+		</script>
+	</body>
+	*/
+
+	// Set Breakpoints (on Google Chrome Console):
+	/*
+		<body>
+			<div class="order_buttons">
+				<p>
+					<input type="button" class="buttons" value="Update Cart" onclick="javascript: document.getElementById(" subtotal").innerHTML
+					= parseFloat(document.getElementById('mantotal').innerHTML)
+					+ parseFloat(document.getElementById('drumtotal').innerHTML)
+					+ parseFloat(document.getElementById('tromtotal').innerHTML);
+					
+					// debugger;
+					
+					document.getElementById('salesTax').innerHTML = (parseFloat(document.getElementById('subtotal').innerHTML) * salesTaxRate).toFixed(2);
+
+					document.getElementById("grandtotal").innerHTML
+					= parseFloat(document.getElementById('subtotal').innerHTML)
+					+ parseFloat(document.getElementById('salesTax').innerHTML)
+					- (parseFloat(document.getElementById('discount').innerHTML)).toFixed(2); />
+				</p>
+				<p>
+					<input type="button" class="buttons" value="Checkout" />
+				</p>
+			</div>
+			<script>
+				const salesTaxRate = .07;
+			</script>
+		</body>
+	*/
+
+	// Console.log(on Google Chrome Console):
+		// console.log(2 + 2)
+
+// Inline & External Scripts
+	// When to Use Scripts:
+	/*
+		JavaScript can be formed and stored:
+		Directly on a web page(inline or internal script): Scripts that only apply to one page can use an inline script, which is good for testing.
+		Through an external script(an external file that is referenced by one or more web pages within a website): Changes are only made in one place.
+		Google Chrome, Right - click, View Source
+	*/
+
+	// How to Use Scripts
+	/*
+	External Script:
+		<head>
+			<script src="scripts/main.js"></script>
+		</head>
+	Inline or Internal Script:
+		<script>
+			function addFive(qty)
+			{
+				var newQty = parseInt(document.getElementById(qty).value);
+				newQty += 5; // newQty = newQty + 5
+				document.getElementById(qty).value = newQty;
+			}
+		</script>
+	*/
+
+	// Use Both Scripts:
+	/*
+		<head>
+			<script src="scripts/main.js"></script>
+		</head>
+		<body>
+			<div class="order_buttons">
+				<p>
+					<input type="button" class="buttons" value="Update Cart" onclick="javascript: document.getElementById("subtotal").innerHTML
+					 = parseFloat(document.getElementById('mantotal').innerHTML)
+					 + parseFloat(document.getElementById('drumtotal').innerHTML)
+					 + parseFloat(document.getElementById('tromtotal').innerHTML);
+					 
+					 // debugger;
+					 document.getElementById('salesTax').innerHTML = (parseFloat(document.getElementById('subtotal').innerHTML) * salesTaxRate).toFixed(2);
+
+					 document.getElementById("grandtotal").innerHTML
+					 = parseFloat(document.getElementById('subtotal').innerHTML)
+					 + parseFloat(document.getElementById('salesTax').innerHTML)
+					 - (parseFloat(document.getElementById('discount').innerHTML)).toFixed(2); />
+				</p>
+				<p>
+					<input type="button" class="buttons" value="Checkout" />
+				</p>
+			</div>
+			<script>
+				const salesTaxRate = .07;
+			</script>
+		</body>
+	// External js takes precedence over internal & inline js. Whatever js is defined first, will run first.
+	// Anything stated externally should not be repeated internally.
+	*/
+
+// Exception Handling
+	// Try and Catch:
+	/*
+	A try-catch block can execute code and capture errors.
+		<p>
+			Enter the number of hours per week you can dedicate to learning:
+			<input type="number" id="learningHours" name="Learning Hours:" onchange="getLearningHours();" />
+		</p>
+		<p id="learningWeeks">
+			&nbsp;
+		</p>
+		<script language="JavaScript">
+			function getLearningHours()
+			{
+				try
+				{
+					document.getElementById('learningWeeks').innerHTML = 'It will take you ' + 20 / parseInt(document.getElementById('learningWeeks'))
+																		  + ' weeks to finish this program';
+				}
+				catch(error)
+				{
+					alert("Error: " + error.description);
+				}
+			}
+		</script>
+	*/
+
+	// Finally:
+	/*
+	A finally block is always executed even if there is an error.
+
+		<p>
+			Enter the number of hours per week you can dedicate to learning:
+			<input type="number" id="learningHours" name="Learning Hours:" onchange="getLearningHours();" />
+		</p>
+		<p id="learningWeeks">
+			&nbsp;
+		</p>
+		<script language="JavaScript">
+			function getLearningHours()
+			{
+				try
+				{
+					document.getElementById('learningWeeks').innerHTML = 'It will take you ' + 20 / parseInt(document.getElementById('learningWeeks'))
+																		  + ' weeks to finish this program';
+				}
+				catch(error)
+				{
+					alert("Error: " + error.description);
+				}
+				finally
+				{
+					document.getElementById('learningWeeks').innerHTML += '<br /> We look forward to seeing you!'
+				}
+			}
+		</script>
+	*/
+
+// Browser Object Model(BOM) Interaction
+	/*
+	// Manage State:
+	Building web applications with many opportunities for interactivity.
+	Many objects have states:
+		An extra window could be open or closed,
+		A browser size could dictate the style sheet used,
+		Objects can be set to be visible or invisible.
+	
+	// JavaScript:
+	Knowing how to use it to manage states of the application and its objects.
+	Know more of the concept of managing states and that JavaScript can perform these tasks.
+	
+	// Browser Object Model (BOM):
+		<p>
+			<input type="button" class="buttons" value="Checkout" onclick="checkoutWindow();" />
+		</p>
+		<p>
+			<input type="button" class="buttons" value="Checkout"onclick="closeCheckout();" />
+		</p>
+		<script>	
+			function addFive(qty)
+			{
+				var newQty = parseInt(document.getElementById(qty).value);
+				newQty += 5; // newQty = newQty + 5
+				document.getElementById(qty).value = newQty;
+			}
+			function checkoutWindow()
+			{
+				checkWin = window.open("checkout.htm", "", "width=300, height=300");
+			}
+			function.closeCheckout()
+			{
+				checkWin.close();
+			}
+		</script>
+	*/
+
+// Display Dialogs:
+	// Alerts, Prompts & Confirm Boxes
+		/*
+		<body onload = "welcome()">
+			<script>
+				function welcome()
+				{
+					yourName = prompt("Enter your name");
+					if (confirm("Is your name correct?") == true)
+					{
+						alert("Welcome, " + yourName);
+					}
+				}
+			</script>
+			</body>
+		*/
+
+	// Determine Screen Size:
+		// <body onload="alert('This screen is ' + screen.width + ' x ' + screen.height)"></body>
+
+// JavaScript Basic Operators
+let x = 6;
+let y = 3;
+
+let sum = x + y // 9
+let sub = x - y // 3
+let mul = x * y // 18
+let div = x / y // 2
+let mod = x % 4 // 2
+
+// let total = x * y + 4 / 2; // 20			(BOMDAS = 18 + 2)
+// let total = x * (y + 4) / 2; // 21		(BOMDAS = 42 / 2)
+
+var element = document.getElementById("p1");
+element.innerHTML = mod;
+
+// JavaScript Math Operators
+	// addition
+		var x = 0;
+		// x = x + 1;
+		// x += 1;
+		// x++;
+		alert(x);
+
+	// subtraction
+		var y = 0;
+		// y = y - 1;
+		// y -= 1;
+		// y--;
+		alert(y);
+
+	// multiplication
+		var z = 10;
+		// z = z * 10;
+		alert(z);
+
+	// division
+		var a = 100;
+		// a = a / 10;
+
+	// modulus
+		var b = 25;
+		// b = b % 2;
+		alert(b);
+
+	// joining strings
+		var c = "Hello";
+		c = c + " Jonathon!"
+
+// Implementing Shorthand Operators:
+	var num1 = 20;
+	var value = 10;
+
+	// num1 = num1 + value; // 30
+	num1 += value;
+	// num1 = num1 - value; // 10
+	num1 -= value;
+	// num1 = num1 * value; // 200
+	num1 *= value;
+	// num1 = num1 / value; // 2
+	num1 /= value;
+
+	console.log(num1)
+
+/*
+Increment and Decrement Operators:
+		<body>
+			<script type="text/javascript">
+				function incAndDec()
+				{
+					var result = 0;
+					// increment (increment before assignment)
+					// document.write((result = ++x) + "<br />");
+
+					// increment (assignment before increment)
+					// document.write((result = x++) + "<br />");
+
+					// decrement (decrement before assignment)
+					// document.write((result = --x) + "<br />");
+
+					// decrement (assignment before decrement)
+					// document.write((result = x--) + "<br />");
+				}
+			</script>
+		</body>
+
+	Basic JavaScript Debugging:
+		<body>
+			<script>
+				function doIt()
+				{
+					var1 = "1";
+					var2 = 1;
+					var3 = true;
+					var4 = new Date;
+					var5 = Math.sin; // math needs to be capitalized
+					var i = "test";
+					var = var6; // undefined variable needs to be assigned
+					document.getElementById("output1").value= typeof var1;
+					document.getElementById("output2").value= typeof var2;
+					document.getElementById("output3").value= typeof var3;
+					document.getElementById("output4").value= typeof var4;
+					document.getElementById("output5").value= typeof var5;
+					document.getElementById("output6").value= typeof var6;
+				}
+			// } this extra closing curly bracket is not needed
+			</script>
+		</body>
+
+	How to Detect a User's Browser and Screen Dimensions:
+		<!DOCTYPE HTML>
+		<html>
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<title>JavaScript</title>
+			<script type="text/javascript">
+				function doIt()
+				{
+					var screenSize = "Screen size: " +
+					window.screen.availWidth + " x " +
+					window.screen.availHeight + "<br/>";
+					var windowSize = "Window size: " +
+					window.innerWidth + " x " +
+					window.InnerHeight + "<br/>";
+					var result = screenSize + windowSize;
+					document.getElementById("output").innerHTML = result;
+				}
+		</head>
+		<body>
+			<input type="button" onclick="doIt()" value="Do It" />
+			<br/><br/>
+			<span id="output"></span>
+		</body>
+		</html>
+
+	Dialog Boxes:
+		<body>
+			<script type="text/javascript">
+				function myAlert()
+				{
+					alert("Hey, what are you looking at?");
+				}
+				function myPrompt()
+				{
+					var food = prompt("What is your favourite summer food?", "BBQ");
+					if(food)
+					{
+						alert("Your favourite summer food is: " + food);
+					}
+					else
+					{
+						alert("You pressed Cancel, or no value was entered.");
+					}
+				}
+				function myConfirm()
+				{
+					var response = confirm("Confirm Test: Continue?");
+					if(response)
+					{
+						alert("Your response was OK!");
+					}
+					else
+					{
+						alert("Your response was Cancel.");
+					}
+				}
+			</script>
+		</body>
+
+	Error/Exception Handling with Try-Catch:
+		trycatch.js:
+			let a = 7 * undefined / "Panama";
+			console.log(a);
+
+		node trycatch.js:
+			NaN
+
+		trycatch.js:
+		function beforeTryCatch()
+		{
+			let obj = undefined;
+			console.log(obj.b);
+			console.log('If the previous line of code throws an exception, you\'ll never see this.');
+		}
+		beforeTryCatch();
+
+		node trycatch.js:
+			TypeError: Cannot read property 'b' of undefined
+
+		trycatch.js:
+		function afterTryCatch()
+		{
+			try
+			{
+				let obj = undefined;
+				console.log(obj.b);
+				console.log('If the previous line of code throws an exception, you\'ll never see this.');
+			}
+			catch (error)
+			{
+				console.log('I caught an exception: ' + error.message);
+			}
+			console.log('My application is still running!');
+		}
+		afterTryCatch();
+
+		node trycatch.js:
+			I caught an exception: Cannot read property 'b' of undefined
+			My application is still running!
+
+		trycatch.js:
+		function afterTryCatch()
+		{
+			try
+			{
+				let obj = undefined;
+				console.log(obj.b);
+				console.log('If the previous line of code throws an exception, you\'ll never see this.');
+			}
+			catch(error)
+			{
+				console.log('I caught an exception: ' + error.message);
+			}
+			finally
+			{
+				console.log('This will happen no matter what!');
+			}
+			console.log('My application is still running!');
+		}
+		afterTryCatch();
+
+		node trycatch.js:
+			I caught an exception: Cannot read property 'b' of undefined
+			This will happen no matter what!
+			My application is still running!
+
+		trycatch.js:
+		function performCalculation(obj)
+		{
+			if(!obj.hasOwnProperty('b'))
+			{
+				throw new Error('Object missing property!');
+			}
+			// continue with calculation of obj.b
+			return 6;
+		}
+
+		function performHigherLevelOperation() {
+			let obj;
+			let value = 0;
+			try
+			{
+				value = performCalculation(obj);
+			}
+			catch (error)
+			{
+				console.log(error.message);
+			}
+			if(value == 0)
+			{
+				// contingency
+				// retry logic
+			}
+		}
+		performHigherLevelOperation();
+
+		node trycatch.js:
+			Cannot read property 'hasOwnProperty' of undefined
+
+		trycatch.js:
+		// let obj = {};
+
+		node trycatch.js:
+			Object missing property!
+
+Supplementary Material:
+	Utilizing Exceptions in JavaScript and HTML5:
+		<script type="text/javascript">
+			function mostBasicExample()
+			{
+				try
+				{
+					var num1 = 10;
+					var num2 = 0;
+					var answer = num1/num2;
+				}
+				catch(error)
+				{
+					alert(error.message);
+				}
+			}
+			function exceptionsForValidation()
+			{
+				var datatocheck;
+				datatocheck = document.getElementById("age");
+				try
+				{
+					if(datatocheck == "")
+						throw "empty";
+					if(isNaN(datatocheck))
+						throw "not a number";
+					if(datatocheck < 18)
+						throw "too low";
+					if(datatocheck > 100)
+						throw "too high";
+				}
+				catch(error)
+				{
+					alert("Input is " + error);
+				}
+			}
+			function finallyExample()
+			{
+				var datatocheck, x;
+				datatocheck = document.getElementById("age");
+				try
+				{
+					if(datatocheck == "")
+						throw "empty";
+					if(isNaN(datatocheck))
+						throw "not a number";
+					if(datatocheck < 18)
+						throw "too low";
+					if(datatocheck > 100)
+						throw "too high";
+				}
+				catch(error)
+				{
+					alert("Input is " + error);
+				}
+				finally
+				{
+					document.getElementById("age").value = "";
+				}
+			}
+			</script>
+
+Quiz (16 Q's in 32 mins (2 mins per Q), >= 80% to Pass: 82.29%):
+	v Q1: Which values are the outputs for x and y?
+			var x = 10;
+			var y = 2;
+			var z = 50;
+			y = x;
+			x = z;
+			document.write(x); // x outputs 50
+			document.write(y); // y outputs 10
+				
+	v Q2: What will be printed when running the above code?
+			var x = 3;
+			var y = 55;
+			var z = 12;
+			var w = 6;
+			var v = 13;
+			x += 5;
+			y -= 15;
+			z /= 3;
+			w *= 20;
+			v %= 2;
+			document.write(x); // x outputs 8
+			document.write(y); // y outputs 40
+			document.write(z); // z outputs 4
+			document.write(w); // w outputs 120
+			document.write(v); // v outputs 1
+
+	x Q3: What will be printed when running the above code?
+			var x = 3;
+			var y = x++;
+			var a = 3;
+			var b = ++a;
+			var z = 10;
+			var w = z--;
+			var c = 10;
+			var d = --c;
+			document.write(x); // x outputs 3		// x outputs 4
+			document.write(y); // y outputs 4		// y outputs 3
+			document.write(a); // a outputs 3		// a outputs 4
+			document.write(b); // b outputs 3		// b outputs 4
+			document.write(z); // z outputs 10		// z outputs 9
+			document.write(w); // w outputs 9		// w outputs 10
+			document.write(c); // c outputs 10		// c outputs 9
+			document.write(d); // d outputs 10		// d outputs 9
+				The increment operator increments
+				(and the decrement operator decrements)
+				the value of a variable by one.
+				If the operator appears before the variable,
+				the value is modified before the expression is evaluated.
+				If the operator appears after the variable,
+				the value is modified after the expression is evaluated.
+
+	v Q4: Add the correct comment symbols below.
+			// Postfix increment
+			/* Below is an example
+			   of Decrement Prefix and Postfix
+			*/
+
+			/*
+	v Q5: Which of these are reserved keywords?
+			myNumber, myDocument = variable name
+			continue, function, blank, case = reserved keyword
+			*/
+
+	/*
+	Q6: The debugger keyword pauses the execution of JavaScript.
+		  If the debugging function is not available, the debugger keyword has no pauses / effect.
+	*/
+
+	/*
+	Q7: Breakpoints allow programmers to pause the code.
+		  This way, they can check variables and then run the code step-by-step to continue processing it.
+	*/
+
+	/*
+	Q8: Which are some variable-naming conventions in JavaScript?
+			You should not use any of the JavaScript reserved keywords as the variable name.
+			It is best practice to use Camel casing when the variable is named using two words.
+	*/
+
+	/*
+	Q9: Which is true of constants in JavaScript?
+				You cannot redeclare a constant.v
+				Constants can be declared with uppercase or lowercase letters, but a common convention is to use all uppercase letters.
+			To declare a variable with constant value, you use the const statement.
+	*/
+
+	/*
+	Q10: A JavaScript Best Practice is to indent statements inside a single function or a group of statements inside a set of curly brackets.
+			True.
+	*/
+
+	/*
+	Q11: A Javascript Block of code, formed and placed on a webpage, is called inline or internal.
+	*/
+
+	/*
+	Q12: Moving your < script > tags to the end of your page will let HTML content render, before the JavaScript is processed, allowing you to present a spinner
+		 (or other message) to the user.
+			True.
+	*/
+
+	/*
+	Q13: Catch: a statement that lets you handle the error.
+		 Finally: a statement that lets you execute code, after try and catch, regardless of the result.
+		 Try: a statement that lets you test a block of code for errors.
+	*/
+
+	/*
+	Q14: What is the output for the code below?
+			try
+			{
+				adlert("Hello World!");
+			}
+			catch (error)
+			{
+				document error.message;
+			}
+			finally
+			{
+				alert("ibbierub");
+			}
+		It will print the error.message & "There is an Error, but I will say Hello to the World anyway!"
+	*/
+
+	/*
+	Q15: confirm(): displays a dialog box with a specified message, along with an OK and a Cancel button.
+		 alert(): displays an alert box with a specified message, and an OK button.
+		 prompt(): displays a dialog box that prompts the user for input.
+	*/
+
+	/*
+	Q16: What does the BOM (Browser Object Model) consist of?
+		The window object and its sub - objects.
+	*/

@@ -1,0 +1,18 @@
+/*
+	Refer back to:
+	import.html
+	import.css
+	paragraphs.css
+
+1. Create and save the style sheet as "headings.css" alongside the HTML
+file then to specify the appearance of headings.
+*/
+
+h1 {
+	color: red;
+	font-family: "Script", cursive
+}
+
+h2 {
+	color: green
+}

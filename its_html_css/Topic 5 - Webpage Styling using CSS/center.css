@@ -1,0 +1,36 @@
+﻿/*
+    Refer back to:
+    center.html
+1. Create a linked style sheet containing a style rule to specify default
+width, margin, and colors for each element.
+2. Next add a style rule overwriting the previous rule for inner elements.
+3. Now add a rule to center inner elements.
+4. Finally add a style rule to center content within an inner element.
+5. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the centered content boxes and centered content.
+When the browser window gets resized the second outer "div" element
+automatically gets repositioned to become horizontally centered again.
+*/
+
+div {
+    width: 20em;
+    margin: 0 0 2em 0;
+    border: 0.1em solid black;
+    background: orange
+}
+
+div.inner {
+    margin: 0;
+    width: 10em;
+    background: yellow
+}
+
+div.center {
+    margin: auto;
+    background: aqua
+}
+
+div.center-text {
+    text-align: center;
+    background: lime
+}

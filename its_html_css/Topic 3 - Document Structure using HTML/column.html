@@ -1,0 +1,51 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections, with a link element
+pointing to a style sheet.
+3. Within the body section, insert a table element that includes an identity for
+styling purposes and a caption.
+4. Next, in the table, insert a column group that includes a class name for
+styling and contains a single column.
+5. Now, insert two more column groups that include class names for both group
+styling and individual styling.
+6. After the column groups, insert a table header, a table footer, and a table
+body – each with six columns.
+Refer to:
+column.css
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Column Styling</title>
+    <link type="text/css" rel="stylesheet"
+          href="column.css" media="screen" />
+</head>
+<body>
+    <table id="jfk">
+        <caption>Breakfast Flights</caption>
+        <colgroup class="sidebar">
+            <col />
+        </colgroup>
+        <colgroup class="info">
+            <col class="stripe" />
+            <col />
+            <col class="stripe" />
+        </colgroup>
+        <colgroup class="info">
+            <col />
+            <col class="stripe" />
+        </colgroup>
+        <thead>
+            <tr><th colspan="6">
+        </thead>
+        <tfoot>
+            <tr><td colspan="6">
+        </tfoot>
+        <tbody>
+            <!--Rows-->
+        </tbody>
+    </table>
+</body>
+</html>

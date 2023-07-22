@@ -1,0 +1,396 @@
+Topic 2: CSS Fundamentals
+
+Learning Material:
+Chapter 1:
+1.	Introducing CSS
+2.	Understanding the Cascade
+3.	Creating Style Rules
+4.	Applying Internal Style Rules
+5.	Linking an External Style Sheet
+6.	Importing other Style Sheets
+7.	Summary
+
+Chapter 1:
+1.	Introducing CSS
+Cascading Style Sheets (CSS) is a language used to control the presentation of elements within HyperText Markup
+Language (HTML) documents. Presentation is specified by "styles" that may be assigned "inline" to HTML element style
+attributes, or by "rules" within <style> </style> tags in the HTML document's head section, or as rules within
+separate style sheets.
+Each style rule selects specified elements then applies specified styles to them. The W3C is an international
+consortium whose members work together to develop web standards. The CSS home page can be found on the W3C website
+at: http://www.w3.org/Style/CSS
+CSS was created by the World Wide Web Consortium (W3C) to regain control of document markup as HTML grew from the
+initial few "tags" that merely defined the structural elements of a document – headings, paragraphs, hyperlinks,
+and lists.
+As further tags were added controlling images, text color, font size, and background color, it became recognized
+that the source code of many web pages often contained a great deal of markup for very little actual content.
+The W3C offered a solution to regain control of document markup by separating their structural and presentational
+aspects. HTML tags would continue to control the structure but presentational aspects would now be contolled by
+"style rules" written in the Cascading Style Sheet (CSS) language. Besides distinguishing between structural and
+presentational aspects of a document, the CSS solution brings these additional benefits:
+	1. Easier Maintenance:
+	A single style sheet can control multiple HTML documents, so changing appearance across an entire website is
+	possible by editing just one style sheet.
+	2. Smaller File Sizes:
+	Removal of all presentational markup from HTML produces smaller files, which download faster.
+	3. Greater Control:
+	Margins, borders, padding, background color, and background images to any HTML element, and the appearance of
+	certain parts of the interface, such as the cursor, can now be specified.
+The CSS level 3 specification (CSS3) is divided into modules that allow enhancements such as rounded borders,
+drop-shadows, gradient color-fills, and animation effects.
+
+2.	Understanding the Cascade
+The term "Cascading" in CSS describes the manner in which style rules can fall from one style sheet to another.
+The cascade determines which style rule will have precedence over others and be the one applied to the selected HTML
+element.
+There are other style sheet languages, such as the eXtensible Stylesheet Language (XSL), but CSS is by far the most
+popular style sheet language.
+There are three basic types of style sheet that can specify style rules to be applied to HTML elements:
+	1. Browser (Default) Style Sheet:
+	Browsers employ an intrinsic set of style rules that they apply to all web pages by default.
+	These vary slightly between different browsers but all have common features, such as black text and
+	blue hyperlinks.
+	2. User Style Sheet:
+	Most browsers allow the user to specify their own appearance preferences, which effectively creates a custom
+	style sheet that overrides the browser's default style sheet.
+	3. Author Style Sheet:
+	Where the HTML document specifies a style sheet created by the web page author, the browser will apply the
+	style rules it contains, overriding both the user style sheet and the default browser style sheet.
+So the cascade means that the browser will typically:
+	Apply the style rules in an author style sheet, if present.
+	Otherwise, it will apply the style rules in a user style sheet, if present.
+	Otherwise, it will apply the style rules in the browser's style sheet by default.
+
+3.	Creating Style Rules
+In CSS, each style rule is comprised of TWO main parts:
+	1. Selector – specifying which element/s of the HTML document are the target of that rule.
+	2. Declaration Block – specifying how properties of the selected target element should be styled.
+A style rule (or "style rule set") begins with the selector, followed by the declaration block within a pair of
+curly brackets (braces). The braces contain one or more declarations that each specify a property and a valid value
+for that property, as in this example:
+	Selector: h1
+		{Declaration Block}
+		Property: Value; Property: Value
+Typically the selector targets (selects) a particular HTML element for styling – such as all <h1> heading elements
+in the document using the style rule set example above.
+The declaration block in the example above contains two declarations to determine the foreground and background
+colors of the selected target elements. The CSS color property is assigned a blue value – so each <h1> heading
+element will have blue foreground text. Similarly, the CSS background property is assigned a yellow value – so each
+<h1> heading element will have a yellow background.
+In conformance with the CSS specifications, the examples listed throughout this book do not add a semi-colon
+terminator after the final declaration in a declaration block.
+Notice how the CSS declaration uses a : colon character to assign a value to a property. Notice also that it
+requires the declarations to be separated by a ; semi-colon character.
+The final declaration in the declaration block does not need to be terminated by a semi-colon. However, some web
+page authors prefer to habitually terminate all CSS declarations so they need not remember to add a separating
+semi-colon when adding further declarations to an existing style rule set:
+	1. When creating a new CSS style rule the author must initially specify a selector to target the HTML element
+	to which the rule will be applied – strictly speaking, the CSS selector is everything that appears before the
+	opening brace of the declaration block: h1
+	2. Next the declaration block must be created by adding a pair of braces after the selector: h1 {}
+Whitespace (spaces, tabs, line feeds, and carriage returns) is permitted within style rule sets to allow the author
+to format the style rules to their own preference. Typically style rule sets with fewer than four declarations are
+written on a single line, otherwise they are written across multiple lines for clarity.
+	3. Now a declaration can be inserted within the declaration block to assign a value to a property:
+		h1 {color: blue}
+	4. A second declaration can then be added within the declaration block, separated from the first by a
+	semi-colon:
+		h1 {color: blue; background: yellow}
+	5. The style rule set is now complete but can also be applied to another HTML element by extending the selector
+	to become a comma-separated list:
+		h1, h2 {color: blue; background: yellow}
+	6. Further style rule sets can then be added below the first style rule set to target other elements:
+		h1, h2 {color: blue; background: yellow}
+		p {color : red}
+
+4.	Applying Internal Style Rules
+A style sheet is simply a collection of style rule sets to be applied to an HTML document. An internal style sheet
+can be created by inserting the style rule sets between <style> and </style> tags in the head section of the HTML
+document.
+The opening <style> tag should include a type attribute assigned a MIME type of "text/css" to describe the style
+sheet as using the CSS language. Optionally, this tag may also include a media attribute assigned a "screen" value
+to specifically describe the viewing medium as a color computer screen – although this is the default value if the
+media attribute is omitted.
+MIME (Multipart Internet Mail Extension) types describe file types:
+	text/html for HTML files,
+	text/javascript for scripts,
+	text/css for style sheets.
+All modern web browsers support CSS but if you wish to hide the internal style sheet from older browsers the style
+rule sets can be enclosed within <!-- and --> HTML comment tags.
+
+Refer to:
+internal.html
+
+5.	Linking an External Style Sheet
+An external style sheet style is simply a collection of style rule sets listed
+in a plain text file, such as those created by Windows' Notepad application, then
+saved with a ".css" file extension. The style sheet can then be linked to HTML
+documents using a <link> tag. This must include a type attribute assigned a MIME
+type of "text/css" to denote using the CSS language, a rel attribute assigned a
+"stylesheet" relationship value, and an href attribute assigned the path to the
+style sheet file. Optionally, this tag may also include a media attribute assigned
+a "screen" value to describe the viewing medium as a color computer screen –
+although this is the default value if the media attribute is omitted.
+
+Refer to:
+external1.html
+&
+external2.html
+
+6.	Importing other Style Sheets
+Multiple external style sheets can be used to control different aspects of HTML
+documents using @import directives to specify the path to each CSS file. These
+must be placed before any other rules in the style sheet and be terminated by a
+semi-colon.
+
+Refer to:
+import.html
+import.css
+headings.css
+paragraphs.css
+
+7.	Summary
+• CSS is a language provided by the W3C to regain control of markup by separating
+document structure from presentation.
+• The cascade allows style rules to fall from one style sheet to another and
+determines which style rule will be applied.
+• Each style rule comprises of a selector and a declaration block.
+• Each declaration specifies a property and a value to be applied to that property,
+separated by a : colon character.
+• A style rule set contains multiple declarations, each separated from the next by
+a ; semi-colon character.
+• The final declaration in a declaration block need not be terminated with a ;
+semi-colon character.
+• An internal style sheet is a collection of style rules contained within
+<style> </style> tags in the head section of an HTML document.
+• Style rules can also be applied inline by assigning properties and values to the
+style attribute of an HTML element.
+• Inline style rules are difficult to maintain and should be avoided.
+• External style sheets are recommended to cleanly separate structure and
+presentation – internal style sheets should only be created in special
+circumstances.
+• An external style sheet is a collection of style rule sets listed in a plain
+text file saved with a .css file extension.
+• An HTML document can link an external style sheet file by adding a <link>
+element in the document's head section.
+• Each <link> element must contain rel, type, and href attributes.
+• The MIME type of CSS is text/css.
+• All @import directives must appear before other rules in a style sheet and must
+be terminated with a ; semi-colon character.
+
+Chapter 2:
+1.	Selecting by Element Type
+2.	Selecting by Class
+3.	Selecting by Identity
+4.	Selecting Descendants
+5.	Selecting by Relationship
+6.	Selecting by Attribute
+7.	Selecting Partial Attributes
+8.	Evaluating Importance
+9.	Summary
+
+Chapter 2:
+1.	Selecting by Element Type
+The selector part of a style rule selects elements in an HTML document to be
+styled according to the values specified in that rule's Declaration Block.
+A "type" selector selects all elements in the page that match the selector.
+Multiple elements can be selected by a type selector that specifies a
+comma-separated list of element types.
+
+Refer to:
+type.html
+&
+type.css
+
+2.	Selecting by Class
+As an alternative to selecting elements by type, a class selector can select HTML
+elements that contain a class attribute that has been assigned a value matching
+the selector. The class selector begins with a period character followed by the
+class value to match. This is especially useful to apply the style rule across a
+number of specific elements of different type.
+Additionally a class selector can be combined with a type selector to select
+specific instances of a class. In this case the selector first specifies the
+element type, followed by a period character and the class value to match.
+
+Refer to:
+class.html
+&
+class.css
+
+3.	Selecting by Identity
+Similar to a class selector, an ID selector can select HTML elements that contain
+an id attribute that has been assigned a value matching the selector. The ID
+selector begins with a # hash character followed by the ID value to match. This is
+mostly useful to apply the style rule to one specific element as each id attribute
+value must be unique within the HTML document.
+Optionally an ID selector can be combined with a type selector simply to identify
+the element type. In this case the selector first specifies the element type,
+followed by a hash character and the ID value to match.
+
+Refer to:
+id.html
+&
+id.css
+
+4.	Selecting Descendants
+A descendant selector can be used in a style rule to select HTML elements by
+reference to an outer containing element from which they "descend". For example,
+a span element within a paragraph element descends from the paragraph element –
+so a descendant selector of p span could be used to select it for styling.
+
+Refer to:
+descendants.html
+&
+descendants.css
+
+5.	Selecting by Relationship
+Style rules can select elements for styling using the HTML document structure
+itself. The elements in all HTML documents are arranged in a hierarchical manner
+descending from the root <html> element. The next level contains the <head> and
+<body> elements. These each contain nested elements that may, in turn, contain
+further nested elements, and so on to complete the hierarchy. The hierarchy of a
+simple HTML document could resemble this tree view:
+This tree view represents the HTML document in the example opposite.
+The hierarchy between a containing element and a nested element on the next
+hierarchical level can be described as a parent-child relationship. So <html> is
+the parent of the <head> and <body> elements, who are themselves children of the
+<html> element. Similarly, the <head> element is the parent of the <meta>, <title>
+and <link> child elements, and the <h3>, <p>, and <ul> elements are all children
+of the <body> parent element.
+A style rule child selector can select specific child elements by stating the
+parent name followed by the > right angled-bracket character then the child name.
+For example, a child selector of p > span selects all span elements within
+paragraph elements.
+As with people, all elements are a parent or a child, or in many cases they are
+both.
+The child selector can even state the hierarchy completely back to the root
+element if preferred, such as html > body > p > span.
+Another selector that selects elements by relationship is the adjacent sibling
+selector. This selects the first sibling element after a specified element – by
+stating the specified element name followed by the + plus character then the
+sibling name. For example, an adjacent sibling selector of h3 + p selects any
+<p> paragraph element that immediately follows a <h3> heading element where both
+have the same parent.
+
+Refer to:
+relationship.html
+&
+relationship.css
+
+6.	Selecting by Attribute
+Style rules can select HTML elements for styling by matching an attribute that
+the element contains. The selector in this case specifies the attribute name
+within square brackets. For example, a selector of *[src] would select all
+elements containing a src attribute – irrespective of their assigned values.
+Additionally, the attribute selector can specify multiple attributes to select
+only those elements containing all the specified attributes. For example, a
+selector of *[src][alt] would select all elements containing both src and alt
+attributes – irrespective of their assigned values.
+More specific selection is possible by stating an assigned value to match in the
+selector. For example, a selector of *[lang = "en"] would select all elements
+containing a lang attribute that have an assigned value of "en".
+
+Refer to:
+attribute.html
+&
+attribute.css
+
+7.	Selecting Partial Attributes
+Style rules can select HTML elements for styling by matching partial attribute
+values. This allows the selector to target an element based upon the presence of
+any single word in an attribute containing a space-separated list of words.
+Typically, this technique might be used to match one of the words assigned to the
+class attribute of an HTML element.
+Beware: Do not insert a space in the ~= or |= syntax.
+The syntax to match a single word in an attribute list adds a ~ tilde character
+to the selector, such as *[class ~= "word"] – to match all elements that have a
+class attribute assigned a "word" value.
+Additionally, a style rule selector can select an HTML element for styling by
+matching the beginning of an assigned attribute value. Typically, this technique
+might be used to match values assigned to HTML lang attribute values or a series
+of images.
+The syntax to match the beginning of a value assigned to an HTML attribute adds a
+| pipe character to the selector, such as *[lang |= "es"] – to match all elements
+that have a lang attribute assigned a value beginning with "es".
+
+Refer to:
+partial.html
+&
+partial.css
+
+8.	Evaluating Importance
+After the cascade considers the origin of style rules, as described on page 11,
+the browser then evaluates their "weight" to determine which rules have most
+weight and should, therefore, be applied.
+Weight can be added to any style rule by including a CSS !important declaration
+to elevate its status. For example, the rule h2 {color: red !important} takes
+precedence over another rule of h2 {color: blue} and the red color will be
+applied.
+Don't Forget: The * wildcard selector has a zero specificity value of 0,0,0,0.
+Although regular Author style sheet rules take precedence over regular User and
+Browser style sheet rules, an !important User style sheet rule overrides an
+!important Author style sheet rule. So the cascade sorts style sheet rules by
+origin and weight into this order, from most weight to least weight:
+1. !important User style sheet rules
+2. !important Author style sheet rules
+3. regular Author style sheet rules
+4. regular User style sheet rules
+5. regular Browser style sheet rules
+Where more than one style rule of equal weight targets properties of the same
+element the browser then evaluates their importance by examining their selector's
+"specificity" – to consider how specifically each one targets the element. The
+specificity evaluation process awards points for each selector component, which
+get stored in four "registers" for later comparison against the specificity value
+of conflicting selectors. So the specificity value can be expressed as a
+comma-separated list – in which 0,0,0,0 is a zero specificity value. The selector
+component points are awarded like this:
+1. For each element and pseudo-element in the selector add 0,0,0,1
+2. For each class attribute value, attribute selection, or pseudo-class in the
+selector add 0,0,1,0
+3. For each id attribute in the selector add 0,1,0,0
+4. For inline style attribute declarations add 1,0,0,0
+In comparing specificity values the registers are examined individually, reading
+from left to right, until a difference is found. The style rule with the highest
+value in that register is then applied, For example, in comparing specificity
+values of 0,1,0,0 and 0,0,0,1 a difference occurs in the second register.
+
+Refer to:
+importance.html
+&
+importance.css
+
+9.	Summary
+• A type selector selects all elements of the specified type and multiple elements
+can be specified as a comma-separated list.
+• The * universal selector can be used to select all elements.
+• The class selector selects all elements containing a class attribute that has
+been assigned a specific value.
+• The # ID selector selects all elements containing an id attribute that has been
+assigned a specific value.
+• A descendant selector specifies both an element type and a type of element from
+which it descends, separated by space.
+• A > child selector specifies both the parent element type and the child element
+type from which it descends, to select the child elements.
+• The + adjacent sibling selector specifies an element type and the element type
+of an adjacent sibling to be selected.
+• The [] attribute selector specifies an element type followed by the name of an
+attribute within square brackets, to select all specified elements containing
+that attribute.
+• Optionally, a [] attribute selector can also specify an attribute value within
+the brackets to select only elements of the specified type that contain a
+specified attribute of that value.
+• An attribute selector can match a single word in an attribute list using the
+~= syntax in the square brackets.
+• An attribute selector can match the beginning of an attribute value using the
+|= syntax in the square brackets.
+• A style rule can be made to override another by adding an !important declaration
+to elevate its status.
+• After the cascade arranges style rule importance by origin, it then considers
+their weight and specificity to determine which rules should be applied.
+
+Q9: Which is a CSS font best practice?
+The user should take control over fonts that are displayed on their website and not make it possible for a viewer to use their own default fonts.
+
+Q10: Which are common web safe font combinations?
+Arial, Helvetica, sans-serif;
+'Courier New', Courier, monospace

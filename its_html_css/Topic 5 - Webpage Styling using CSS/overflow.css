@@ -1,0 +1,67 @@
+﻿/*
+    Refer back to:
+    overflow.html
+1. Create a linked style sheet with rules that specify the absolute
+position and size of each div element.
+2. Add a style rule that allows the first image to be automatically
+cropped to the full image size.
+3. Next add style rules that crop the visible part of the second and
+third image to reveal only those parts of the image within specified
+coordinates.
+The ability to toggle content visibility, between visible and hidden,
+presents exciting dynamic possibilities.
+4. Now add a style rule that allows those parts of the fourth image that
+overflow the content box to be visible.
+5. Add a style rule to hide those parts of the fifth image that overflow
+the content box.
+6. Finally add a style rule to hide those parts of the sixth image that
+overflow the content box and provide scroll bars so hidden parts can be
+viewed.
+7. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the cropped images and compare how the overflow
+is handled.
+*/
+
+div.crop {
+    position: absolute;
+    top: 20px;
+    width: 100px;
+    height: 100px
+}
+
+div.spill {
+    position: absolute;
+    top: 150px;
+    width: 75px;
+    height: 75px
+}
+
+div.auto-clip {
+    left: 20px;
+    clip: auto
+}
+
+div.blok-clip {
+    left: 140px;
+    clip: rect(25px, 100px, 100px, 25px)
+}
+
+div.line-clip {
+    left: 260px;
+    clip: rect(25px, 100px, 50px, 0px)
+}
+
+div.show-overflow {
+    left: 20px;
+    overflow: visible
+}
+
+div.hide-overflow {
+    left: 140px;
+    overflow: hidden
+}
+
+div.keep-overflow {
+    left: 260px;
+    overflow: scroll
+}

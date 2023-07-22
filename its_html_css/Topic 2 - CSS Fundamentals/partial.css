@@ -1,0 +1,26 @@
+/*
+Refer back to:
+partial.html
+1. Create a style sheet with a rule to select elements in the ordered list according
+to the value assigned to their class attributes.
+2. Now add a rule to select elements in the unordered list according to the
+beginning of the value assigned to their lang attributes.
+3. Next add rules to select img elements according to the beginning of the value
+assigned to their src attributes.
+4. Save the style sheet alongside the HTML document then open the web page in a
+browser to see styles applied by selecting partial attribute values.
+*/
+
+*[class ~= "animal"] {
+    background: lime
+}
+*[lang |= "es"] {
+    color: red;
+    background: yellow
+}
+*[src |= "ring"] {
+    background: fuchsia
+}
+*[src |= "box"] {
+    background: aqua
+}

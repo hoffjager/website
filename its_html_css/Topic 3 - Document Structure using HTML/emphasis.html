@@ -1,0 +1,35 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections.
+3. Within the body section, add a paragraph that emphasizes some text without
+affecting the meaning of the sentence.
+4. Next, within the body section, add paragraphs that emphasize some text to
+affect the meaning of the sentence.
+5. Save the HTML document, then open it in your web browser to see how the text
+has been emphasized.
+The <b> tag should be avoided wherever possible, but one legitimate use is to
+markup the lead sentence of an article.
+Refer to:
+    emphasis.css
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Emphasis Example</title>
+        <link type="text/css" rel="stylesheet"
+              href="emphasis.css" media="screen" />
+    </head>
+    <body>
+        <p>
+            <strong class="warning">Warning!<br /></strong>This dungeon is dangerous.<br />
+            <strong class="ducks">Avoid the ducks.</strong><br />Take any gold you find.<br />
+            <strong class="diamonds">Do not take any of the diamonds, they are explosive.<br /></strong>
+            You have been warned.
+        </p>
+        <p><em>Puppy dogs </em>are so cute!</p>
+        <p>Puppy dogs are <em>so</em> cute!</p>
+        <p>Puppy dogs are so <em>cute!</em></p>
+    </body>
+</html>

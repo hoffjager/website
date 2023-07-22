@@ -1,0 +1,25 @@
+﻿/*
+    Refer back to:
+    figure.html
+1. Create a style sheet to position each captioned figure and to specify
+some font styles.
+*/
+
+figure#front-stack{
+    float:left;
+    margin-top: 0px;
+}
+
+figure#back-stack{
+    float:right;
+    margin-top: 0px;
+}
+
+figcaption{
+    font-size:smaller;
+    color:red;
+}
+
+p:first-letter{
+    font-size:xx-large;
+}

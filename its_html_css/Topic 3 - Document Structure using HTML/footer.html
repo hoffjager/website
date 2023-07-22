@@ -1,0 +1,52 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections, with a link element
+pointing to a style sheet.
+3. Within the body, insert a main document heading.
+4. Next, within the body, just before its closing tag, insert a document footer
+containing page navigation hyperlinks.
+5. Next, within the document footer, insert copyright details.
+The HTML5 <aside> and <nav> elements may also each contain a <footer> element.
+6. Now, within the body, between the document heading and document footer, insert
+two articles that each contain an article heading, a paragraph, and an article
+footer.
+Refer to:
+    footer.css
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <title>Footer Example</title>
+    <link type="text/css" rel="stylesheet"
+          href="footer.css" media="screen" />
+</head>
+<body>
+    <h1 id="top">Interesting Articles</h1>
+    <article>
+            <h2 id="art-1">Sally's Article</h2>
+            <p>Article content...</p>
+            <footer>
+                <address>jonnygrealish64@gmail.com</address>
+            </footer>
+        </article>
+        <article>
+            <h2 id="art-2">Terry's Article</h2>
+            <p>Article content...</p>
+            <footer>
+                <address>nonnygrealish64@gmail.com</address>
+            </footer>
+        </article>
+        <br />
+        <footer id="page">
+            <nav>
+                <a href="#art-1">Sally's Article</a> -
+                <a href="#art-2">Terry's Article</a> -
+                <a href="#top">Top of Page</a>
+            </nav>
+            <small>Copyright &copy; 2023 Example Corporation</small>
+        </footer>
+    </body>
+</html>

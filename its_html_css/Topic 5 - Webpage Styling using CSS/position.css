@@ -1,0 +1,34 @@
+﻿/*
+Refer back to:
+    position.html
+1. Create a linked style sheet containing rules to style the spans and
+paragraphs.
+2. Now add rules to position paragraph background images using keywords
+and percentages.
+3. Finally add a rule to fix a background image in the page that will
+remain positioned when the page gets scrolled.
+4. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the positioned background images.
+*/
+
+span {
+    background: yellow;
+    margin: 0 0 0 10em
+}
+
+p {
+    background: url(tile.png) fuchsia no-repeat;
+    height: 3.5em
+}
+
+p#p1 {
+    background-position: bottom left
+}
+
+p#p2 {
+    background-position: 20% 50%
+}
+
+body {
+    background: url(tile.png) no-repeat bottom right fixed
+}

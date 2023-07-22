@@ -1,0 +1,19 @@
+﻿/*
+Refer back to:
+olist.html
+1. Create a style sheet to position the lists and to specify how the items should
+be numbered.
+2. Save the HTML document and style sheet, then open the web page in your
+browser to see the list numbering.
+*/
+
+ol {
+    display: table-cell}
+
+ol #list-2 {
+    padding-right: 20px}
+
+ol #list-3 {
+    list-style-type: upper-roman;
+    padding-left: 50px;
+    border-left: 3px dashed black}

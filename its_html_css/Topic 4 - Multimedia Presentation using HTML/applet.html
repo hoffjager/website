@@ -1,0 +1,49 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections.
+Java applet parameters are specific to each applet, and are given in the
+documentation that accompanies the applet.
+3. Within the body section, insert a paragraph wrapper.
+4. Within the paragraph, insert an applet object to embed.
+5. Before the fallback text within the object element, insert a
+parameter specifying the applet resource's URL.
+6. Next, within the object element, insert parameters defining data to
+be used by this particular applet.
+This particular Java applet also lets you specify custom colors and
+legend details. These are unlisted here due to the limitations of
+page space.
+7. Save the HTML document alongside the specified resource file, then
+open the web page to see it embedded.
+If fallback text is included, it should appear just before the closing
+</object> tag.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Embedding Applet Example</title>
+</head>
+<body>
+    <p>
+        This is text in the main document that...<br />
+        <object type="application/x-java-applet"
+                width="580" height="300">
+            <param name="code" value="barchart.class" />
+            <param name="title" value="Web Browser Popularity" />
+            <param name="val_1" value="23" />
+            <param name="description_1" value="Internet Explorer" />
+            <param name="val_2" value="11" />
+            <param name="description_2" value="Mozilla Firefox" />
+            <param name="val_3" value="55" />
+            <param name="description_3" value="Google Chrome" />
+            <param name="val_4" value="4" />
+            <param name="description_4" value="Apple Safari" />
+            <param name="val_5" value="6" />
+            <param name="description_5" value="Microsoft Edge" />
+            [Java Applet - Requires Java Runtime Environment (JRE)]
+        </object>
+        <br />...continues around an embedded resource.
+    </p>
+</body>
+</html>

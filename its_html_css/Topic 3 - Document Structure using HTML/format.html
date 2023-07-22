@@ -1,0 +1,40 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections.
+3. Within the body section, insert a paragraph containing a side comment for
+legal purposes.
+4. Next, insert a large heading and a regular paragraph.
+5. Now, insert a paragraph that has been deleted.
+6. Then, insert a paragraph that has been added.
+7. Finally, insert a paragraph that has been added, which contains a text snippet
+that has been changed.
+8. Save the HTML document, then open it in your web browser to see how the text
+has been formatted.
+The <big> and <tt> tags in the previous version of HTML are now obsolete, as they
+were seen as presentational.
+The <small> tag does not denote content of lesser importance, only that it is a
+side comment to surrounding text.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Format Example</title>
+</head>
+<body>
+    <p>
+        Example Corp today announced record profits for Q2 <br />
+        <small>(Full Disclosure: EG News is a subsidiary of Example Corp)</small>,<br />
+        leading to speculation about a merger with Demo Group.
+    </p>
+    <hr />
+    <h1>To Do List</h1>
+    <p>Empty the dishwasher</p>
+    <del><p>Take out the trash</p></del>
+    <ins><p>Sweep the yard</p></ins>
+    <ins>
+        <p>Feed the <del>dog</del> <ins>cat</ins>.</p>
+    </ins>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿/*
+    Refer back to:
+    table.html
+1. Create a style sheet rule to specify table width and its features.
+2. Next add style rules to color each table cell and caption.
+3. Now add a style rule to specify a fixed size column scheme for the
+second table.
+4. Save the style sheet alongside the HTML document then open the web
+page in a browser to see tables drawn with both automatic and fixed
+layout schemes.
+*/
+
+table {
+    width: 500px;
+    border: 3px dashed blue;
+    caption-side: top;
+    text-align: center;
+    margin: 0 0 20px
+}
+
+td {
+    border: 3px solid red;
+    background: yellow
+}
+
+caption {
+    background: aqua
+}
+
+table.fix {
+    table-layout: fixed
+}

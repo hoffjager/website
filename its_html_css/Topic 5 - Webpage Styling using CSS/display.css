@@ -1,0 +1,32 @@
+﻿/*
+Refer back to:
+    display.html
+1. Create a style sheet rule to display one list's items inline.
+2. Add another style rule to run one heading block into the following
+paragraph block.
+3. Then add a style rule to change the inline hyperlink content boxes
+into inline blocks so their height and width can be adjusted.
+4. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the content displayed in default and non-default
+display formats.
+Assigning a non-default display type to an element only changes the way
+it gets displayed – in the document tree inline elements are always
+descendants of block-level elements.
+*/
+
+ul.line li {
+    display: inline;
+    background: aqua
+}
+
+h2.run {
+    display: run-in;
+    background: yellow
+}
+
+p * {
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    background: lime
+}

@@ -1,0 +1,1461 @@
+﻿Topic 3: Document Structure using HTML
+
+Chapter 3:
+	Working the body
+	Inserting paragraphs
+	Including quotations
+	Emphasizing text
+	Reading the small print
+	Marking text
+	Keeping preformatted text
+	Modifying text
+	Including code in text
+	Giving tooltip advice
+	Adding images
+	Directing languages
+	Summary
+
+Chapter 3:
+	Working the body
+Every HTML5 document should contain exactly one opening <body> tag and exactly
+one matching closing </body> tag – defining the body section to contain all
+document content that is intended for display in the web browser window.
+Scripts and style sheets are best contained in separate files and incorporated
+into the HTML document by <script> and <link> elements placed within its head
+section.
+The body section of an HTML document should not contain any meta data, scripts,
+or style sheets – <meta>, <script>, and <link> elements all belong in the head
+section.
+Uniquely, the opening <body> tag may contain an attribute to reference the “load”
+event that occurs when the page has completely loaded in the web browser. The
+onload attribute is useful when scripting to respond to the load page event.
+The onload attribute references the same load event that was used in the example
+here to create an “event-handler” function. Within the <body> tag, the onload
+attribute can specify the name of a script function to call when the load event
+occurs.
+In scripting terms, onload and alert() are both members of the window object, so
+you may find them written in scripts as window.onload and window.alert() – but as
+the window object is top-level in the document object hierarchy, the window.
+prefix is unnecessary.
+Alternatively, short script “snippets” can simply be assigned to the attributes
+within the HTML <body> tag. For example, the onload attribute could call upon the
+intrinsic alert() function to launch an alert dialog whenever that page gets
+loaded. This function can specify a message to be displayed by the dialog as a
+text string within quotes between the function parentheses.
+With entire attribute values surrounded by double quotes, it is important to
+enclose the message text string within single quotes to avoid terminating the
+attribute value prematurely, like this:
+<body onload = "alert('Greetings!')">
+If double quotes were used throughout in the example above, the attribute value
+would become:
+“alert(”.
+This principle of differentiating text strings must be applied to any attribute
+value that contains a “nested” quote.
+The onload event call to the alert() function relies upon the browser being
+enabled for JavaScript in order to launch the dialog. A <noscript> element can be
+incorporated in the document body to advise the user when JavaScript is disabled.
+The onload attribute is a remnant from earlier versions of HTML. It is better to
+specify event- handler functions in a script file – in line with the aim of HTML5
+to separate content from presentation.
+
+Refer to:
+body.html
+
+	Inserting paragraphs
+All text content is traditionally separated into sentences and paragraphs, to be
+more easily read and more readily understood. This is also true for text content
+in HTML5 documents, and their paragraphs are contained within <p> </p> tags. Each
+paragraph element is visually separated from the next one by the browser –
+typically leaving two empty lines between them.
+Text within a paragraph will normally automatically wrap to the next line when it
+meets the element’s edge, but it can be forced to wrap sooner by inserting a
+line break <br> tag.
+For emphasis, a horizontal rule <hr> tag can be inserted between paragraphs to
+draw a line separating them. The <hr> tag cannot, however, be inserted inside a
+paragraph to separate sentences. You may be surprised to find the <hr> tag in
+HTML5, as it would seem to perform a purely presentational function. It is,
+however, described in the specifications as representing a “paragraph-level
+thematic break”, such as a scene change in a story.
+The <br> tag and <hr> tag are both single tags that need no matching closing tag.
+
+Refer to:
+paragraph.html
+
+	Including quotations
+It is important to recognize that some HTML5 elements produce a rectangular block
+area on the page in which to display content, while others merely produce a small
+block on a line within an outer containing block. These are referred to as “flow”
+and “phrasing” elements. Phrasing elements, which produce a small block on a line,
+must always be enclosed by a flow element, which produces the larger containing
+block, such as <p> </p>. The difference between flow elements and phrasing
+elements can be seen by contrasting how web browsers display the two HTML elements
+that are used to include quotations in documents.
+The <blockquote> </blockquote> tags are intended to surround long quotations from
+another source, which can be specified by its cite attribute. For this element,
+the browser typically produces a rectangular block area to contain the quotation,
+starting on a new line and indented from surrounding content – so <blockquote>
+is a flow element.
+The <q> </q> tags, on the other hand, are intended to surround short quotations
+from another source, which can be specified by its cite attribute. For this
+element, the browser typically produces a small block area on the current line to
+contain the quotation – so <q> is a phrasing element.
+Unlike the <blockquote> flow element, the <q> phrasing element causes the browser
+to automatically add quotation marks around the element’s content when it gets
+displayed on the page. Ideally, these should be double quotation marks surrounding
+the entire element content, and single quotation marks around any inner nested
+quotations, but its implementation may vary.
+
+Refer to:
+quote.html
+&
+quote.css
+
+	Emphasizing text
+HTML5 provides four phrasing elements that can be used to emphasize text within
+the body of a document:
+• Text enclosed between <b> </b> tags is enhanced without conveying extra
+importance, such as keywords in a paragraph – typically displayed in a bold font.
+• Text enclosed between <i> </i> tags is enhanced without conveying extra
+importance, such as technical terms in a paragraph – typically displayed in an
+italic font.
+• Text enclosed between <strong> </strong> tags gains increased importance,
+without changing the meaning of the sentence – typically displayed in a bold font.
+• Text enclosed between <em> </em> tags should be stressed to deliberately affect
+the meaning of the sentence – typically displayed in an italic font.
+It is perhaps surprising that the <b> and <i> tags remain in HTML5, as they
+outwardly suggest that content should be presented in a bold or italic font –
+contradicting the aim of HTML5 to separate structure from presentation. According
+to the specifications, their meaning has been redefined, however, so content
+within a <b> element should be “stylistically offset” and that within an <i>
+element should be seen as in an “alternate voice”. In real terms, these are
+nonetheless represented by bold and italic fonts but should only be used as a
+last resort as they do not convey meaning – use <strong> and <em> tags instead.
+The specifications encourage web page authors to consider accessibility issues
+in all aspects of their web page designs.
+The advantage of the <strong> and <em> tags is that they describe the importance
+of their content relative to surrounding text, and let the browser choose how it
+should be presented. Additionally, these tags are more relevant to suggest how
+narrators should convey their content vocally.
+As with many HTML tags, the <strong> and <em> tags can be nested, but care must
+be taken to close nested elements correctly. For example, <strong><em>...</em>
+</strong> is the correct order, whereas <strong><em>...</strong></em> is incorrect
+and will not validate.
+
+Refer to:
+emphasis.html
+&
+emphasis.css
+
+	Reading the small print
+HTML5 provides three elements that can be used to format text within the body of
+a document:
+• Text enclosed between <small> </small> tags is regarded as a side comment to
+surrounding text, such as copyright information – typically displayed in a
+smaller font.
+• Text enclosed within <del> </del> tags is regarded as having been removed from
+the document, such as a completed item in a to-do list – typically displayed with
+a strike-through line.
+• Text enclosed within <ins> </ins> tags is regarded as having been added to the
+document, such as a new additional item in a “to do” list – typically displayed
+with an underline.
+The <del> and <ins> tags may optionally include a cite attribute to specify the
+URL of a document explaining the changes made.
+The <small> tag is only meant to contain short comments that supplement
+surrounding content. It is not intended for use with large sections of text, such
+as multiple paragraphs, as that would be considerably more than a side comment.
+In displaying content contained within a <small> element, the web browser
+considers the size of the font used to display the surrounding content, then
+applies an appropriate reduction. Therefore, where the surrounding content is
+displayed with a font of 12-point size, content contained within a <small> element
+might be displayed with a font of 10-point size – the precise size is determined
+by the browser.
+Both <del> and <ins> elements can be used within a section of content, to mark up
+snippets of changed text, and to enclose entire sections of changed content, such
+as replaced paragraphs.
+
+Refer to:
+format.html
+
+	Marking text
+HTML5 provides four phrasing elements that can be used to mark text for special
+treatment within the body of a document:
+• Text enclosed between <s> </s> tags is marked as being superseded by more
+accurate or relevant up-to-date content – typically displayed with a
+strike-through line.
+• Text enclosed between <u> </u> tags is marked as being different in some way to
+normal text content – typically displayed with an underscore line to underline
+the text.
+• Text enclosed between <mark> </mark> tags is marked as being of special
+significance for reference – typically displayed in a colored background block
+to highlight the text.
+• Text broken by a <wbr> tag is invisibly marked as being a suitable point at
+which to break a line of text – representing a word-break opportunity.
+The <s>, <mark>, and <wbr> tags are new elements introduced in HTML 5.1,
+whereas the <u> tag has been reinstated in HTML 5.1 after previously being
+deprecated.
+It is important to note that specifications state that the <s> tag should not be
+used to indicate edited content within a document. The <del> tag should be used
+instead to indicate document edits.
+Similarly, the <mark> tag should not be used to emphasize the importance of text
+content, but should only be used to highlight the relevance of text within a
+document. The <strong> and <em> tags should be used instead to indicate emphasis.
+The <u> tag was deprecated in the HTML 5.0 specification, as underlined text
+within a document traditionally indicates hyperlinks. The <u> tag has, however,
+reappeared in the HTML 5.1 specification for the purposes of labeling misspelled
+words or proper names in Chinese. Authors are nonetheless strongly discouraged
+from using the <u> tag for emphasis, to avoid confusion with hyperlinks. Once
+again, the <strong> and <em> tags should be used instead to indicate emphasis.
+Where the document contains lengthy content that may exceed the width of the
+browser, you may wish to use the <wbr> tag to indicate appropriate points at which
+a line-break can be inserted.
+Use style sheet rules for presentation purposes rather than the <u> tag for
+underlines.
+
+Refer to:
+mark.html
+
+	Keeping preformatted text
+Where it is desirable to have the browser render text content that has been
+“preformatted”, the web page author can enclose that content between <pre> </pre>
+flow element tags. These advise the browser that the following instructions should
+be applied:
+• Preserve white space
+• Render all text with a fixed-width font
+• Disable automatic word-wrapping
+• Do not disable bi-directional processing
+Preserving the white space retains all spaces, tabs and line breaks. This is
+great to display lengthy poems in which every second line is indented.
+Each second line is indented by four character widths – created by hitting the
+space bar four times to insert four invisible space characters. These indents will
+be exactly preserved by the <pre> element as four character widths.
+Use spaces rather than tabs when preparing preformatted text.
+Tab characters, on the other hand, can present some surprises as they are usually
+interpreted by a browser as eight character widths. This agrees with the tab size
+in Windows’ Notepad application but other text editors can vary. This means that
+preformatted text containing tab characters may appear to be mis-aligned by the
+<pre> element. It is for this reason that the specifications discourage the use of
+tab characters when creating preformatted text content.
+The <pre> </pre> tags can also be useful to ensure “Text-Art”, sometimes used as
+web forum signatures, will appear as intended.
+
+Refer to:
+preformat.html
+
+	Modifying text
+Regular text in a paragraph area of a web page is displayed in invisible inline
+phrasing boxes that comprise an outer logical box, and an inner font box
+containing a baseline:
+You can find a chart of all character entities at:
+dev.w3.org/html5/htmlauthor/charref
+The vertical line spacing is determined by the font height to allow space between
+characters that extend below the baseline, such as “p”, and tall characters that
+extend upwards, such as “b”, plus a vertical margin area.
+Additionally, the font box will accommodate “superscript”, such as the trademark
+symbol ™ produced by the &trade; character entity. Superscript is any text, number
+or symbol that appears smaller than regular text and is set above the baseline.
+Mathematical formulae can use superscript to indicate numeric powers with the
+character entities &sup2; for ² and &sup3; for ³. The font box will also
+accommodate “subscript” – that appears smaller than regular text and is set below
+the baseline.
+The height available for superscript and subscript with the standard vertical line
+spacing is limited so the character size is restricted. Rather than use character
+entities for this purpose, it is often better to use the HTML5 <sup> </sup> tags
+for superscript and <sub> </sub> tags for subscript. These elements increase the
+vertical line spacing to allow more prominent superscript and subscript
+characters. For example, <sup>2</sup> is larger than &sup2;. Additionally, any
+content can be included within these elements so you are not restricted to
+available character entity references.
+
+Refer to:
+modify.html
+
+	Including code in text
+HTML5 provides five phrasing elements specifically to include computer program
+code within the body of a document:
+• Complete program code, or snippets, can be enclosed between <code> </code>
+tags for displaying in a suitable font.
+• Program variable instances can be enclosed between <var> </var> tags to
+differentiate them from regular text.
+• Sample program input and output can be enclosed between <samp> </samp> tags
+to differentiate them from regular text.
+• Content that also has associated machine-readable code can be enclosed between
+<data> </data> tags and the code specified to its required value attribute.
+• Dates and times can be enclosed in <time> </time> tags and a machine-readable
+version specified to its datetime attribute.
+The datetime value of a <time> element must be in a valid format, for example, as
+full datetime with 2017-12-25 14:30 or month as 2017-12 or date as 2017-12-25 or
+day with 12-25 or time only as 14:30.
+The <data> element could, for example, describe a book title and its
+machine-readable ISBN, then the <time> element could describe that book’s
+publication date.
+
+Refer to:
+code.html
+
+	Giving tooltip advice
+HTML5 provides four phrasing elements that can be used to designate advisory
+phrases within the body of a document:
+• Text can be enclosed between <abbr> </abbr> tags to indicate it is an
+abbreviation.
+• Text can be enclosed between <cite> </cite> tags to indicate it is a citation
+or reference from another source.
+• Text can be enclosed between <dfn> </dfn> tags to indicate it is the definitive
+instance of that term.
+• Text can be enclosed between <kbd> </kbd> tags to indicate input to be entered
+by the user from the keyboard.
+Every HTML5 element that can legally appear within the body of a document may
+optionally include a title attribute. Values specified to a title attribute are
+typically displayed as a tooltip that pops up when the user places the cursor over
+the element. This means that each of the phrasing elements listed above can
+include a title attribute to expand on the meaning of its content.
+
+Refer to:
+advice.html
+
+	Adding images
+The ability to add images to HTML document content introduces lots of exciting
+possibilities. An image is easily added to the document using the <img> tag,
+which should preferably always include these attributes:
+• An src attribute is required to specify the image location URL, by either its
+absolute or relative path.
+• A width attribute is recommended to specify the pixel width of the area the
+image will occupy on the page.
+• A height attribute is recommended to specify the pixel height of the area the
+image will occupy on the page.
+• An alt attribute is recommended to specify text describing the image, for
+occasions when the image cannot be loaded.
+Attributes in HTML tags can appear in any order.
+The values assigned to the width and height attributes instruct the web browser to
+create a content area on the web page of that size. This need not be the actual
+dimensions of the image, as the web browser can render the image in another
+specified size. Care must be taken to avoid distortion by ensuring the dimensions
+are scaled in proportion to the actual image size. Additionally, images should
+only be scaled down, as scaling up often results in pixelation – where individual
+pixels are visible to the eye. It is inefficient, however, to rely upon the
+browser to scale images that are not to be displayed full size as this requires
+downloading unnecessarily larger files. It is better to adjust the image size to
+the actual dimensions it will occupy on the web page using a graphics editor,
+such as Photoshop, so it will download and display faster.
+The optimum file type for web bitmap graphics is the popular non-proprietary
+Portable Network Graphics (PNG) format, which produces compact files and supports
+transparency.
+Avoid the BMP bitmap file format for web graphics – saving the original image
+shown here as fish.bmp creates a file size of 790KB!
+
+Refer to:
+image.html
+
+	Directing languages
+The recommended UTF-8 document encoding format provides support for bi-directional
+text, so that characters from languages written right-to-left, such as Hebrew, are
+automatically written in that direction and may appear alongside left-to-right
+text such as English. Content to be read in right-to-left direction should be
+enclosed within <bdi> </bdi> bi-directional isolation tags so as not to confuse
+the browser, as it expects to read left-to-right. Additionally, HTML5 provides a
+<bdo> bi-direction override element to which a text direction can be explicitly
+specified as either “ltr” or “rtl” by its dir attribute. The bi-direction override
+allows characters from right-to-left languages to be written as character entities
+in an HTML document in “logical” left-to-right order, but to be displayed in
+“visual” right-to-left order. For example, the <bdo> element below encloses five
+character entities from left-to-right, in the order they may have been
+entered, but displays them right-to-left:
+<bdo dir=”rtl”>&#1497;&#1513;&#1512;&#1488;&#1500;</bdo>
+.... appears as לארשי (Yiśrā’ēl in the Latin alphabet).
+Without the bi-direction override, these character entities get displayed in their
+logical order as ישראל – which is back-to-front for the right-to-left Hebrew
+language.
+Ruby annotation
+For Eastern languages, HTML5 supports “ruby annotation” that usefully provides
+pronunciation alongside text. In Japanese, for example, there is more than one
+alphabet.
+Text written in the semantic “kanji” alphabet, which has thousands of characters,
+is often annotated with its equivalent in the phonetic “hiragana” language, which
+has around 50 characters, to aid pronunciation. This is called “furigana” in
+Japanese and “ruby” in English – named after the small font used to indicate the
+pronunciation. For the benefit of Westerners, the Japanese kanji text can be
+annotated with “romaji” – its Latin alphabet equivalent. Similarly in Chinese,
+text written in the “mandarin” alphabet can be annotated with “pinyin” – its
+Latin alphabet equivalent.
+Don’t confuse ruby annotation with the unconnected Ruby programming language.
+HTML5 ruby annotation is entirely enclosed between root <ruby> </ruby> tags. This
+element may then enclose the Eastern text within <rb> </rb> tags (ruby base) and
+the pronunciation between <rt> </rt> (ruby text) tags. Optionally, the entire
+<rt> element can be enclosed between <rp> </rp> (ruby parentheses) tags to display
+the pronunciation in parentheses after the main text in old browsers that do not
+support ruby annotation, and an English language equivalent provided within
+<rtc> </rtc> tags.
+
+Refer to:
+ruby.html
+
+	Summary
+• The <body> element encloses all document content, and its opening tag may include
+an onload scripting attribute.
+• A paragraph is enclosed within a <p> element and may use the <br> tag to force
+breaks between lines of text.
+• Flow elements create a block area on the page, whereas phrasing elements create a
+small block on a line.
+• Long quotations may be enclosed within a <blockquote> flow element, and short
+quotations within a <q> phrasing element.
+• The <em> and <strong> phrasing elements are preferred over the <i> and <b>
+phrasing elements to emphasize text.
+• Side comments can be enclosed within a <small> element and the <ins> and <del>
+elements used to indicate replaced text.
+• The <s> element denotes superseded content, and the <mark> element is used to
+highlight content for reference.
+• The <wbr> element can be used to suggest an appropriate point at which to break a
+word or line of text.
+• To avoid mis-alignment, tab spacing should be avoided when creating preformatted
+text for inclusion within a <pre> element.
+• Superscript and subscript can be included using character entities or using the <sup>
+and <sub> elements.
+• Program code can be included in an HTML document using the <code>, <var> and
+<samp> elements.
+• Machine-readable code can be specified to a value attribute of the <data> tag and
+to a datetime attribute of the <time> tag.
+• The <abbr>, <cite>, <dfn> and <kbd> elements provide advice.
+• Most elements that can appear in the document body can include a title attribute to
+provide tooltip text.
+• The <img> tag places an image on the web page and should preferably always
+include src, width, height and alt attributes.
+• The <bdi> and <bdo> bi-directionals element can be used to surround items of text
+written in a language read right-to-left.
+• Ruby annotation uses <ruby>, <rb>, <rt>, <rp> and <rtc> elements to provide pronunciation aid for Eastern languages.
+
+Chapter 4:
+	Creating hyperlinks
+	Accessing links via keys
+	Linking to page fragments
+	Linking to protocols
+	Using images as hyperlinks
+	Producing image map links
+	Generating popups
+	Summary
+
+Chapter 4:
+	Creating hyperlinks
+When the internet carried only text content, “hypertext” provided the ability to
+easily access related documents and was fundamental to the creation of the World
+Wide Web. Today, images can also be used for this purpose, so any navigational
+element of a web page is now referred to as a “hyperlink”. Hyperlinks are enclosed
+between <a> </a> anchor tags, which specify the target URL to an href (hyperlink
+reference) attribute in the opening tag. The web browser will display a hyperlink
+in a manner that distinguishes it from regular text – typically hypertext gains
+an underline and image-based hyperlinks gain a colored border.
+Each web page hyperlink is sensitive to three interactive states:
+• Hover – gaining focus, the cursor is placed over the hyperlink.
+• Active – retrieving the linked resource, the user clicks the hyperlink.
+• Visited – the linked resource has previously been retrieved.
+Style rules can be used to emphasize each hyperlink state.
+
+Refer to:
+hyperlink.html
+&
+hyperlink.css
+
+	Accessing links via keys
+There are three ways to access the target of a hyperlink:
+• Pointer – a mouse or similar device places a screen pointer over a hyperlink,
+then the user clicks to access its target.
+• Tab – repeatedly hit the Tab key to successively focus on each hyperlink in
+turn, then hit Return to access the target of the currently selected hyperlink.
+• Access Key – hit a designated character key to focus on a particular hyperlink,
+then hit Return to access its target.
+A designated character key is specified for a hyperlink by the accesskey attribute
+of an <a> anchor tag. The method to utilize the designated key generally requires
+the user to press ALT + accesskey with most web browsers, such as Microsoft Edge
+and Google Chrome, but it’s ALT + SHIFT + accesskey with Firefox.
+
+Refer to:
+access.html
+
+	Linking to page fragments
+Hyperlinks can target a specific point in a document that has been created with a
+“fragment” identifier – an element with a unique identifying name assigned to an
+id attribute in its opening tag. Within the hyperlink, the fragment identifier is
+specified to a href attribute in the opening <a> tag prefixed by a # hash
+character. For example, the tag <a href=”#top”> targets an element within the same
+document that contains the unique fragment identifier name of “top”.
+The # hash character is used in HTML to target fragments and to specify
+hexadecimal color values, and in CSS to select elements by their id attribute for
+styling.
+A hyperlink can also target a specific point in a different document using the
+document’s URL, followed by a # hash character, then the fragment identifier. For
+example, the tag <a href=”index.html#top”> targets an element within a document
+named “index.html” that contains the unique fragment identifier name of “top”.
+Following a hyperlink to a fragment identifier displays the document from the
+point where the fragment identifier appears.
+
+Refer to:
+fragment.html
+&
+fragment.css
+
+	Linking to protocols
+The href attribute of a hyperlink will typically target a resource using the
+HyperText Transfer protocol http: but it may also target resources using other
+protocols. Script functions can be called with the javascript: protocol, and email
+clients can be invoked by the mailto: protocol.
+
+Refer to:
+protocol.html
+protocol.css
+protocol.js
+
+	Using images as hyperlinks
+To make the navigational features of an HTML document more visually appealing,
+images can be used as hyperlinks – simply by nesting an <img> element within an
+<a> hyperlink element:
+
+Refer to:
+rollover.html
+
+	Producing image map links
+A single image can target multiple hyperlink resources if an image “map” is added
+to define “hot spot” areas for each hyperlink. To use an image map, the <img> tag
+must include a usemap attribute to specify a map name, prefixed by a # hash
+character. The image map itself is contained between <map> </map> tags, and its
+name is specified by a name attribute in the opening <map> tag.
+Each area of the image that is to become a hyperlink hot spot is defined by four
+attributes of an <area> tag within the <map> element. The shape attribute
+specifies its shape as rect (rectangle), circle or poly (polygon), and the coords
+attribute specifies a comma-separated list of its x-axis and y-axis coordinates:
+rect: top-left x, top-left y, bottom-right x, bottom-right y
+circle: center x, center y, radius
+poly: x1,y1,x2,y2,x3,y3,etc. – one pair for each point. The first and final point
+must have identical coordinates to complete the shape.
+Additionally, each <area> tag must have an href attribute, to specify the
+hyperlink’s URL target, and an alt attribute to specify alternative text to be
+displayed when images are not enabled.
+
+Refer to:
+map.html
+
+	Generating popups
+Hyperlinks can also be used without an actual target resource to perform both CSS
+rollovers and “popup” effects. Typically, the hyperlink’s <a> anchor tag href
+attribute will specify a #null value in this case. The CSS a:hover pseudo-class
+can create hot spots – much like the image map hot spots in the previous example.
+In response, the style rules can reveal previously hidden HTML elements to be
+displayed as popups in front of other content. These are useful to display
+additional graphical or text content.
+
+Refer to:
+popup.html
+&
+popup.css
+
+	Summary
+• The HTML5 <a> </a> anchor tags are used to enclose hyperlinks within an HTML
+document.
+• An href attribute can be included in an <a> anchor tag to specify the URL of a
+target resource for that hyperlink.
+• Each hyperlink is sensitive to hover, active and visited states.
+• Hyperlinks can be accessed by a pointer, the tab key or a designated key
+specified by the <a> tag’s accesskey attribute.
+• An id attribute can be included in an element to create a fragment identifier
+that can become the target of a hyperlink.
+• When targeting a fragment, the hyperlink’s href attribute must specify the
+identifier name prefixed by a # hash character.
+• A hyperlink may target a resource via the http: protocol, or with other
+protocols such as javascript: and mailto:.
+• Rollover effects are performed by the CSS a:hover pseudo-class to swap images
+in response to cursor position.
+• A single image can target multiple hyperlink resources by adding an image map
+to specify an area for each hyperlink.
+• The <map> </map> tags enclose <area> elements, to define the areas of an image
+map, and a name attribute must be included in the <map> tag to specify a name for
+that map.
+• To use an image map, the <img> tag must include a usemap attribute specifying
+the map’s name prefixed by a # hash character.
+• Each <area> tag must include shape, coords, href and alt attributes and the
+shape may be a value of rect, circle or poly.
+• Hyperlinks can be used without resource targets to perform CSS effects by
+assigning a #null value to the <a> tag’s href attribute.
+• Popup effects can be performed by the CSS a:hover pseudo-class to reveal hidden
+content in response to cursor position.
+
+Chapter 5:
+	Proclaiming Headings
+	Grouping headers
+	Providing navigation
+	Writing articles
+	Standing aside
+	Footing the page
+	Positioning content
+	Denying anonymity
+	Summary
+
+Chapter 5: Arranging Content Sections:
+	Proclaiming Headings
+HTML5 heading elements are created using <h1>, <h2>, <h3>, <h4>, <h5>, and <h6>
+tags. These are ranked in importance by their numeric value – where <h1> has the
+greatest importance, and <h6> has the least importance. Each heading requires a
+matching closing tag and should only contain heading text. Typically, the
+heading’s font size and weight will reflect its importance, but headings also
+serve other purposes. Heading elements should be used to implicitly convey the
+document structure by correctly sequencing them – so <h2> elements below a <h1>
+element, <h3> elements below a <h2> element, etc. This structure helps readers
+quickly skim through a document by navigating its headings. Search engine spiders
+may promote documents that have correctly sequenced headings as they can use the
+headings in their index. They assume headings are likely to describe their content
+so it is especially useful to include meta keywords from the document’s head
+section in the document’s headings. The <h1> element is by far the most important
+heading and should ideally appear only once to proclaim the document heading.
+Often this can be a succinct version of the document title. Below that, a number
+of <h2> headings can proclaim section headings for long documents. Each section
+might contain individual article headings within <h3> elements, followed by
+paragraph <p> elements containing the actual article content.
+
+Refer to:
+heading.html
+
+	Grouping headers
+Headings sometimes have a sub-heading or tagline. For example, a document heading
+could be marked up like this:
+	<h1>American Airlines</h1>
+	<h2>Doing What We Do Best</h2>
+Unfortunately, this would strictly require all subsequent headings to be <h3>
+down to <h6> – to maintain a correctly sequenced outline. Fortunately, HTML5
+provides a grouping solution with the <header> </header> element. This can be used
+to enclose both the heading and sub-heading, like this:
+<header>
+	<h1>American Airlines</h1>
+	<h2>Doing What We Do Best</h2>
+</header>
+Each document may contain multiple <header> elements, and each <header> element
+may contain headings <h1> down to <h6>. Complete headers may be enclosed in
+<header> </header> tags to include one or more headings along with other
+introductory items – such as a banner, logo, or a section’s table of contents.
+Typically, a <header> element will contain the document heading at the start of a
+page, but may also be used at the start of sections within a page to contain
+associated introductory items.
+
+Refer to:
+header.html
+
+	Providing navigation
+Groups of hyperlinks on an HTML5 web page, which enable the user to navigate
+around the page or website, should be enclosed between <nav> </nav> tags. This may
+typically be a horizontal menu in the document header, or a vertical menu down the
+edge of the page. Note that the <nav> element is simply a wrapper around the menu
+– it does not replace any structural elements.
+
+Refer to:
+nav.html
+&
+nav.css
+
+	Writing articles
+In HTML5, all content within the <body> element is considered to be part of a
+“section”. Within the main section, defined by the <body> element, section limits
+are defined implicitly by correctly sequenced headings in the document outline.
+Section limits may also be defined explicitly by placing content within the
+<header>, <nav>, <section> and <article> elements, plus the <aside>, and <footer>
+elements demonstrated over the next few pages.
+Remember that an <article> contains a stand-alone composition, but a <section> is
+just a grouping element.
+General content within the document body, which is not part of a special content
+element such as <nav>, can be arranged in sections between <section> </section>
+tags. Each section will typically begin with its own heading element, followed by
+articles. Each article should be enclosed between <article> </article> tags and
+will typically begin with its own heading element followed by one or more
+paragraphs. In understanding the <section> and <article> elements, it helps to
+consider the way a newspaper contains various sections – news, sport, real estate,
+and so on. Each section contains various articles.
+
+Refer to:
+section.html
+
+	Standing aside
+HTML5 usefully provides <aside> </aside> tags that can be nested within an
+<article> element in order to incorporate content that is somewhat related to the
+main content of that article. These allow for supplemental, yet separate, content
+to be included – typically displayed as a sidebar or footnote.
+Content within an <aside> element should be stand-alone information that is
+related to the article, such as pull-quotes extracted from an affiliated article,
+a glossary of terms used within the article, or even hyperlinks to pages providing
+further reading associated with the article. Alternatively, the <aside> element
+can be used alone, without an <article> element, to contain secondary content that
+is related to the entire page, such as related advertising or a blogroll.
+
+Refer to:
+aside.html
+&
+aside.css
+
+	Footing the page
+Just as each HTML5 document may contain multiple headings, for the document,
+sections and articles, they may also contain multiple footers for the document,
+sections and articles. The content of each footer is contained between
+<footer> </footer> tags and provides information about that part of the document.
+Typically, a <footer> element might contain the author’s name, the author’s
+contact details within an <address> element, or copyright and legal disclaimers
+within a <small> element.
+Like a <header> element, a <footer> element can also contain hyperlinks for page
+and site navigation within a nested <nav> element. Hyperlinks to related
+documents, however, are better placed in an <aside> element within the section or
+article.
+
+Refer to:
+footer.html
+&
+footer.css
+
+	Positioning content
+Just as HTML provides a <header> element to group together related items at the
+top of the page, and a <footer> element to group together related items at the
+bottom of the page, it also provides a <main> element to group together related
+items that form the body content of the page. A <main> element can contain any
+kind of content that is not related to the page header or footer information.
+For example, sections, articles, paragraphs, sidebar notes, images, etc.
+The <main> tag is a new element introduced in HTML 5.1. Using the <main> element
+in combination with the elements introduced throughout this chapter, the document
+header, main content and footer can be positioned in a logical structure:
+
+Refer to:
+position.html
+
+	Denying anonymity
+The dividing <div> </div> tags, which were used widely in earlier versions of
+HTML, continue to be supported in HTML5 for backward-compatibility – but the <div>
+element should only now be used as a last resort, when no other element is
+suitable. Unlike other meaningful elements such as <header>, <main>, <section>,
+<article>, <nav> and <footer>, the meaningless <div> element is anonymous. For
+example, a smart browser might have a shortcut key to jump to the page’s
+navigation section. This section is easily identifiable when contained in a
+meaningful <nav> element, but not so when contained in a meaningless <div>
+element. Only use the <div> element as a last resort, because it has no meaning –
+always look for a meaningful element to use instead. The <div> element remains
+useful for styling purposes, as do the similarly anonymous <span> </span> tags.
+Although the <div> and <span> elements are meaningless alone, they can include an
+identifying attribute to wrap content that is to be styled alike. Documents that
+use the <div> element for structural, rather than stylistic purposes should be
+edited to use meaningful elements instead. For example, given the body
+section elements below:
+
+Refer to:
+division.html
+
+	Summary
+• Heading elements <h1>, <h2>, <h3>, <h4>, <h5> and <h6> are ranked in order of
+importance from <h1> down to <h6>.
+• Correctly sequenced heading elements implicitly convey the document structure,
+to create the document outline.
+• Complete headers, including a logo and headings <h1> to <h6> can be enclosed in
+a <header> element.
+• Groups of hyperlinks providing page or site navigation should be enclosed within
+a <nav> element.
+• A <nav> element is just a wrapper around a menu, typically displayed
+horizontally in the header or vertically in a sidebar.
+• Section limits are explicitly defined in a document outline when content is
+placed within <header>, <nav>, <section>, <article>, <aside> and <footer>
+elements.
+• Each document <section> element will typically begin with a section heading,
+followed by one or more articles.
+• Each document <article> element will typically begin with an article heading,
+followed by one or more paragraphs.
+• Stand-alone information related to an article can be enclosed within an <aside>
+element nested in an <article> element.
+• Typically, a <footer> element might contain contact details in an <address>
+element or legal details in a <small> element.
+• A <main> element can be used as a wrapper around all body content that is not
+related to header or footer information.
+• The anonymous <div> and <span> elements are best avoided for structural
+purposes, but are useful for styling purposes.
+
+Chapter 6:
+	Creating unordered lists
+	Creating ordered lists
+	Creating definition lists
+	Producing a simple table
+	Spanning cells over rows
+	Spanning cells across columns
+	Adding a header and footer
+	Aligning cell content
+	Grouping columns
+	Setting column widths
+	Utilizing templates
+	Summary
+
+Chapter 6: Writing Lists and Tables:
+	Creating unordered lists
+Unordered lists, where the sequence of list items is not important, typically
+place a bullet-point before each item to differentiate list items from regular
+text.
+In HTML5, unordered lists are created with <ul> </ul> tags, which provide a
+container for list items. Each list item can be created using <li> </li> tags to
+enclose the item, or optionally just using <li> to precede the item – either form
+of <li> element validates as correct HTML. An unordered list <ul> element can
+contain numerous list item <li> elements.
+The bullet point that differentiates unordered list items from regular text may be
+one of these three marker types:
+• Disc – a filled circular bullet-point (the default style).
+• Circle – an unfilled circular bullet-point.
+• Square – a filled square bullet-point.
+A style rule can specify any one of the above values to the unordered list’s
+list-styletype property, or a none value can be specified to that property to
+suppress bulletpoints.
+Each HTML list also has a list-style-image property that can specify the URL of
+an image to be used as the list’s bullet-point. This will appear in place of any
+of the marker type bullet-points. Where the web browser cannot use the specified
+image, the marker specified to its list-style-type property will be used, or when
+no marker has been specified, the default will be used.
+
+Refer to:
+ulist.html
+&
+ulist.css
+
+	Creating ordered lists
+Ordered lists, where the sequence of list items is important, number each item to
+differentiate list items from regular text.
+When no numbering type has been specified, the default will be used.
+In HTML5, ordered lists are created with <ol> </ol> tags, which provide a
+container for list items. As with unordered lists, each list item can be created
+using <li> </li> tags to enclose the item, or optionally just using <li> to
+precede the item – either form of <li> element validates as correct HTML. An
+ordered list <ol> element can contain numerous list item <li> elements.
+The automatic numbering that differentiates ordered list items from regular text
+may be one of these six numbering types:
+• Decimal – traditional numerals (the default style).
+• Roman – classical numerals.
+• Latin – traditional alphabetical lettering.
+• Greek – classical alphabetical lettering.
+• Georgian – traditional Georgian numbering.
+• Armenian – traditional Armenian numbering.
+A style rule can specify any of the above numbering types to the list’s
+list-style-type property with the following values:
+Decimal: decimal or decimal-leading-zero
+Roman: lower-roman or upper-roman
+Latin: lower-latin or upper-latin
+	   lower-alpha or upper-alpha
+Greek: lower-greek
+Georgian: georgian
+Armenian: armenian
+Additionally, a none value can be specified to suppress numbering. List item
+numbering will normally begin at one, but a different start point can be specified
+to a start attribute in the <ol> tag.
+As with the markers in unordered lists, numbering is drawn in the left padding
+area of the list’s content box.
+
+Refer to:
+olist.html
+&
+olist.css
+
+	Creating definition lists
+A definition list is a unique type of list in which each list item has two parts –
+the first part being a term, and the second part being a description of the term
+in the first part.
+This is referred to as a name/value pair. For example, a name/value pair for the
+term “sun” could be “sun/the star at the center of our solar system”.
+In HTML5, definition lists are created with <dl> </dl> tags, which provide a
+container for list items. Each list item term is contained between <dt> </dt>
+definition term tags, and each list item description is contained between
+<dd> </dd> definition description tags. Optionally, the </dt> and </dd> closing
+tags may be omitted – either form of <dt> and <dd> element is valid.
+Each list item in a definition list can contain multiple <dt> definition term
+elements and multiple <dd> definition description elements – to allow a single
+term to have multiple descriptions, or multiple terms to have a single
+description.
+Typically, browsers display the definition descriptions inset from their terms.
+Definition lists are also useful to contain a series of questions and related
+answers, or indeed any other groups of name/value data.
+
+Refer to:
+dlist.html
+&
+dlist.css
+
+	Producing a simple table
+Data is often best presented in tabular form, arranged in rows and columns to
+logically group related items, so it is easily understood.
+Omit the closing </td> cell tags but include the closing </tr> tags to more
+clearly denote the end of each table row.
+In HTML5, tables are created with <table> </table> tags, which provide a container
+for table rows. Each table row is created with <tr> </tr> tags, which provide a
+container for a line of table data cells. Each table data cell is created with
+<td> </td> tags, which enclose the actual data to be presented. Optionally, the
+</td> and </tr> closing tags may be omitted – either form of <td> and <tr>
+element is valid.
+A <table> element will typically contain numerous <tr> elements to create a table
+displaying multiple rows of data. Similarly, each <tr> element will typically
+contain numerous <td> elements to create a table of multiple columns of data. It
+is important to note, however, that each <tr> row in the table must contain the
+exact same number of <td> cells – so, for example, if the first <tr> row contains
+five <td> cells, all <tr> rows must contain five <td> cells.
+
+Refer to:
+table.html
+&
+table.css
+
+	Spanning cells over rows
+An individual table cell can be combined with others vertically to span down over
+multiple rows of a table. The number of rows to be spanned is specified to a
+rowspan attribute in the spanning cell’s <td> tag. Cells in the rows being spanned
+must then be removed to maintain the table symmetry.
+
+Refer to:
+rowspan.html
+&
+rowspan.css
+
+	Spanning cells across columns
+An individual table cell can be combined with others horizontally to span to the
+right across multiple columns of a table. The number of columns to be spanned is
+specified to a colspan attribute in the spanning cell’s <td> tag. Cells in the
+columns being spanned must then be removed to maintain table symmetry.
+
+Refer to:
+colspan.html
+&
+colspan.css
+
+	Adding a header and footer
+Tables can be enhanced by the addition of special header and footer rows, above
+and below the regular table content, which provide additional table information.
+In HTML5, table header information is contained between <thead> </thead> tags
+and table footer information is contained between <tfoot> </tfoot> tags. When a
+table has a <thead> and/or a <tfoot> element, all regular table rows must be
+enclosed between <tbody> </tbody> tags.
+In long tables, rows can be grouped into separate table body sections using
+multiple <tbody> elements. When these are printed, each paper page can repeat the
+table header and footer information.
+It is important to note that both the <thead> and <tfoot> elements must appear
+before the first <tbody> element within the <table> element, but after the
+<caption> element if one is present.
+
+Refer to:
+enhance.html
+&
+enhance.css
+
+	Aligning cell content
+Typically, the default alignment of content in a <td> table data cell is
+horizontally leftaligned and vertically centered, whereas content in a <th> table
+heading cell is generally centered both horizontally and vertically. These
+defaults may be overridden by style rules, however, to align content horizontally
+and vertically.
+A table cell’s text-align property can specify values of left, center or right to
+align horizontally, and its vertical-align property can specify values of top,
+middle or bottom to align vertically.
+Alignment rules may be specified for <tr>, <tbody>, <thead> and <tfoot> elements
+to control the horizontal and vertical content position in groups of cells. All
+<td> and <th> elements they contain automatically inherit the specified alignment
+values.
+
+Refer to:
+align.html
+&
+align.css
+
+	Grouping columns
+Table columns that contain similar data can be virtually grouped together for
+styling purposes with <colgroup> </colgroup> tags. The opening <colgroup> tag can
+specify the number of columns to include in that group to a span attribute.
+A <table> element can contain one or more <colgroup> elements to allow all the
+columns in a group to be styled alike, but have each group styled differently from
+other groups for contrast. These should appear at the start of the <table>
+element, immediately after the <caption> element, if one is present, but before
+<thead>, <tfoot>, <tbody> elements and table content.
+When the <colgroup> element includes a span attribute, to specify how many columns
+to include in that group, the closing </colgroup> tag is required, but the element
+must remain empty – with nothing between the <colgroup> </colgroup> tags.
+
+Refer to:
+colgroup.html
+&
+colgroup.css
+
+	Setting column widths
+Where a table simply has an overall width specified by a style rule, the browser
+will, by default, calculate the width of each column according to its content –
+columns with broad content will be wider than columns with slender content.
+Greater control over column width can be achieved using <col> tags to represent
+individual columns so rules can specify their size and appearance.
+The <col> tag is a single tag – it does not have a matching closing tag.
+A single <col> element can also represent multiple columns by including a span
+attribute to specify a number of columns. So a style rule specifying a column
+width will be applied to all the columns that <col> element represents.
+Optionally, <col> elements may be enclosed between <colgroup> </colgroup> tags to
+allow styling of both column groups and individual columns.
+
+Refer to:
+column.html
+&
+column.css
+
+	Utilizing templates
+HTML5 provides an interesting <template> element, which can be used to designate
+a group of elements that can be “cloned” by JavaScript. Typically, these elements
+will contain no data when designated as a template within the HTML document
+itself, but data can be dynamically inserted into the elements by a script. This
+feature is useful to dynamically populate lists or tables:
+
+Refer to:
+template.html
+template.css
+template.js
+
+	Summary
+• The HTML5 <ul> element creates an unordered bullet-point list that contains
+individual list items within <li> elements.
+• A list-style-type property can specify that unordered list items should have a disc,
+circle or square bullet-point, or none.
+• A list-style-image property can specify the URL of an image that should appear in
+place of list item bullet-points.
+• The <ol> element creates an ordered numerical list that contains individual list items
+within <li> elements.
+• A list-style-type property can specify how ordered list items should be numbered,
+such as decimal, upper-latin, or none.
+• The <dl> element creates a definition list containing terms in <dt> elements and their
+descriptions in <dd> elements.
+• The HTML5 <table> element creates a table, and may optionally first enclose a
+<caption> element to title the table.
+• Each table row is created with a <tr> element to contain numerous <th> heading
+elements and <td> data elements.
+• Table cells can span down other cells using the rowspan attribute, and cells to the
+right using the colspan attribute.
+• Adding <thead> and <tfoot> elements, immediately after the <caption> element,
+enhances a table with a header and footer.
+• Tables that have a header and footer must also enclose all regular table rows within
+a <tbody> element.
+• A table cell’s text-align and vertical-align properties can be used to specify its
+content’s horizontal and vertical alignment.
+• Table columns can be grouped using a <colgroup> element to specify the number of
+columns to group with its span attribute.
+• Each table column can be represented by a <col> element so it can be individually
+styled.
+• The <template> element can designate a group of elements that can be cloned to
+dynamically write lists and tables.
+
+Chapter 8:
+	Submitting forms
+	Gathering text input
+	Controlling input type
+	Providing text areas
+	Checking boxes
+	Choosing radio buttons
+	Selecting options
+	Utilizing hidden data
+	Pushing buttons
+	Using images for submission
+	Adding logos to buttons
+	Labeling form controls
+	Listing data options
+	Uploading files
+	Summary
+
+Chapter 8:
+	Submitting forms
+Web page forms are built from a number of HTML5 component elements that submit
+data to a web server for processing. Each of these elements include a name
+attribute and a value attribute so the data assigned to these attributes can be
+processed by the associated name=value pairs. For example, where an element’s name
+attribute is assigned “Brand” and its value attribute is assigned “Ford” the
+name=value pair represents the data as Brand=Ford.
+The examples in this chapter use the free Abyss Personal Edition web server
+available from aprelium.com
+All form components are enclosed between <form> </form> tags. Each opening <form>
+tag should include a method attribute, specifying which HTTP method is to be used
+to submit the form, and an action attribute specifying the URL of a web server
+script that is to be used to process the submitted data.
+The method attribute can be assigned values of “GET” or “POST”. Submission via the
+preferred GET method appends the data to the URL, whereas submission via the POST
+method encodes the data differently and can be used when the GET method fails.
+Typically, an HTML form will have a “Submit” button that the user clicks to submit
+data for processing. This is created by assigning the value “submit” to a type
+attribute of an <input> tag. Additionally, this tag may include name and value
+attributes to submit data assigned to them as a name=value pair.
+In order to demonstrate form submission and web server response, the examples
+throughout this chapter use a personal web server. This emulates submission of
+data to an external web server but is installed locally on the host computer. Like
+many web servers, it has a directory named “htdocs” in which to deposit web pages
+and can be addressed by the domain name “localhost”, or alternatively by the IP
+address “127.0.0.1”. For example, to view the default web page entitled
+“index.html” with the server running, you can enter http://localhost/index.html
+in the browser address field, or alternatively enter http://127.0.0.1/index.html
+To provide a response from the web server, the htdocs directory contains a custom
+server-side script named “echo.pl” that echos the submitted name=value data in an
+HTML response document – in each example, its URL is assigned to the form’s action
+attribute. The web server’s response simply displays the submitted values in a
+table to confirm the form data was received.
+The server-side scripts used to process the examples in this chapter are written
+in the Perl language and require the installation of ActivePerl support on Windows
+systems. The free ActivePerl Community Edition can be downloaded from
+activestate.com/activeperl/downloads
+
+Refer to:
+submit.html
+
+	Gathering text input
+An HTML5 form can provide text boxes where the user can input data for submission
+to the web server for processing. These are created by assigning the value “text”
+to the type attribute of an <input> tag, and a name to its name attribute. Upon
+submission, the data in the text box is sent as the value associated with the text
+box name as a name=value pair. Optionally, the <input> tag can include a value
+attribute to specify a default value. A text box for the input of a password is
+created by assigning the value “password” to the type attribute of an <input> tag.
+This functions just like any other text box, except it does not display its
+contents as readable text. Both text and password <input> elements can optionally
+include other attributes to control their performance:
+• size – the width of the text box in average character widths
+• minlength and maxlength – permissible number of characters
+• min and max – permissible range of numeric values
+• placeholder – provides a data entry hint to the user
+• readonly – the default value in the text box cannot be changed
+• disabled – the text box is grayed out and will not be submitted
+
+Refer to:
+text.html
+
+	Controlling input type
+An HTML5 form <input> tag can enforce its completion by including the required
+keyword. It can also control what the user is permitted to submit by the value
+assigned to its type attribute. Many of the input types listed in the table below
+prohibit submission of the form if the user enters a value that is not permitted,
+and issue an error notice. Some also provide special controls that allow the user
+to easily select a permitted value.
+The month, week, and datetime-local input types are new types introduced in HTML
+5.1.
+text: String of text
+password: String of text (obscured by browser)
+url: Valid URL protocol and domain address
+email: Valid email address
+date: Date in mm/dd/yyyy format
+month: Month and year
+week: Week number and year
+time: Time in HH:MM format
+datetime-local: Date and time as mm-dd-yy HH:MM
+number: Numeric integer value
+range: Numeric integer value (slider)
+color: Color in #RRGGBB hexadecimal format
+file: File path address (browse)
+
+Refer to:
+type.html
+
+	Providing text areas
+An HTML5 form can provide a multi-line text field where the user can input data
+for submission to the web server for processing. These are created by <textarea>
+</textarea> tags that may enclose default text content. The <textarea> tag should
+include a name attribute that will be associated with the element’s content upon
+submission as a name=value pair. Additionally, this tag must include a rows
+attribute, to specify the number of visible text lines, and a cols attribute to
+specify the field width in average character widths. Optionally, it may also
+include a readonly attribute to prevent the user editing its content.
+Unlike a text <input> element, the <textarea> element has no value attribute – as
+its content is treated as its value.
+When submitting large bodies of text, you must be aware of some limitations of the
+GET method. This varies by browser, but Internet Explorer typically allows the URL
+to append up to around 200 characters. The POST method provides much larger
+capacity, as the text is sent as “Form Data” along with the HTTP header, not
+simply appended to the URL.
+
+Refer to:
+textarea.html
+
+	Checking boxes
+An HTML5 form can provide a visual checkbox “on/off” switch that the user can
+toggle to include or exclude its associated data for submission to the server.
+When the box is checked, the switch is set to “on” and its name=value pair will be
+submitted, but when the box is unchecked, the switch is set to “off” and its
+name=value pair is not submitted.
+A checkbox is created by assigning the value “checkbox” to the type attribute of
+an <input> tag. This tag must also include a name attribute and a value attribute
+to specify the name=value pair values. Optionally, this tag may also include a
+Boolean checked attribute to set the initial state of the switch to “on” – so a
+check mark will automatically appear in the checkbox. Checkbox names may be
+individually unique, or several checkboxes can share a common name to allow the
+user to select multiple values for the same named property. In this case, the
+selected values are returned by the server as a comma-separated list where
+name=value,value,value. Multiple checkboxes that share a common name can be
+visually grouped by surrounding their <input> elements by <fieldset> </fieldset>
+tags. These may also contain <legend> </legend> tags to state a common group name.
+
+Refer to:
+checkbox.html
+
+	Choosing radio buttons
+An HTML5 form can provide visual “radio button” groups, from which the user can
+select one button to include its associated data for submission to the server.
+When the button is selected, its switch is set to “on” and its name=value pair
+will be submitted, otherwise its switch is set to “off” and its name=value pair is
+not submitted. Unlike checkboxes, radio buttons that share a common name are
+mutually exclusive, so when one radio button is selected, all others in that group
+are automatically switched off.
+A radio button is created by assigning the value “radio” to the type attribute of
+an <input> tag. This tag must also include a name attribute and a value attribute
+to specify the name=value pair values. Optionally, this tag may also include a
+Boolean checked attribute to set the initial state of the switch to “on” – so the
+button will automatically appear selected.
+Radio button groups that share a common name can be visually grouped by
+surrounding their <input> elements by <fieldset> </fieldset> tags. These may also
+contain <legend> </legend> tags to contain a group name.
+
+Refer to:
+radio.html
+
+	Selecting options
+An HTML5 form can provide a select option list, from which the user can select one
+option to include its associated data for submission to the server.
+A select option list is created using <select> </select> tags. The opening
+<select> tag must include a name attribute specifying a list name. The <select>
+element encloses <option> </option> tags that define each option. Each opening
+<option> tag must include a value attribute specifying an option value. When the
+form is submitted, the list name and the selected option value are sent to the
+server as a name=value pair.
+Optionally, one <option> tag may also include a Boolean selected attribute to
+automatically select that option, and the <option> elements may be grouped by
+enclosure in <optgroup> </optgroup> tags. The opening <optgroup> tag may specify
+an option group name to a label attribute.
+A select option list will normally appear as a single-line dropdown list, unless
+a size attribute is included in the <select> tag to specify the number of rows to
+be visible.
+
+Refer to:
+select.html
+
+	Utilizing hidden data
+An HTML5 form can provide hidden elements, which create no visible controls but
+allow additional data to be submitted to the server. Hidden form data is created
+by assigning the value “hidden” to the type attribute of an <input> tag. This tag
+must also include a name attribute, and may include a value attribute to specify
+static data that will be submitted as a name=value pair. Optionally, the <input>
+tag may include an id attribute and omit the value attribute so its value can be
+specified by script.
+Hidden form data can also be used to perform a calculation and dynamically display
+the result in an <output> </output> element. The <output> tag must include an id
+attribute and a for attribute for reference in script. The for attribute can
+specify multiple element identities as a space separated list. These can be used
+in an assignment to the <form> tag’s oninput attribute, to perform a calculation
+whose result will appear in the <output> </output> element – but will not be
+submitted to the server.
+
+Refer to:
+hidden.html
+
+	Pushing buttons
+An HTML5 form can provide push buttons for scripting purposes. When the user
+pushes a button, a “click event” occurs to which a script function can respond.
+This allows the user to dynamically interact with the form and can be used to set
+attribute values. When a script designates a function to be called, whenever a
+button gets pushed it is said to attach a “behavior” to that button. A push button
+is created by specifying a “button” value to the type attribute of an <input> tag,
+and should also include an id attribute so the script can easily identify that
+element.
+Additionally, any HTML5 form can be returned to its original state by pushing a
+reset button that is created by specifying a “reset” value to the type attribute
+of an <input> tag.
+
+Refer to:
+button.html
+
+	Using images for submission
+An HTML5 form can use an image button to submit the form, in place of a regular
+submit button. An image button is created by specifying an “image” value to the
+type attribute of an <input> tag and including an alt attribute. When a form is
+submitted by an image button, the XY coordinates of the point at which the click
+occurred are automatically submitted as name=value pairs along with the rest of
+the form data.
+Additionally, a regular <img> tag can be used as an image button by attaching a
+behavior with script. Where the behavior is to submit a form, the script function
+can usefully incorporate validation. For example, to ensure a user-entered email
+address is in the expected format:
+
+Refer to:
+ibutton.html
+
+	Adding logos to buttons
+HTML5 can create push buttons that display small “logo” images using <button>
+</button> tags. These tags can then enclose an <img> element specifying the URL of
+the logo image, and text that will appear on the face of the button. Each <button>
+tag should include a type attribute to specify whether the button is simply a
+scripting “button” type, a “submit” form type, or a “reset” form type. Scripting
+buttons can include an onclick attribute in the <button> tag to specify the
+function to be called when the button gets clicked, or directly specify a
+snippet of script to execute.
+
+Refer to:
+logo.html
+
+	Labeling form controls
+Text that is to be associated with an HTML5 form control can be enclosed between
+<label> </label> tags. The opening <label> tag can include a for attribute to
+specify the value assigned to the control’s id attribute to make the association.
+Alternatively, the <label> element can simply enclose both the text and the
+control element to make the association. This allows styling to be applied to the
+entire label – including the text and control. Often this is useful to distinguish
+the control associated with particular text. Additionally, each form control
+element may include a tabindex attribute to specify its tabbing order within the
+document as a unique value between 0 and 32,767. Using the tab key, the user can
+then navigate through the document starting at the lowest tabindex value and
+proceeding through successively higher values:
+
+Refer to:
+label.html
+&
+label.css
+
+	Listing data options
+A simple “autocomplete” feature can be provided for a text <input> using a
+<datalist> </datalist> element to enclose a number of pre-defined <option> values.
+The user may choose any one of the options, or enter text directly into the input
+field. In order to associate the <input> field with the list, the <datalist> tag
+must include an id attribute to specify a list name. The same name must then be
+specified to a list attribute within the <input> tag to create the association.
+The <input> tag must also include a name attribute to send to the server as usual.
+
+Refer to:
+datalist.html
+
+	Uploading files
+An HTML5 form can provide a file selection facility, which calls upon the
+operating system’s “Choose File” dialog, to allow the user to browse their local
+file system and select a file.
+A file selection facility is created by assigning the value “file” to the type
+attribute of an <input> tag, and a name to its name attribute. This element
+produces a text field and a “Browse” button to launch the Choose File dialog.
+After a file has been selected, its full path appears in the text field. When the
+form is submitted, the element name and the selected file’s name are sent to the
+web server as a name=value pair. Where a selected file is to be uploaded to the
+web server, the <form> tag must include an enctype attribute specifying the
+encoding type as “multipart/form-data”. Also, its method attribute must specify
+the POST method – because Form Data cannot be appended to a URL using the GET
+method.
+
+Refer to:
+upload.html
+
+	Summary
+• HTML5 forms submit data to the web server as name=value pairs for processing by
+a specified server-side script.
+• All form component elements are enclosed between <form> </form> tags, which
+must include an action attribute, to specify the URL of the processing script, and
+a method attribute to specify the submission method as “GET” or “POST”.
+• Each <input> tag’s type attribute specifies its component type, such as “text”,
+“password”, “checkbox”, “radio”, etc.
+• An <input> tag can include name and value attributes to specify data for
+submission as a name=value pair.
+• An <input> tag can enforce its completion by including the required keyword, but
+many automatically prohibit submission if the user enters a value that is not
+permitted.
+• A multi-line text field is created by <textarea> </textarea> tags that require
+rows and cols attributes to specify its size.
+• Radio button and checkbox inputs only submit their name and value attribute data
+if they are checked.
+• An option list is created by enclosing a number of <option> elements between
+<select> </select> tags.
+• Option lists can be enclosed between <optgroup> </optgroup> tags that can
+specify an option group name to a label attribute.
+• Forms can contain “hidden” elements that allow static or script-generated data
+to be submitted to the server for processing.
+• A form may be submitted by a regular submit <input> element, by an image <input>
+element, or by a <button> element.
+• Logo images can be added to the button face by enclosing an <img> element
+between <button> </button> tags.
+• Each form control can be enclosed between <label> </label> tags to visually
+group them with text for styling purposes.
+• An <input> tag can include a list attribute to associate it with the id of a
+<datalist> element to provide pre-defined options.
+• When a form is to upload files, the <form> tag must include an enctype attribute
+specifying encoding as “multipart/form-data”.
+
+Pre-Assessment
+Q1: Table Tags v: Which HTML tag indicates a table cell?
+A: td
+
+Q2: Div Tag v: The ___ tag creates an image map that links to an image, while the
+___ tag defines the different areas within an image map.
+A: map; area v
+E: The map tag creates an image map that links to an image, while the area tag
+defines the different areas within an image map.
+
+Q3: Blocks of Text v: In some programs, images are ___ into the document, whereas
+images on webpages are ___.
+A: embedded; linked to a stored location
+
+Q4: Unordered Lists v: Span tags work with large blocks of text.
+A: True
+E: Span tags work with individual words and phrases.
+
+Q5: Article Tag x: The article tag is used to mark off self-containing text that
+can make up which of the following?
+A: A blog entry; a side note x => a story; an article
+E: The article tag is used to mark off self-containing text that can make up a
+story, blog entry, or an article.
+
+Q6: Adding Images to a Webpage x: Which formatting features does the div tag allow
+programmers to control?
+A: Text font x => Background colors v; Positioning; Alignment
+E: The div tag allows programmers to control formatting features such as
+alignment, positioning, background colors, boxes, and others.
+
+Q7: Absolute Link x: A form put can be used to change existing customer
+information.
+A: True x => False
+E: A form POST can be used to change existing customer information, but a form
+PUT cannot.
+
+Q8: Image Maps v: The appropriate use of label tags is considered best practice in
+HTML because a lot of internet traffic comes from ___.
+A: Mobile Devices
+
+Q9: Form Submission Method x: Unordered lists are basic bulleted lists.
+A: False x => True
+
+Q10: Form Example v: Which form submission method is a request to take data
+submitted and insert it into a database?
+A: Put
+E: The submission method, put, is a request to take data submitted and insert it
+into a database.
+
+Q11: Enter Lines of Text v: How many steps make up the process of adding the
+output tag to a form?
+A: Two
+
+Q12: Best Practice v: An absolute link contains a complete ___ to a link.
+A: Address
+
+Q13: Output Process v: Which input type is used for entering multiple types of
+text?
+A: Textarea
+
+Post-Assessment
+Q1: What is an hr tag used for?
+A: Separating sections of a page
+
+Q2: Which is true of the section tag?
+A: It is helpful on long pages; it is used to mark off sections of a webpage
+
+Q3: True or False: Text or images inside a details tag can be hidden or shown at will.
+A: False x => A: True v
+
+Q4: Which tag can be used with the figure tag to add a caption to an image?
+A: Caption tag x => A: Figcaption tag v
+E: The figure tag can be used with the figcaption tab to put a caption on an image and
+line the caption up with the image.
+
+Q5: Which attribute would make the comments textarea larger?
+A: Lines x => A: Rows v
+E: The addition of the rows and columns attributes would make the comments
+textarea larger.
+
+Q6: Which are the two steps in the process of adding an output tag to a form?
+A: Declare a variable; instruct form regarding input data
+
+Test
+Q7: A fieldset defines a: group x => box v: around a set of fields.
+A legend defines a box x => name v: for a fieldset.
+Q23: Which is the caption tag used to add captions to?
+A: Images x => Tables
+Q30: Which are three attributes of the input tag?
+A: Text v, Button v, Label x => Submit v
+Q31: What elements need to be added to the option tags to make the
+selection functional?
+A: IDs x => Values
+Q34: The article tag is used to mark off self-containing text that can
+make up which of the following?
+A: An article v, a story v, a side note x => a blog entry v

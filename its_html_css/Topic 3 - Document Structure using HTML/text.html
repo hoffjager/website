@@ -1,0 +1,44 @@
+﻿<!--
+1. Start a new HTML5 document.
+2. In the body section, insert a form element containing a submit button to send
+form data by the GET method.
+3. Now, in the form element, insert a definition list element.
+4. In the definition list, insert terms and descriptions.
+5. Save the HTML document, then open the web page in your browser, enter some
+data and submit the form.
+Notice that the readonly attribute ensures that the State cannot be edited, the
+maxlength attribute limits the Zip Code to 5 characters in length, and the
+disabled attribute grays out the Area text box – so that element will not be
+submitted to the server for processing.
+The server-side script echos the name=value pairs arranged in alphabetical name
+order, irrespective of their order on the page.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Text Input Example</title>
+</head>
+<body>
+    <form method="get" action="http://localhost/echo.pl">
+        <p>
+            <input type="submit" value="Submit Form" />
+        </p>
+        <dl>
+            <dt>Username:
+            <dd><input type="text" name="Name" />
+            <dt>Password:
+            <dd><input type="password" name="Password" />
+            <dt>City:
+            <dd><input type="text" name="City" value="Dallas" />
+            <dt>Area:
+            <dd><input type="text" name="Area" value="Downtown" disabled />
+            <dt>State:
+            <dd><input type="text" name="State" value="Texas" readonly />
+            <dt>Zip Code:
+            <dd><input type="text" name="Zip Code" size="5" maxlength="5" />
+        </dl>
+    </form>
+</body>
+</html>

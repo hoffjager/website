@@ -1,0 +1,46 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections, with a link element
+pointing to a style sheet.
+3. Within the body section, insert a paragraph containing hyperlinks with nested
+image elements.
+4. Next, in the body, insert a paragraph containing text.
+Specifying a value of just “#” to a hyperlink’s href attribute targets the top
+of that document.
+Refer to:
+popup.css
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>PopUp Example</title>
+    <link type="text/css" rel="stylesheet" href="TOPIC3popup.css"
+          media="screen" />
+</head>
+<body>
+    <p id="models">
+        <a href="#null">
+            Cayman
+            <img class="pop" src="cayman.png" alt="Cayman" />
+        </a>
+        <br />
+        <a href="#null">
+            Boxster
+            <img class="pop" src="boxster.png" alt="Boxster" />
+        </a>
+        <br />
+        <a href="#null">
+            Carrera
+            <img class="pop" src="carrera.png" alt="Carrera" />
+        </a>
+    </p>
+    <p>
+        Porsche doesn't simply build sports cars.<br />
+        Porsche is more.<br />
+        Much more.<br />
+        And Porsche is different.
+    </p>
+</body>
+</html>

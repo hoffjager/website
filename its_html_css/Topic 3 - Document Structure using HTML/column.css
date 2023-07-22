@@ -1,0 +1,39 @@
+﻿/*
+Refer back to:
+column.html
+1. Create a style sheet with rules to specify the appearance of the table, and its
+header, footer and data cells.
+2. Next, add rules to specify the width of each column.
+3. Now, add rules to style groups and individual columns.
+4. Save the HTML document and style sheet, then open the web page in your
+browser to see distinct column groups.
+The &bull; character entity is used in this table footer to create bullet points.
+Notice how the styling separates the column groups.
+*/
+
+table#jfk {
+    width: 580px;
+    border-collapse: collapse}
+
+table#jfk tbody th {
+    background: blue;
+    color: white}
+
+table#jfk tbody td {
+    padding: 3px;
+    text-align: center}
+
+table#jfk tfoot {
+    font-size: small}
+
+table#jfk colgroup.sidebar col {
+    width: 70px}
+
+table#jfk colgroup.info col {
+    width: 80px}
+
+table#jfk colgroup.info {
+    border-left: 2px solid white}
+
+table#jfk colgroup col.stripe {
+    background: aqua}

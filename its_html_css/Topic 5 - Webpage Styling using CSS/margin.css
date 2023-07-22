@@ -1,0 +1,31 @@
+﻿/*
+Refer back to:
+    margin.html
+1. Create a linked style sheet with rules to color the elements.
+2. Next add a style rule to remove all margins from the second
+heading and paragraph element content boxes.
+3. Now add a style rule to add a left margin only to the third heading
+and paragraph element content boxes.
+4. Save the style sheet alongside the HTML file then open the web page
+in a browser to see the margin styles.
+*/
+
+div {
+    border: 1px solid black
+}
+
+h2 {
+    background: lime
+}
+
+p {
+    background: orange
+}
+
+h2.zero {
+    margin: 0
+}
+
+h2.left {
+    margin: 0 0 0 0.5in
+}

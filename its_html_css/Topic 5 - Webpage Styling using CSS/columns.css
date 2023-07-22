@@ -1,0 +1,62 @@
+﻿/*
+    Refer back to:
+    columns.html
+1. Create a linked style sheet with a rule to remove all margins and
+padding, and to center all content.
+2. Add a rule to ensure the page is the entire window height.
+3. Now add a rule to have the container element use the entire window
+area – except for a bottom margin area where the footer will appear.
+4. Next add style rules to set the header and footer heights and
+background color.
+This example solves the issue of how to create a "sticky footer" that
+always remains at the bottom of the window.
+5. Finally add rules to position and color the three columns.
+6. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the page layout.
+An image is included in this example, stretched to various dimensions,
+just to represent simple page content.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center
+}
+
+html, body {
+    height: 100%
+}
+
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -30px
+}
+
+#hdr {
+    height: 60px;
+    background: aqua
+}
+
+#ftr {
+    height: 30px;
+    background: aqua
+}
+
+#nav {
+    float: left;
+    width: 100px;
+    background: yellow
+}
+
+#ads {
+    float: right;
+    width: 100px;
+    background: fuchsia
+}
+
+#txt {
+    margin: 0 100px;
+    background: lime
+}

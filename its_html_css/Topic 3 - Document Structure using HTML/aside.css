@@ -1,0 +1,15 @@
+﻿/*
+Refer back to:
+aside.html
+1. Create a style sheet to control the position of the paragraph and aside element
+in the first article.
+2. Save the HTML document and the style sheet, then open the web page in your
+browser to see how the asides appear.
+Do not use the <aside> element to contain navigation hyperlinks – those should
+always be contained inside a <nav> element.
+*/
+
+article.sidebar > p,aside {
+    display: table-cell;
+    padding-right: 20px;
+}

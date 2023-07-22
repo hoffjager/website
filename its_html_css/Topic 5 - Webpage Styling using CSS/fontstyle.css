@@ -1,0 +1,41 @@
+﻿/*
+    Refer back to:
+    fontstyle.html
+1. Create a linked style sheet containing rules specifying default font
+styles for each paragraph.
+2. Next add style rules specifying font styles for the spanned sections
+of text in the paragraphs.
+3. Now add style rules specifying font variants for the heading and its
+spanned text.
+5. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the sections of text appear in the specified
+font styles and variants.
+*/
+
+p#para-1 {
+    font-style: normal
+}
+
+p#para-2 {
+    font-style: italic
+}
+
+span.ital {
+    font-style: italic
+}
+
+span.oblq {
+    font-style: oblique
+}
+
+span.reg {
+    font-style: normal
+}
+
+h2 {
+    font-variant: small-caps
+}
+
+span.reg-caps {
+    font-variant: normal
+}

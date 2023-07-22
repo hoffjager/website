@@ -1,0 +1,48 @@
+﻿/*
+    Refer back to:
+    relative.html
+1. Create a linked style sheet containing a rule to set the size and
+color of the outermost containing element.
+2. Next add a style rule to position the first nested element relative
+to the outermost containing element.
+3. Now add a style rule to position the second nested element relative
+to the first nested element.
+4. Finally add a style rule to position the innermost nested element
+relative to the second nested element.
+5. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the nested elements positioned relative to
+their containing elements.
+The margin property is only set on the outer element simply to move the
+content away from the edge of the window.
+*/
+
+div#pale-gray {
+    width: 400px;
+    height: 50px;
+    background: #CCC;
+    margin: 20px
+}
+
+div#light-gray {
+    position: relative;
+    left: -4px;
+    top: -4px;
+    height: 100%;
+    background: #999
+}
+
+div#dark-gray {
+    position: relative;
+    left: -4px;
+    top: -4px;
+    height: 100%;
+    background: #666
+}
+
+div#text-box {
+    position: relative;
+    left: -4px;
+    top: -4px;
+    height: 100%;
+    background: lime
+}

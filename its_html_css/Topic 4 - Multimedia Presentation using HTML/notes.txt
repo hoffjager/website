@@ -1,0 +1,332 @@
+Chapter 7: Embedding Media Content
+
+	Referencing Figures
+With the latest HTML5 specifications, the web page author now has
+additional means by which to insert images into a web page. An <img> tag
+can be nested within a <figure> </figure> element to embed an image that
+is related to the main text content, but whose removal would not disrupt
+the text's meaning.
+As the nested image, in effect, is now self-contained as a "figure", it
+can be positioned away from the text if desired, and referenced by a
+caption within a nested <figcaption> </figcaption> element:
+
+Refer to:
+figure.html
+&
+figure.css
+
+	Selecting Pictures
+As web content is increasingly being accessed on small handheld devices,
+the latest HTML5 specifications allow the web page author to specify
+alternative images to be displayed on the web page according to the size
+of the device screen.
+The <picture> tag, and the ability for it to contain multiple <source>
+elements for responsive image selection, is a great new feature
+introduced in the HTML 5.1 specifications.
+A <picture> </picture> element is used to contain multiple image sources
+from which the browser can select the most appropriate size. Each image
+source is specified to the srcset attribute of a nested <source> element,
+and the minimum screen width suitable for that image is specified to its
+media attribute. The assignment requires an unusual syntax that states
+the size to a min-width property within ( ) parentheses. For example, to
+specify that an image is suitable for display only on devices whose
+screen width exceeds 500 pixels with: media="(min-width: 500px)".
+Usefully, the <picture> </picture> element can enclose a final regular
+<img> element to specify the image to be displayed on older web browsers
+that do not support this selection feature.
+
+Refer to:
+picture.html
+
+	Embedding Objects
+An external resource can be embedded into an HTML5 document using
+<object> </object> tags to define the resource.
+When the resource is an image it will be treated much like those
+specified by <img> elements, otherwise a plugin may be sought to process
+the resource. The <object> element can specify the resource's URL to its
+data attribute and the resource type to its type attribute. The resource
+type must be a valid MIME type describing the resource.
+This table lists some popular MIME types. Further details can be found
+on the W3C website at http://www.w3.org
+
+MIME Type Object File Format
+image/png PNG image resource
+image/jpeg JPG, JPEG, JPE image resource
+image/gif GIF image resource
+image/svg+xml SVG vector image resource
+text/plain TXT regular plain text resource
+text/html HTM, HTML markup text resource
+application/pdf PDF portable document resource
+application/msword DOC Word document resource
+application/x-java-applet CLASS Java applet resource
+audio/x-wav WAV sound resource
+audio/mpeg MP3 music resource
+video/mp4 MP4 video resource
+video/x-mpeg MPEG, MPG, MPE video resource
+video/x-msvideo AVI video resource
+video/x-msv-wmv WMV Windows video resource
+video/quicktime MOV QuickTime video resource
+
+Each <object> element can specify dimensions in which to display visual
+content using its width and height attributes. Where the resource is an
+image, the <object> element can also include a usemap attribute to
+specify the name of an image map, just like those produced for an
+<img> element.
+<object> elements must contain at least one data attribute or one type
+attribute.
+Optionally, fallback text can be included between the <object> </object>
+tags that will only be displayed by the browser in the event that the
+resource cannot be embedded within the document. For example, when an
+appropriate plugin cannot be found.
+
+Refer to:
+pdf.html
+
+	Specifying Parameters
+Some external resources embedded into an HTML5 document can be passed
+"parameter" values to the plugin processing that resource to control its
+execution. For example, a plugin's "autoplay" property might be passed
+a "false" value to suppress automatic playback when the resource gets
+embedded into the web page.
+Java applets can pose a security threat, so trusted websites need to be
+added to the Exception Site List under Web Settings in the Java Control
+Panel in order to run their applets.
+An appropriate plugin will be sought after the resource type is
+identified by the MIME type specified to an <object> element's type
+attribute. Parameter values for that particular plugin can then be
+specified using <param> elements nested between the <object> </object>
+tags. Each <param> element must have both a name attribute and a value
+attribute, which pass the parameters to the plugin as a name/value pair.
+For example, automatic playback might be suppressed with this element:
+<param name="autoplay" value="false">
+The permissible parameter names and values are specific to each object,
+but are given in their documentation. For example, the permissible
+parameter names and values for Java applets are provided in each applet's
+documentation - as they have been specified by the applet creator to suit
+that particular application. In this case, the Java Runtime Environment
+(JRE) uses the parameters specified in each <param> element to control
+execution of the applet.
+
+Refer to:
+applet.html
+
+	Embedding in Frames
+External resources can be embedded in an HTML5 document within an
+"inline frame" using <iframe> </iframe> tags. These create a fixed area
+on the page in which to display the embedded resource. The inline frame's
+dimensions must be specified to the <iframe> element's width and height
+attributes, and the URL of the external resource to its src attribute.
+Where the dimensions of the external resource exceed those of the inline
+frame, the browser automatically adds scroll bars so the user can view
+the entire content.
+Each <iframe> element may also optionally contain a name attribute to
+specify a unique identifier for that frame. This allows hyperlinks to
+then load the URL specified to their href attribute into the inline
+frame (rather than replace the entire page) by assigning the frame name
+to a target attribute in the <a> element. For example, a hyperlink could
+target an inline frame named "topbox" with:
+<a href="some.html" target="topbox">.
+Typically, inline frames are useful to provide supplemental content
+while maintaining a compact page format.
+
+Refer to:
+iframe.html
+&
+iframe.css
+
+	Embedding plugin movies
+The <object> and <iframe> elements can be used to embed other documents
+into a web page. External resources that provide interactive content,
+such as Flash "movies", can more easily be embedded by an <embed> element.
+Support for browser plugins, such as Adobe Flash Player, is slowly
+disappearing, as HTML5 provides better and more secure alternatives.
+Each <embed> tag should specify the URL of the external interactive
+resource to its src attribute. For a Flash movie, this will be the
+location of the ShockWave Flash (SWF) file. In order for the browser to
+seek an appropriate plugin, the movie's MIME type should also be
+specified to its type attribute. For a Flash movie, this will be
+"application/x-shockwave-flash". Additionally, the dimensions of the
+area in which to display the movie on the page are specified to width
+and height attributes.
+Web browsers that support HTML5 also support Scalable Vector Graphics
+(SVG). Unlike bitmap graphic formats such as PNG, which store their
+graphic information as the color of each pixel, vector graphics store
+the graphic information as a series of "paths". This is a highly
+efficient way to describe graphics. Most importantly, vector graphics
+can be scaled without loss of fidelity. This means that they can be
+infinitely enlarged without suffering the pixelation experienced when
+enlarging bitmap images.
+SVG is not actually part of HTML5, but is a specification based on the
+eXtensible Markup Language (XML), so it describes vector images in text
+files. These can be created manually, but it's far simpler to use a
+vector graphics editor such as Adobe Illustrator.
+Static SVG images can be embedded using the <img> element - just like
+any other image.
+Just as Flash movies incorporate ActionScript for functionality, SVG can
+incorporate JavaScript to create interactive SVG movies. These can be
+embedded in HTML5 by specifying the MIME type "image/svg+xml" to the
+<embed> element's type attribute.
+
+Refer to:
+movie.html
+movie.swf
+movie.svg
+
+	Embedding Audio
+External audio resources, such as MP3 music files, can be embedded in an
+HTML5 document using <audio> </audio> tags.
+A Boolean value can be only True or False. By default, attributes that
+represent Boolean values are True unless they are assigned a value
+of False.
+The <audio> element can include an src attribute, to specify the URL of
+the audio resource to embed, and may include additional attributes to
+determine how the audio resource will be used:
+autoplay – a Boolean attribute that specifies the browser should
+immediately begin playing the audio resource.
+loop – a Boolean attribute that specifies the browser should play the
+audio resource repeatedly.
+controls – a Boolean attribute that specifies the browser should display
+user controls to start or stop the audio playing.
+preload – accepts values of "auto" or "none" to suggest the browser
+should load the audio resource so it is ready to play.
+Boolean attributes, like the autoplay, loop and controls attributes, need
+have no assigned value – their presence alone within the element is
+sufficient for the browser to understand their purpose.
+Browsers rely upon an in-built "codec" (coder-decoder) to decode audio
+resources so they can be played. Sadly, not all browsers incorporate the
+same audio codec:
+Advanced Audio Coding (AAC) – codec "mp4a.40.2" is supported by modern
+browsers such as Microsoft Edge, Internet Explorer, Firefox, and Chrome
+for MP3 audio.
+A fallback message can be included between the <audio> </audio> tags to
+be displayed when audio playback support is disabled.
+Ogg audio – codec "vorbis" is supported by other browsers for audio files
+in OGG format.
+This inconsistency therefore requires audio resources to be encoded
+twice for playback across all browsers. Two <source> elements may be
+nested within an <audio> element for this purpose, rather than specifying
+a single resource URL to an src attribute in the <audio> tag. For each
+file format, the <source> elements can then specify their resource URL
+to an src attribute, and their MIME type to a type attribute. The browser
+will only load the supported audio resource for playback.
+
+Refer to:
+audio.html
+audio.mp3
+audio.ogg
+
+	Embedding Video
+External video resources, such as MP4 video files, can be embedded in an
+HTML5 document using <video> </video> tags.
+To determine how the video resource will be used, the <video> element
+can include src, autoplay, loop, controls and preload attributes, just
+like the <audio> element in the previous example. Additionally, the
+dimensions of the area in which to display the video on the page can be
+specified to width and height attributes.
+You can discover more about the WebVTT subtitle format online at:
+http://www.w3.org/TR/webvtt1
+As with audio resources, browsers rely upon an in-built "codec"
+(coder-decoder) to decode video resources so they can be played. Sadly,
+not all browsers incorporate the same video codec:
+Advanced Video Coding (AVC) – codec "avc1.42E01E" is supported by modern
+browsers such as Microsoft Edge, Internet Explorer, Firefox, and Chrome
+for MP4 video.
+Ogg video – codec "theora" is supported by other browsers for video
+files in OGV format.
+This inconsistency requires video resources to be encoded twice for
+playback across all browsers, and embedded using two <source> elements
+nested within a <video> element. For each file format, the <source>
+elements can then specify their resource URL to an src attribute, and
+the MIME type of each video file can be specified to the type attribute.
+The browser will only load the supported video resource for playback.
+The Advanced Video Coding standard is also often referred to by its
+project name of "H.264".
+A <track> tag may also be nested within a <video> element to specify the
+location of a Web Video Text Tracks (WebVTT) subtitles file to its src
+attribute. The tag must also include a Boolean default attribute to use
+the specified file. The subtitles file must be in a very specific format
+that begins with "WEBVTT". Start and end timing cues are added on new
+lines in the format "HH:MM:SS:sss" and separated by " --> ". The
+associated subtitle caption appears on a new line below each timing cue,
+like this:
+WEBVTT
+00:00:01:000 --> 00:00:04:000
+Playing video with "HTML5 in easy steps"
+00:00:05:000 --> 00:00:06:000
+Thanks for watching.
+
+Refer to:
+video.html
+
+	Indicating Progress
+If you prefer not to provide the browser's standard controls for playback
+of audio or video, the controls attribute can be omitted from the
+<audio> and <video> tags. The JavaScript play() and pause() methods of
+an embedded media object can then be called to control playback from an
+onclick event-handler script function.
+The <progress> tag is a new element introduced in HTML 5.1.
+A visual indicator of media playback can be displayed using a <progress>
+</progress> element to present a "progress bar".
+Within the <progress> tag, a value attribute determines the extent of
+progress towards completion. This can be dynamically updated in
+synchronization with media playback from an ontimeupdate event-handler
+script function.
+Embedded media objects have a currentTime property, which stores the
+elapsed time since playback began, and a duration property that stores
+total playback time. These can be used to calculate playback progress as
+a percentage.
+
+Refer to:
+progress.html
+&
+progress.js
+
+	Summary
+The <figure> and <figcaption> tags can be used to embed a captioned
+reference image within an HTML document.
+A <picture> element can contain several <source> tags to provide a
+variety of image sizes for different screen widths.
+The <object> </object> tags can be used to embed external resources
+within an HTML document.
+An <object> tag can specify the size of a display area, the URL of an
+external resource, and the resource's MIME type.
+Multiple <param> elements can be nested within an <object> element to
+specify parameters to name and value attributes.
+External resources can be embedded into an inline frame with an <iframe>
+element that specifies the size of a display area, and a name attribute
+so it can become the target of a hyperlink.
+Each <object> and <iframe> element can include fallback text to be
+displayed when the resource cannot be embedded.
+External resources can be embedded into an HTML document using <embed>
+tags.
+An <embed> tag can specify the size of a display area, the URL of an
+external resource, and the resource's MIME type.
+External audio resources can be embedded into an HTML document using
+<audio> </audio> tags, and external video resources can be embedded
+using <video> </video> tags.
+Each <audio> and <video> element should include nested <source> elements
+to specify the resource URL to their src attribute, and its MIME type
+to their type attribute.
+A <video> element can contain a nested <track> element to specify a
+subtitle file in the WebVTT format.
+The <progress> element can be used to provide a visual indicator of
+media playback.
+
+Test 1:
+Q1: A free, open container format maintained by the Xiph.org
+	Foundation. Unrestricted by software patents [Ogg (.ogg)]
+	A royalty-free video format. Reasonably small file size. It has a
+	sister project WebP for images [WebM (.webm)]
+Q11: Which portions in the tag affect vector aspects when changed?
+	A: X & Y x => Height, Width v
+
+Test 2:
+Q3: <nav></nav> x => <header></header>
+Q4: <summary><details></details></summary> x => <details><summary></summary></details>
+Q7: <a href="#C19"></a> <h2 id="#C19"></h2> x => <a href="#C19"></a> <h2 id="C19"></h2>
+Q9: <input tabindex="1" accesskey="n" /> <input tabindex="2" accesskey="m" /> x => <input tabindex="1" accesskey="n" /> <input tabindex="2" accesskey="m" />
+Q11: <optgroup><option value="g"></option value></optgroup> x => <optgroup><option value="g"></option></optgroup>
+Q21: <table style="width:100%"><tr><td colspan="2"></td></tr></table> x => <table border="2"><tr><td colspan="2"></td></tr></table>
+Q29: No alert messages will be displayed due to a syntax error x => An alert message is displayed: This browser supports JavaScript
+Q36: POST x => GET
+Q40: True or False: SVG graphics do not lose any quality if they are zoomed or resized: False x => True v

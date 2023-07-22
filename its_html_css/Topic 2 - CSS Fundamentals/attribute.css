@@ -1,0 +1,28 @@
+/*
+Refer back to:
+attribute.html
+1. Create a linked style sheet with a style rule to paint the background of all
+anchors containing an id attribute.
+2. Add a style rule text to color the text in all hyperlinks containing an href
+attribute.
+3. Next add a style rule to paint the background of all hyperlinks containing
+both an href attribute and a title attribute.
+4. Now add a style rule to draw a border around all hyperlinks that have an href
+attribute assigned a #top value.
+5. Save the style sheet alongside the HTML document then open the web page in a
+browser to see styles applied to elements selected by their attributes.
+The * "wild card" universal selector selects all elements that match.
+*/
+
+a[id] {
+    background: orange
+}
+a[href] {
+    color: red
+}
+a[href][title] {
+    background: yellow
+}
+a[href="#top"] {
+    border: 0.2em solid blue
+}

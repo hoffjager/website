@@ -1,0 +1,84 @@
+	A Tag	An anchor (a) tag is used to implement a hyperlink for a user. This means that the user is anchoring himself to another page.
+	Absolute Link	A link which contains the complete address to another link.
+	Absolute Positioning	A type of positioning in CSS which places items in an exact location on a webpage.
+	Action Attribute	An attribute used within a form tag to navigate users to the next page or script once the form is submitted.
+	Article Tag	A tag which is used to mark off self-containing text that can make up a story, blog entry, or an article.
+	Aside Tag	A tag which is often used to mark off a side story.
+	Audio Tag	A tag which can have multiple sources and should have the controls attribute added to allow a user to control when the audio plays.
+	Background	The color or image used as the backdrop of an entire webpage.
+	Body Tag	A tag which contains everything that displays on the webpage. Most of the tags used in CSS are placed inside of a body tag.
+	Border-Color Property	A CSS property which is used to alter to color of a border either by name or using hexadecimal colors.
+	Border-Style Property	An element used in CSS to control the overall look of a border.
+	Border-Width Property	A property which is used in CSS to control the width of a border.
+	Br Tag	A tag which is used to create a line break.
+	Button Tag	A tag which can be used on a form to add a button option.
+	Caption Tag	A tag which is used on tables to allow a table description to be placed in close proximity to a table.
+	Comment	A tool used to put placeholders in for text that will need to be added later to a webpage. It can also be used to explain parts of a webpage that do not display in a browser but will appear in a text editor. It will help any collaborative efforts to build a website.
+	CSS	Cascading Style Sheets (CSS) is a type of style sheet language which is used in web design to describe the presentation of a document that is written in a markup language, such as HTML5. It is the code used to format the text in a webpage.
+	CSS Framework	A template which is created by the web designer, downloaded for free, or purchased from a third-party which has built in CSS the designer can use to ease in the development process of a website.
+	Datalist Tag	A tag which is used to create a pre-populated list within a form.
+	Delete	A common submission method which requests to remove information from a database.
+	Details Tag	The summary tag surrounds the line explaining what is in the details section in a details tag.
+	Div Tag	A tag which is used in CSS to control alignment, backgrounds, margins, padding, and text flow for webpage elements. It can also be used to control the width of an entire page.
+	Em	A relative measurement which is equivalent to the font size being used. For example, 3em = 3 x the size of the current font.
+	Ex	A measurement type which is relative to the height of the letter x.
+	Fieldset Tag	A tag which creates fieldsets that allow you to group fields on forms to make them easier to read.
+	Figure Tag	A tag which is used to mark up an image in a webpage.
+	Float Element	An element which is used to move one item next to another on a webpage.
+	Font-Family Property	A property which is used in CSS to ensure there are backup fonts and web safe fonts available in the event a user does not have access to the web designers designated fonts.
+	Font-Style Property	A font property which is used in CSS to apply style to fonts, such as italics.
+	Font-Weight Property	A font property which controls the bold level of text on a webpage.
+	Get	A common submission method which requests to retrieve something, such as information from another webpage, an image, or a search engine.
+	Head Tag	A tag type which contains information that describes the webpage but does not show on the webpage.
+	Heading Tags	HTML has six levels of headings, with tags of h1 through h6. H1 is the largest heading while h6 is the smallest.
+	Hexadecimal Colors	A color format which uses a pound symbol and six hexadecimal numbers, that is, six numbers 0 through 9 or A through F. 0 represents black, while F represents white. The six colors are in three pairs, which signify the amounts of red, green, and blue used in the color.
+	Hr Tag	A horizontal rule (hr) tag is a tag that creates a paragraph-level break within text on a web document.
+	Html Tag	A tag which contains data that makes up a webpage.
+	HTML5	Hypertext Markup Language 5 (HTML5) is a type of markup language used to build and present content on the Internet.
+	iFrame	A content-holding frame inside of a webpage. It can be altered using programming.
+	Img Tag	An image (img) tag defines an image in an HTML document, which requires the src and alt attributes.
+	JavaScript	The dynamic aspect of webpage building where scripts are used to manipulate objects based on an event.
+	Li Tag	A list item (li) tag goes around every item listed in either an ordered or unordered list.
+	Link Tag	A tag which allows web designers to link to external files, such as style sheets and scripts.
+	Margins	The space between the top, bottom, or side of a webpage's content and its edge.
+	Max-Width Property	A property which is used to control layouts on webpages using CSS. It can ensure that the total width of a webpage does not exceed the screen size of the user.
+	Media Query	A fairly granular method used to control how a webpage displays across different types of devices. It checks for screen width and changes styles according to that screen width.
+	Meta Tag	A type of tag used to embed metadata in CSS.
+	Metadata	A tool used in CSS to describe items and elements and their usage.
+	Method Attribute	An attribute which is used within a form tag to tell the form what type of action to take once it is submitted.
+	MP3	A compressed sound file which allows for digital storage and transmission.
+	MP4	A digital multimedia container often used to store video and audio data.
+	MPEG	Moving Picture Experts Group (MPEG), lso known as the H.264 format is the most common format for output from video editing software.
+	Nav Tag	The nav tag is used to help spot, in HTML code, the area on the page containing navigation links on our webpage.
+	Noscript Tag	A tag which notifies the user if their browser does not support the programming language that is currently in use.
+	Ogg	An open container format which is designed to provide for efficient streaming of digital multimedia. It is a royalty-free video format.
+	Ol Tag	An ordered list (ol) tag is a numbered list.
+	Output Tag	A tag which allows you to take what is in a form and run an instant calculation depending upon what is being input in a form.
+	Overflow Property	A property which is used to ensure that text will fit on the screen regardless of the device.
+	P Tag	A tag used to create paragraphs.
+	Percentage Measurement	A type of measurement used within CSS. It can be applied to elements on a webpage where it will allow the element to fluctuate its size based on the screen size the user has.
+	Pixel Measurement	A static form of measurement in CSS. It allows the web designer to assign a specific measurement to a webpage element.
+	Post	A common submission method which requests to take submitted data and modify data on the server as a result of user input.
+	Pt	A measurement which is 1/72 of an inch.
+	Put	A common submission method which requests to take data submitted and insert it into a database.
+	Px	A measurement which is normally 1/96 of an inch but can vary based on screen sizes.
+	Relative Link	Hyperlinks used to link pages within a website.
+	Relative Positioning	A type of positioning in CSS which places items relative to where they normally are in relation to how things normally flow on a webpage.
+	Responsive Web Design	A concept which refers to designing webpages which can be viewed on different devices, such as desktops, laptops, tablets, and smartphones.
+	Script Tag	A tag which is used to hold programming scripts for programming languages.
+	Section Tag	A tag which marks off sections on a webpage.
+	Select Tag	A form-based tag which creates a drop-down list full of options.
+	Semantic Tag	A tag which is used to help organize a webpage and can be used to determine how a webpage should be rendered.
+	Span Tag	A tag which is used to format a word or phrase.
+	Summary Tag	A semantic tag which can hide the text inside of a details tag. The summary tag surrounds the line explaining what is in the details section.
+	SVG	Scalable Vector Graphics (SVG) is a vector image format for two-dimensional graphics with the ability to support interactivity and animation.
+	Tag	A command within an HTML document that specifies the formatting of the document or a portion of that document.
+	Text-Align Property	An alignment property which is used to align text on a webpage.
+	Textarea Tag	A tag used to create text boxes within a form so that users can type responses.
+	Text-Decoration Property	An element which is used in CSS to apply underlines to text on a webpage.
+	Text-Indent Property	A text property which is used in CSS to indent the first line of text in a multi-line paragraph.
+	Track Tag	A tag which works in conjunction with vtt files as part of the Web Video Text Tracks (WebVTT) standard.
+	Ul Tag	An unordered list (ul) tag adds a bulleted list with no specific hierarchy to a webpage.
+	Video Tag	A tag which adds a video to a webpage.
+	Visibility Property	A property which is used to make an object invisible using CSS.
+	WebM	A video file format which works well on low-power devices, such as netbooks and tablets.

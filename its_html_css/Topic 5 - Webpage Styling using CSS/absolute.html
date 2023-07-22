@@ -1,0 +1,39 @@
+﻿<!--
+1. Create an HTML document with four "div" elements that each contain
+an inner div element.
+2. Save the HTML document then create a linked style sheet with rules
+to set the absolute size of the elements.
+Refer to:
+    absolute.css
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Absolute Example</title>
+    <link type="text/css" rel="stylesheet"
+          href="absolute.css" media="screen" />
+</head>
+<body>
+    <div class="top-left large">
+        Top:0 Left:0
+        <div class="btm-right small">Bottom:0 Right:0</div>
+    </div>
+
+    <div class="top-right large">
+        Top:0 Right:0
+        <div class="btm-left small">Bottom:0 Left:0</div>
+    </div>
+
+    <div class="btm-left large">
+        <br /><br /><br />Bottom:0 Left:0
+        <div class="top-right small">Top:0 Right:0</div>
+    </div>
+
+    <div class="btm-right large">
+        <br /><br /><br />Bottom:0 Right:0
+        <div class="top-left small">Top:0 Left:0</div>
+    </div>
+</body>
+</html>

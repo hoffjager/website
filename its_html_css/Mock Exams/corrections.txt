@@ -1,0 +1,584 @@
+Mock Exam #1:
+28/40 Marks = 71%/100% (>= 80% Required to Pass)
+12 Marks Lost (4 Marks More to Pass with >= 80%)
+Re-Attempt on Tues 11th Apr @ 10:01am:
+39.3/40 Marks = 98%/100% (Passed)
+0.66 Marks Lost
+
+Q4 (0.33/1):
+Hexadecimal Notation
+#0000FF, Ergonomics = green x
+						blue v
+#00FF00, Health and Safety = blue x
+								green v
+#RRGGBB
+
+Q8 (0.5/1):
+Text Decoration
+h1 {
+	text-decoration-line: overline red wavy; x
+		text-decoration: overline red wavy; v
+}
+h2 {
+	text-decoration: underline; x
+		text-decoration-line: underline; v
+	text-decoration-style: double; v
+	text-decoration-color: navy; v
+}
+
+Q11 (0/1):
+The <div> element should be positioned relative to the nearest positioned ancestor (instead of being positioned relative to the viewport).
+<style>
+	div.relative x
+		div.absolute v
+</style>
+	
+<div class = relative> x
+	<div class = absolute> v
+
+Q13: (0.6/1):
+<p> v
+<br> v
+<br> v
+<hr> x
+	</p> v
+</p> x
+	<hr> v
+
+Q14: (0/1):
+img {
+	float: clear; x
+		float: none; v
+}
+
+Q17: (0.75/1):
+<img>
+	width = 250 v
+	height = 250 v
+	src = "images/ambiance.png" v
+	style = "display:inline"; x
+		style = "display:block"; v
+</img>
+
+Q19:  (0.33/1):
+If the user is viewing the website via a mobile device, the footiePitch image is to be hidden completely.
+@media only window and (min-width: 320px) and (max-width: 1200px) x
+	@media only screen and (min-width: 320px) and (max-width: 480px) v
+{
+	#footiepitch
+	{
+		display: none;
+	}
+}
+If the user is viewing the website via a tablet, the footiePitch image should have a width of 240px.
+@media only device and (min-width: 320px) and (max-width: 1200px) x
+	@media only screen and (min-width: 481px) and (max-width: 1200px) v
+{
+	#footiepitch
+	{
+		width: 240px;
+	}
+}
+
+Q20: (0.75/1):
+Void Elements
+br v
+link v
+meta v
+MISSING x
+	input v
+
+Q21: (0.5/1):
+Table
+<table border = "1">
+	<th> x
+		<tr> v
+			<td>Running</td> x
+			<td>Swimming</td> x
+				<th>Running</th> v
+				<th>Swimming</th> v	
+	</th> x
+		</tr> v
+
+	<tr>
+		<td>5K run on Monday and Saturday!</td>
+		<td>20 lengths swim on Wednesday and Sunday!</td>
+	</tr>
+	<tr>
+		<td colspan = "2">Hours vary during the winter!</td>
+	</tr>
+</table>
+
+Q24: (0/1):
+Mr C would like to grab this image directly from one of Scott's webpages and display it on theambiance.com website (a webpage within a webpage).
+<body>
+	<embed width = "250" height = "250" id = "ambianceLogo" url = "url">
+	</embed> x
+		<iframe width = "250" height = "250" id = "ambianceLogo" src = "url">
+		</iframe> v
+
+Q27: (0/1):
+Mr C has given you the task of completing the following code to successfully add the subtitles to the video.
+<src href = "videos/subtitles.vtt" type = "subtitles" language = "en"/> x
+	<track src = "videos/subtitles.vtt" kind = "subtitles" srclang = "en"/> v
+
+Q29: (0.8/1):
+Please complete the code to successfully create the above video with the following requirements:
+The video should have a width of 600 pixels.
+The video should have a height of 400 pixels.
+Autoplay and loop functionality should not be enabled, as the controls are best left to the user.
+The .mov file should be made available for users who are unable to play the mp4 file.
+<video width = "600" height = "400" autoplay = "false"> x
+	<video width = "600" height = "400" controls> v
+	<source src = "videos/trenbyBeach.mp4" type = "video/mp4/"/>
+	<source src = "videos/trenbyBeach.mov" type = "video/quicktime/"/>
+</video>
+
+Q32: (0/1):
+T or F: When the <div> element is displayed, it will contain a border. The border color will be tomato and the border width will be thin.
+True x
+	False v
+
+Q33: (0.9/1):
+html
+head
+style
+/head
+body
+/body
+/html x
+	html
+	head
+	/head
+	style
+	body
+	/body
+	/html v
+
+Q36: (0/1):
+span {
+	display:inline; x
+		display:block; v
+	...
+}
+
+Q37: (0/1):
+The three <h1> elements will display without any CSS style applied. x
+	The three <h1> elements will display with a font color of black (default color) and a font size of 200%. v
+
+Q39: (0/1):
+Whether the user has JavaScript enabled or not, just the word 'Hello' is displayed on the webpage. x
+	If the user has JavaScript disabled, 'document.write("Hello");' will be displayed on the webpage. v
+
+Mock Exam #2:
+28/40 Marks = 71%/100% (>= 80% Required to Pass)
+12 Marks Lost (4 Marks More to Pass with >= 80%)
+Re-Attempt on Tues 11th Apr @ 11:46am
+33/40 Marks = 82%/100% (Passed)
+7 Marks Lost
+
+Q1 (0/1):
+Fields & Forms
+<datalist>
+<caption>Personal</caption>
+	...
+</datalist> x
+	<fieldset>
+		<legend>Personal</legend>
+		...
+	</fieldset> v
+
+Q5 (0/1):
+Mr C has asked you to modify the CSS to ensure that the car is displayed on the correct side of the road (moved to the right).
+#car {
+	position: absolute;
+	top: 45%;
+	left: 32%;
+	padding: 250px; x
+		margin-left: 250px; v
+}
+
+Q9 (0/1):
+Which text-decoration will be applied to the <h1> element?
+h1
+{
+    text-decoration: underline line-through overline;
+}
+	Underline x
+		All 3 lines are applied to the h1 element (underline, line-through and overline) v
+
+Q12 (0.8/1):
+Mrs C has noticed that there is no hyperlink in the header to bring the user back to the homepage.
+<a href = "index.html">
+<img id = "logo" src = "images/footieBoss.png">
+<a> x
+	</a> v
+
+Q14: (0/1):
+You have been tasked with hiding the policyDownload label and button using CSS. After this is hidden, the form fields should move up to occupy the space vacated.
+#policyLabel {
+	display: false; x
+		display: none; v
+}
+#policyDownload {
+	visibility: hidden; x
+		display: none; v
+}
+
+Q17: (0.75/1):
+<input list = "time periods" name = "time period" />
+<datalist id = "time period"> x
+	<datalist id = "time periods"> v
+<option value = "One weekday"></option>
+<option value = "Two weekdays"></option>
+<option value = "A weekend"></option>
+<option value = "A week"></option>
+</datalist>
+
+Q19: (0/1):
+MISSING x
+
+<h2>Eating Out in Trenby</h2>
+<details>
+<summary>Show or hide these images</summary>
+<p>
+Trenby has a wide selection of vegan restaurants.<br>
+<img src = "chopping-board-close-up-cuisine-162825.jpg" height="150" width="820">
+</p>
+<p>
+A wide selection of Vegatarian Restaurants can be found in the area.<br>
+<img src = "bowl-delicious-diet-257816.jpg" height="150" width="820">
+</p>
+<p>
+Near the Trenby promenade, your will find many Seaside Restaurants.<br>
+<img src = "seaside-restaurant-375889.jpg" height="150" width="820">
+</p>
+</details>
+
+Q21: (0/1):
+You have been tasked with adding the yellow sun to the postcard. Please select the option that will successfully achieve this.
+<circle left="100" top="100" r="100" fill="yellow" /> x
+	<circle cx="100" cy="100" r="100" fill="yellow" /> v
+
+Q24: (0/1):
+Mrs C, has expressed her concerns over the look of the website. She is very concerned that the text displayed in the h1 tag, may be translated into another language.
+<h1 multi-lang = "false">The Ambiance</h1> x
+	<h1 translate = "no">The Ambiance</h1> v
+
+Q28: (0.5/1):
+T or F:
+First the ogg file is played, followed by the mp3 file. True x
+															False v
+
+If the audio element is not supported by the user's browser, an error message is displayed. True x
+																								False v
+The controls attribute allows the user to play, pause and change the volume. True v
+The mp3 file will only play if the user is unable to play the ogg file. True v
+
+Q30: (0/1):
+T or F:
+The SVG element will accept the following file types: JPEG, GIF, PNG. True x
+																		False v
+The SVG element allows for better scalability than the Canvas element. False x
+																		True v
+SVG is pixel based. True x
+						False v
+
+Q31: (0.25/1):
+Please review the HTML code below and determine how you can place the car and badger images on the webpage, relative to the parent figure element.
+#car {
+	position: relative; x
+		position: absolute; v
+	...
+}
+#badger {
+	position: fixed; x
+		position: absolute; v
+	top: 30%; x
+		top: 70%; v
+	left: 20%; v
+}
+
+Q36: (0.5/1):
+Which of the following are monospace fonts?
+Courier, New Courier. v
+MISSING x
+	Lucinda Console, Monaco. v
+
+Q40: (0/1):
+Which 2 of the following options will successfully display the images in the correct order?(From left to right - car, coffee, nap)?
+figure {
+    float: left;
+}
+#img2, #img3 {
+    float: none;
+} v
+
+#img1, #img2, #img3 {
+    float: left;
+}
+figure
+{
+    float: right;
+} x
+	#img1 {
+		float: left;
+	} v
+
+GMETRIX MOCK EXAM #1 (PRACTICE) = 23/42 X (+7 => 30/42 NEEDED TO PASS)
+
+a {text-decoration: none;}
+
+text-align = aligns text within an element
+margin:auto = center aligns items within a <div> tag
+align-items = aligns content within a flexible layout
+
+.feature {
+	height: auto;
+	max-height: 200px;
+}
+
+#productList {
+	width: 50%; /* set the width of the table */
+	max-width: 800px; /* make sure the table does not exceed 800 pixels in width */
+}
+
+h2 {
+	font-family: "Times New Roman", serif;
+	font-variant: small-caps;
+	line-height: 18pt;
+}
+
+body {
+	background-image: url(kazoo.jpg);
+	background-repeat: repeat-y;
+}
+
+<img src = "images/kazoo.jpg" alt = "kazoo">
+
+Relative = relative to its normal position on a webpage.
+Absolute = relative to the document body, unless placed inside another element.
+Fixed = relative to the viewport
+
+#0000FF = Blue			(all blue, no red or green present)
+#9999FF = Light Blue	(closer to #FFFFFF which is white)
+#000088 = Dark Blue		(closer to #000000 which is black)
+
+<audio> <source src = "welcome.mp3" type = "audio/mp3" /> </audio>
+	add controls to audio tag
+	add controls = "controls" to audio tag
+
+<meta name = "keywords" content = "music, guitar, piano" />
+
+figcaption {
+	color: darkgreen;
+	background-color: antiquewhite;
+	display: inline; /* inline limits background-color to text only */
+}
+.headerhighlight {
+	display: block; /* block allows background-color to run across the entire webpage */
+}
+
+@media only screen and (max-width: 640px)
+
+<a href = "http://www.gmetrix.com" target = "_blank">GMetrix</a>
+
+The <map> tag is used in conjunction with latitude & longitude? Yes. x
+	No. v
+		The <map> tag is used to define clickable areas on an image.
+
+section = an area consisting of stories of content
+article = used to display a story on a webpage
+caption = used to give a title to a table
+nav = used to store both internal & external hyperlinks
+
+The POST method is typically used to modify server data, such as changing information in a database.
+The GET method is usually used to retrieve information from a database, such as the case of a search engine.
+The PUT method is usually used to insert information into a database.
+UPDATE is not a method, it is an SQL term.
+
+<header>
+<figure>
+<img src = "widget1.png" width = "300" height = "240" />
+<br />
+<figcaption> The Mighty Widget </figcaption>
+</figure>
+</header>
+	The <figure> tag holds images, illustrations and similar content.
+
+GMETRIX MOCK EXAM #2 (PRACTICE) = 21/42 X (+9 => 30/42 NEEDED TO PASS)
+
+The style applies only to specific paragraphs, not all.
+		It should be defined as a class, an id is only applied to a single tag.
+
+A border defines the color, style & thickness of a box.
+Padding indicates the area around the content of a box.
+Margins are areas between boxes.
+
+Well-known fonts tend to be the most readable fonts on a web page. Yes v
+Font sizes defined with ems are always resizable as one zooms in on a web page. Yes v
+Font sizes defined with points are always resizable as one zooms in on a web page. No v
+	Font sizes defined with points and pixels are not always resizable as one zooms in on a web page, points and pixels are absolute measurements, whereas ems are relative measurements.
+
+The color of the first paragraph will be black. No v
+The color of the second paragraph will be slateblue. Yes v
+The heading color will be maroon. Yes x
+		The body is styled as maroon, so the entire document will be maroon, unless a class or other style is indicated.
+
+Inline Styles
+IDs
+Classes
+Internal Style Sheets
+
+<form action ="thankyou.html">
+	<p>In 100 characters or less, describe your favourite food.</p>
+	<input type ="text" maxlength ="100" />
+	<p>Enter an email address: </p>
+	<input type="email" required />
+</form>
+	The attribute action defines what will happen with a form once submitted, often in the form of displaying a web page.
+
+<a href="#sale">Sale Items</a>
+<!-- regular code here -->
+<h1 id="sale">Sale Items</h1>
+		<p>Short sleeve t-shirts are 20% off!</p>
+	Because a link is needed to navigate to a bookmark, an anchor tag <a></a> is needed around the text that will serve as a link.
+	The bookmark needs an id attribute with a name, since id is the attribute used in HTML5.
+	The link from the top of the page uses the # symbol in front of the name, since the name refers to an area with an id attribute.
+
+.specialheading {
+		text-indent: 2em;
+		word-wrap: break-word;
+		letter-spacing: 2px;
+}
+	The text-indent attribute controls the indenting of text, with em being the equivalent of a letter m.
+	The word-wrap attribute with the break-word value allows unbreakable words to be broken.
+	The letter-spacing attribute controls the amount of spacing between letters.
+
+<div>
+	Employee Spotlight
+<p>Travis has been at Shirts 'R Us for 5 years, working in the Sales department. Travis has been a top employee for a long time.</p>
+</div>
+		A block of text that needs to be positioned on a web page needs to be inside a <div></div> tag.
+		A normal block of text within the flow of a web page can be within a <p></p> tag.
+
+<select>
+	<option>TV</option>
+</select>
+
+<details>
+	<summary>Sale Items</summary>
+	<p>T-shirts and Pullovers are 20% off!</p>
+</details>
+		Details and summary tags create collapsible content, with the content to always show inside of a summary tag inside a details tag.
+		Within the details tag, any other tagged text becomes collapsible.
+
+The hiddenelement class is coded correctly. Yes v
+The showelement class is coded correctly. Yes x
+		To make a hidden element show, the visibility property needs to be set to visible, not show. No v
+	collapseelement class can be used on a <div></div> tag. No v
+		The collapse property can only be used on the following tags: <tr> </tr> <tbody></tbody> <col> and <colgroup>
+
+<meta name="google" content="notranslate"/>
+
+<meta charset ="iso-8859-1" />
+<meta name="description" content="Discount Shirt Site" />
+		UTF-8 is a character set for HTML code, so the attribute to use is charset, even though it is an encoding type.
+		A description is different than that of keywords, so the description attribute should be used for the "Discount Shirt Site" text.
+
+<picture>
+	<source media="(min-width:640px)" srcset="large_shirt.png" />
+	<img src="small_shirt.png" />
+</picture>
+		The picture tag is used for an image that can vary based on a screen's width.
+		The source tag is used with the media attribute to define a minimum or maximum width for the source of an image, defined using the srcset attribute.
+		The img tag is used when no source widths match within the picture tag.
+
+<iframe src="sales.html" height="300" width="300" />
+		The iframe tag allows one to have a web page appear inline within another webpage.
+		The src attribute dictates the webpage to display within the inline frame.
+
+<track src="captions.vtt" kind="subtitles" srclang="en" label="English" />
+	Closed captions use the track tag, not the video tag.
+
+.gridbox {
+		display: grid;
+		grid-template-columns: 100px auto 100px;
+}
+		The display property defines a grid.
+		The grid-template-columns property defines column widths, for a responsive column, auto is used.
+
+#sidebar {
+		float: right;
+}
+		Given that this is a single block of text to position, it should be styled as an id (#).
+		The float attribute set to right will ensure the block of text is positioned on the right side of the page.
+
+Which statement best defines a CSS framework?
+		A style template with a responsive, grid-like layout.
+			A CSS framework can be used as a starting point for a web page layout.
+
+A script tag is used to embed both client-side scripts and server-side scripts. No v
+		A script tag is used to embed client-side but not server-side scripts.
+A script tag has to appear in the head section of a webpage. Yes x
+		A script tag can appear in the head or body section of a webpage. No v
+
+h1 {
+		color: maroon;
+		font-size: 16pt;
+		text-align: center;
+}
+
+#sidebar {
+		width: 250px;
+		float: right;
+		overflow: scroll;
+}
+		The overflow is not showing because in order for an overflow to show, a height needs to be specified for the area in which a scrollbar could be needed.
+		Otherwise, the area will stretch to the height needed with no need for a scrollbar, no matter what the overflow property is set to.
+
+#textbox {
+		padding: 3px;
+		margin: 2px;
+		border: 1px solid black;
+}
+		Padding is the spacing inside of an object from the border to the text.
+		Margins are used for spacing around an object.
+
+.borders {
+		border-style: solid;
+		border-color: black;
+		border-width: 1px 1px 3px 1px;
+}
+		The border-width property sets the top, right, bottom and left sides.
+
+@media only screen and (max-width: 719px) {
+		#textbox {
+			display: none;
+		}
+}
+		The max-width attribute is set to 719px since the task calls for anything under 720px.
+
+em is relative, to the font size of an element.
+percentage is relative, based on the size of a parent element.
+px is absolute, 1/96 of an inch.
+vw & vh are relative, to the size of a viewport.
+
+.feature {
+		position: static;
+		float: right;
+}
+		The position property positions an element relative to either the viewport or another element on a webpage.
+		Setting the position to static makes the element flow as normal within a webpage and to not be affected by other elements on that page.
+
+.housebox {
+		width: 250px;
+		border: 5px solid blue; /* a blue line around each box */
+		padding: 10px; /* a clear area around the content of each box */
+		margin: 8px; /* the distance between a box and another element */
+}
+		A border defines the color, style and thickness of a box.
+		Padding indicates the area around the content of a box.
+		Margins are areas between boxes.
+
+

@@ -1,0 +1,18 @@
+/*
+Refer back to:
+style.html
+1. Create a custom cascading style sheet.
+2. Save the Cascading Style Sheet file in the same directory as the HTML5
+document, then open the web page in your browser to see the style rules
+applied.
+Coloring the <h1> element without setting a width rule would reveal that
+it occupies the entire width of the browser window – except for the
+default margins of the body.
+*/
+h1 {
+	color: red;
+	background: yellow;
+	border: 10px dashed blue;
+	padding: 5px;
+	width: 550px;
+}

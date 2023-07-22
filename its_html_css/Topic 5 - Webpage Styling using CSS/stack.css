@@ -1,0 +1,51 @@
+﻿/*
+    Refer back to:
+    stack.html
+1. Create a linked style sheet containing a rule to set the size of all
+elements.
+2. Next add a style rule to position the uppermost element.
+3. Now add a rule to position the next element below.
+4. Then add a rule to position an element further below.
+5. Finally add a rule to position the lowest element.
+6. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the elements positioned in all three dimensions.
+A smaller offset creates a more convincing drop shadow effect – a large
+offset is used here to illustrate the contribution of each element.
+*/
+
+div {
+    width: 400px;
+    height: 50px
+}
+
+div#text-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: yellow;
+    z-index: 4
+}
+
+div#dark-gray {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    background: #666;
+    z-index: 3
+}
+
+div#light-gray {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    background: #999;
+    z-index: 2
+}
+
+div#pale-gray {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    background: #CCC;
+    z-index: 1
+}

@@ -1,0 +1,87 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections, with a link element
+pointing to a style sheet.
+3. Within the body section, insert a table element that includes an identity for
+styling purposes.
+4. Within the table element, first insert a table caption title.
+5. Next, within the table element, insert elements grouping columns – with
+specified class names for styling each group.
+6. Now, within the table element, insert a table header and a table footer – each
+spanning seven columns.
+7. Finally, in the table element, insert a table body containing seven columns,
+with one cell given an identity for styling.
+Refer to:
+colgroup.css
+8. Create a style sheet to color the column groups, remove cell spacing, and
+highlight the header, footer, and one cell.
+9. Save the HTML document and style sheet, then open the web page in your browser
+to see how the column groups are clearly distinct from each other.
+The table body in this example omits the optional </td> and </tr> closing tags to
+save page space, but including the </tr> tags more clearly denotes each row end.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Column Grouping</title>
+    <link type="text/css" rel="stylesheet"
+          href="colgroup.css" media="screen" />
+</head>
+<body>
+    <table id="feb">
+        <caption>Monthly Calendar</caption>
+        <colgroup span="5" class="weekday"></colgroup>
+        <colgroup span="2" class="weekend"></colgroup>
+        <thead>
+            <tr><th colspan="7">February 2021</tr>
+        </thead>
+        <tfoot>
+            <tr><th colspan="7">Birthday</tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>Mon
+                <td>Tue
+                <td>Wed
+                <td>Thu
+                <td>Fri
+                <td>Sat
+                <td>Sun
+            <tr>
+                <td>1
+                <td>2
+                <td>3
+                <td>4
+                <td>5
+                <td>6
+                <td>7
+            <tr>
+                <td>8
+                <td>9
+                <td>10
+                <td>11
+                <td>12
+                <td>13
+                <td>14
+            <tr>
+                <td>15
+                <td>16
+                <td>17
+                <td>18
+                <td>19
+                <td>20
+                <td id=”birthday”>21
+            <tr>
+                <td>22
+                <td>23
+                <td>24
+                <td>25
+                <td>26
+                <td>27
+                <td>28
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿/*
+Refer back to:
+    emphasis.html
+*/
+
+*[class ~= "warning"] {
+    color: red
+}
+
+*[class ~= "ducks"] {
+    color: gold
+}
+
+*[class ~= "diamonds"] {
+    color: silver
+}

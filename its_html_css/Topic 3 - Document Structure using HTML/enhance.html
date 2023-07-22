@@ -1,0 +1,55 @@
+﻿<!--
+1. Make a copy of table.html, and rename it “enhance.html”
+2. Change the document and table titles.
+3. Immediately after the caption, insert a table header containing a single row
+that spans all four columns.
+4. Immediately after the header, insert a table footer containing a single row
+that spans all four columns.
+5. After the footer, add a table body element to enclose all the regular existing
+table rows.
+6. After the table body element, insert a second table body element containing
+four more table rows.
+Refer to:
+enhance.css
+7. Save the HTML document, then reopen the enhance.css style sheet and add
+rules to style the table header, the second table body heading, and the table
+footer.
+8. Save the style sheet, then open the web page in your browser to see the
+enhanced table.
+Table headers and footers should only contain information – all table data should
+appear in the table body.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Enhanced Table Example</title>
+    <link type="text/css" rel="stylesheet"
+          href="enhance.css" media="screen" />
+</head>
+<body>
+    <table id="data">
+        <caption>An Enhanced Table</caption>
+        <thead>
+            <tr><td colspan="4">Header Information</tr>
+        </thead>
+        <tfoot>
+            <tr><td colspan="4">Footer Information</tr>
+        </tfoot>
+        <tbody>
+        </tbody>
+        <tbody>
+            <tr><th>Row 1<td>Cell 1.1<td>Cell 1.2<td>Cell 1.3</tr>
+            <tr><th>Row 2<td>Cell 2.1<td>Cell 2.2<td>Cell 2.3</tr>
+            <tr><th>Row 3<td>Cell 3.1<td>Cell 3.2<td>Cell 3.3</tr>
+        </tbody>
+        <tbody>
+            <tr><th colspan="4" class="next">Next Section</tr>
+            <tr><th>Row 4<td>Cell 4.1<td>Cell 4.2<td>Cell 4.3</tr>
+            <tr><th>Row 5<td>Cell 5.1<td>Cell 5.2<td>Cell 5.3</tr>
+            <tr><th>Row 6<td>Cell 6.1<td>Cell 6.2<td>Cell 6.3</tr>
+        </tbody>
+    </table>
+</body>
+</html>

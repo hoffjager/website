@@ -1,0 +1,16 @@
+﻿table#data {
+    width: 580px;
+    font-family: sans-serif;
+    border: 5px solid black}
+
+table#data tr,td {
+    border: 1px solid black}
+
+table#data thead {
+    background: aqua}
+
+table#data th.next {
+    background: yellow}
+
+table#data tfoot {
+    background: lime}

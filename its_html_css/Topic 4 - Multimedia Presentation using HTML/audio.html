@@ -1,0 +1,31 @@
+﻿<!--
+1. Start a new HTML document.
+2. In the body section, insert an element to embed an audio resource in
+the MP3 format for automatic playback.
+3. Save the HTML document, then open the web page to hear automatic
+audio playback in supported browsers.
+4. Next, replace both previous attributes with one to display user
+controls for audio playback.
+5. Now, in the audio element, insert elements to specify audio resources
+to be embedded for all browsers.
+Avoid automatic audio playback on websites, as some users detest the
+autoplay feature.
+6. Save the HTML document again, then open the web page in any browser
+and use the controls to hear playback.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Audio Example</title>
+</head>
+<body>
+    <audio src="waa.m4a" autoplay>
+        [Fallback]
+    </audio>
+    <audio controls>
+        <source src="waa.m4a" type="audio/mpeg" />
+    </audio>
+</body>
+</html>

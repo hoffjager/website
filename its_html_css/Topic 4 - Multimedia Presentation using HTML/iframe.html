@@ -1,0 +1,49 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections, with a link
+element pointing to a style sheet.
+A fallback message can be provided between the <iframe> </iframe> tags
+to be displayed when inline frame support is disabled.
+3. Within the body section, insert an article containing a heading and
+descriptive paragraph, and with a specified class name for positional
+styling purposes.
+4. Next, in the body, as an aside, insert an inline frame to load a
+document containing relevant text and illustrative photographs positioned
+horizontally side-by-side.
+Refer to:
+    concept.html
+Refer to:
+    iframe.css
+5. Now, create a style sheet to size the article and position it to the
+left of the inline frame.
+6. Save the HTML document and style sheet then open the web page to see
+the article and the inline frame content.
+Drag the scrollbar to see the images. Embedding documents within inline
+frames is particularly favored on property websites to accompany property
+descriptions with photographs in a compact page format.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Inline Frame Example</title>
+    <link type="text/css" rel="stylesheet"
+          href="iframe.css" media="screen" />
+</head>
+<body>
+    <article class="left220">
+        <h3>Concept Cars</h3>
+        <p>
+            Many of the creative and innovative concept cars
+            premiered at the recent motor show left the audience in
+            eager anticipation of their production.
+        </p>
+    </article>
+    <aside>
+        <iframe src="concept.html" width="300" height="200">
+            [Framed Document - Requires iFrame Support]
+        </iframe>
+    </aside>
+</body>
+</html>

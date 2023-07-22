@@ -1,0 +1,39 @@
+﻿<!--
+1. Create an HTML document with a paragraph containing spanned text and
+another paragraph containing hyperlinks, separated by a ruled line.
+2. Save the HTML document then create a linked style sheet with rules to
+specify fonts and colors.
+    Refer to:
+    decor.css
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Decorating Text</title>
+    <link type="text/css" rel="stylesheet"
+          href="decor.css" media="screen" />
+</head>
+<body>
+    <p id="para-1">
+        You know that it's
+        <span class="under caps">important</span>
+        when<br>it is
+        <span class="under">underlined</span>
+        <br>and that it's been
+        <span class="thru caps">cancelled</span>
+        when<br>it has been
+        <span class="thru">struck through</span>
+        <br>but you also must remember to<br>
+        <span class="rails upper">read between the lines</span>
+        <br>
+        <span id="sig" class="lower"> - MIKE MCGRATH</span>
+    </p>
+    <hr>
+    <p>
+        <a href="http://w3c.org">Regular link</a> |
+        <a class="plain" href="http://w3c.org">Plain link</a>
+    </p>
+</body>
+</html>

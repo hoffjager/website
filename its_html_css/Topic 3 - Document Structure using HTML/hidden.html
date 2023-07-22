@@ -1,0 +1,41 @@
+﻿<!--
+1. Start a new HTML5 document that incorporates a script.
+2. In the body section, insert an image with sale price details.
+3. Next, insert a form element to send form data by the GET method.
+4. Within the form element, insert a visible input element for user-entered data.
+Hidden data elements can be useful to maintain user data across a website – a
+user name entered on the first page can be recalled on any other page.
+5. Next, in the form element, insert an invisible element for hidden data and an
+element to display a calculated result.
+6. Now, insert another attribute in the <form> tag.
+Refer to:
+hidden.js
+7. Create a script to perform the calculation.
+8. Save the HTML document and script, then open the web page in your browser,
+enter data, and submit the form.
+JavaScript is case-sensitive, so you must use the correct case when copying
+script examples.
+The hidden form <input> data gets submitted to the server but the <output> element
+merely displays the result of the calculation.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Hidden Data Example</title>
+    <script src="hidden.js"></script>
+</head>
+<body>
+    <img src="sale.png" width="200" height="120" alt="Sale" />
+    <form method="get" action="http://localhost/echo.pl"
+          oninput="sum.value=multiply(qty,price)">
+        <input type="submit" name="Offer" value="Buy Teddy Bears" />
+        Qty (60 Available) <input type="number" id="qty"
+                                  name="Quantity" size="2" min="1"
+                                  max="60" />
+        <input type="hidden" id="price" name="Unit Price" value="24.99" />
+        <output name="sum" for="qty price"></output><br />
+    </form>
+</body>
+</html>

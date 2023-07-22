@@ -1,0 +1,42 @@
+﻿<!--
+1. Start a new HTML5 document that incorporates a script.
+2. In the body section, insert elements to embed an audio resource for
+manual playback.
+Include an id attribute in the <audio> tag to reference the media from
+script, and in all other tags that the script needs to reference.
+3. Next, insert an image button to control payback.
+4. Now, insert elements to present a visual indicator and calculated
+percentage as playback proceeds.
+5. Begin a script with a function to initialize variables when the HTML
+document has loaded.
+Refer to:
+    progress.js
+6. Insert a function to control playback.
+The control will play or pause playback according to the Boolean value
+of the run variable.
+7. Insert a function to display playback progress.
+8. Save the HTML document and script file, then open the web page in a
+browser and click the button to see playback progress.
+The currentTime and duration properties store time in seconds as
+floating-point values, so need to be rounded down with Math.floor().
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Progress Example</title>
+    <script src="progress.js"></script>
+</head>
+<body>
+    <audio id="snd">
+        <source src="audio.mp3" type="audio/mpeg" />
+        <source src="audio.ogg" type="audio/ogg" />
+        [Fallback]
+    </audio>
+    <img id="ctl" src="ctl.png" width="32"
+         height="32" alt="control" />
+    <progress id="bar" value="0"></progress>
+    <span id="num">[Audio]</span>
+</body>
+</html>

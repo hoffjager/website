@@ -1,0 +1,47 @@
+﻿<!--
+1. Make a copy of table.html, and rename it “rowspan.html”
+2. Change the document and table titles.
+3. In the table data element containing the text “Cell 1.1”, insert an attribute
+in its opening tag and edit its content.
+4. Now, delete the table data element containing the text “Cell 2.1” – as this
+cell is now spanned.
+5. Save the HTML document, then open the rowspan.css style sheet and add
+rules to style cells spanning rows.
+Refer to:
+    rowspan.css
+
+6. Reopen the HTML document, then insert an attribute into the table data element
+containing the text “Cell 2.2” and edit its content.
+7. Now, delete the table data element containing the text “Cell 3.2” – as this
+cell is now spanned.
+8. Save the amended HTML document, then open it in your browser to see the cell
+spanning two rows in Column 2.
+9. Reopen the HTML document once more, then insert an attribute into the table
+data element containing the text “Cell 1.3” and edit its content:
+10. Now, delete the table data elements containing the text “Cell 2.3” and
+“Cell 3.3” – as these cells are now spanned.
+11. Save the amended HTML document, then open it in your browser to see the cell
+spanning three rows in Column 3.
+Insert tab spaces between all table data elements in the HTML code to align them
+so it’s easier to configure the table layout.
+Notice that by default, text in each cell is left-aligned and horizontally
+centered in merged cells.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Row Spanning Example</title>
+    <link type="text/css" rel="stylesheet"
+          href="rowspan.css" media="screen" />
+</head>
+<body>
+    <table id="data">
+        <caption>A Table Spanning Rows</caption>
+        <tr><th>Row 1<td rowspan="2">Cell 1.1 + Cell 2.1<td>Cell 1.2<td rowspan="3">Cell 1.3 + Cell 2.3 + Cell 3.3</tr>
+        <tr><th>Row 2<td rowspan="2">Cell 2.2 + Cell 3.2</tr>
+        <tr><th>Row 3<td>Cell 3.1</tr>
+    </table>
+</body>
+</html>

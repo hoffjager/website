@@ -1,0 +1,26 @@
+﻿/*
+Refer back to:
+table.html
+1. Create a style sheet to set the table width and font, and also to add borders
+to the table, its cells, and its headings.
+2. Save the HTML document and style sheet, then open the web page to see this
+simple table.
+If a <caption>: element is to be included, it must immediately follow the opening
+<table> tag.
+A table title can be specified with <caption> </caption> tags and row and column
+headings can be added between <th> </th> tags.
+3. Immediately following the opening table tag, insert a caption title and a new
+row of four column headings.
+4. Finally, insert a row heading at the start of each following row, then save
+the HTML document to view the additions.
+The closing </th> tag is optional but the number of opening <th> headings must
+exactly match the number of rows and columns.
+*/
+
+table#data {
+    width: 580px;
+    font-family: sans-serif;
+    border: 5px solid black}
+
+table#data tr,td {
+    border: 1px solid black}

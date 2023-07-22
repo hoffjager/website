@@ -1,0 +1,33 @@
+/*
+Refer back to:
+external1.html
+&
+external2.html
+
+1. Open a plain text editor, such as Notepad, and list style rule sets
+for content elements:
+    h1 {color: blue; background: yellow}
+    p {color: red; background: white}
+2. Save the CSS file alongside the HTML files, named as "external.css",
+then open the HTML files in a web browser to see the styles applied to
+each web page.
+3. Re-open the style sheet file in a plain text editor and insert a
+commented title at the very start of the file.
+4. Now edit the style rule sets to reverse the previous colors.
+5. Save the style sheet file once more then re-open (or refresh) each
+HTML page in a web browser to see modified style rules applied to both
+web pages.
+Always use external style sheets rather than internal style sheets or inline
+style rules – to cleanly separate the structural and presentational aspects of
+web pages.
+*/
+
+/* Master Cascading Style Sheet for external-x.html Pages */
+h1 {
+    color: yellow;
+    background: blue
+}
+p {
+    color: white;
+    background: red
+}

@@ -1,0 +1,45 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing a head section, incorporating a style sheet and
+script, and a body section.
+3. Within the body section, insert an image and a paragraph containing two
+hyperlinks that target different protocols.
+
+4. Save the HTML document, then create a style sheet with a rule to hide the
+image and a rule to style the paragraph:
+Refer to:
+protocol.css
+
+5. Save the style sheet, then create a script to alternately reveal and hide the
+image when the first hyperlink gets activated:
+Refer to:
+protocol.js
+
+6. Save the script, then open the web page in your browser and click on the first
+link to reveal the image element.
+7. Click on the first hyperlink to hide the image element again, then click on the
+second hyperlink to launch your default client email application – ready to send
+a message.
+This script first examines the current visibility status of the image element,
+then reverses it.
+The mailto: protocol automatically adds the email address of the recipient in the
+“To” field of the email client.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Protocol Example</title>
+    <link type="text/css" rel="stylesheet"
+          href="protocol.css" media="screen" />
+    <script src="protocol.js"></script>
+</head>
+<body>
+    <img id="chart" src="chart.png" alt="Chart Image" />
+    <p id="links">
+        <a href="javascript.toggle()">Show/Hide Chart</a> <br />
+        <a href="mailto:jonnygrealish64@gmail.com">Email Me</a>
+    </p>
+</body>
+</html>

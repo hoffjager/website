@@ -1,0 +1,34 @@
+﻿<!--
+1. Create an HTML document with a "div" element containing two further
+elements.
+2. Now add another "div" element containing three further elements.
+3. Save the HTML document then create a linked style sheet containing a
+style rule to specify default width, margin, and colors for each element.
+Refer to:
+    center.css
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Centering Example</title>
+    <link type="text/css" rel="stylesheet"
+          href="center.css" media="screen" />
+</head>
+<body>
+    <div>
+        Default Position
+        <div class="inner">Default Position</div>
+        <div class="inner center">Centered Block</div>
+    </div>
+    <div class="center">
+        Centered Block
+        <div class="inner">Default Position</div>
+        <div class="center inner">Centered Block</div>
+        <div class="center inner center-text">
+            Centered Block + Centered Content
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections,
+with a link element pointing to a style sheet.
+3. Within the body section, insert a heading.
+4. Next, insert a captioned figure.
+Always refer to figures only by their label - avoid using reference
+terms like "in the figure on the right" so the document layout can be
+easily changed without creating confusion.
+5. Now, insert text content that makes reference to the previous
+captioned figure.
+6. Insert a second captioned figure.
+7. Now, insert text content that makes reference to the second
+captioned figure.
+Refer to:
+    figure.css
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Figure Example</title>
+    <link type="text/css" rel="stylesheet"
+          href="figure.css" media="screen" />
+</head>
+<body>
+    <h1>Web Development Stacks</h1>
+    <figure id="front-stack">
+        <img src="front.png" alt="Front-end"
+             width="118" height="108" />
+        <figcaption>Figure 1: Front-end Technologies</figcaption>
+    </figure>
+    <p>
+        Front-end development, also known as client-
+        side development, is the practice of producing HTML
+        documents, CSS style sheets, and JavaScript script code
+        (Figure 1) for a website or Web Application - so a user can
+        see and interact with them directly.
+    </p>
+    <figure id="back-stack">
+        <img src="back.png" alt="Back-end"
+             width="133" height="108" />
+        <figcaption>Figure 2: Back-end Technologies</figcaption>
+    </figure>
+    <p>
+        Back-end development, also known as server-side
+        development, is the practice of producing complex
+        websites using programming languages such as SQL, Java,
+        PHP or .NET (Figure 2) to provide features beyond front-
+        end capabilities.
+    </p>
+</body>
+</html>

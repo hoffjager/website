@@ -1,0 +1,29 @@
+﻿<!--
+1. Start with the HTML5 document type declaration.
+2. Add a root element containing head and body sections.
+3. Add the following code to the body section's opening tag:
+<body onload = ”alert(‘Greetings!’)”>
+    <noscript>JavaScript Is Not Enabled!</noscript>
+    <h1>Page Loaded</h1>
+4. Save the HTML document, then open it in your web browser to see the alert
+dialog appear when it loads.
+5. Close the alert dialog, then disable JavaScript support and reload the page
+to see the advisory message.
+The alert dialog is “modal” – the user must click OK to close it before the page
+will completely load.
+With the Firefox web browser, shown here, enter about:config in its address bar,
+then accept the “risk” warning and click the javascript:enabled item to false –
+to disable JavaScript support.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Body Attributes</title>
+</head>
+<body onload="alert('Greetings!')">
+    <noscript>JavaScript Is Not Enabled!</noscript>
+    <h1>Page Loaded</h1>
+</body>
+</html>

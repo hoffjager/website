@@ -1,0 +1,39 @@
+﻿/*
+Refer back to:
+    background.html
+1. Create a style sheet rule to style the span elements.
+2. Next add a style rule to specify the background color, background
+image, and height of each paragraph.
+3. Now add a style rule to modify the tiling behavior of the second
+paragraph to one row.
+4. Then add a style rule to modify the tiling behavior of the third
+paragraph to one column.
+5. Finally add a style rule to modify the tiling behavior of the fourth
+paragraph to just one copy of the image.
+6. Save the style sheet alongside the HTML document then open the web
+page in a browser to see the background color and image applied.
+The repeat value could be omitted from the rule – as that is the default
+value.
+*/
+
+span {
+    background: yellow;
+    margin: 0 0 0 10em
+}
+
+p {
+    background: url(tile.png) fuchsia repeat;
+    height: 3.5em
+}
+
+p#x {
+    background-repeat: repeat-x
+}
+
+p#y {
+    background-repeat: repeat-y
+}
+
+p#no {
+    background-repeat: no-repeat
+}

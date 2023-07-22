@@ -1,0 +1,13 @@
+/*
+Refer back to:
+import.html
+
+1. Create the "master" style sheet that simply imports two other style
+sheets to style the headings and paragraphs within the web page.
+2. Save the master style sheet as "import.css" alongside the HTML file.
+The @import directive can be used to hide style sheets from older
+browsers that do not recognize that instruction.
+*/
+
+@import "headings.css";
+@import "paragraphs.css";

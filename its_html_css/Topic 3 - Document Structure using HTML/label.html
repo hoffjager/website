@@ -1,0 +1,66 @@
+﻿<!--
+1. Start a new HTML5 document with a link element pointing to a style sheet.
+2. In the body section, insert a form element containing a fieldset with a legend.
+3. Now, in the fieldset, insert labels that each contain text and a checkbox with
+a specified tab order.
+A form “control” is any <input>, <button> or <textarea> element.
+A tabindex attribute can be included in these tags and also in any <a>, <area>,
+<object> or <select> tag.
+4. Next, in the fieldset, insert a logo submit button – to be first in the tab
+order.
+5. Save the HTML document then open the web page in your browser to see the
+text-control association is unclear.
+6. Edit the HTML document to add a class attribute to each alternate label tag for
+styling purposes.
+Refer to:
+label.css
+7. Create a style sheet with a rule to distinguish the labels.
+8. Save the HTML document and style sheet, then open the web page to see that the
+text-control association is now clear. Use the tab key to move between controls,
+and the space bar to select checkboxes, then submit the form.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Label Example</title>
+    <link type="text/css" rel="stylesheet"
+          href="label.css" media="screen" />
+</head>
+<body>
+    <form method="get" action="http://localhost/echo.pl">
+        <fieldset>
+            <legend>Toolbox</legend>
+            <label class="hilite">
+                Hammer
+                <input type="checkbox" name="Toolbox"
+                       value="Hammer" tabindex="2" checked />
+            </label>
+            <label>
+                Wrench
+                <input type="checkbox" name="Toolbox"
+                       value="Wrench" tabindex="3" />
+            </label>
+            <label class="hilite">
+                Screwdriver
+                <input type="checkbox" name="Toolbox"
+                       value="Screwdriver" tabindex="4" />
+            </label>
+            <label>
+                Ratchet
+                <input type="checkbox" name="Toolbox"
+                       value="Ratchet" tabindex="5" />
+            </label>
+            <label class="hilite">
+                Power Drill
+                <input type="checkbox" name="Toolbox"
+                       value="Power Drill" tabindex="6" />
+            </label>
+            <button type="submit" tabindex="1">
+                <img src="toolbox.png" />Submit
+            </button>
+        </fieldset>
+    </form>
+</body>
+</html>

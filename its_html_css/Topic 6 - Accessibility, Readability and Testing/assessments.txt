@@ -1,0 +1,27 @@
+Topic 6 - Accessibility, Readability & Testing
+
+Pre-Assessment
+	What are two methods of resizing text in a browser?
+		Change the Appearance settings v
+		Select the Font Size drop-down arrow x
+			Adjust the zoom settings in the browser v
+	T or F: Browsers are prepared to run code in spite of any HTML syntax errors
+		False x
+			True v
+				Syntax errors in HTML are very forgiving because of the way browsers parse the code.
+				Browsers are prepared to run in spite of syntax errors.
+				So when one runs their HTML code, the page will run, even though it will not be exactly what was intended.
+
+Post-Assessment
+	Which is a CSS font best practice?
+		The developer should allow the browser to dictate which default fonts are used. x
+			The developer should take control over fonts that are displayed on their website and not make it possible for a viewer to use their own default fonts. v
+	What is tag mismatch?
+		A grouping of tags in CSS code that create mismatched elements on a page. x
+			A situation in which closing tags do not match up with opening tags in HTML code. v
+	When there are multiple CSS rules for the same element, one can experience cascading issues. What can one use to deal with these issues?
+		Specific CSS rules. x
+			Developer Tools. v
+				The simplest way to deal with these issues is to use the Developer Tools along with foreknowledge of stylesheet precedence.
+
+T6 Quiz - 100% :)

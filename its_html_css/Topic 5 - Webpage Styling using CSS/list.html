@@ -1,0 +1,39 @@
+﻿<!--
+1. Create an HTML document containing three lists and one nested list.
+2. Save the HTML document then create a linked style sheet containing
+rules to show the list boundaries.
+    Refer to:
+    list.css
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Position List Markers</title>
+    <link type="text/css" rel="stylesheet"
+          href="list.css" media="screen" />
+</head>
+<body>
+    <ol class="outside-markers">
+        <li>List</li>
+        <li>Markers</li>
+        <li>Outside Content Box</li>
+    </ol>
+    <ol class="inside-markers">
+        <li>List</li>
+        <li>Markers</li>
+        <li>Inside Content Box</li>
+    </ol>
+    <ul>
+        <li>List</li>
+        <li>Style</li>
+        <ol class="inside-markers">
+            <li>List</li>
+            <li>Markers</li>
+            <li>Inside Content Box</li>
+        </ol>
+        <li>Shorthand</li>
+    </ul>
+</body>
+</html>

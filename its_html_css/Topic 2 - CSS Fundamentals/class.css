@@ -1,0 +1,20 @@
+/*
+Refer back to:
+class.html
+1. Create a linked style sheet with a style rule drawing red borders around each
+element using the class value.
+2. Now add a rule overriding the previous one for the paragraph element only, to
+draw a blue border around the paragraph and set its width.
+Other paragraphs added to this HTML document would not be styled with this style
+sheet – unless they too contained a class attribute with the value of "frame".
+3. Save the style sheet file alongside the HTML document then open the web page
+in a browser to see the elements styled by the class selectors.
+*/
+
+.frame {
+    border: 0.2em solid red
+}
+p.frame {
+    border: 0.2em solid blue;
+    width: 50%
+}

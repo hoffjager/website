@@ -1,0 +1,27 @@
+﻿/*
+    Refer back to:
+    hide.html
+1. Create a style sheet rule to specify table width and its features.
+2. Next add a style rule to color each table cell and border.
+3. Now add a style rule to specify the border spacing and hide empty
+cells in the second table.
+4. Save the style sheet alongside the HTML document then open the web
+page in a browser to see tables drawn with both visible and hidden empty
+cells.
+*/
+
+table {
+    width: 500px;
+    margin: 20px;
+    border: 3px dotted red
+}
+
+td {
+    border: 3px solid blue;
+    background: aqua
+}
+
+table.space {
+    border-spacing: 20px;
+    empty-cells: hide
+}

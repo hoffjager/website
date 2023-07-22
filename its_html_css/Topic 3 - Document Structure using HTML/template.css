@@ -1,0 +1,12 @@
+﻿table {
+    font-family: sans-serif;
+    border: 1px solid black}
+
+th {
+    background: white}
+
+tr:nth-child(odd) {
+    background: coral}
+
+td {
+    padding: 5px 50px}
